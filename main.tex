@@ -575,6 +575,60 @@ Dato che $E_y = A^2 = K < \infty$ allora
 \[
 	y_m = 0.
 \]
+\begin{proof}
+\begin{equation}
+\begin{split}
+	P_y = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{y(t)}^2 \dt =
+	\quads{13}
+	\\
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{A e^{-t} u(t) - A e^t u(-t)}^2 \dt =
+	\quads{10}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} \abs{A e^{-t} u(t) - A e^t u(-t)}^2 \dt + \int\displaylimits_{0}^{T/2} \abs{A e^{-t} u(t) - A e^t u(-t)}^2 \dt \right] =
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} \abs{- A e^t u(-t)}^2 \dt + \int\displaylimits_{0}^{T/2} \abs{A e^{-t} u(t)}^2 \dt \right] =
+	\quads{7}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} A^2 e^{2t} \dt + \int\displaylimits_{0}^{T/2} A^2 e^{-2t} \dt \right] 	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} A^2 e^{-2\abs{t}} \dt =
+	\quads{3}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 2 \int\displaylimits_{0}^{T/2} A^2 e^{-2t} \dt = \lim_{T \rightarrow \infty} \frac{1}{T} 2 A^2 \int\displaylimits_{0}^{T/2} e^{-2t} \dt =
+	\quads{8}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 2 A^2 \int\displaylimits_{0}^{T/2} \frac{1}{2} \cdot 2 \cdot e^{-2t} \dt = \lim_{T \rightarrow \infty} \frac{1}{T} A^2 \int\displaylimits_{0}^{T/2} 2 \cdot e^{-2t} \dt =
+	\quads{7}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} A^2 \left[e^{-2t}\right]_0^{T/2} = \lim_{T \rightarrow \infty} \frac{A^2}{T} \left[e^{-T} - 1\right] = 0.
+	\quads{8}
+\end{split}
+\end{equation}
+\begin{equation}
+	y_eff = \sqrt{P_y} = 0.
+\end{equation}
+\begin{equation}
+\begin{split}
+	y_m = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} y(t) \dt = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) - x(-t) \dt =
+	\quads{4}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} A e^{-t} u(t) - A e^{t} u(-t) \dt =
+	\quads{7}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} A e^{-t} u(t) - A e^{t} u(-t) \dt + \int\displaylimits_{0}^{T/2} A e^{-t} u(t) - A e^{t} u(-t) \dt \right] =
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} - A e^{t} u(-t) \dt + \int\displaylimits_{0}^{T/2} A e^{-t} u(t) \dt \right] =
+	\quads{4}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} - A e^{t} \dt + \int\displaylimits_{0}^{T/2} A e^{-t} \dt \right] =
+	\quads{7}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[-A \left(e^0 - e^{-T/2}\right) + A \left(-e^{-T/2} + e^0\right)\right] =
+	\quads{5}
+	\\
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[-A + Ae^{-T/2} - Ae^{-T/2} + A\right] = 0.
+	\quads{6}
+\end{split}
+\end{equation}
+\end{proof}
 
 \newpage
 \section{Segnali periodici a tempo continuo}
@@ -589,15 +643,15 @@ per ogni valore della variabile $t$. La grandezza $T_0$ rappresenta il \textit{p
 \textit{L'energia $E_x$} del segnale periodico \`e infinita:
 \begin{equation}
 \begin{split}
-	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt = \sum_{k = -\infty}^{+\infty} \int\displaylimits_{-kT_0/2}^{kT_0/2} \abs{x(t)}^2 \dt =
-	\quads{3}
+	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt = \sum_{k = -\infty}^{+\infty} \int\displaylimits_{-T_0/2 + k T_0}^{T_0/2 + k T_0} \abs{x(t)}^2 \dt =
 	\\
-	= \sum_{k = -\infty}^{+\infty} k \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt = \sum_{k = -\infty}^{+\infty} k \cdot E_{T_0} = \lim_{k \rightarrow \infty} k \cdot E_{T_0} = \infty.
+	= \sum_{k = -\infty}^{+\infty} E_{T_0} = \lim_{k \rightarrow \infty} k \cdot E_{T_0} = \infty.
+	\quads{4}
 \end{split}
 \end{equation}
 Dove si \`e posto
 \begin{equation}
-	E_{T_0} = \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt.
+	E_{T_0} = \int\displaylimits_{-T_0/2 + k T_0}^{T_0/2 + k T_0} \abs{x(t)}^2 \dt.
 \end{equation}
 \textbf{Per la precedente (2.13) \`e di fondamentale importanza la seguente considerazione:}
 \begin{lemma}
@@ -627,7 +681,10 @@ In generale invece $x(t)$ ha \textit{potenza} $P_x$ finita, per calcolare la qua
 \begin{split}
 	P_x = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 \dt = \lim_{k \rightarrow \infty} \frac{1}{kT_0} \cdot \int\displaylimits_{-kT_0/2}^{kT_0/2} \abs{x(t)}^2 \dt =
 	\\
-	= \lim_{k \rightarrow \infty} \frac{1}{kT_0} \cdot k \cdot E_{T_0} = \lim_{k \rightarrow \infty} \frac{1}{T_0} \cdot E_{T_0} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt.
+	= \lim_{k \rightarrow \infty} \frac{1}{kT_0} \cdot k \cdot \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt = \lim_{k \rightarrow \infty} \frac{1}{T_0} \cdot \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt =
+	\\
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt.
+	\quads{8}
 \end{split}
 \end{equation}
 \end{proof}
@@ -656,7 +713,7 @@ analogamente a quanto visto per la potenza, l'espressione del \textit{valor medi
 \end{proof}
 
 \subsection{Sviluppo in serie di Fourier in forma reale polare}
-Ci\`o premesso, ci poniamo una domanda: qual \`e il modo pi\`u appropriato di procedere quando il segnale $x(t)$ \`e periodico con \textit{andamento arbitrario}, e in particolare \textit{non sinusoidali}? La risposta a questo quesito sta nella cosiddetta \textit{analisi di Fourier} che costituisce la base della moderna teoria dei segnali. Infatti, sotto ipotesi piuttosto ampie, che in seguito elencheremo, un segnale reale periodico qualunque pu\`o essere espresso come \textit{somma di oscillazioni sinusoidali di ampiezza, frequenza e fase opportune} cio\`e in una forma che richiami:
+Ci\`o premesso, ci poniamo una domanda: qual \`e il modo pi\`u appropriato di procedere quando il segnale $x(t)$ \`e periodico con \textit{andamento arbitrario}, e in particolare \textit{non sinusoidale}? La risposta a questo quesito sta nella cosiddetta \textit{analisi di Fourier} che costituisce la base della moderna teoria dei segnali. Infatti, sotto ipotesi piuttosto ampie, che in seguito elencheremo, un segnale reale periodico qualunque pu\`o essere espresso come \textit{somma di oscillazioni sinusoidali di ampiezza, frequenza e fase opportune} cio\`e in una forma che richiami:
 \begin{equation}\label{eq:periodic_signal_decomposition}
 	x(t) = a_0 + a_1 \cos(2 \pi f_1 t + \vartheta_1) + a_2 \cos(2 \pi f_2 t + \vartheta_2) + \dots
 \end{equation}
@@ -664,7 +721,7 @@ In particolare, le frequenze di oscillazione includono in generale la "frequenza
 \begin{equation}\label{eq:fourier_series_polar_form}
 	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k)
 \end{equation}
-dove per comodit\`a di notazione si \`e anche posto $A_0 = a_0$ e $2A_k = a_k$ per $k \geq 1$. Questa rappresentazione del segnale prende il nome di \textit{sviluppo in seria di Fourier}; pi\`u precisamente la relazione \eqref{eq:fourier_series_polar_form} costituisce l'\textit{espressione in forma polare} dello sviluppo in serie di Fourier. Essa permette dunque di rappresentare un segnale reale $x(t)$ come somma di una costante $A_0$ e di una \textit{serie} il cui \textit{k}-esimo termine, detto \textit{k}-esima \textit{oscillazione armonica} (o \textit{armonica tout-court}, ha ampiezza $A_k > 0$, frequenza $kf_0$ (la \textit{k}-esima \textit{frequenza armonica}) e fase iniziale $\vartheta_k$.
+dove per comodit\`a di notazione si \`e anche posto $A_0 = a_0$ e $2A_k = a_k$ per $k \geq 1$. Questa rappresentazione del segnale prende il nome di \textit{sviluppo in seria di Fourier}; pi\`u precisamente la relazione \eqref{eq:fourier_series_polar_form} costituisce l'\textit{espressione in forma polare} dello sviluppo in serie di Fourier. Essa permette dunque di rappresentare un segnale reale $x(t)$ come somma di una costante $A_0$ e di una \textit{serie} il cui \textit{k}-esimo termine, detto \textit{k}-esima \textit{oscillazione armonica} (o \textit{armonica tout-court}), ha ampiezza $A_k > 0$, frequenza $kf_0$ (la \textit{k}-esima \textit{frequenza armonica}) e fase iniziale $\vartheta_k$.
 \bigbreak
 Prima di procedere ulteriormente, da un punto di vista formale, \`e bene dimostrare che la funzione $A_k \cos(2 \pi k f_0 t + \vartheta_k)$ sia effettivamente periodica:
 \[
@@ -697,19 +754,19 @@ la \eqref{eq:fourier_series_polar_form} pu\`o essere riscritta come segue:
 	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k) =
 	\quads{3}
 	\\
-	= A_0 + 2 \sum_{k = 1}^{\infty} A_k \frac{e^{j(2 \pi k f_0 t + \vartheta_k)} + e^{-j(2 \pi k f_0 t + \vartheta_k)}}{2} =
+	= A_0 + 2 \sum_{k = 1}^{\infty} A_k \ \frac{e^{j(2 \pi k f_0 t + \vartheta_k)} + e^{-j(2 \pi k f_0 t + \vartheta_k)}}{2} =
 	\quads{2}
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k e^{j(2 \pi k f_0 t + \vartheta_k)} + e^{-j(2 \pi k f_0 t + \vartheta_k)} =
+	= A_0 + \sum_{k = 1}^{\infty} A_k \left( e^{j(2 \pi k f_0 t + \vartheta_k)} + e^{-j(2 \pi k f_0 t + \vartheta_k)} \right) =
 	\quads{2}
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k e^{j(2 \pi k f_0 t + \vartheta_k)} + \sum_{k = 1}^{\infty} A_k e^{-j(2 \pi k f_0 t + \vartheta_k)} =
+	= A_0 + \sum_{k = 1}^{\infty} A_k \ e^{j(2 \pi k f_0 t + \vartheta_k)} + \sum_{k = 1}^{\infty} A_k \ e^{-j(2 \pi k f_0 t + \vartheta_k)} =
 	\quad
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k e^{j\vartheta_k}e^{j 2 \pi k f_0 t} + \sum_{k = 1}^{\infty} A_k e^{-j\vartheta_k}e^{-j 2 \pi k f_0 t} =
+	= A_0 + \sum_{k = 1}^{\infty} A_k \ e^{j\vartheta_k}e^{j 2 \pi k f_0 t} + \sum_{k = 1}^{\infty} A_k \ e^{-j\vartheta_k}e^{-j 2 \pi k f_0 t} =
 	\quad
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k e^{j\vartheta_k}e^{j 2 \pi k f_0 t} + \sum_{k = -\infty}^{-1} A_{-k} e^{-j\vartheta_{-k}}e^{j 2 \pi k f_0 t} =
+	= A_0 + \sum_{k = 1}^{\infty} A_k \ e^{j\vartheta_k}e^{j 2 \pi k f_0 t} + \sum_{k = -\infty}^{-1} A_{-k} \ e^{-j\vartheta_{-k}}e^{j 2 \pi k f_0 t} =
 \end{split}
 \end{equation}
 Definiamo ora le quantit\`a
@@ -718,15 +775,15 @@ Definiamo ora le quantit\`a
 	X_0 \triangleq A_0
 	\quads{6}
 	\\
-	X_k \triangleq A_k e^{j \vartheta_k} \quad , \quad k = 1, 2, 3, \dots
+	X_k \ \triangleq A_k e^{j \vartheta_k} \quad , \quad k = 1, 2, 3, \dots
 	\quad
 	\\
-	X_k \triangleq A_{-k} e^{-j \vartheta_{-k}} \quad , \quad k = \dots , -2, -1.
+	X_k \ \triangleq A_{-k} e^{-j \vartheta_{-k}} \quad , \quad k = \dots , -2, -1.
 \end{split}
 \end{equation}
 Se si effettuano le opportune sostituzioni nella \eqref{eq:fourier_series_complex_development} si ricava
 \begin{equation}\label{eq:fourier_series_complex_form}
-	x(t) = X_0 + \sum_{k = 1}^{\infty} X_k e^{j 2 \pi k f_0 t} - \sum_{k = -\infty}^{-1} X_k e^{j 2 \pi k f_0 t} = \sum_{k = -\infty}^{\infty} X_k e^{j 2 \pi k f_0 t}
+	x(t) = X_0 + \sum_{k = 1}^{\infty} X_k \ e^{j 2 \pi k f_0 t} - \sum_{k = -\infty}^{-1} X_k \ e^{j 2 \pi k f_0 t} = \sum_{k = -\infty}^{\infty} X_k \ e^{j 2 \pi k f_0 t}
 \end{equation}
 che rappresenta l'\textit{espressione in forma complessa} della serie di Fourier\footnote{Tale rappresentazione pu\`o essere estesa nella stessa forma anche al caso di segnale $x(t)$ \textit{complesso}.}.
 \bigbreak
@@ -749,15 +806,30 @@ Ovvero
 \end{equation}
 Procediamo adesso con il calcolo dell'integrale a secondo membro. Ricordando che $f_0 \cdot T_0 = 1$ si ha:
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt =\footnote{$\int f(t) e^{f(t)} \dt = e^{f(t)}$ quindi si moltiplica e divide per $\frac{d}{dt} \left(j 2 \pi (k - n) f_0 t\right) = j 2 \pi (k - n) f_0.$} \frac{1}{j 2 \pi (k - n) f_0} \int\displaylimits_{-T_0/2}^{T_0/2} j 2 \pi (k - n) f_0 e^{j 2 \pi (k - n) f_0 t} \dt =
+	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt =\footnote{$\int f(t) e^{f(t)} \dt = e^{f(t)}$ quindi si moltiplica e divide per $\frac{d}{dt} \left(j 2 \pi (k - n) f_0 t\right) = j 2 \pi (k - n) f_0.$} \frac{1}{j 2 \pi (k - n) f_0} \int\displaylimits_{-T_0/2}^{T_0/2} j 2 \pi (k - n) f_0 \ e^{j 2 \pi (k - n) f_0 t} \dt =
 \]
 \[
-	= \frac{e^{j 2 \pi (k - n) f_0 t}}{j 2 \pi (k - n) f_0}\right]_{-T_0/2}^{T_0/2}
+	= \frac{1}{j 2 \pi (k - n) f_0} \left[e^{j 2 \pi (k - n) f_0 t}\right]_{-T_0/2}^{T_0/2} = \frac{e^{j 2 \pi (k - n) f_0 (T_0/2)} - e^{j 2 \pi (k - n) f_0 (-T_0/2)}}{j 2 \pi (k - n) f_0} =
 \]
-
-
-
-Infine, l'espressione del generico coefficiente di Fourier $X_k$ \`e data da:
+\[
+	= \frac{e^{j \pi (k - n)} - e^{-j \pi (k - n)}}{j 2 \pi (k - n) f_0} =\footnote{$\frac{e^{j \pi (k - n)} - e^{-j \pi (k - n)}}{j 2} = \frac{\sin[\pi(k-n)]}{2j}$.} \ \frac{\sin[\pi (k - n)]}{\pi (k - n) f_0}
+\]
+Il valore dell'integrale \`e pertanto nullo se $k \neq n$, essendo $\sin[\pi (k - n)] = 0$. Se $k = n$ allora si ottiene $\sin[0] = 0$ e il risultato perde di significato in quanto si ottiene una forma $\frac{0}{0}$. Tuttavia, ponendo $k = n$ direttamente nell'espressione di partenza si ricava che l'integrale cercato valore in questo caso $T_0$:
+\[
+	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt =
+		\begin{cases}
+			T_0 \quad\quad k = n\\
+			0 \quad\quad \ \ k \neq n
+		\end{cases}
+\]
+Riprendendo quindi da dove avevamo lasciato la nostra ricerca per una espressione per il generico coefficiente di Fourier,
+\[
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt = \sum_{k = -\infty}^{\infty} X_k \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt.
+\]
+\[
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt = X_n T_0.
+\]
+Dalla quale si deduce infine, l'espressione del generico coefficiente di Fourier $X_k$ data da:
 \begin{equation}\label{eq:fourier_coefficient}
 	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt
 \end{equation}
@@ -844,8 +916,6 @@ Ricaviamo i coefficienti di Fourier:
 \begin{equation}
 	\begin{split}
 		X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \cos(2 \pi f_0 t) e^{-j 2 \pi n f_0 t}
-		\\
-d		
 	\end{split}
 \end{equation}
 Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento: se si confronta l'espressione in forma polare della serie di Fourier di un segnale generico
@@ -1012,11 +1082,16 @@ ricordando poi che
 \end{equation}
 ne segue che
 \begin{equation}
-	E_{x_T} = K < \infty.
+	\lim_{T \rightarrow \infty} E_{x_T} = K < \infty.
 \end{equation}
-Inoltre, per definizione
+Allora
 \begin{equation}
-	P_x = \lim_{T \rightarrow \infty} P_{x_T} = \lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} = \lim_{T \rightarrow \infty} \frac{K}{T} = 0,
+	\begin{split}
+		P_x = \lim_{T \rightarrow \infty} P_{x_T} = \lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} = \lim_{T \rightarrow \infty} E_{x_T} \cdot \lim_{T \rightarrow \infty} \frac{1}{T} =
+		\\
+		= K \cdot \lim_{T \rightarrow \infty} \frac{1}{T} = 0.
+		\quads{7}
+	\end{split}
 \end{equation}
 che dimostra la tesi iniziale.
 \end{proof}
@@ -1093,7 +1168,7 @@ Resta da dimostrare che
 	P_x = 0 \Longrightarrow x_m = 0.
 \end{equation}
 Per fare ci\`o consideriamo il segnale $x(t) = \tilde x(t)  + x_m$ , dove $x_m$ \`e il valore medio del segnale $x(t)$ stesso. Risulta quindi $\tilde x(t) \triangleq x(t) - x_m$, e quindi per definizione $\tilde x(t)$ \`e un segnale con valore medio nullo. Infatti
-\begin{equation}
+\begin{equation}\label{eq:valor_medio_x_tilde}
 \begin{split}
 	\tilde x_m = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (x(t) - x_m) \dt =
 	\quads{2}
@@ -1127,7 +1202,7 @@ Sviluppiamo ora i calcoli per ottenere un'espressione per la potenza $P_x$ del s
 	\quads{10}
 \end{split}
 \end{equation}
-Vediamo di risolvere questi tre integrali separatamente. Il primo integrale \`e ovvio
+Vediamo di risolvere questi tre limiti di integrali separatamente. Il primo integrale \`e ovvio
 \begin{equation}
 	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 \dt = P_{\tilde x}.
 \end{equation}
@@ -1152,7 +1227,7 @@ Per quanto riguarda il secondo invece, possiamo procedere cos\`i
 \end{split}
 \end{equation}
 \[
-	= 2 \cdot \Re\left(x_m^* \cdot \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt\right) = 2 \cdot \Re\left(x_m^* \ \tilde x_m\right) =\footnote{Nella (4.19) abbiamo calcolato che $\tilde x_m = 0.$} \ 2 \cdot \Re\left(x_m^* \ 0\right) = 0.
+	= 2 \cdot \Re\left(x_m^* \cdot \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt\right) = 2 \cdot \Re\left(x_m^* \ \tilde x_m\right) =\footnote{Nella \eqref{eq:valor_medio_x_tilde} abbiamo calcolato che $\tilde x_m = 0.$} \ 2 \cdot \Re\left(x_m^* \cdot 0\right) = 0.
 \]
 A questo punto, riportando i risultati ottenuti nell'integrale di partenza:
 \begin{equation}
@@ -1216,7 +1291,7 @@ Si definisce valore efficace di una funzione continua $x(t)$, la radice della me
 Se si applica il procedimento ad un segnale costante si può facilmente constatare che il suo valore efficace coincide con il valore reale. 
 
 \newpage
-\subsection{Biunivocit\`a della TSF}
+\subsection{Biunivocit\`a della trasformata serie di Fourier}
 Ogni segnale $x(t)$ che soddisfi il criterio di Dirichlet pu\`o essere rappresentato con lo sviluppo in serie di Fourier
 \begin{equation}
 	x(t) = \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t},
@@ -1225,12 +1300,12 @@ dove il particolare coefficiente $X_k$ della serie \`e dato da
 \begin{equation}
 	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
-La seconda delle due \`e una equazione di \textit{analisi} che permette di stabilire qual \`e il contenuto in termini di oscillazioni armoniche del segnale (in una parola, di \textit{analizzare} il segnale). La prima delle due, viceversa, \`e una equazione di \textit{sintesi} che, note le ampiezze e fasi delle varie armoniche (cio\`e noti i coefficienti di Fourier), permette di ricostruire, cio\`e di \textit{sintetizzare}, il segnale dato a partire dalle proprie componenti frequenziali (armoniche). Evidentemente, l'equazione di sintesi prevede l'uso di \textit{infinite} armoniche per ricostruire il segnale. D'altronde, condizione necessaria alla convergenza della serie \`e che l'ampiezza $\abs{X_n}$ delle armoniche \textit{tende a zero} quando $n \rightarrow \infty$. Questa comporta che le armoniche pi\`u "importanti" ai fini della sintesi del segnale sono in numero limitato, e che quindi la serie pu\`o essere sostituita ai fini pratici da una sommatoria di un numero finito di termini.\\
+La seconda delle due \`e una equazione di \textit{analisi} che permette di stabilire qual \`e il contenuto in termini di oscillazioni armoniche del segnale (in una parola, di \textit{analizzare} il segnale). La prima delle due, viceversa, \`e una equazione di \textit{sintesi} che, note le ampiezze e fasi delle varie armoniche (cio\`e noti i coefficienti di Fourier), permette di ricostruire, cio\`e di \textit{sintetizzare}, il segnale dato a partire dalle proprie componenti frequenziali (armoniche). Evidentemente, l'equazione di sintesi prevede l'uso di \textit{infinite} armoniche per ricostruire il segnale. D'altronde, condizione necessaria alla convergenza della serie \`e che l'ampiezza $\abs{X_n}$ delle armoniche \textit{tenda a zero} quando $n \rightarrow \infty$. Questo comporta che le armoniche pi\`u "importanti" ai fini della sintesi del segnale sono in numero limitato, e che quindi la serie pu\`o essere sostituita ai fini pratici da una sommatoria di un numero finito di termini.\\
 Le equazioni di analisi e di sintesi permettono di stabilire una corrispondenza tra il segnale $x(t)$ e la \textit{sequenza} $X_n$ costituita dai coefficienti della serie (coefficienti di Fourier o di Eulero). Indicheremo tale corrispondenza con la seguente scrittura:
 \begin{equation}
 	x(t) \iff X_n
 \end{equation}
-Questo tipo di notazione suggerisce che la conoscenza dell'andamento del segnale $x(t)$ in ambito temporale \`e di fatto \textit{equivalente} alla conoscenza della \textit{successione} dei coefficienti di Fourier $X_k$ in ambito frequenziale, nel senso che il passaggio da un dominio all'altro \`e immediato attraverso le relazioni di analisi e sintesi.
+Questo tipo di notazione suggerisce che la conoscenza dell'andamento del segnale $x(t)$ in ambito temporale \`e di fatto \textit{equivalente} alla conoscenza della \textit{successione} dei coefficienti di Fourier $X_n$ in ambito frequenziale, nel senso che il passaggio da un dominio all'altro \`e immediato attraverso le relazioni di analisi e sintesi.
 \begin{proof}
 \begin{equation}
 \begin{split}
@@ -1248,38 +1323,41 @@ Questo tipo di notazione suggerisce che la conoscenza dell'andamento del segnale
 \end{split}
 \end{equation}
 \[
-	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt + j \int\displaylimits_{-T_0/2}^{T_0/2} \sin(2 \pi (n - k) f_0 t) \dt\right]
+	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[ \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi (n - k) f_0 t] \dt + j \sin[2 \pi (n - k) f_0 t] \right) \dt \right] =
 \]
-I due integrali sono risolvibili senza effettuare eccessivi calcolo matematici, infatti
-\begin{equation}
+\[
+	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[\int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi (n - k) f_0 t] \dt + j \int\displaylimits_{-T_0/2}^{T_0/2} \sin[2 \pi (n - k) f_0 t] \dt\right].
+\]
+I due integrali sono risolvibili senza effettuare eccessivi calcoli matematici, infatti
+\[
 	\cos(2 \pi (n - k) f_0 t) = 
 		\begin{cases}
 			1 \quad se \quad n = k\\
-			0 \quad se \quad n \neq k
+			1 \quad se \quad n \neq k
 		\end{cases}
-\end{equation}
-\begin{equation}
+\]
+\[
 	\sin(2 \pi (n - k) f_0 t) = 
 		\begin{cases}
 			0 \quad se \quad n = k\\
 			0 \quad se \quad n \neq k
 		\end{cases}
-\end{equation}
+\]
 da cui segue che
-\begin{equation}
-	\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt =
+\[
+	\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt =\footnote{Poich\`e integriamo il $coseno$ lungo intervalli pari al periodo.}
 		\begin{cases}
 			T_0 \quad se \quad n = k\\
 			0 \quad \ se \quad n \neq k
 		\end{cases}
-\end{equation}
-\begin{equation}
+\]
+\[
 	\int\displaylimits_{-T_0/2}^{T_0/2} \sin(2 \pi (n - k) f_0 t) \dt =
 		\begin{cases}
 			0 \quad se \quad n = k\\
 			0 \quad se \quad n \neq k
 		\end{cases}
-\end{equation}
+\]
 Possiamo quindi riprendere
 \[
 	X_k = \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt + j \int\displaylimits_{-T_0/2}^{T_0/2} \sin(2 \pi (n - k) f_0 t) \dt\right] =
@@ -1508,14 +1586,23 @@ Tale funzione, discontinua nell'origine, consente una rappresentazione concisa d
 \bigbreak
 Il segnale gradino serve a modellare matematicamente l'accensione all'istante $t = 0$ di un generatore ideale di tensione continua. che eroga cos\`i una tensione costante per ogni valore $t \geq 0$. Il  segnale possiede energia illimitata, in quanto
 \begin{equation}
-	E_u = \underbrace{\int\displaylimits_{-\infty}^{+\infty} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ \forall \ t \ < \ 0} = \underbrace{\int\displaylimits_{0}^{+\infty} 1 \dt}_{u(t) \ = \ 1 \ \forall \ t \ > \ 0} = \left[ t \right]_0^{+\infty} = +\infty - 0 = +\infty.
+	\begin{split}
+		E_u = \int\displaylimits_{-\infty}^{+\infty} \abs{u(t)}^2 \dt = \underbrace{\int\displaylimits_{0}^{+\infty} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ \forall \ t \ < \ 0} = \underbrace{\int\displaylimits_{0}^{+\infty} 1 \dt}_{u(t) \ = \ 1 \ \forall \ t \ > \ 0} =
+		\\
+		= \left[ t \right]_0^{+\infty} = +\infty - 0 = +\infty.
+		\quads{6}
+	\end{split}
 \end{equation}
 La potenza media $P_u$, invece, \`e espressa dalla relazione
 \begin{equation}
 	\begin{split}
-		P_u = \underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ \forall \ t \ < \ 0} = \underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{0}^{T/2} \abs{u(t)}^2 \dt}_{u(t) \ = \ 1 \ \forall \ t \ > \ 0} =
+		P_u = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{u(t)}^2 \dt = \underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{0}^{T/2} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ \forall \ t \ < \ 0} =
 		\\
-		= \lim_{T \rightarrow \infty} \frac{1}{T} \left[ t \right]_0^{T/2} = \lim_{T \rightarrow \infty} \frac{1}{T} \left(\frac{T}{2} - 0\right) = \lim_{T \rightarrow \infty} \frac{1}{T} \cdot \frac{T}{2} = \frac{1}{2}.
+		= \underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{0}^{T/2} 1 \dt}_{u(t) \ = \ 1 \ \forall \ t \ > \ 0} = \lim_{T \rightarrow \infty} \frac{1}{T} \left[ t \right]_0^{T/2} =
+		\quads{4}
+		\\
+		= \lim_{T \rightarrow \infty} \frac{1}{T} \left(\frac{T}{2} - 0\right) = \lim_{T \rightarrow \infty} \frac{1}{T} \cdot \frac{T}{2} = \frac{1}{2}.
+		\quads{4}
 	\end{split}
 \end{equation}
 Il valore efficace \`e dato da
