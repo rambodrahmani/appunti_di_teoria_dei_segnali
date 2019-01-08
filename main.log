@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.5)  7 JAN 2019 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.5)  8 JAN 2019 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1661,7 +1661,21 @@ Package pdftex.def Info: images/spettro_di_ampiezza_e_di_fase.jpg  used on inpu
 t line 905.
 (pdftex.def)             Requested size: 383.0pt x 287.26407pt.
  [29] [30 <./images/spettro_di_ampiezza_e_di_fase.jpg>] [31]
-Overfull \hbox (11.01395pt too wide) detected at line 979
+<images/cosine_power_phase_spectrum.jpg, id=788, 277.035pt x 102.3825pt>
+File: images/cosine_power_phase_spectrum.jpg Graphic file (type jpg)
+<use images/cosine_power_phase_spectrum.jpg>
+Package pdftex.def Info: images/cosine_power_phase_spectrum.jpg  used on input 
+line 994.
+(pdftex.def)             Requested size: 383.0pt x 141.5442pt.
+ [32] [33 <./images/cosine_power_phase_spectrum.jpg>] [34]
+<images/sine_phase_spectrum.jpg, id=812, 264.99pt x 108.405pt>
+File: images/sine_phase_spectrum.jpg Graphic file (type jpg)
+<use images/sine_phase_spectrum.jpg>
+Package pdftex.def Info: images/sine_phase_spectrum.jpg  used on input line 112
+1.
+(pdftex.def)             Requested size: 383.0pt x 156.69359pt.
+ [35]
+Overfull \hbox (11.01395pt too wide) detected at line 1146
 \OT1/ppl/m/n/12 2 [] \OML/zplm/m/it/12 A[] []\OT1/zplm/m/n/12 (\OT1/ppl/m/n/12 
 2\OML/zplm/m/it/12 ^^Ykf[]t \OT1/zplm/m/n/12 + \OML/zplm/m/it/12 #[]\OT1/zplm/m
 /n/12 ) = \OML/zplm/m/it/12 A []\OT1/zplm/m/n/12 (\OT1/ppl/m/n/12 2\OML/zplm/m/
@@ -1669,79 +1683,79 @@ it/12 ^^Yf[]t \OMS/zplm/m/n/12 ^^@ []\OT1/zplm/m/n/12 )[][][] =[]\OMS/zplm/m/n/
 12 ) []
  []
 
-[32] [33] [34] [35] [36] [37] [38] [39] [40
+[36 <./images/sine_phase_spectrum.jpg>] [37] [38] [39] [40] [41] [42] [43]
+[44
 
-] [41] [42] [43] [44] [45] [46]
-[47] [48] [49] [50
+] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1058.
+(hyperref)                removing `subscript' on input line 1223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1058.
+(hyperref)                removing `subscript' on input line 1223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1223.
 
-[51] [52] [53]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1139.
-
+[55] [56] [57]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1139.
+(hyperref)                removing `math shift' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathrel' on input line 1139.
+(hyperref)                removing `subscript' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\std@equal' on input line 1139.
+(hyperref)                removing `\mathrel' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathrel' on input line 1139.
+(hyperref)                removing `\std@equal' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mkern' on input line 1139.
+(hyperref)                removing `\mathrel' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Rightarrow' on input line 1139.
+(hyperref)                removing `\mkern' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1139.
+(hyperref)                removing `\Rightarrow' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1139.
+(hyperref)                removing `subscript' on input line 1304.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1139.
+(hyperref)                removing `subscript' on input line 1304.
 
-[54]
-Overfull \hbox (14.36142pt too wide) detected at line 1221
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1304.
+
+[58]
+Overfull \hbox (14.36142pt too wide) detected at line 1386
 [] [] []\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 x[][]\OT1/zplm/m/n/12 (\OML/zplm/m/
 it/12 t\OT1/zplm/m/n/12 ) + \OML/zplm/m/it/12 x[][]\OT1/zplm/m/n/12 (\OML/zplm/
 m/it/12 t\OT1/zplm/m/n/12 )[]) \OML/zplm/m/it/12 dt \OT1/zplm/m/n/12 =[] [][] [
@@ -1750,68 +1764,68 @@ m/it/12 t\OT1/zplm/m/n/12 )[]) \OML/zplm/m/it/12 dt \OT1/zplm/m/n/12 =[] [][] [
 m/m/n/12 ))[]) \OML/zplm/m/it/12 dt \OT1/zplm/m/n/12 =
  []
 
-[55]
+[59]
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 1261.
- [56] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 1426.
+ [60] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) [57] [58]
-Overfull \hbox (4.56747pt too wide) detected at line 1330
+) [61] [62]
+Overfull \hbox (4.56747pt too wide) detected at line 1495
 \OT1/zplm/m/n/12 = [] [] \OML/zplm/m/it/12 X[] [] \OT1/ppl/m/n/12 .
  []
 
-[59]
-Overfull \hbox (35.56392pt too wide) detected at line 1364
+[63]
+Overfull \hbox (35.56392pt too wide) detected at line 1529
 \OML/zplm/m/it/12 X[] \OT1/zplm/m/n/12 = [] [] \OML/zplm/m/it/12 X[] [] \OT1/zp
 lm/m/n/12 =
  []
 
-[60] [61] [62]
+[64] [65] [66]
 File: images/spettro_di_ampiezza_e_di_fase.jpg Graphic file (type jpg)
 <use images/spettro_di_ampiezza_e_di_fase.jpg>
 Package pdftex.def Info: images/spettro_di_ampiezza_e_di_fase.jpg  used on inpu
-t line 1438.
+t line 1609.
 (pdftex.def)             Requested size: 383.0pt x 287.26407pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1628
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1628
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1628
 
  []
 
-[63]
+[67]
 
-LaTeX Warning: Command \textbullet invalid in math mode on input line 1477.
+LaTeX Warning: Command \textbullet invalid in math mode on input line 1648.
 
 
-LaTeX Warning: Command \textbullet invalid in math mode on input line 1477.
+LaTeX Warning: Command \textbullet invalid in math mode on input line 1648.
 
 Missing character: There is no ˆ in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1472--1480
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1651
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1472--1480
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1651
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1472--1480
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1651
 
  []
 
 
-Overfull \hbox (1.80507pt too wide) detected at line 1482
+Overfull \hbox (1.80507pt too wide) detected at line 1653
 \OML/zplm/m/it/12 y \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 x[] \OMS/zplm/m/n/12 ^
 ^@ \OML/zplm/m/it/12 x \OT1/zplm/m/n/12 =[]\OMS/zplm/m/n/12 ) \OML/zplm/m/it/12
  f\OT1/zplm/m/n/12 (\OMS/zplm/m/n/12 ^^@\OML/zplm/m/it/12 x\OT1/zplm/m/n/12 ) =
@@ -1824,71 +1838,71 @@ Overfull \hbox (1.80507pt too wide) detected at line 1482
  )\OT1/ppl/m/n/12 .
  []
 
-[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
-[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
+[68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82]
+[83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1561.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1561.
+(hyperref)                removing `math shift' on input line 1732.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1561.
+(hyperref)                removing `\sigma' on input line 1732.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1561.
+(hyperref)                removing `subscript' on input line 1732.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1561.
+(hyperref)                removing `superscript' on input line 1732.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1561.
+(hyperref)                removing `math shift' on input line 1732.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1561.
+(hyperref)                removing `math shift' on input line 1732.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1561.
+(hyperref)                removing `subscript' on input line 1732.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1561.
+(hyperref)                removing `superscript' on input line 1732.
 
-[92]
-<images/heaviside_function.png, id=1119, 326.21875pt x 244.915pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1732.
+
+[96]
+<images/heaviside_function.png, id=1149, 326.21875pt x 244.915pt>
 File: images/heaviside_function.png Graphic file (type png)
 <use images/heaviside_function.png>
-Package pdftex.def Info: images/heaviside_function.png  used on input line 1582
+Package pdftex.def Info: images/heaviside_function.png  used on input line 1753
 .
 (pdftex.def)             Requested size: 191.5pt x 143.77733pt.
- [93
+ [97
 
-] [94 <./images/heaviside_function.png>] [95]
+] [98 <./images/heaviside_function.png>] [99]
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1618.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1618.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1789.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1789.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1618.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1618.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1789.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1789.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 50EFC9C23D4057B4EB596983E05E7EC0;7606.
  ) 
 Here is how much of TeX's memory you used:
- 36340 strings out of 492639
- 636544 string characters out of 6135498
+ 36365 strings out of 492639
+ 637123 string characters out of 6135498
  728403 words of memory out of 5000000
- 39336 multiletter control sequences out of 15000+600000
+ 39344 multiletter control sequences out of 15000+600000
  611502 words of font info for 217 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,22n,80p,1054b,762s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1916,10 +1930,10 @@ ti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></us
 r/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/f
 onts/type1/urw/palatino/uplbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (103 pages, 1021973 bytes).
+Output written on main.pdf (107 pages, 1450698 bytes).
 PDF statistics:
- 1307 PDF objects out of 1440 (max. 8388607)
- 1129 compressed objects within 12 object streams
- 329 named destinations out of 1000 (max. 500000)
- 874 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1339 PDF objects out of 1440 (max. 8388607)
+ 1155 compressed objects within 12 object streams
+ 344 named destinations out of 1000 (max. 500000)
+ 884 words of extra memory for PDF output out of 10000 (max. 10000000)
 

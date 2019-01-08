@@ -719,29 +719,29 @@ Ci\`o premesso, ci poniamo una domanda: qual \`e il modo pi\`u appropriato di pr
 \end{equation}
 In particolare, le frequenze di oscillazione includono in generale la "frequenza zero" relative al termine costante, e sono \textit{multiple intere della frequenza fondamentale $f_0$}, cosicch\'e la \eqref{eq:periodic_signal_decomposition} diventa:\footnote{Il termine $A_0$ \`e dato dal fatto che il coseno in $0$ valore $1$ mentre il seno vale $0$.}
 \begin{equation}\label{eq:fourier_series_polar_form}
-	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k)
+	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t + \vartheta_n)
 \end{equation}
-dove per comodit\`a di notazione si \`e anche posto $A_0 = a_0$ e $2A_k = a_k$ per $k \geq 1$. Questa rappresentazione del segnale prende il nome di \textit{sviluppo in seria di Fourier}; pi\`u precisamente la relazione \eqref{eq:fourier_series_polar_form} costituisce l'\textit{espressione in forma polare} dello sviluppo in serie di Fourier. Essa permette dunque di rappresentare un segnale reale $x(t)$ come somma di una costante $A_0$ e di una \textit{serie} il cui \textit{k}-esimo termine, detto \textit{k}-esima \textit{oscillazione armonica} (o \textit{armonica tout-court}), ha ampiezza $A_k > 0$, frequenza $kf_0$ (la \textit{k}-esima \textit{frequenza armonica}) e fase iniziale $\vartheta_k$.
+dove per comodit\`a di notazione si \`e anche posto $A_0 = a_0$ e $2A_n = a_n$ per $n \geq 1$. Questa rappresentazione del segnale prende il nome di \textit{sviluppo in seria di Fourier}; pi\`u precisamente la relazione \eqref{eq:fourier_series_polar_form} costituisce l'\textit{espressione in forma polare} dello sviluppo in serie di Fourier. Essa permette dunque di rappresentare un segnale reale $x(t)$ come somma di una costante $A_0$ e di una \textit{serie} il cui \textit{n}-esimo termine, detto \textit{n}-esima \textit{oscillazione armonica} (o \textit{armonica tout-court}), ha ampiezza $A_n > 0$, frequenza $nf_0$ (la \textit{n}-esima \textit{frequenza armonica}) e fase iniziale $\vartheta_n$.
 \bigbreak
-Prima di procedere ulteriormente, da un punto di vista formale, \`e bene dimostrare che la funzione $A_k \cos(2 \pi k f_0 t + \vartheta_k)$ sia effettivamente periodica:
+Prima di procedere ulteriormente, da un punto di vista formale, \`e bene dimostrare che la funzione $A_n \cos(2 \pi n f_0 t + \vartheta_n)$ sia effettivamente periodica:
 \[
-	A_k \cos(2 \pi k f_0 t + \vartheta_k) = A_k \cos(2 \pi k f_0 (t - mT_0) + \vartheta_k) \quad \forall m \in \mathbb{Z}.
+	A_n \cos(2 \pi n f_0 t + \vartheta_n) = A_n \cos(2 \pi n f_0 (t - mT_0) + \vartheta_n) \quad \forall m \in \mathbb{Z}.
 \]
 \begin{proof}
 Ricordando che $f_0 \cdot T_0 = 1$ e che $T_{\cos(x)} = 2\pi$,
 \begin{equation}
 \begin{split}
-	A_k \cos(2 \pi k f_0 (t - mT_0) + \vartheta_k) =
+	A_n \cos(2 \pi n f_0 (t - mT_0) + \vartheta_n) =
 	\quads{5}
 	\\
-	= A_k \cos(2 \pi k f_0 t + \vartheta_k - 2 \pi k f_0 m T_0) =
+	= A_n \cos(2 \pi n f_0 t + \vartheta_n - 2 \pi n f_0 m T_0) =
 	\quads{4}
 	\\
-	= A_k \cos(2 \pi k f_0 t + \vartheta_k - 2 \pi k m) = A_k \cos(2 \pi k f_0 t + \vartheta_k).
+	= A_n \cos(2 \pi n f_0 t + \vartheta_n - 2 \pi n m) = A_n \cos(2 \pi n f_0 t + \vartheta_n).
 \end{split}
 \end{equation}
 \end{proof}
-Evidentemente, ogni particolare segnale $x(t)$ sar\`a caratterizzato da particolari insiemi di valori di $A_k$ e $\vartheta_k$. Dovremo quindi ricavare formule utili per il calcolo delle ampiezze e delle fasi delle varie armoniche e indicare condizioni matematiche che garantiscano la convergenza della serie \eqref{eq:fourier_series_polar_form}. Il primo di questi problemi fu risolto dal matematico L. Eulero attorno alla fine del 1700 in connessione con lo studio delle corde vibranti. e fu ripreso alcuni anni pi\`u tardi da J.B. Fourier. Quest'ultimo fu il primo a intuire l'importanza e la potenza della rappresentazione \eqref{eq:fourier_series_polar_form}, che us\`o per risolvere questioni di trasmissione del calore. La \textit{convergenza} della \eqref{eq:fourier_series_polar_form} fu dimostrata in seguito in maniera rigorosa da P.D. Dirichlet.
+Evidentemente, ogni particolare segnale $x(t)$ sar\`a caratterizzato da particolari insiemi di valori di $A_n$ e $\vartheta_n$. Dovremo quindi ricavare formule utili per il calcolo delle ampiezze e delle fasi delle varie armoniche e indicare condizioni matematiche che garantiscano la convergenza della serie \eqref{eq:fourier_series_polar_form}. Il primo di questi problemi fu risolto dal matematico L. Eulero attorno alla fine del 1700 in connessione con lo studio delle corde vibranti. e fu ripreso alcuni anni pi\`u tardi da J.B. Fourier. Quest'ultimo fu il primo a intuire l'importanza e la potenza della rappresentazione \eqref{eq:fourier_series_polar_form}, che us\`o per risolvere questioni di trasmissione del calore. La \textit{convergenza} della \eqref{eq:fourier_series_polar_form} fu dimostrata in seguito in maniera rigorosa da P.D. Dirichlet.
 
 \subsection{Sviluppo in serie di Fourier in forma complessa}
 Per semplificare gli sviluppi analitici si preferisce usare una forma alternativa della serie di Fourier. Richiamando le formule di Eulero delle funzioni trigonometriche
@@ -751,22 +751,22 @@ Per semplificare gli sviluppi analitici si preferisce usare una forma alternativ
 la \eqref{eq:fourier_series_polar_form} pu\`o essere riscritta come segue:
 \begin{equation}\label{eq:fourier_series_complex_development}
 \begin{split}
-	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k) =
+	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t + \vartheta_n) =
 	\quads{3}
 	\\
-	= A_0 + 2 \sum_{k = 1}^{\infty} A_k \ \frac{e^{j(2 \pi k f_0 t + \vartheta_k)} + e^{-j(2 \pi k f_0 t + \vartheta_k)}}{2} =
+	= A_0 + 2 \sum_{n = 1}^{\infty} A_n \ \frac{e^{j(2 \pi n f_0 t + \vartheta_n)} + e^{-j(2 \pi n f_0 t + \vartheta_n)}}{2} =
 	\quads{2}
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k \left( e^{j(2 \pi k f_0 t + \vartheta_k)} + e^{-j(2 \pi k f_0 t + \vartheta_k)} \right) =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \left( e^{j(2 \pi n f_0 t + \vartheta_n)} + e^{-j(2 \pi n f_0 t + \vartheta_n)} \right) =
 	\quads{2}
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k \ e^{j(2 \pi k f_0 t + \vartheta_k)} + \sum_{k = 1}^{\infty} A_k \ e^{-j(2 \pi k f_0 t + \vartheta_k)} =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j(2 \pi n f_0 t + \vartheta_n)} + \sum_{n = 1}^{\infty} A_n \ e^{-j(2 \pi n f_0 t + \vartheta_n)} =
 	\quad
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k \ e^{j\vartheta_k}e^{j 2 \pi k f_0 t} + \sum_{k = 1}^{\infty} A_k \ e^{-j\vartheta_k}e^{-j 2 \pi k f_0 t} =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j\vartheta_n}e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{\infty} A_n \ e^{-j\vartheta_n}e^{-j 2 \pi n f_0 t} =
 	\quad
 	\\
-	= A_0 + \sum_{k = 1}^{\infty} A_k \ e^{j\vartheta_k}e^{j 2 \pi k f_0 t} + \sum_{k = -\infty}^{-1} A_{-k} \ e^{-j\vartheta_{-k}}e^{j 2 \pi k f_0 t} =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j\vartheta_n}e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1} A_{-n} \ e^{-j\vartheta_{-n}}e^{j 2 \pi n f_0 t} =
 \end{split}
 \end{equation}
 Definiamo ora le quantit\`a
@@ -775,59 +775,59 @@ Definiamo ora le quantit\`a
 	X_0 \triangleq A_0
 	\quads{6}
 	\\
-	X_k \ \triangleq A_k e^{j \vartheta_k} \quad , \quad k = 1, 2, 3, \dots
+	X_n \ \triangleq A_n e^{j \vartheta_n} \quad , \quad n = 1, 2, 3, \dots
 	\quad
 	\\
-	X_k \ \triangleq A_{-k} e^{-j \vartheta_{-k}} \quad , \quad k = \dots , -2, -1.
+	X_n \ \triangleq A_{-n} e^{-j \vartheta_{-n}} \quad , \quad n = \dots , -2, -1.
 \end{split}
 \end{equation}
 Se si effettuano le opportune sostituzioni nella \eqref{eq:fourier_series_complex_development} si ricava
 \begin{equation}\label{eq:fourier_series_complex_form}
-	x(t) = X_0 + \sum_{k = 1}^{\infty} X_k \ e^{j 2 \pi k f_0 t} - \sum_{k = -\infty}^{-1} X_k \ e^{j 2 \pi k f_0 t} = \sum_{k = -\infty}^{\infty} X_k \ e^{j 2 \pi k f_0 t}
+	x(t) = X_0 + \sum_{n = 1}^{\infty} X_n \ e^{j 2 \pi n f_0 t} - \sum_{n = -\infty}^{-1} X_n \ e^{j 2 \pi n f_0 t} = \sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t}
 \end{equation}
 che rappresenta l'\textit{espressione in forma complessa} della serie di Fourier\footnote{Tale rappresentazione pu\`o essere estesa nella stessa forma anche al caso di segnale $x(t)$ \textit{complesso}.}.
 \bigbreak
 \noindent
-Determiniamo ora una espressione per il calcolo del generico coefficiente di Fourier $X_n$, dove $n$ deve intendersi \textit{fissato}. A tal fine moltiplichiamo entrambi i membri della \eqref{eq:fourier_series_complex_form} per il fattore $e^{-j 2 \pi n f_0 t}$
+Determiniamo ora una espressione per il calcolo del generico coefficiente di Fourier $X_k$, dove $k$ deve intendersi \textit{fissato}. A tal fine moltiplichiamo entrambi i membri della \eqref{eq:fourier_series_complex_form} per il fattore $e^{-j 2 \pi k f_0 t}$
 \begin{equation}
-	x(t) \cdot e^{-j 2 \pi n f_0 t} = \sum_{k = -\infty}^{\infty} X_k e^{j 2 \pi k f_0 t} \cdot e^{-j 2 \pi n f_0 t}
+	x(t) \cdot e^{-j 2 \pi k f_0 t} = \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t}
 \end{equation}
 e integriamo il risultato in un intervallo pari al periodo $T_0$ del segnale stesso:
 \begin{equation}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt = \int\displaylimits_{-T_0/2}^{T_0/2} \sum_{k = -\infty}^{\infty} X_k e^{j 2 \pi k f_0 t} \cdot e^{-j 2 \pi n f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \int\displaylimits_{-T_0/2}^{T_0/2} \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
-Supponendo che la serie a secondo membro converga \textit{uniformemente} (cosa che peraltro non \`e stata dimostrata fino a questo momento), possiamo considerare il termine $\sum_{k = -\infty}^{\infty} X_k$ una costante:
+Supponendo che la serie a secondo membro converga \textit{uniformemente} (cosa che peraltro non \`e stata dimostrata fino a questo momento), possiamo considerare il termine $\sum_{k = -\infty}^{\infty} X_n$ una costante:
 \begin{equation}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt = \sum_{k = -\infty}^{\infty} X_k \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi k f_0 t} \cdot e^{-j 2 \pi n f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
 Ovvero
 \begin{equation}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt = \sum_{k = -\infty}^{\infty} X_k \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt.
 \end{equation}
 Procediamo adesso con il calcolo dell'integrale a secondo membro. Ricordando che $f_0 \cdot T_0 = 1$ si ha:
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt =\footnote{$\int f(t) e^{f(t)} \dt = e^{f(t)}$ quindi si moltiplica e divide per $\frac{d}{dt} \left(j 2 \pi (k - n) f_0 t\right) = j 2 \pi (k - n) f_0.$} \frac{1}{j 2 \pi (k - n) f_0} \int\displaylimits_{-T_0/2}^{T_0/2} j 2 \pi (k - n) f_0 \ e^{j 2 \pi (k - n) f_0 t} \dt =
+	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =\footnote{$\int f(t) e^{f(t)} \dt = e^{f(t)}$ quindi si moltiplica e divide per $\frac{d}{dt} \left(j 2 \pi (n - k) f_0 t\right) = j 2 \pi (n - k) f_0.$} \frac{1}{j 2 \pi (n - k) f_0} \int\displaylimits_{-T_0/2}^{T_0/2} j 2 \pi (n - k) f_0 \ e^{j 2 \pi (n - k) f_0 t} \dt =
 \]
 \[
-	= \frac{1}{j 2 \pi (k - n) f_0} \left[e^{j 2 \pi (k - n) f_0 t}\right]_{-T_0/2}^{T_0/2} = \frac{e^{j 2 \pi (k - n) f_0 (T_0/2)} - e^{j 2 \pi (k - n) f_0 (-T_0/2)}}{j 2 \pi (k - n) f_0} =
+	= \frac{1}{j 2 \pi (n - k) f_0} \left[e^{j 2 \pi (n - k) f_0 t}\right]_{-T_0/2}^{T_0/2} = \frac{e^{j 2 \pi (n - k) f_0 (T_0/2)} - e^{j 2 \pi (n - k) f_0 (-T_0/2)}}{j 2 \pi (n - k) f_0} =
 \]
 \[
-	= \frac{e^{j \pi (k - n)} - e^{-j \pi (k - n)}}{j 2 \pi (k - n) f_0} =\footnote{$\frac{e^{j \pi (k - n)} - e^{-j \pi (k - n)}}{j 2} = \frac{\sin[\pi(k-n)]}{2j}$.} \ \frac{\sin[\pi (k - n)]}{\pi (k - n) f_0}
+	= \frac{e^{j \pi (n - k)} - e^{-j \pi (n - k)}}{j 2 \pi (n - k) f_0} =\footnote{$\frac{e^{j \pi (n - k)} - e^{-j \pi (n - k)}}{j 2} = \frac{\sin[\pi(n - k)]}{2j}$.} \ \frac{\sin[\pi (n - k)]}{\pi (n - k) f_0}
 \]
-Il valore dell'integrale \`e pertanto nullo se $k \neq n$, essendo $\sin[\pi (k - n)] = 0$. Se $k = n$ allora si ottiene $\sin[0] = 0$ e il risultato perde di significato in quanto si ottiene una forma $\frac{0}{0}$. Tuttavia, ponendo $k = n$ direttamente nell'espressione di partenza si ricava che l'integrale cercato valore in questo caso $T_0$:
+Il valore dell'integrale \`e pertanto nullo se $n \neq k$, essendo $\sin[\pi (n - k)] = 0$. Se $n = k$ allora si ottiene $\sin[0] = 0$ e il risultato perde di significato in quanto si ottiene una forma $\frac{0}{0}$. Tuttavia, ponendo $n = k$ direttamente nell'espressione di partenza si ricava che l'integrale cercato vale in questo caso $T_0$:
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt =
+	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =
 		\begin{cases}
-			T_0 \quad\quad k = n\\
-			0 \quad\quad \ \ k \neq n
+			T_0 \quad\quad n = k\\
+			0 \quad\quad \ \ n \neq k
 		\end{cases}
 \]
 Riprendendo quindi da dove avevamo lasciato la nostra ricerca per una espressione per il generico coefficiente di Fourier,
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt = \sum_{k = -\infty}^{\infty} X_k \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (k - n) f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt.
 \]
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt = X_n T_0.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = X_k T_0.
 \]
 Dalla quale si deduce infine, l'espressione del generico coefficiente di Fourier $X_k$ data da:
 \begin{equation}\label{eq:fourier_coefficient}
@@ -911,13 +911,89 @@ Consideriamo il segnale
 \begin{equation}
 	x(t) = A \cos(2 \pi f_0 t).
 \end{equation}
-Esso rappresenta un'oscillazione cosinusoidale di frequenza $f_0$; il periodo del segnale \`e $T_0 = 1/f_0$. 
-Ricaviamo i coefficienti di Fourier:
+Esso rappresenta un'oscillazione cosinusoidale di frequenza $f_0$; il periodo del segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
 \begin{equation}
 	\begin{split}
-		X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \cos(2 \pi f_0 t) e^{-j 2 \pi n f_0 t}
+		X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \cos(2 \pi f_0 t) e^{-j 2 \pi n f_0 t} \dt =
+		\\
+		= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \ \frac{e^{j 2 \pi f_0 t} + e^{-j 2 \pi f_0 t}}{2} \ e^{-j 2 \pi n f_0 t} \dt =
+		\quads{6}
+		\\
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 - n) t} \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 + n) t} \dt =
+		\quads{4}
+		\\
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 - n) t] + j \sin[2 \pi f_0 (1 - n) t] \right) \dt +
+		\quads{3}
+		\\
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 + n) t] - j \sin[2 \pi f_0 (1 + n) t] \right) \dt =
+		\quads{3}
+		\\
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		\\
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
 	\end{split}
 \end{equation}
+Osserviamo a questo punto che
+\begin{equation}
+	\begin{split}
+		\frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt =
+			\begin{cases}
+				\frac{A}{2 T_0} \cdot T_0 = \frac{A}{2} \quad\quad n = 1\\
+				\frac{A}{2 T_0} \cdot 0 = 0 \quad\quad \ \ \ n \neq 1
+			\end{cases},
+		\\
+		\frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt =
+			\begin{cases}
+				\frac{A}{2 T_0} \cdot 0 = 0 \quad\quad n = 1\\
+				\frac{A}{2 T_0} \cdot 0 = 0 \quad\quad n \neq 1
+			\end{cases}
+			\quad
+	\end{split}
+\end{equation}
+\begin{equation}
+	\begin{split}
+		\frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt =
+			\begin{cases}
+				\frac{A}{2 T_0} \cdot T_0 = \frac{A}{2} \quad\quad n = -1\\
+				\frac{A}{2 T_0} \cdot 0 = 0 \quad\quad \ \ \ n \neq -1
+			\end{cases},
+		\\
+		-\frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+			\begin{cases}
+				-\frac{A}{2 T_0} \cdot 0 = 0 \quad\quad n = -1\\
+				-\frac{A}{2 T_0} \cdot 0 = 0 \quad\quad n \neq -1
+			\end{cases}
+	\end{split}
+\end{equation}
+Ne segue quindi che
+\begin{equation}
+	\begin{split}
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		\\
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+		\\
+		=
+		\begin{cases}
+			\frac{A}{2} \quad\quad n = \pm 1\\
+			0 \quad\quad \ n \neq \pm 1
+		\end{cases}.
+		\quads{10}
+	\end{split}
+\end{equation}
+In conclusione,
+\begin{equation}
+	\begin{split}
+		\abs{X_{\pm 1}} = \frac{A}{2} \ ,\\
+		\angle X_{\pm 1} = 0.
+	\end{split}
+\end{equation}
+Gli spettri di ampiezza e fase del segnale sono mostrati nella seguente figura:
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/cosine_power_phase_spectrum.jpg}
+\caption{Spettri di ampiezza e fase del segnali cosinusoidale.}
+\end{figure}
 Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento: se si confronta l'espressione in forma polare della serie di Fourier di un segnale generico
 \begin{equation}
 	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k),
@@ -941,20 +1017,111 @@ ovvero
 \[
 	X_1 = \frac{A}{2}, X_{-1} = \frac{A}{2}; \quad X_k = 0 \ \forall k \neq \pm 1.
 \]
-Gli spettri di ampiezza e fase sono mostrati nella seguente figura:
 
 \subsubsection{Spettro di un seno}
 Consideriamo il segnale
 \begin{equation}
 	x(t) = A \sin(2 \pi f_0 t).
 \end{equation}
-Esso rappresenta un'oscillazione sinusoidale di frequenza $f_0$; il periodo del segnale \`e $T_0 = 1/f_0$. 
-Ricaviamo i coefficienti di Fourier:
+Esso rappresenta un'oscillazione sinusoidale di frequenza $f_0$; il periodo del segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
+\[
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \sin(2 \pi f_0 t) e^{-j 2 \pi n f_0 t} \dt =
+\]
+\[
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \ \frac{e^{j 2 \pi f_0 t} - e^{-j 2 \pi f_0 t}}{2j} \ e^{-j 2 \pi n f_0 t} \dt =
+\]
+\[
+	= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 - n) t} \dt - \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 + n) t} \dt =
+\]
+\[
+	= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 - n) t] + j \sin[2 \pi f_0 (1 - n) t] \right) \dt +
+\]
+\[
+	- \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 + n) t] - j \sin[2 \pi f_0 (1 + n) t] \right) \dt =
+\]
 \begin{equation}
-	X_n 
+	\begin{split}
+		= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		\\
+		- \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt + \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+	\end{split}
 \end{equation}
+Osserviamo a questo punto che
+\begin{equation}
+	\begin{split}
+		\frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt =
+			\begin{cases}
+				\frac{A}{j 2 T_0} \cdot T_0 = \frac{A}{j 2} \quad\quad n = 1\\
+				\frac{A}{j 2 T_0} \cdot 0 = 0 \quad\quad \ \ \ n \neq 1
+			\end{cases},
+		\\
+		\frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt =
+			\begin{cases}
+				\frac{A}{j 2 T_0} \cdot 0 = 0 \quad\quad n = 1\\
+				\frac{A}{j 2 T_0} \cdot 0 = 0 \quad\quad n \neq 1
+			\end{cases}
+			\quad
+	\end{split}
+\end{equation}
+\begin{equation}
+	\begin{split}
+		-\frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt =
+			\begin{cases}
+				-\frac{A}{j 2 T_0} \cdot T_0 = -\frac{A}{j 2} \quad\quad n = -1\\
+				-\frac{A}{j 2 T_0} \cdot 0 = 0 \quad\quad \ \ \ \ \ \ n \neq -1
+			\end{cases},
+		\\
+		\frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+			\begin{cases}
+				\frac{A}{j 2 T_0} \cdot 0 = 0 \quad\quad n = -1\\
+				\frac{A}{j 2 T_0} \cdot 0 = 0 \quad\quad n \neq -1
+			\end{cases}
+			\quads{2}
+	\end{split}
+\end{equation}
+Ne segue quindi che
+\begin{equation}
+	\begin{split}
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		\\
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+		\\
+		=
+		\begin{cases}
+			\frac{A}{j 2} \quad\quad \ \ \ \ n = 1\\
+			0 \quad\quad \ \ \ \ \ n \neq \pm 1\\
+			-\frac{A}{j 2} \quad\quad n = -1
+		\end{cases}.
+		\quads{10}
+	\end{split}
+\end{equation}
+In conclusione, ricordando che
+\[
+\frac{A}{j 2} \cdot \frac{j}{j} = -j \cdot \frac{A}{2},
+\]
+\[
+-\frac{A}{j 2} \cdot \frac{j}{j} = j \cdot \frac{A}{2},
+\]
+possiamo scrivere che
+\begin{equation}
+	\abs{X_{\pm 1}} = \abs{\pm j \cdot \frac{A}{2}} = \frac{A}{2} \ ,
+\end{equation}
+\begin{equation}
+	\angle X_{\pm 1} =
+		\begin{cases}
+			\angle -j \cdot \frac{A}{2} = \angle \frac{A}{2} e^{-j} = -\frac{\pi}{2}\\
+			\angle \ j \cdot \frac{A}{2} = \angle \frac{A}{2} e^{j} = \frac{\pi}{2}\\
+		\end{cases}.
+\end{equation}
+Gli spettri di ampiezza e fase del segnale sono mostrati nella seguente figura:\\
+\textbf{Lo spettro di ampiezza \`e ovviamente uguale a quello del coseno visto precedentemente, mentre lo spettro di fase \`e differente.}
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/sine_phase_spectrum.jpg}
+\caption{Spettro di fase del segnale sinusoidale.}
+\end{figure}
 Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento: riscriviamo il segnale come
-il segnale
 \begin{equation}
 	x(t) = A \sin(2 \pi f_0 t) = A \cos(2 \pi f_0 t - \frac{\pi}{2}),
 \end{equation}
@@ -981,8 +1148,6 @@ ovvero
 \[
 	X_1 = \frac{A}{2} e^{-j\frac{\pi}{2}}, X_{-1} = \frac{A}{2} e^{j\frac{\pi}{2}}; \quad X_k = 0 \ \forall k \neq \pm 1.
 \]
-Gli spettri di ampiezza e fase sono mostrati nella seguente figura:
-\textbf{Lo spettro di ampiezza \`e ovviamente uguale a quello del coseno visto precedentemente, mentre lo spettro di fase \`e differente.}
 
 \newpage
 \section{Segnali aperiodici a tempo continuo}
@@ -1363,14 +1528,17 @@ Possiamo quindi riprendere
 	X_k = \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt + j \int\displaylimits_{-T_0/2}^{T_0/2} \sin(2 \pi (n - k) f_0 t) \dt\right] =
 \]
 \[
-	=\footnote{Di tutti i termini della sommatoria $\sum_{n = -\infty}^{\infty} X_n$ rimane infatti solo il \textit{k}-esimo per cui il primo dei due integrali non \`e nullo.} \ \frac{1}{T_0} \ X_k \ T_0 = X_k,
+	=\footnote{Di tutti i termini della sommatoria $\sum_{n = -\infty}^{\infty} X_n$ rimane infatti solo il \textit{k}-esimo per cui il primo dei due integrali non \`e nullo.} \ \frac{1}{T_0} \ X_k \ T_0 = X_k
+\]
+\[
+	X_k = X_k,
 \]
 che dimostra la tesi iniziale.
 \end{proof}
 
 \newpage
 \subsection{Linearit\`a della trasformata serie di Fourier}
-Consideriamo ora due segnali $x(t)$ e $y(t)$, entrambi periodici dello stesso periodo $T_0$ e aventi come coefficienti di Fourier $X_k$ and $Y_k$. Il segnale
+Consideriamo ora due segnali $x(t)$ e $y(t)$, entrambi periodici dello stesso periodo $T_0$ e aventi come $k$-esimo coefficiente di Fourier $X_k$ and $Y_k$. Il segnale
 \begin{equation}
 	z(t) = a \cdot x(t) + b \cdot y(t)
 \end{equation}
@@ -1404,10 +1572,10 @@ Naturalmente, lo sviluppo in serie di $z(t)$ \`e costituito da una somma di osci
 \subsection{Simmetria Hermitiana della trasformata serie di Fourier}
 Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$), i coefficienti $X_k$ dello sviluppo in serie di Fourier in forma complessa di $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
 \begin{equation}
-	x(t) = x^*(t) \iff X_{-n} = X^*_{n}
+	x(t) = x^*(t) \iff X_{-k} = X^*_{k}
 \end{equation}
 \begin{equation}
-	X_{-n} = X^*_{n} \iff
+	X_{-k} = X^*_{k} \iff
 		\begin{cases}
 			\abs{X_{k}} = \abs{X_{-k}} \quads{2} (simmetria \ pari \ per \ il \ modulo)\\
 			\angle X_k = - \angle X_{-k} \quad (simmetria \ dispari \ per \ la \ fase)
@@ -1423,10 +1591,13 @@ Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$), 
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x^*(t) e^{j 2 \pi k f_0 t} \dt =
 	\quad
+	\\
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( x(t) e^{-j 2 \pi k f_0 t} \right)^* \dt =
+	\quad
 \end{split}
 \end{equation}
 \[
-=\footnote{Sia $z = re^{j\varphi} \in \mathbb{C}$ un numero complesso espresso in forma esponenziale. Allora: $\conjugate{z} = re^{-j\varphi}$ where $\conjugate{z}$ denota il complesso coniugato di $z$.} \footnote{Siano $z_1 , z_2 \in \mathbb{C}$. Allora: $(z_1 \cdot z_2)^* = \left[c_1 e^{j \varphi_1} \cdot c_2 e^{j \varphi_2}\right]^* = \left[c_1 c_2 \cdot e^{j (\varphi_1 + \varphi_2)}\right]^* = c_1 c_2 \cdot e^{-j (\varphi_1 + \varphi_2)} = c_1 e^{-j \varphi_1} \cdot c_2 e^{-j \varphi_2}$} \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt\right]^* = X^*_{k}.
+=\footnote{Sia $z = re^{j\varphi} \in \mathbb{C}$ un numero complesso espresso in forma esponenziale. Allora: $\conjugate{z} = re^{-j\varphi}$ dove $\conjugate{z}$ denota il complesso coniugato di $z$.} \footnote{Siano $z_1 , z_2 \in \mathbb{C}$. Allora: $(z_1 \cdot z_2)^* = \left[c_1 e^{j \varphi_1} \cdot c_2 e^{j \varphi_2}\right]^* = \left[c_1 c_2 \cdot e^{j (\varphi_1 + \varphi_2)}\right]^* = c_1 c_2 \cdot e^{-j (\varphi_1 + \varphi_2)} = c_1 e^{-j \varphi_1} \cdot c_2 e^{-j \varphi_2} = z_1^* \cdot z_2^*.$} \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt\right]^* = X^*_{k}.
 \]
 \end{proof}
 
