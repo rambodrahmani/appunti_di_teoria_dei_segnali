@@ -54,7 +54,27 @@
 
 \usepackage{textcomp}
 
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
 \usepackage{listings}
+
+\lstset{language=Matlab,%
+    basicstyle=\tiny,
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
 
 % Use more than one optional parameter in a new commands
 \usepackage{xargs}
@@ -459,7 +479,21 @@ Here $1$ and $0$ and the complex unit and the complex zero. We all know  that th
 Di seguito alcune definizioni essenziali necessarie per poter comprendere i contenuti presentati nei capitoli successivi.
 
 \section{Introduzione allo studio dei segnali}
+La teoria dei segnali studia le propriet\`a matematiche e statistiche dei segnali, definiti come funzioni matematiche del tempo. In generale, un segnale \`e una variazione temporale dello stato fisico di un sistema o di una grandezza fisica (potenziale o corrente elettrica per segnali elettrici, parametri di campo elettromagnetico per segnali radio) che serve per rappresentare e trasmettere messaggi ovvero informazione a distanza; il sistema in questione pu\`o essere il pi\`u disparato. In elettronica un segnale viene dunque studiato attraverso un modello matematico o funzione in cui il tempo (o il suo inverso, la frequenza) \`e considerato variabile indipendente.
+\bigbreak
 Un segnale \`e \textit{una qualunque grandezza fisica variabile cui \`e associata una informazione}.
+\bigbreak
+In generale esistono diversi tipi di segnali, ma tutti sono accomunati dall'essere in natura segnali casuali e continui e quasi mai deterministici. La teoria dei segnali studia la rappresentazione dei segnali in modo da poter poi manipolarli e trattarli matematicamente. Questa rappresentazione richiede l'uso di matematica astratta e, nel caso di segnali stocastici, della teoria della probabilit\`a.
+\bigbreak
+La teoria si suddivide in due grandi branche a seconda del tipo di segnale in esame: i "segnali determinati" o deterministici, di cui è possibile predire il valore in un qualunque istante a piacere, e i "segnali stocastici" o aleatori, il cui valore non \`e prevedibile, ma su cui \`e possibile ottenere soltanto delle propriet\`a statistiche e che rientrano nella pi\`u vasta tematica dei processi aleatori o stocastici.
+\bigbreak
+Nella trasmissione di informazione a distanza (telecomunicazione) i segnali determinati vengono utilizzati per la modulazione tramite portante, mentre i segnali contenenti l'informazione sono invece segnali aleatori, quindi processi stocastici, dal momento che l'informazione viaggia sotto forma di "innovazione" ovvero varia in maniera aleatoria nel tempo.
+\bigbreak
+I segnali periodici possono essere trattati mediante l'astrazione in uno spazio vettoriale lineare quale lo spazio di Hilbert e quindi con l'utilizzo della serie di Fourier. Per quanto riguarda i segnali non periodici, questi necessitano della trasformata di Fourier.
+\bigbreak
+Altra suddivisione \`e quella in "segnali continui" e "segnali discreti". Ad essi si associano rispettivamente le comunicazioni analogiche e le comunicazioni digitali.
+\bigbreak
+Parte della teoria dei segnali \`e intimamente connessa con la teoria dei sistemi giacch\'e molti segnali transitano come input in sistemi che elaborano ovvero trasformano il segnale in ingresso restituendo in uscita un certo output. Centrale \`e anche l'analisi di Fourier ovvero l'analisi spettrale. 
 
 \subsection{Propriet\`a elementari dei segnali determinati}
 Limitiamo per il momento la nostra attenzione ai segnali determinati e definiamo alcune grandezze di fondamentale importanza per il prosieguo dello studio.
@@ -839,27 +873,27 @@ X_0 = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) dt
 \end{equation}
 che coincide con l'espressione del valore medio $x_m$ del segnale.
 
-\subsection{Sviluppo in serie di Fourier in reale rettangolare}
+\subsection{Sviluppo in serie di Fourier in forma reale rettangolare}
 Abbiamo dunque ricavato due possibili espressioni per la serie di Fourier, e precisamente quella in forma polare \eqref{eq:fourier_series_polar_form} e quella in forma complessa \eqref{eq:fourier_series_complex_form}; ne esiste anche una terza, detta \textit{espressione in forma rettangolare}, che ricaviamo di seguito. Sviluppando le funzioni cosinusoidali della \eqref{eq:fourier_series_polar_form} si ha
 \begin{equation}
 \begin{split}
-	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k) =
+	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t + \vartheta_n) =
 	\quads{4}
 	\\
-	= A_0 + 2 \sum_{k = 1}^{\infty} A_k \left[\cos(r \pi k f_0 t) \cos\vartheta_k - \sin(2 \pi k f_0 t) \sin\vartheta_k\right],
+	= A_0 + 2 \sum_{n = 1}^{\infty} A_n \left[\cos(2 \pi n f_0 t) \cos\vartheta_n - \sin(2 \pi n f_0 t) \sin\vartheta_n\right],
 \end{split}
 \end{equation}
-dove si \`e sfruttata l'identit\`a $\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta$.\\
-Se adesso si definiscono le quantit\`a $a_0 \triangleq A_0$, $a_k \triangleq A_k \cos\vartheta_k$ e $b_k \triangleq A_k \sin\vartheta_k$, con $k = 1, 2, \dots$, si ricava la relazione cercata:
+dove \`e stata sfruttata l'identit\`a $\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta$.\\
+Se adesso si definiscono le quantit\`a $a_0 \triangleq A_0$, $a_n \triangleq A_n \cos\vartheta_n$ e $b_n \triangleq A_n \sin\vartheta_n$, con $n = 1, 2, \dots$, si ricava la relazione cercata:
 \begin{equation}
-	x(t) = a_0 + 2 \sum_{k = 1}^{\infty} \left[a_k \cos(r \pi k f_0 t) - b_k \sin(2 \pi k f_0 t)\right].
+	x(t) = a_0 + 2 \sum_{n = 1}^{\infty} \left[a_n \cos(2 \pi n f_0 t) - b_n \sin(2 \pi n f_0 t)\right].
 \end{equation}
-I coefficienti dell'espressione in forma rettangolare $a_k$, $b_k$ sono legati a quelli relativi all'espansione in forma complessa $X_k$ della relazioni
+I coefficienti dell'espressione in forma rettangolare $a_n$, $b_n$ sono legati a quelli relativi all'espansione in forma complessa $X_n$ della relazioni
 \begin{equation}
-	a_k = \Re[X_k] = \frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \cos(2 \pi k f_0 t) \dt,
+	a_n = \Re[X_n] = \frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \cos(2 \pi n f_0 t) \dt,
 \end{equation}
 \begin{equation}
-	b_k = \Im[X_k] = -\frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \sin(2 \pi k f_0 t) \dt.
+	b_n = \Im[X_n] = -\frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \sin(2 \pi n f_0 t) \dt.
 \end{equation}
 Nelle equazioni precedenti, la notazione $\int\displaylimits_{[T_0]}$ sta a indicare che l'integrale pu\`o essere esteso a un qualunque intervallo temporale di ampiezza $T_0$. Per ragioni di simmetria, \`e buona norma scegliere l'intervallo $[-T_0/2, \ T_0/2]$.
 
@@ -870,7 +904,7 @@ Ricordiamo che negli sviluppi analitici necessari per ottenere l'espressione del
 \end{equation}
 \`e stata ipotizzata la convergenza uniforme della serie ottenuta in \eqref{eq:fourier_series_complex_form}
 \begin{equation}
-	\sum_{k = -\infty}^{\infty} X_k e^{j 2 \pi k f_0 t}.
+	\sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t}.
 \end{equation}
 Per i segnali che si incontrano comunemente nella applicazioni pratiche, questa ipotesi \`e sempre verificata; spesso per\`o, per schematizzare fenomeni fisici, si fa ricorso a funzioni che non rappresentano esattamente i segnali in esame, ma che offrono il vantaggio non indifferente di una maggiore \textit{semplicit\`a}. Per tali funzioni, tuttavia, non \`e pi\`u assicurata in generale la possibilit\`a di uno sviluppo in serie di Fourier e diventa quindi necessario disporre di criteri che garantiscano la correttezza di tale sviluppo.
 \bigbreak
@@ -878,7 +912,7 @@ Un insieme di condizioni sufficienti che garantiscano la possibilit\`a di svilup
 \begin{itemize}
 	\item se $x(t)$ \`e assolutamente integrabile\footnote{Una funzione assolutamente integrabile su un intervallo \`e una funzione per la quale esiste finito l'integrale del valore assoluto della funzione sull'intervallo di integrazione considerato.} sul periodo $T_0$, vale a dire se verifica la condizione
 		\begin{equation}
-			\int\displaylimits_{-T_0/2}^{T-0/2} \abs{x(t)}^2 \dt < \infty.
+			\int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt < \infty.
 		\end{equation}
 	\item se $x(t)$ \`e continuo o presenta in un periodo un numero finito di discontinuit\`a di prima specie;
 	\item se $x(t)$ \`e derivabile rispetto al tempo nel periodo, escluso al pi\`u un numero finito di punti nei quali esistono finite la derivata destra e sinistra,\\
@@ -898,7 +932,7 @@ dove il particolare coefficiente $X_k$ della serie \`e dato da
 \begin{equation}
 	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
-Naturalmente, la sequenza $X_n$ \`e in generale complessa \textit{complessa}; per rappresentarla \`e conveniente tracciare due grafici che prendono il nome di \textit{spettro di ampiezza} e \textit{spettro di fase}\footnote{Il termine "spettro" deve intendersi nel significato di "gamma di rappresentazione, gamma di visione" e nasce in fisica nel campo della spettroscopia in cui si \textit{analizza} la composizione dei materiali attraverso le "righe" di emissione caratteristiche dei diversi elementi chimici.}. Il primo illustra l'andamento dell'ampiezza (modulo) dei coefficienti $X_k$, il secondo ne illustra l'andamento della fase, entrambi in funzione dell'ordine $k$ del coefficiente o del valore della $k$-esima frequenza armonica $k f_0$. Esempi stilizzati di queste rappresentazioni sono riportati nelle seguenti figure:
+Naturalmente, la sequenza $X_n$ \`e in generale \textit{complessa}; per rappresentarla \`e conveniente tracciare due grafici che prendono il nome di \textit{spettro di ampiezza} e \textit{spettro di fase}\footnote{Il termine "spettro" deve intendersi nel significato di "gamma di rappresentazione, gamma di visione" e nasce in fisica nel campo della spettroscopia in cui si \textit{analizza} la composizione dei materiali attraverso le "righe" di emissione caratteristiche dei diversi elementi chimici.}. Il primo illustra l'andamento dell'ampiezza (modulo) dei coefficienti $X_k$, il secondo ne illustra l'andamento della fase, entrambi in funzione dell'ordine $k$ del coefficiente o del valore della $k$-esima frequenza armonica $k f_0$. Esempi stilizzati di queste rappresentazioni sono riportati nelle seguenti figure:
 \begin{figure}[H]
 \centering
 \captionsetup{justification=centering}
@@ -1150,25 +1184,153 @@ ovvero
 \]
 
 \newpage
+\subsection{MATLAB 2.1}
+Verifichiamo le properit\`a della serie di Fourier (simmetria e linearit\`a) considerando un esempoi di segnale periodico tratto dalla realt\`a. Prendiamo, in particolare, il tracciato di un \textit{elettrocardiogramma}, che \`e stato acquisito registrando l'attivit\`a elettrica del cuore di un paziente al variare del tempo. Come \`e noto, la differenza di potenziale tra gli elettrodi applicati sul corpo del paziente (cio\`e l'elettrocardiogramma) ha un andamento tipo (pressoch\'e) periodico, in virtu\`u della regolarit\`a temporale con la quale vengono prodotti gli impulsi da parte del miocardio.\\
+Per verificare sperimentalmente quanto abbiamo appena introdotto, facciamo ricorso al pacchetto software per l'analisi e la simulazione di segnali Matlab. Riguardo all'uso di Matlab occorre fare alcune precisazioni: innanzitutto osserviamo che fino ad ora abbiamo sempre ragionato in termini di segnali \textit{analogici}, e in particolare di segnali a \textit{tempo continuo}. Matlab \`e invece un simulatore \textit{a tempo discreto}, che fa uso di segnali numerici o \textit{digitali}. Questi segnali a tempo discreto vengono introdotti per \textit{emulare} o \textit{simulare} segnali a tempo continuo (che non possono essere trattati dai computer digitali). Dunque in luogo di una forma d'onda continua nel tempo $x(t)$, Matlab elabora un vettore temporale $\boldsymbol{x}$ ottenuto, come nelle classiche procedure di calcolo numerico, raccogliendo una successione di \textit{N} valori consecutivi ed equispaziati di $x(t)$. Tali campioni vengono estratti da $x(t)$ su di un dato intervallo (dominio) temporale con un certo quanto temporale $\Delta t$; in breve, si ha che $\boldsymbol{x} = [x(0), x(\Delta t), x(2 \Delta t), \dots, x((N - 1)\Delta t)]$. Un vettore $N$-dimensionale come quello appena definito rappresenta la tipica entit\`a trattata da Matlab per emulare un segnale analogico.
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/matlab_ecg_signal.jpg}
+\caption{Elettrocardiogramma.}
+\end{figure}
+La figura precedente riporta l'andamento nel tempo della differenza di potenziale prodotta dall'attivit\`a cardiaca, registrata su di un paziente che nel passato ha subito un infarto miocardico (segnali di questo tipo sono facilmente estraibili da database disponibili online \footnote{\href{https://www.physionet.org/physiobank/database/mitdb/}{https://www.physionet.org/physiobank/database/mitdb/}}). Nel caso specifico, i dati sono immagazzinati nel file binario 'egc.dat', che utilizza 16 bit per rappresentare ciascun campione temporale, con una spaziatura temporale pari a $\Delta t = 20 ms$. Si consideri il seguente script Matlab
+\lstinputlisting[frame=single, language=Matlab]{resources/ecg.m}
+Le righe di codice
+\begin{lstlisting}[frame=single, language=Matlab]
+fOut = fopen('ecg.dat');
+numeroCampioni = 5000;
+x = fread(fOut, numeroCampioni, 'int16');
+\end{lstlisting}
+servono a leggere $500$ campioni dall'elettrocardiogramma e memorizzarli nel vettore $\boldsymbol{x}$. A questo punto, \`e possibile visualizzare l'andamento temporale del segnale con
+\begin{lstlisting}[frame=single, language=Matlab]
+deltaT = 0.02;
+tempo = (1:numeroCampioni)*deltaT;
+figure
+plot(tempo, x);
+\end{lstlisting}
+Utilizzando la funzione \texttt{fft} in dotazione a Matlab, \`e possibile valutare sperimentalmente lo spettro del segnale in esame:
+\begin{lstlisting}[frame=single, language=Matlab]
+lunghezzaFft = 2^nextpow2(numeroCampioni);
+X=fft(x, lunghezzaFft);
+X=[X(lunghezzaFft/2+1:lunghezzaFft) X(1:lunghezzaFft/2)];
+frequenza = linspace(-0.5, 0.5, length(X))/deltaT;
+figure
+plot(frequenza, abs(X));
+\end{lstlisting}
+Il risultato delle precedenti operazioni \`e lo spettro di ampiezza illustrato di seguito. Come possiamo facilmente vedere, sono presenti righe abbastanza marcate (e simmetriche rispetto all'origine), che ci consentono di affermare che lo spettro calcolato \`e quello di un segnale periodico. Possiamo identificare l'armonica fondamentale $f_0$ a un frequenza praticamente uguale a $1 Hz$; ci\`o suggerisce che la pulsazione cardiaca del paziente al momento dell'elettrocardiogramma \`e pari a $60$ battiti al minuto, come del resto ci potevamo aspettare valutando la distanza temporale $T_0$ tra due picchi consecutivi del segnale. Tuttavia, lo spettro ottenuto non \`e esattamente a righe come ci aspetteremo da un segnale periodico: le righe non sono isolate, in quanto si manifestano componenti frequenziali anche tra un'armonica e l'altra, e non sono neanche infinitamente strette. Questi fenomeni sono dovuti al fatto che il battito cardiaco \`e soltanto \textit{approssimativamente} periodico. In realt\`a anche su piccola scala temporale, l'attivit\`a miocardica ha leggere irregolarit\`a temporali e quindi lo spettro risultante non \`e perfettamente a righe.
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/matlab_ecg_spectrum.jpg}
+\caption{Elettrocardiogramma.}
+\end{figure}
+
+\newpage
+\subsection{MATLAB 2.2}
+L'equazione di sintesi 
+\begin{equation}\label{eq:fourier_series_complex_form}
+	x(t) = \sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t}
+\end{equation}
+richiede un numero illimitato di armoniche per ricostruire il segnale periodico $x(t)$. Le considerazioni fatte per\`o suggeriscono che una approssimazione soddisfacente del segnale pu\`o essere conseguita anche con un numero \textit{finito} di armoniche. Possiamo verificare "sperimentalmente" l'effetto che il troncamento a un numero finito $K$ di armoniche produce sulla sintesi del segnale \textit{treno di impulsi}
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/treno_di_impulsi.png}
+\caption{Rappresentazione grafica del segnale treno di impulsi.}
+\end{figure}
+sfruttando nuovamente il pacchetto software Matlab. Per riprodurre l'equazione di sintesi dobbiamo generare una rappresentazione vettoriale delle forme d'onda $cos(2 \pi k f_0 t)$ al variare di $k$. In altre parole, occorre calcolare i punti di queste curve utilizzando come supporto dei vettori temporali sufficientemente "fitti" (cio\`e con $\Delta t$ sufficientemente piccolo), che siano in grado di approssimare in maniera accurata l'andamento dei segnali a tempo continuo.
+Si consideri il seguente script Matlab
+\lstinputlisting[frame=single, language=Matlab]{resources/fourier_approximation.m}
+Di seguito i grafici del seguente script per $K = 3$, $K = 7$, $K = 15$, $K = 30$.
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_1.jpg}
+\caption{Approssimazione del treno di impulsi per $K = 3$.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_2.jpg}
+\caption{Approssimazione del treno di impulsi per $K = 7$.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_3.jpg}
+\caption{Approssimazione del treno di impulsi per $K = 15$.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_4.jpg}
+\caption{Approssimazione del treno di impulsi per $K = 30$.}
+\end{figure}
+\`E interessante fornire la rappresentazione grafica dell'approssimazione che si ottiene per un valore crescete di $K$ sino ad ottenere una quasi perfetta rappresentazione del segnale treno di impulsi.
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_5.jpg}
+\caption{Approssimazione del treno di impulsi per $K = 300$.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_6.jpg}
+\caption{Approssimazione del treno di impulsi per $K = 3000$.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_7.jpg}
+\caption{Approssimazione del treno di impulsi per $K = 30000$.}
+\end{figure}
+In tutto questo volume gli esperimenti Matlab vengono usati come semplici strumenti per chiarire ulteriormente i concetti esposti nel testo. Non vi \`e nessuna pretesa di \textit{far apprendere} Matlab con le sue regole e/o i suoi trucchi. Non possiamo pre\`o sottrarci, di quando in quando, a qualche osservazione di carattere generale sulla programmazione. In particolare, il codice presentato qui sopra merita alcune precisazioni riguardo allo stile di scrittura. Come \`e possibile notare soprattutto nelle ultime righe, l'approccio adottato fa un uso apprezzabile di \textit{matrici} e \textit{vettori}, a scapito talvolta della leggibilit\`a del codice. Per esempio, invece di utilizzare un ciclo \texttt{for} in funzione dei coefficienti \texttt{k} per l'equazione di sintesi come in
+\begin{lstlisting}[frame=single, language=Matlab]
+% X_0 = 1/2
+componenteContinua = 0.5;
+
+% inizializzazione del vettore del segnale approssimante
+ones(1, length(tempoNormalizzato));
+
+% ciclo sui vari indici k
+for k = 1:2:K
+	% X_k
+	coefficienteK = 2/(k*pi)*(-1)^((k-1)/2);
+	
+	% aggiornamento del vettore segnale approssimante mediante l'equazione di sintesi
+	xApprossimante = xApprossimante + coefficienteK * cos(2*pi*k*tempoNormalizzato);
+end
+\end{lstlisting}
+(e come si farebbe utilizzando un linguaggio di programmazione general-purpose, per esempio C o C++), abbiamo usato il prodotto matriciale tra vettore \texttt{coseni} e \texttt{coefficienti}. Il motivo di tale scelta risiede nel fatto che Matlab, a differenza di altri ambienti di simulazione numerica e altri linguaggi di programmazione, \`e ottimizzato per il calcolo matriciale. \`E buona regola, quindi, sfruttare questa caratteristica, adottando uno stile di programmazione conseguente, per ottenere un codice efficiente che venga eseguito velocemente sulla piattaforma di calcolo utilizzata.
+
+\newpage
 \section{Segnali aperiodici a tempo continuo}
+Segnali aperiodici a tempo continuo\change{Work in progress.}
 
 \newpage
 \section{Sistemi monodimensionali a tempo continuo}
+Sistemi monodimensionali a tempo continuo\change{Work in progress.}
 
 \newpage
 \section{Segnali a tempo discreto}
+Segnali a tempo discreto\change{Work in progress.}
 
 \newpage
 \section{Sistemi monodimensionali a tempo discreto}
+Sistemi monodimensionali a tempo discreto\change{Work in progress.}
 
 \newpage
 \section{Progetto di filtri digitali}
+Progetto di filtri digitali\change{Work in progress.}
 
 \newpage
 \section{Richiami di teoria della probabilit\`a}
+Richiami di teoria della probabilit\`a\change{Work in progress.}
 
 \newpage
 \section{Segnali aleatori a tempo continuo e a tempo discreto}
+Segnali aleatori a tempo continuo e a tempo discreto\change{Work in progress.}
 
 %------------------------------------------------
 %	Chapter 3: Esame Scritto
@@ -1538,66 +1700,106 @@ che dimostra la tesi iniziale.
 
 \newpage
 \subsection{Linearit\`a della trasformata serie di Fourier}
-Consideriamo ora due segnali $x(t)$ e $y(t)$, entrambi periodici dello stesso periodo $T_0$ e aventi come $k$-esimo coefficiente di Fourier $X_k$ and $Y_k$. Il segnale
+Consideriamo ora due segnali $x(t)$ e $y(t)$, entrambi periodici dello stesso periodo $T_0$ e aventi coefficienti di Fourier $X_n$ and $Y_n$. Il segnale
 \begin{equation}
 	z(t) = a \cdot x(t) + b \cdot y(t)
 \end{equation}
-data dalla combinazione lineare di $x(t)$ e $y(t)$, \`e periodico di periodo $T_0$, e il coefficiente \textit{k}-esimo $Z_k$ della sua serie di Fourier \`e
+data dalla combinazione lineare di $x(t)$ e $y(t)$, \`e periodico di periodo $T_0$, e ha coefficienti di Fourier $Z_n$ dati da
 \begin{equation}
-	Z_k = a \cdot X_k + b \cdot Y_k.
+	Z_n = a \cdot X_n + b \cdot Y_n.
 \end{equation}
 \begin{proof}
 Tale propriet\`a di linearit\`a dei coefficienti di Fourier deriva direttamente dalla medesima propriet\`a dell'integrale; si ha infatti che
 \begin{equation}
 \begin{split}
-	Z_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} z(t) e^{-j 2 \pi k f_0 t} \dt =
+	Z_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} z(t) e^{-j 2 \pi n f_0 t} \dt =
 	\quads{8}
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left[a \cdot x(t) + b \cdot y(t)\right] e^{-j 2 \pi k f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left[a \cdot x(t) + b \cdot y(t)\right] e^{-j 2 \pi n f_0 t} \dt =
 	\quads{6}
 	\\
-	= \frac{a}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt + \frac{b}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi k f_0 t} \dt =
+	= \frac{a}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt + \frac{b}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t} \dt =
 	\quads{3}
 	\\
-	= a \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt \right] + b \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi k f_0 t} \dt \right] =
+	= a \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt \right] + b \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t} \dt \right] =
 	\\
-	= a \cdot X_k + b \cdot Y_k.
+	= a \cdot X_n + b \cdot Y_n.
 	\quads{11}
 \end{split}
 \end{equation}
 Naturalmente, lo sviluppo in serie di $z(t)$ \`e costituito da una somma di oscillazioni aventi \textit{le stesse frequenze} di quelle che compongono i segnali $x(t)$ e $y(t)$; pertanto, in generale una combinazione lineare di segnali aventi medesimo periodo $T_0$ non introduce nuove armoniche.\\
 \end{proof}
-
-\newpage
-\subsection{Simmetria Hermitiana della trasformata serie di Fourier}
-Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$), i coefficienti $X_k$ dello sviluppo in serie di Fourier in forma complessa di $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
+\subsubsection{Esercizio}
+Consideriamo il segnale
 \begin{equation}
-	x(t) = x^*(t) \iff X_{-k} = X^*_{k}
+	x(t) = A \cos(2 \pi f_0 t + \varphi) + A \sin(2 \pi f_0 t + \varphi),
+\end{equation}
+ricaviamo i coefficienti di Fourier.
+\bigbreak\noindent
+Notiamo subito che
+\begin{equation}
+	x(t) = A x_1(t) + A x_2(t),
+\end{equation}
+dove
+\begin{equation}
+	x_1(t) = \cos(2 \pi f_0 t + \varphi),
 \end{equation}
 \begin{equation}
-	X_{-k} = X^*_{k} \iff
+	x_2(t) = \sin(2 \pi f_0 t + \varphi),
+\end{equation}
+dalla propriet\`a di linearit\`a dei coefficienti di Fourier deriva che
+\begin{equation}
+	X_n = A X_{1n} + B X_{2n}.
+\end{equation}
+Procediamo con i calcoli.
+
+In conclusione possiamo quindi scrivere
+\begin{equation}
+	X_n =
 		\begin{cases}
-			\abs{X_{k}} = \abs{X_{-k}} \quads{2} (simmetria \ pari \ per \ il \ modulo)\\
-			\angle X_k = - \angle X_{-k} \quad (simmetria \ dispari \ per \ la \ fase)
+			A X_{1n} \quad\quad\quad n = \pm 1\\
+			B X_{2n} \quad\quad\quad n = \pm 2
+		\end{cases}
+			=
+			\begin{cases}
+				\frac{A}{2} e^{j \varphi} \quad\quad\quad n = 1\\
+				\frac{A}{2} e^{-j \varphi} \quad\quad n = -1\\
+				\frac{B}{2} e^{-j \frac{\pi}{2}} \quad\quad n = 2\\
+				\frac{B}{2} e^{j \frac{\pi}{2}} \quad\quad\quad n = -2\\
+				0  \quad\quad\quad\quad\quad n \neq \pm 1, \ \pm 2.
+			\end{cases}
+\end{equation}
+\change{To be continued.}
+\newpage
+\subsection{Simmetria Hermitiana della trasformata serie di Fourier}
+Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$), i coefficienti $X_n$ dello sviluppo in serie di Fourier in forma complessa di $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
+\begin{equation}
+	x(t) = x^*(t) \iff X_{-n} = X^*_{n}
+\end{equation}
+\begin{equation}
+	X_{-n} = X^*_{n} \iff
+		\begin{cases}
+			\abs{X_{n}} = \abs{X_{-n}} \quads{2} (simmetria \ pari \ per \ il \ modulo)\\
+			\angle X_n = - \angle X_{-n} \quad (simmetria \ dispari \ per \ la \ fase)
 		\end{cases}
 \end{equation}
 \begin{proof}
 \begin{equation}
 \begin{split}
-	X_{-k} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi (-k) f_0 t} \dt =
+	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi (-n) f_0 t} \dt =
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{j 2 \pi k f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{j 2 \pi n f_0 t} \dt =
 	\quad
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x^*(t) e^{j 2 \pi k f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x^*(t) e^{j 2 \pi n f_0 t} \dt =
 	\quad
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( x(t) e^{-j 2 \pi k f_0 t} \right)^* \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( x(t) e^{-j 2 \pi n f_0 t} \right)^* \dt =
 	\quad
 \end{split}
 \end{equation}
 \[
-=\footnote{Sia $z = re^{j\varphi} \in \mathbb{C}$ un numero complesso espresso in forma esponenziale. Allora: $\conjugate{z} = re^{-j\varphi}$ dove $\conjugate{z}$ denota il complesso coniugato di $z$.} \footnote{Siano $z_1 , z_2 \in \mathbb{C}$. Allora: $(z_1 \cdot z_2)^* = \left[c_1 e^{j \varphi_1} \cdot c_2 e^{j \varphi_2}\right]^* = \left[c_1 c_2 \cdot e^{j (\varphi_1 + \varphi_2)}\right]^* = c_1 c_2 \cdot e^{-j (\varphi_1 + \varphi_2)} = c_1 e^{-j \varphi_1} \cdot c_2 e^{-j \varphi_2} = z_1^* \cdot z_2^*.$} \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt\right]^* = X^*_{k}.
+=\footnote{Sia $z = re^{j\varphi} \in \mathbb{C}$ un numero complesso espresso in forma esponenziale. Allora: $\conjugate{z} = re^{-j\varphi}$ dove $\conjugate{z}$ denota il complesso coniugato di $z$.} \footnote{Siano $z_1 , z_2 \in \mathbb{C}$. Allora: $(z_1 \cdot z_2)^* = \left[c_1 e^{j \varphi_1} \cdot c_2 e^{j \varphi_2}\right]^* = \left[c_1 c_2 \cdot e^{j (\varphi_1 + \varphi_2)}\right]^* = c_1 c_2 \cdot e^{-j (\varphi_1 + \varphi_2)} = c_1 e^{-j \varphi_1} \cdot c_2 e^{-j \varphi_2} = z_1^* \cdot z_2^*.$} \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt\right]^* = X^*_{n}.
 \]
 \end{proof}
 
@@ -1612,7 +1814,7 @@ Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$), 
 
 \subsubsection{Simmetria pari per il modulo}
 \begin{equation}
-	\abs{X_k} = \abs{X_{-k}}
+	\abs{X_n} = \abs{X_{-n}}
 \end{equation}
 Sia $f(x)$ una funzione a valori reali di variabile reale e sia $D \subset \mathbb{R}$ il suo dominio. Allora $f$ \`e [aro se per ogni $x \in D$ vale l'equazione:
 \[
@@ -1631,7 +1833,7 @@ Esempio pratico:
 
 \subsubsection{Simmetria dispari per la fase}
 \begin{equation}
-	\angle X_k = - \angle X_{-k}
+	\angle X_n = - \angle X_{-n}
 \end{equation}
 Sia $f(x)$ una funzione a valori reali di variabile reale e sia $D \subset \mathbb{R}$ il suo dominio. Allora $f$ \`e dispari se per ogni $x \in D$ sussiste l'equazione:
 \[
@@ -1653,13 +1855,186 @@ Esempio pratico:
 \]
 
 \newpage
-\subsection{Trasformata di un segnale reale e pari}
+\subsection{Trasformata di un segnale (periodico) reale e pari}
+Si consideri un segnale periodico
+\[
+	x(t) = x(t + T_0) \quad \forall t,
+\]
+reale
+\[
+	x(t) = x^*(t),
+\]
+e pari
+\[
+	x(t) = x(-t).
+\]
+In tal caso, il generico coefficiente di Fourier di $x(t)$ \`e una funzione pari di $n$:
+\[
+	X_n = X_{-n}.
+\]
+\begin{proof}
+\[
+	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{j 2 \pi n f_0 t} \dt =
+\]
+\[
+	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0} \int\displaylimits_{T_0/2}^{-T_0/2} x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} -\dt^{'} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = 
+\]
+\[
+	\footnote{Dato che $x(t) = x(-t)$.}= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = X_n.
+\]
+\end{proof}
+\noindent
+Che dimostra la nostra tesi.
+\bigbreak
+Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e sia pari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per $x(t)$ in forma semplificata. Infatti:
+\[
+	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1} X_n e^{j 2 \pi n f_0 t} =
+\]
+\[
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
+\]
+\[
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
+\]
+\[
+	\footnote{$X_n = X_{-n}$. dato che $x(t)$ \`e un segnale pari.}= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_n e^{-j 2 \pi n f_0 t} =
+\]
+\[
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} + e^{-j 2 \pi n f_0 t}\right) =
+\]
+\[
+	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \left( \frac{e^{j 2 \pi n f_0 t} + e^{-j 2 \pi n f_0 t}}{2} \right) =
+\]
+\[
+	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \cos(2 \pi n f_0 t).
+\]
+Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i termini sinusoidale per i segnali periodici pari.\\ Questo risultato \`e logicamente giustificabile se si riflette sul fatto che il coseno \`e una funzione pari mentre il seno \`e una funzione dispari e quindi poco si presta a rappresentare l'andamento periodico di un segnale pari.
 
 \newpage
-\subsection{Trasformata di un segnale reale e dispari}
+\subsection{Trasformata di un segnale (periodico) reale e dispari}
+Si consideri un segnale periodico
+\[
+	x(t) = x(t + T_0) \quad \forall t,
+\]
+reale
+\[
+	x(t) = x^*(t),
+\]
+e dispari
+\[
+	x(t) = -x(-t).
+\]
+In tal caso, il generico coefficiente di Fourier di $x(t)$ \`e una funzione dispari di $n$:
+\[
+	X_n = -X_{-n}.
+\]
+\begin{proof}
+\[
+	-X_{-n} = -\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} -x(t) e^{j 2 \pi n f_0 t} \dt =
+\]
+\[
+	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0} \int\displaylimits_{T_0/2}^{-T_0/2} -x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} -\dt^{'} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} -x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = 
+\]
+\[
+	\footnote{Dato che $x(t) = -x(-t)$.}= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = X_n.
+\]
+\end{proof}
+\noindent
+Che dimostra la nostra tesi.
+\bigbreak
+Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e sia dispari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per $x(t)$ in forma semplificata. Infatti:
+\[
+	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1} X_n e^{j 2 \pi n f_0 t} =
+\]
+\[
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
+\]
+\[
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
+\]
+\[
+	\footnote{$X_n = -X_{-n}$. dato che $x(t)$ \`e un segnale dispari.}= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} (-X_n) e^{-j 2 \pi n f_0 t} =
+\]
+\[
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} - \sum_{n = 1}^{+\infty} X_n e^{-j 2 \pi n f_0 t} =
+\]
+\[
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}\right) =
+\]
+\[
+	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \left( \frac{e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}}{2} \right) =
+\]
+\[
+	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \sin(2 \pi n f_0 t).
+\]
+Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i termini cosinusoidale per i segnali periodici dispari.\\ Questo risultato \`e logicamente giustificabile se si riflette sul fatto che il seno \`e una funzione dispari mentre il coseno \`e una funzione pari e quindi poco si presta a rappresentare l'andamento periodico di un segnale dispari.
 
 \newpage
-\subsection{Trasformata di un segnale reale alternativo}
+\subsection{Trasformata di un segnale (periodico) reale alternativo}
+Si consideri un segnale periodico
+\[
+	x(t) = x(t + T_0) \quad \forall t,
+\]
+reale
+\[
+	x(t) = x^*(t),
+\]
+e alternativo
+\[
+	x(t) = -x\left(t + \frac{T_0}{2}\right).\footnote{L'andamento del segnale in un qualunque semiperiodo $t_0 \leq t < t_0 + T_0/2$ \`e identico all'andamento nel semiperiodo precedente $t_0 - T_0/2 \leq t < t$, cambiato di segno.}
+\]
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/segnale_alternativo.jpg}
+\caption{Rappresentazione grafica di un segnale alternativo.}
+\end{figure}
+In tal caso, il generico coefficiente $X_n$ di Fourier di $x(t)$ \`e \textit{nullo} per tutti i valori pari dell'indice $n$:
+\begin{equation}
+	X_n =
+		\begin{cases}
+			\frac{2}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt \quad\quad\quad\quad n \ dispari\\
+			0 \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \ \ \ n \ pari
+		\end{cases}.
+\end{equation}
+\begin{proof}
+\[
+	X_{n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt =
+\]
+\[
+	\footnote{Avendo suddiviso l'intervallo di integrazione $[-T_0/2, T_0/2]$ in due smeiperiodi.}= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{0} x(t) e^{-j 2 \pi n f_0 t} \dt + \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt =
+\]
+Il primo integrale pu\`o essere riscritto come
+\[
+	\footnote{Poniamo $t^{'} = t + \frac{T_0}{2}$ nel primo integrale. Quindi $t = t^{'} - \frac{T_0}{2}$, e se $t$ va da $-\frac{T_0}{2}$ a $0$, allora $t^{'} = t + \frac{T_0}{2}$ va da $0$ a $\frac{T_0}{2}$.}= \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x\left(t^{'} - \frac{T_0}{2}\right) e^{-j 2 \pi n f_0 \left(t^{'} - \frac{T_0}{2}\right)} \dt^{'} = \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 \left(t^{'} - \frac{T_0}{2}\right)} \dt^{'} =
+\]
+\[
+	= \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} e^{j 2 \pi n f_0 \frac{T_0}{2}} \dt^{'} = \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} e^{j \pi n} \dt^{'} =
+\]
+\[
+	\footnote{$e^{j \pi n} = \cos(\pi n) - j \sin(\pi n) = \pm 1$.}= \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} (-1)^{n} \dt^{'} = (-1)^{n} \cdot \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} =
+\]
+\[
+	= -\frac{(-1)^{n}}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt.
+\]
+Ora, sostituendo questo risultato nell'integrale iniziale
+
+\[
+	= -\frac{(-1)^{n}}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt + \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} =
+\]
+\[
+	= \left[1 - (-1)^{n}\right] \cdot \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'}.
+\]
+Ne segue quindi che
+\[
+	X_n = \frac{2}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt \quad\quad\quad n \ dispari
+\]
+\[
+	X_n = 0 \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad n \ pari.
+\]
+\end{proof}
+\noindent
+Che dimostra la nostra tesi.
 
 \newpage
 \subsection{Biunivocit\`a della Trasformata Continua di Fourier (TCF)}
