@@ -221,7 +221,7 @@ and \(b\) is known to be the imaginary part
 \[b = \Im(z).\]
 The complex number system can be defined as the algebraic extension of the ordinary real numbers by an imaginary number \(i\). \(i\) is a solution of the equation \(x^2 = −1\). Because no real number satisfies this equation, since the square of a real number cannot be negative, \(i\) is called an imaginary number.
 \bigbreak
-A real number a can be regarded as a complex number \(a + 0i\) whose imaginary part is \(0\). A purely imaginary number \(bi\) is a complex number \(0 + bi\) whose real part is zero. It is common to write \(a\) for \(a + 0i\) and \(bi\) for \(0 + bi\).
+A real number \(a\) can be regarded as a complex number \(a + 0i\) whose imaginary part is \(0\). A purely imaginary number \(bi\) is a complex number \(0 + bi\) whose real part is zero. It is common to write \(a\) for \(a + 0i\) and \(bi\) for \(0 + bi\).
 \bigbreak
 The complex numbers give rise to the fundamental theorem of algebra: every non-constant polynomial equation with complex coefficients has a complex solution. This property is true of the complex numbers, but not the reals. The 16th century Italian mathematician Gerolamo Cardano is credited with introducing complex numbers in his attempts to find solutions to cubic equations.
 \bigbreak
@@ -249,7 +249,7 @@ An alternative way of defining a point P in the complex plane, other than using 
 \bigbreak
 The absolute value (or modulus or magnitude) of a complex number \(z = a + bj\) is
 \[c = \abs{z} = \sqrt{a^2 + b^2}\]
-If \(z\) is a real number (that is, if \(y = 0\)), then \(c = \abs{x}\). That is, the absolute value of a real number equals its absolute value as a complex number. By Pythagoras' theorem, the absolute value of complex number is the distance to the origin of the point representing the complex number in the complex plane. 
+If \(z\) is a real number (that is, if \(b = 0\)), then \(c = \abs{a}\). That is, the absolute value of a real number equals its absolute value as a complex number. By Pythagoras' theorem, the absolute value of complex number is the distance to the origin of the point representing the complex number in the complex plane. 
 \bigbreak
 The argument of \(z\) (in many applications referred to as the "phase") is the angle of the radius \(OP\) with the positive real axis, and is written as \(arg(z)\). As with the modulus, the argument can be found from the rectangular form \(a + bj\):
 \[
@@ -276,7 +276,7 @@ If we are given the polar form to start with, the following formulas can be used
 \subsection{Trigonometric form}
 The trigonometric form of a complex number \(z = a + bj\) can be easily obtain by substitution in our previous equations:
 \[
-	z = a + bj = c \cdot \cos(\varphi) + c \cdot sin(\varphi) \cdot j = c \cdot (\cos(\varphi) + j \cdot sin(\varphi)) = c \cdot e^{j \varphi}
+	z = a + bj = c \cdot \cos(\varphi) + c \cdot sin(\varphi) \cdot j = c \cdot (\cos(\varphi) + j \cdot sin(\varphi)).
 \]
 
 \subsection{Euler's formula}
@@ -1962,10 +1962,10 @@ Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e 
 	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}\right) =
 \]
 \[
-	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \left( \frac{e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}}{2} \right) =
+	= X_0 + 2 j \cdot \sum_{n = 1}^{+\infty} X_n \left( \frac{e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}}{2 j} \right) =
 \]
 \[
-	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \sin(2 \pi n f_0 t).
+	= X_0 + 2 j \cdot \sum_{n = 1}^{+\infty} X_n \sin(2 \pi n f_0 t).
 \]
 Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i termini cosinusoidale per i segnali periodici dispari.\\ Questo risultato \`e logicamente giustificabile se si riflette sul fatto che il seno \`e una funzione dispari mentre il coseno \`e una funzione pari e quindi poco si presta a rappresentare l'andamento periodico di un segnale dispari.
 
