@@ -145,6 +145,7 @@
 
 \newcommand{\quads}[1]{\Repeat{#1}{\quad}}
 \newcommand{\dt}{\ dt}
+\newcommand{\df}{\ df}
 
 \newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
 \newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
@@ -528,7 +529,7 @@ Siamo ora in grado di estendere a $x(t)$ questa definizione di \textit{potenza m
 \end{equation}
 Analogamente a quanto visto per l'energia di un segnale, per i segnali a tempo discreto abbiamo
 \begin{equation}
-	P_x = \triangleq \lim_{N \rightarrow \infty} \frac{1}{2N + 1} \sum_{n = -N}^{N} \abs{x[n]}^2
+	P_x \triangleq \lim_{N \rightarrow \infty} \frac{1}{2N + 1} \sum_{n = -N}^{N} \abs{x[n]}^2
 \end{equation}
 dove la notazione \`e autoesplicativa.
 Talvolta torna utile usare il \textit{valore efficace} di un segnale a potenza finita, definito sia per i segnali a tempo continuo, sia per quelli a tempo discreto come
@@ -1306,7 +1307,180 @@ end
 
 \newpage
 \section{Segnali aperiodici a tempo continuo}
-Segnali aperiodici a tempo continuo\change{Work in progress.}
+Consideriamo il segnale detto \textit{treno di impulsi rettangolari di durata $T$ e periodo $T_0$} ($T < T_0$) rappresentato nella seguente figura
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/treno_di_impulsi_rettangolari.jpg}
+\caption{Treno di impulsi rettangolari.}
+\end{figure}
+Per questo segnale si definisce il parametro \textit{duty-factor} (o \textit{duty-cycle}) $\delta = T/T_0$ che esprime il rapporto tra la durata $T$ di ciascun impulso e il periodo di ripetizione del segnale $T_0$.
+\bigbreak
+Per rappresentare pi\`u comodamente il treno di impulsi rettangolari \`e utile definire la funzione
+\begin{equation}
+	rect(\alpha) \triangleq
+		\begin{cases}
+			1 \quad\quad \abs{\alpha} < \frac{1}{2}\\
+			\frac{1}{2} \quad\quad \abs{\alpha} = \frac{1}{2}\\
+			0 \quad\quad altrove
+		\end{cases}
+\end{equation}
+il cui andamento (impulso rettangolare) \`e rappresentato nella seguente figura
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/rect_alpha.jpg}
+\caption{Grafico della funzione $rect(\alpha)$.}
+\end{figure}
+Ancora una volta, questa semplice funzione rappresenta un'astrazione matematica utile per schematizzare impulsi che hanno \textit{tempo di salita} molto breve rispetto alla propria \textit{durata}. Utilizzando questa funzione \`e possibile scrivere la seguente espressione per il treno di impulsi rettangolari
+\begin{equation}
+	x(t) = \sum_{n = -\infty}^{+\infty} a \cdot rect\left(\frac{t - nT_0}{T}\right).
+\end{equation}
+Il segnale periodico \textit{treno di impulsi rettangolari} \`e infatti rappresentato come la \textit{sovrapposizione} di infiniti impulsi di durata $T$ ottenuti ciascuno \textit{ritardando} l'impulso "base" non periodico $tect(t/T)$ di $nT_0$ secondi con $n = 0. \pm1,\dots$. In questo caso diremo che l'impulso-base $rect(t/T)$ \`e stato \textit{periodicizzato} con periodo di ripetizione $T_0$ per ottenere il segnale $x(t)$.
+\bigbreak
+Calcoliamo ora i coefficienti dello sviluppo in serie del segnale in esame:
+\[
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} a \cdot rect(t/T) e^{-j 2 \pi n f_0 t} \dt
+\]
+\begin{equation}
+	\begin{split}
+		= \underbrace{\frac{1}{T_0} \int\displaylimits_{-T/2}^{T/2} a \cdot e^{-j 2 \pi n f_0 t} \dt}_{rect(t/T) \ = \ 1 \ \forall \ t \ \in \ [-T/2, \ T/2]} = \frac{1}{T_0} \int\displaylimits_{-T/2}^{T/2} a \cdot \frac{-j 2 \pi n f_0}{-j 2 \pi n f_0} \cdot e^{-j 2 \pi n f_0 t} \dt =
+		\\
+		= \frac{a}{T_0} \cdot \frac{1}{-j 2 \pi n f_0} \int\displaylimits_{-T/2}^{T/2} (-j 2 \pi n f_0) \cdot e^{-j 2 \pi n f_0 t} \dt =
+		\quads{4}
+		\\
+		= \frac{a}{T_0} \cdot \left[\frac{e^{-j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)}\right]_{-T/2}^{T/2} = \frac{a}{T_0} \cdot \frac{e^{-j 2 \pi n f_0 t} - e^{j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)} =
+		\quads{3}
+		\\
+		= \frac{a}{T_0} \frac{e^{-j 2 \pi n f_0 t} - e^{j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)} = \frac{a}{T_0} \frac{sin(\pi n f_0 T}{\pi n / T_0} =
+		\quads{4}
+		\\
+		= \frac{a T}{T_0} \cdot \frac{sin(\pi n T/T_0)}{\pi n T/T_0}
+		\quads{9}
+		\\
+	\end{split}
+\end{equation}
+Per esprimere $X_n$ in una forma pi\`u concisa, definiamo una ulteriore funzione notevole
+\begin{equation}
+	sinc(\alpha) \triangleq \frac{sin(\pi \alpha)}{\pi \alpha},
+\end{equation}
+per cui
+\begin{equation}
+	X_n = \frac{aT}{T_0} sinc(\frac{kT}{T_0}) = a \delta sinc(k \delta),
+\end{equation}
+dove si \`e posto $\delta = T/T_0$ e $\alpha = kT/T_0$.
+
+\subsection{Dalla serie all'integrale di Fourier}
+Il significato e l'importanza della rappresentazione in serie di Fourier di un segnale periodico a tempo continuo sono stati ampiamente discussi nella sezione precedente. Molti segnali che si osservano nei fenomeni naturali non sono per\`o periodico. Sorge allora immediata la questione della possibilit\`a di ottenere una scomposizione simile alla serie di Fourier \textit{anche per i segnali aperiodici}. \textbf{\`E possibile cio\`e rappresentare anche un segnale non periodico come una opportuna \textit{sovrapposizione} di segnali elementari, in particolare sinusoidali?}
+\bigbreak
+Per rispondere a questa domanda, consideriamo come caso di studio il segnale aperiodico appena introdotto impulso rettangolare:
+\[
+	x(t) = rect(\frac{t}{T}).
+\]
+Mettiamo ora in relazione questo segnale con il treno di impulsi rettangolari \textit{periodico}
+\begin{equation}
+	x_p(t) = \sum_{n = -\infty}^{+\infty} x(t - nT_0) = \sum_{n = -\infty}^{+\infty} rect\left(\frac{t - nT_0}{T}\right)
+\end{equation}
+di cui gi\`a conosciamo la rappresentazione in serie di Fourier. Come \`e chiaro, $x_p(t)$ \`e ottenuto \textit{periodicizzando} $x(t)$ con periodo di ripetizione $T_0$, come suggerito nella seguente figura
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/treno_di_impulsi_rettangolari_2.jpg}
+\caption{Treno di impulsi rettangolari.}
+\end{figure}
+Il segnale originario $x(t)$ pu\`o essere considerato come una sorta di caso-limite di un segnale periodico: partendo da $x_p(t)$, si riottiene l'impulso "base" $x(t)$ centrato in $t = 0$ se si pensa di \textit{fare una periodicizzazione di periodo $T-0 \rightarrow \infty$}. Al di l\`a del particolare esempio, se si costruisce un segnale periodico $x_p(t)$ per periodicizzazione del segnale aperiodico $x(t)$ \`e vero in generale che
+\begin{equation}
+	x(t) = \lim_{T_0 \rightarrow \infty} x_p(t).
+\end{equation}
+Naturalmente, il segnale $x_p(t)$, essendo periodico di periodo $T_0$, pu\`o essere rappresentato mediante serie di Fourier tramite la ben nota relazione
+\[
+	x_p(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t}
+\]
+con $f_0 = 1/T_0$ e con i coefficienti di Fourier $X_n$ dati da
+\[
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt.
+\]
+\textbf{Questo ci fa gi\`a intuire che, dato che il segnale $x(t)$ rappresenta un caso limite del segnale $x(t)$, sia possibile ottenere una espressione tramite i coefficienti di Fourier anche per il segnale aperiodico $x(t)$ come caso limite dei coefficienti di Fourier del segnale periodico $x_p(t)$.}
+\bigbreak
+Nase adesso l'esigenza di stabilire il comportamento della serie di Fourier e dei relativi coefficienti $X_n$ quando $T_0 \rightarrow \infty$.\\
+Osserviamo innanzitutto che aumentando il periodo di ripetizione $T_0$ si riduce la frequenza fondamenta $f_ 0 = 1/T_0$, e quindi si riduce la differenza tra due generiche frequenze armoniche consecutive. Ci\`o determina un infittimento dello spettro del segnale se la scala di rappresentazione delle frequenze resta la stessa. Inoltre, dalla relazione 
+\[
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt
+\]
+\`e facile vedere che l'\textit{ampiezza} dei coefficienti tende a ridursi man mano che $T_0$ cresce; al limite, per $T_0 \rightarrow \infty$, lo spettro di $x_p(t)$ tende a divenire sempre pi\`u fitto e ad assumere valori sempre pi\`u piccoli per tutte le frequenze armoniche.\\
+Si pu\`o facilmente ovviare al problema della riduzione delle ampiezze delle righe spettrali definendo, per ciascuna delle frequenze armoniche $nf_0$, una sorta di "coefficiente di Fourier modificato"
+\begin{equation}
+	X(nf_0) \triangleq T_0 \cdot X_n \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt
+\end{equation}
+che evidentemente non \`e una quantit\`a che tende a zero per $T_0 \rightarrow \infty$.\\
+Riscriviamo dunque l'espansione in serie di Fourier di $x_p(t)$ usando il coefficiente modificato\footnote{Dato che si \`e posto $X(nf_0) \triangleq T_0 \cdot X_n$, ne segue che $X_n = X(n f_0) \frac{1}{T_0} = X(n f_0) \cdot f_0$.}
+\begin{equation}
+	x_p(t) = \sum_{n = -\infty}^{+\infty} X(n f_0) e^{j 2 \pi n f_0 t} \cdot f_0.
+\end{equation}
+Possiamo adesso effettuare il passaggio cruciale al limite per $T+0 \rightarrow \infty$ (ovvero per $f_0 \rightarrow 0$. Il segnale periodico $x_p(t)$ al primo membro si trasforma nel segnale aperiodico $x(t)$. La somma a secondo membro invece, per definizione, si trasforma in un \textit{integrale} e si ottiene uno \textit{sviluppo} del segnale aperiodico $x(t)$ tramite
+\begin{equation}\label{eq:fourier_integral}
+	x(t) = \int\displaylimits_{-\infty}^{+\infty} X(f) e^{j 2 \pi f t} \df.
+\end{equation}
+Il segnale aperiodico \`e dunque rappresentabile attraverso il cosiddetto \textbf{integrale di Fourier}. Resta da determinare l'espressione della funzione $X(f)$ che compare nell'integrando della \eqref{eq:fourier_integral}. Innanzitutto, \`e chiaro che tale quantit\`a risulta una funzione complessa della variabile continua $f$, che mantiene il significato di \textit{frequenza}. L'espressione di $X(f)$ si ottiene passando al limite per $T_0 \rightarrow \infty$ nella definizione di $X(nf_0)$ del coefficiente di Fourier modificato:
+\begin{equation}\label{eq:tcf_coefficient}
+	X(f) = \lim_{\begin{split}T_0 \rightarrow \infty \\ f_0 \rightarrow 0\end{split}} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt = \int\displaylimits_{-\infty}^{\infty} x_p(t) e^{-j 2 \pi n f_0 t} \dt 
+\end{equation}
+che rappresenta la \textbf{trasformata continua di Fourier del segnale $x(t)$}.\\
+In maniera euristica, possiamo dire che la variabile continua $f$ \`e, in un certo senso, il limite della variabile discreta $n f_0$ di partenza, quando $f_0 \rightarrow 0$.
+\bigbreak
+\textbf{Commentiamo il risultato ottenuto.} Nella serie di Fourier per un segnale periodico, quest'ultimo viene rappresentato mediante componenti sinusoidali a frequenze in \textit{relazione armonica}, cio\`e tutti multiple di un'unica fondamentale, nonch\`e di ampiezza \textit{finita}. Nel caso del segnale aperiodico, la \eqref{eq:fourier_integral}, detta anche \textit{antitrasformata di Fourier} (o \textit{trasformata inversa di Fourier}), permette ancora di rappresentare il segnale aperiodico $x(t)$ come la sovrapposizione di componenti sinusoidali, ma questa volta di ampiezza \textit{infinitesima} $\abs{X(f)} \df$ e di frequenza $f$ variabile \textit{con continuit\`a} su tutto l'asse reale. In altre parole, il segnale aperiodico \`e visto come un segnale periodico "di periodo illimitato" e quindi con frequenza fondamentale "infinitamente piccola".
+\bigbreak
+Riportiamo di nuovo le due equazioni relative alla rappresentazione del segnale aperiodico, osservando che in generale indicheremo con la lettera maiuscola $X$, $Y$, $Z$, la trasformata di Fourier rispettivamente di un segnale $x$, $y$, $z$:
+\begin{equation}
+	x(t) = \int\displaylimits_{-\infty}^{\infty} X(f) e^{j 2 \pi f t} \df \quad\quad , \quad\quad X(f) = \int\displaylimits_{-\infty}^{\infty} x(t) e^{-j 2 \pi f t} dt.
+\end{equation}
+La prima delle due rappresenta evidentemente un'equazione di \textit{sintesi} che permette di rappresentale il segnale come sovrapposizione di segnali elementari, ed \`e chiaramente analoga alla \eqref{eq:fourier_series_complex_form} per i segnali periodici; la seconda \`e un'equazione di \textit{analisi}, analoga alla \eqref{eq:fourier_coefficient}, che permette di determinare il \textit{peso} che le varie componenti frequenziali (a tutte le possibili frequenze variabili con continuit\`a da $-\infty$ a $+\infty$). hanno nella composizione di $x(t)$. Tali relazioni mettono in corrispondenza un segnale del tempo con la propria trasformata di Fourier, funzione a valori complessi della frequenza. Come d'uso anche con i coefficienti di Fourier, questa relazione viene riassunta con la notazione
+\begin{equation}
+	x(t) \iff X(f).
+\end{equation}
+Un modo alternativo di indicare sinteticamente le operazioni di trasformata e antitrasformata \`e quello mutuato alla notazione degli operatori caratteristica dell'analisi funzione:
+\begin{equation}
+	X(f) = \mathcal{F}[x(t)] \quads{2} , \quads{2} x(t) = \mathcal{F}^{-1}[X(f)]
+\end{equation}
+
+\subsubsection{Esempio}
+Conseideriamo il segnale impulso rettangolare
+\[
+	x(t) = rect\left(\frac{t}{T}\right)
+\]
+e calcoliamone la trasformata di Fourier $X(f)$. questa \`e data da
+\[
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} rect\left(\frac{t}{T}\right) e^{-j 2 \pi f t} \dt =
+\]
+\[
+	= \int\displaylimits_{-T/2}^{T/2} rect\left(\frac{t}{T}\right) e^{-j 2 \pi f t} \dt = \int\displaylimits_{-T/2}^{T/2} 1 \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+	= \left[\frac{e^{-j 2 \pi f t}}{-j 2 \pi f}\right]_{-T/2}^{T/2} = \frac{\sin(\pi f T)}{\pi f}.
+\]
+Gli spettri di ampiezza e di fase del segnale $x(t)$ sono rappresentati nella seguente figura
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=1.0\textwidth]{images/spettro_rect_alpha.jpg}
+\caption{Spetro \textbf{a)} di ampiezza e \textbf{b)} di fase dell'impulso rettangolare di ampiezza unitaria.}
+\end{figure}
+
+\newpage
+\subsection{Criteri di esistenza della Trasformata Continua di Fourier (TCF)}
+Indichiamo adesso delle condizioni sufficienti per la rappresentazione del segnale $x(t)$ attraverso la propria trasformata di Fourier $X(f)$, nel senso gi\`a discusso riguardo la serie di Fourier. Se tali condizioni sono soddisfatte \`e possibile affermare che la conoscenza dell'andamento nel tempo del segnale $x(t)$ \`e equivalente alla conoscenza dell'andamento frequenziale della relativa trasformata di Fourier.\\
+Una prima condizione sufficiente afferma che se il segnale $x(t)$ ha energia finita
+\begin{equation}
+	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt < \ +\infty
+\end{equation}
+allora la trasformata $X(f)$ esiste, nel senso che l'integrale \eqref{eq:tcf_coefficient} \`e convergente e la rappresentazione del segnale come integrale di Fourier (antitrasformata) coincide quasi ovunque con il segnale originario $x(t)$.\\
+Un secondo criterio sufficiente meno restrittivo (criterio di Dirichlet) pu\`o essere enunciato come segue:
+\begin{itemize}
+	\item \textit{se} il segnale $x(t)$ \`e assolutamente sommabile, ovvero $\int_{-\infty}^{\infty} \abs{x(t)} \dt < +\infty;$
+	\item \textit{se} in qualunque intervallo finito $t_1 \leq t \leq t_2$ il segnale $x(t)$ ha un numero finito di discotinuit\`a di prima specie;
+	\item \textit{se} in qualunque intervallo finito $t_1 \leq t \leq t_2$ il senglae $x(t)$ ha un numero finito di massimi e minimi;
+\end{itemize}
+\textit{allora} il segnale \`e rappresentabile come integrale di Fourier - cio\`e l'antitrasformata della sua propria trasformata di Fourier $X(f)$.
 
 \newpage
 \section{Sistemi monodimensionali a tempo continuo}
@@ -2037,19 +2211,58 @@ Ne segue quindi che
 Che dimostra la nostra tesi.
 
 \newpage
-\subsection{Biunivocit\`a della Trasformata Continua di Fourier (TCF)}
+\subsection{Simmetrie della Trasformata Continua di Fourier (TCF)}
+La funzione complessa $X(f)$ pu\`o essere rappresentata in forma polare o in forma rettangolare:
+\begin{equation}
+	X(f) = R(f) + j I(f)
+\end{equation}
+dove $R(f)$ e $I(f)$ ne rappresentano rispettivamente la parte reale e la parte immaginaria.\\
+Vogliamo ora stabilire in che modo le propriet\`a della funzione $x(t)$ si riflettano sulla sua trasformata.
+
+\subsubsection{Simmetrie della TCF: Simmetria Hermitiana}
+Supponiamo che $x(t)$ sia una funzione \textit{reale}:
+\[
+	x(t) = x^*(t)
+\]
+in tal caso $X(f)$ \`e \textit{Hermitiana}
+\[
+	X(-f) = X^*(f).
+\]
+In tal caso le funzione $R(f)$ e $I(f)$ si ricavano immediatamente dalle seguenti relazioni
+\[
+	R(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cos(2 \pi f t) \dt,
+\]
+\[
+	I(f) = -\int\displaylimits_{-\infty}^{+\infty} x(t) \sin(2 \pi f t) \dt.
+\]
+Da queste espressioni si vede chiaramente che
+\[
+	R(f) = R(-f),
+\]
+\[
+	I(f) = -I(f),
+\]
+ovvero la parte reale della trasformata di un segnale reale \`e una funzione \textit{pari} della frequenza, mentre la parte immaginaria ne \`e una funzione \textit{dispari}.\\
+La medesima propriet\`a si riflette ovviamente anche nelle funzioni $A(f)$ e $\vartheta(f)$:
+\[
+	A(f) = A(-f),
+\]
+\[
+	\vartheta(f) = - \vartheta(-f),
+\]
+per cui lo spettro di ampiezza di un segnale reale \`e una funzione pari, mentre il suo spettro di fase \`e dispari.
+\begin{proof}
+
+\end{proof}
+
+\subsubsection{Simmetrie della TCF: Segnali reali e pari}
+
+
+\subsubsection{Simmetrie della TCF: Segnali reali e dispari}
+
 
 \newpage
-\subsection{Linearit\`a della Trasformata Continua di Fourier (TCF)}
-
-\newpage
-\subsection{Simmetrie della TCF: Simmetria Hermitiana}
-
-\newpage
-\subsection{Simmetrie della TCF: Segnali reali e pari}
-
-\newpage
-\subsection{Simmetrie della TCF: Segnali reali e dispari}
+\subsection{Linearit\`a della TCF}
 
 \newpage
 \subsection{Dualit\`a della TCF}
