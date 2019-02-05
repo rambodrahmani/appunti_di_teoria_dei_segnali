@@ -1336,7 +1336,7 @@ Ancora una volta, questa semplice funzione rappresenta un'astrazione matematica 
 \begin{equation}
 	x(t) = \sum_{n = -\infty}^{+\infty} a \cdot rect\left(\frac{t - nT_0}{T}\right).
 \end{equation}
-Il segnale periodico \textit{treno di impulsi rettangolari} \`e infatti rappresentato come la \textit{sovrapposizione} di infiniti impulsi di durata $T$ ottenuti ciascuno \textit{ritardando} l'impulso "base" non periodico $tect(t/T)$ di $nT_0$ secondi con $n = 0. \pm1,\dots$. In questo caso diremo che l'impulso-base $rect(t/T)$ \`e stato \textit{periodicizzato} con periodo di ripetizione $T_0$ per ottenere il segnale $x(t)$.
+Il segnale periodico \textit{treno di impulsi rettangolari} \`e infatti rappresentato come la \textit{sovrapposizione} di infiniti impulsi di durata $T$ ottenuti ciascuno \textit{ritardando} l'impulso "base" non periodico $rect(t/T)$ di $nT_0$ secondi con $n = 0. \pm1,\dots$. In questo caso diremo che l'impulso-base $rect(t/T)$ \`e stato \textit{periodicizzato} con periodo di ripetizione $T_0$ per ottenere il segnale $x(t)$.
 \bigbreak
 Calcoliamo ora i coefficienti dello sviluppo in serie del segnale in esame:
 \[
@@ -2252,26 +2252,123 @@ La medesima propriet\`a si riflette ovviamente anche nelle funzioni $A(f)$ e $\v
 \]
 per cui lo spettro di ampiezza di un segnale reale \`e una funzione pari, mentre il suo spettro di fase \`e dispari.
 \begin{proof}
-
+\[
+	X(-f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (-f) t} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{j 2 \pi f t} \dt =
+\]
+\[
+	= \int\displaylimits_{-\infty}^{+\infty} x^*(t) \cdot e^{j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} \left[x(t) \cdot e^{-j 2 \pi f t}\right]^* \dt =
+\]
+\[
+	= \left[\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt\right]^* = X^*(f).
+\]
 \end{proof}
 
+\newpage
 \subsubsection{Simmetrie della TCF: Segnali reali e pari}
+Supponiamo adesso che $x(t)$ sia un segnale \textit{reale e pari}
+\[
+	x(t) = x^*(t) \quad\quad , \quad\quad x(t) = x(-t).
+\]
+Le relazioni che esprimono al parte reale e quella immaginaria del suo coefficiente di Fourier si semplificano rispettivamente in
+\[
+	R(f) = 2 \int\displaylimits_{0}^{\infty} x(t) \cos(2 \pi f t) \dt,
+\]
+\[
+	I(f) = 0.
+\]
+Ovvero, la trasformata di un segnale reale e pari \`e una funzione \textit{reale e pari} della frequenza
+\[
+	X(f) = X^*(f) \quad\quad , \quad\quad X(f) = X(-f).
+\]
+\begin{proof}
+$X(f) = X^*(f)$
+\[
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt =\footnote{Poniamo $t = -t^{'}$, $dt = dt^{'}$, se $t$ va da $-\infty$ a $+\infty$, allora $t^{'}$ va da $+\infty$ a $-\infty$.} \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{-j 2 \pi f (-t^{'})} \ -dt^{'} =
+\]
+\[
+	= - \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty} x(-t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} =
+\]
+\[
+	= \int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty} x^*(t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} =
+\]
+\[
+	= \int\displaylimits_{-\infty}^{+\infty} \left[x(t^{'}) \cdot e^{-j 2 \pi f t^{'}}\right]^* \ dt^{'} = \left[\int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{-j 2 \pi f t^{'}} \ dt^{'}\right]^* = X^*(f).
+\]
+\end{proof}
+\begin{proof}
+$X(f) = X(-f)$
+\[
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt = \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{-j 2 \pi f (-t^{'})} \ -dt^{'} =
+\]
+\[
+	= - \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{-j 2 \pi (-f) t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{-j 2 \pi (-f) t^{'}} \ dt^{'} = X(-f).
+\]
+\end{proof}
 
-
+\newpage
 \subsubsection{Simmetrie della TCF: Segnali reali e dispari}
-
+Supponiamo adesso che $x(t)$ sia un segnale \textit{reale e dispari}
+\[
+	x(t) = x^*(t) \quad\quad , \quad\quad x(t) = -x(-t).
+\]
+Le relazioni che esprimono al parte reale e quella immaginaria del suo coefficiente di Fourier si semplificano rispettivamente in
+\[
+	R(f) = 0,
+\]
+\[
+	I(f) = -2 \int\displaylimits_{0}^{\infty} x(t) sin(2 \pi f t) \dt.
+\]
+Ovvero, la trasformata di un segnale reale e dispari \`e una funzione \textit{immaginaria pura e dispari} della frequenza
+\[
+	X(f) = -X(-f) \quad\quad , \quad\quad X(f) \ immaginario \ puro.
+\]
+\begin{proof}
+$X(f) = -X(-f)$
+\[
+	-X(-f) = -\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (-f) t} \dt = \int\displaylimits_{-\infty}^{+\infty} -x(t) \cdot e^{j 2 \pi f t} \dt =
+\]
+\[
+	= \int\displaylimits_{-\infty}^{+\infty} -x(-t^{'}) \cdot e^{j 2 \pi f (-t^{'})} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{-j 2 \pi f t^{'}} \dt = X(f).
+\]
+\end{proof}
 
 \newpage
-\subsection{Linearit\`a della TCF}
+\subsection{Teoremi sulla trasformata continua di Fourier}
+Dalla definizione di trasformata, seguono facilmente alcune ulteriori propriet\`a, che chiameremo \textit{teoremi}, estremamente utili nel calcolo delle trasformate dei segnali e comunque nell'uso dell'analisi di Fourier di carattere applicativo.
+
+\subsubsection{Linearit\`a della TCF}
+Pu\`o essere conveniente in molti casi esprimere un segnale $x(t)$ come combinazione lineare di due segnali $x_1(t)$ e $x_2(t)$:
+\[
+	x(t) = a \cdot x_1(t) + b \cdot x_2(t),
+\]
+con $a$ e $b$ costanti. Indicando come di consueto con $X_1(f)$ e $X_2(f)$ le trasformate rispettivamente dei segnali $x_1(t)$ e $x_2(t)$, la trasformata $X(f)$ di $x(t)$ \`e allora
+\[
+	X(f) = a \cdot X_1(f) + b \cdot X_2(f).
+\]
+\begin{proof}
+Infatti, applicando semplicemente la definizione trasformata, la tesi segue sfruttando la propriet\`a di linearit\`a dell'integrale stesso
+\[
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} [a \cdot x_1(t) + b \cdot x_2(t)] \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+	= \int\displaylimits_{-\infty}^{+\infty} a \cdot x_1(t) \cdot e^{-j 2 \pi f t} \dt + \int\displaylimits_{-\infty}^{+\infty} b \cdot x_2(t) \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+	= a \cdot \int\displaylimits_{-\infty}^{+\infty} x_1(t) \cdot e^{-j 2 \pi f t} \dt + b \cdot \int\displaylimits_{-\infty}^{+\infty} x_2(t) \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+	= a \cdot X_1(f) + b \cdot X_2(f).
+\]
+\end{proof}
 
 \newpage
-\subsection{Dualit\`a della TCF}
+\subsubsection{Dualit\`a della TCF}
 
 \newpage
-\subsection{TCF: Teorema del ritardo}
+\subsubsection{TCF: Teorema del ritardo}
 
 \newpage
-\subsection{TCF: Teorema del cambiamento di scala}
+\subsubsection{TCF: Teorema del cambiamento di scala}
 
 \newpage
 \subsection{Teorema della Modulazione}
