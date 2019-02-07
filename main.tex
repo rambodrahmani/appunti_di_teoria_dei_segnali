@@ -10,12 +10,14 @@
 % Rambod Rahmani <rambodrahmani@autistici.org>
 %
 % License: 
-% Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+% License.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%------------------------------------------------
+
 \documentclass[12pt,oneside,openany]{memoir}
 
 \usepackage[utf8x]{inputenc}
@@ -54,26 +56,27 @@
 
 \usepackage{textcomp}
 
-\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mygreen}{RGB}{28,172,0}
 \definecolor{mylilas}{RGB}{170,55,241}
 
 \usepackage{listings}
 
-\lstset{language=Matlab,%
-    basicstyle=\tiny,
-    breaklines=true,%
-    morekeywords={matlab2tikz},
-    keywordstyle=\color{blue},%
-    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
-    identifierstyle=\color{black},%
-    stringstyle=\color{mylilas},
-    commentstyle=\color{mygreen},%
-    showstringspaces=false,%without this there will be a symbol in the places where there is a space
-    numbers=left,%
-    numberstyle={\tiny \color{black}},% size of the numbers
-    numbersep=9pt, % this defines how far the numbers are from the text
-    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
-    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+\lstset{
+	language=Matlab,
+	basicstyle=\tiny,
+	breaklines=true,
+	morekeywords={matlab2tikz},
+	keywordstyle=\color{blue},
+	morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+	identifierstyle=\color{black},
+	stringstyle=\color{mylilas},
+	commentstyle=\color{mygreen},
+	showstringspaces=false,%without this there will be a symbol in the places where there is a space
+	numbers=left,
+	numberstyle={\tiny \color{black}},% size of the numbers
+	numbersep=9pt, % this defines how far the numbers are from the text
+	emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+	%emph=[2]{word1,word2}, emphstyle=[2]{style},    
 }
 
 % Use more than one optional parameter in a new commands
@@ -91,28 +94,28 @@
 % dedication environment
 \newenvironment{dedication}
 {
-    % blank page before dedication
-    \afterpage{\blankpage}
-    % we want a new page
-    \clearpage
-    % no header and footer
-    \thispagestyle{empty}
-    % some space at the top 
-    \vspace*{\stretch{1}}
-    % the text is in italics
-    \itshape
-    % flush to the right margin
-    \raggedleft
-    % blank page after dedication
-    \afterpage{\blankpage}
+	% blank page before dedication
+	\afterpage{\blankpage}
+	% we want a new page
+	\clearpage
+	% no header and footer
+	\thispagestyle{empty}
+	% some space at the top 
+	\vspace*{\stretch{1}}
+	% the text is in italics
+	\itshape
+	% flush to the right margin
+	\raggedleft
+	% blank page after dedication
+	\afterpage{\blankpage}
 }
 {
-    % end the paragraph
-    \par
-    % space at bottom is one times that at the top
-    \vspace{\stretch{1}}
-    % finish off the page
-    \clearpage
+	% end the paragraph
+	\par
+	% space at bottom is one times that at the top
+	\vspace{\stretch{1}}
+	% finish off the page
+	\clearpage
 }
 
 \newtheorem{theorem}{Teorema}[section]
@@ -155,9 +158,9 @@
 
 \epigraphfontsize{\small\itshape}
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
+%------------------------------------------------
+% TITLE PAGE
+%------------------------------------------------
 
 \title{%
   Esame Comunicazioni Numeriche\\
@@ -176,7 +179,7 @@ To my twin brother Ramtin.
 \end{dedication}
 
 %------------------------------------------------
-%	TABLE OF CONTENTS
+% TABLE OF CONTENTS
 %------------------------------------------------
 
 \newpage
@@ -188,7 +191,7 @@ To my twin brother Ramtin.
 \pagenumbering{arabic}
 
 %------------------------------------------------
-%	Chapter 0: Disclaimer
+% Chapter 0: Disclaimer
 %------------------------------------------------
 
 \chapter{Disclaimer}
@@ -201,7 +204,7 @@ This work is licensed under:
 \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{\includegraphics[height=\baselineskip]{images/cc_88x31.png} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.
 
 %------------------------------------------------
-%	Chapter 1: Introduction
+% Chapter 1: Introduction
 %------------------------------------------------
 
 \chapter{Introduction}
@@ -210,7 +213,7 @@ This work is licensed under:
 This chapter contains introductory concepts needed as theoretical base to be able to understand the signal processing topics presented in this text.
 
 %------------------------------------------------
-%	Section 1: Complex Numbers
+% Section 1: Complex Numbers
 %------------------------------------------------
 
 \section{Complex Numbers}
@@ -404,7 +407,7 @@ In our goal toward finding a geometric interpretation of complex multiplication,
 Let's interpret this statement geometrically. The point \(z\) in \(\mathbb{C}\) is located $a$ units to the right of the imaginary axis and $b$ units above the real axis. The point $z \cdot j$ is located $b$ units to the left, and $a$ units above. What has happened is that multiplying by $j$ has rotated the point $z$ $90^{\degree}$ counterclockwise around the origin to the point $zj$. Stated more briefly, multiplication by $j$ gives a $90^{\degree}$ counterclockwise rotation about 0. You can analyze what multiplication by $-j$ does in the same way. You'll find that multiplication by $-j$ gives a $90^{\degree}$ clockwise rotation about 0. When we don't specify counterclockwise or clockwise when referring to rotations or angles, we'll follow the standard convention that counterclockwise is intended. Then we can say that multiplication by $-j$ gives a $-90^{\degree}$ rotation about 0, or if you prefer, a $270^{\degree}$ rotation about 0. 
 
 %------------------------------------------------
-%	Section 2: The Field C of Complex Numbers
+% Section 2: The Field C of Complex Numbers
 %------------------------------------------------
 
 \newpage
@@ -471,7 +474,7 @@ Here $1$ and $0$ and the complex unit and the complex zero. We all know  that th
 \improvement[inline]{To be continued.}
 
 %------------------------------------------------
-%	Chapter 2: Concetti Preliminari
+% Chapter 2: Concetti Preliminari
 %------------------------------------------------
 
 \chapter{Concetti Preliminari}
@@ -2141,7 +2144,11 @@ Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e 
 \[
 	= X_0 + 2 j \cdot \sum_{n = 1}^{+\infty} X_n \sin(2 \pi n f_0 t).
 \]
-Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i termini cosinusoidale per i segnali periodici dispari.\\ Questo risultato \`e logicamente giustificabile se si riflette sul fatto che il seno \`e una funzione dispari mentre il coseno \`e una funzione pari e quindi poco si presta a rappresentare l'andamento periodico di un segnale dispari.
+Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i
+termini cosinusoidale per i segnali periodici dispari.\\ Questo risultato \`e
+logicamente giustificabile se si riflette sul fatto che il seno \`e una funzione
+dispari mentre il coseno \`e una funzione pari e quindi poco si presta a
+rappresentare l'andamento periodico di un segnale dispari.
 
 \newpage
 \subsection{Trasformata di un segnale (periodico) reale alternativo}
@@ -2212,12 +2219,15 @@ Che dimostra la nostra tesi.
 
 \newpage
 \subsection{Simmetrie della Trasformata Continua di Fourier (TCF)}
-La funzione complessa $X(f)$ pu\`o essere rappresentata in forma polare o in forma rettangolare:
+La funzione complessa $X(f)$ pu\`o essere rappresentata in forma polare o in
+forma rettangolare:
 \begin{equation}
 	X(f) = R(f) + j I(f)
 \end{equation}
-dove $R(f)$ e $I(f)$ ne rappresentano rispettivamente la parte reale e la parte immaginaria.\\
-Vogliamo ora stabilire in che modo le propriet\`a della funzione $x(t)$ si riflettano sulla sua trasformata.
+dove $R(f)$ e $I(f)$ ne rappresentano rispettivamente la parte reale e la parte
+immaginaria.\\
+Vogliamo ora stabilire in che modo le propriet\`a della funzione $x(t)$ si
+riflettano sulla sua trasformata.
 
 \subsubsection{Simmetrie della TCF: Simmetria Hermitiana}
 Supponiamo che $x(t)$ sia una funzione \textit{reale}:
@@ -2228,7 +2238,8 @@ in tal caso $X(f)$ \`e \textit{Hermitiana}
 \[
 	X(-f) = X^*(f).
 \]
-In tal caso le funzione $R(f)$ e $I(f)$ si ricavano immediatamente dalle seguenti relazioni
+In tal caso le funzione $R(f)$ e $I(f)$ si ricavano immediatamente dalle
+seguenti relazioni
 \[
 	R(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cos(2 \pi f t) \dt,
 \]
@@ -2242,15 +2253,19 @@ Da queste espressioni si vede chiaramente che
 \[
 	I(f) = -I(f),
 \]
-ovvero la parte reale della trasformata di un segnale reale \`e una funzione \textit{pari} della frequenza, mentre la parte immaginaria ne \`e una funzione \textit{dispari}.\\
-La medesima propriet\`a si riflette ovviamente anche nelle funzioni $A(f)$ e $\vartheta(f)$:
+ovvero la parte reale della trasformata di un segnale reale \`e una funzione
+\textit{pari} della frequenza, mentre la parte immaginaria ne \`e una funzione
+\textit{dispari}.\\
+La medesima propriet\`a si riflette ovviamente anche nelle funzioni $A(f)$ e
+$\vartheta(f)$:
 \[
 	A(f) = A(-f),
 \]
 \[
 	\vartheta(f) = - \vartheta(-f),
 \]
-per cui lo spettro di ampiezza di un segnale reale \`e una funzione pari, mentre il suo spettro di fase \`e dispari.
+per cui lo spettro di ampiezza di un segnale reale \`e una funzione pari, mentre
+il suo spettro di fase \`e dispari.
 \begin{proof}
 \[
 	X(-f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (-f) t} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{j 2 \pi f t} \dt =
@@ -2269,14 +2284,16 @@ Supponiamo adesso che $x(t)$ sia un segnale \textit{reale e pari}
 \[
 	x(t) = x^*(t) \quad\quad , \quad\quad x(t) = x(-t).
 \]
-Le relazioni che esprimono al parte reale e quella immaginaria del suo coefficiente di Fourier si semplificano rispettivamente in
+Le relazioni che esprimono al parte reale e quella immaginaria del suo
+coefficiente di Fourier si semplificano rispettivamente in
 \[
 	R(f) = 2 \int\displaylimits_{0}^{\infty} x(t) \cos(2 \pi f t) \dt,
 \]
 \[
 	I(f) = 0.
 \]
-Ovvero, la trasformata di un segnale reale e pari \`e una funzione \textit{reale e pari} della frequenza
+Ovvero, la trasformata di un segnale reale e pari \`e una funzione
+\textit{reale e pari} della frequenza
 \[
 	X(f) = X^*(f) \quad\quad , \quad\quad X(f) = X(-f).
 \]
@@ -2311,14 +2328,16 @@ Supponiamo adesso che $x(t)$ sia un segnale \textit{reale e dispari}
 \[
 	x(t) = x^*(t) \quad\quad , \quad\quad x(t) = -x(-t).
 \]
-Le relazioni che esprimono al parte reale e quella immaginaria del suo coefficiente di Fourier si semplificano rispettivamente in
+Le relazioni che esprimono al parte reale e quella immaginaria del suo
+coefficiente di Fourier si semplificano rispettivamente in
 \[
 	R(f) = 0,
 \]
 \[
 	I(f) = -2 \int\displaylimits_{0}^{\infty} x(t) sin(2 \pi f t) \dt.
 \]
-Ovvero, la trasformata di un segnale reale e dispari \`e una funzione \textit{immaginaria pura e dispari} della frequenza
+Ovvero, la trasformata di un segnale reale e dispari \`e una funzione
+\textit{immaginaria pura e dispari} della frequenza
 \[
 	X(f) = -X(-f) \quad\quad , \quad\quad X(f) \ immaginario \ puro.
 \]
@@ -2334,19 +2353,26 @@ $X(f) = -X(-f)$
 
 \newpage
 \subsection{Teoremi sulla trasformata continua di Fourier}
-Dalla definizione di trasformata, seguono facilmente alcune ulteriori propriet\`a, che chiameremo \textit{teoremi}, estremamente utili nel calcolo delle trasformate dei segnali e comunque nell'uso dell'analisi di Fourier di carattere applicativo.
+Dalla definizione di trasformata, seguono facilmente alcune ulteriori
+propriet\`a, che chiameremo \textit{teoremi}, estremamente utili nel calcolo
+delle trasformate dei segnali e comunque nell'uso dell'analisi di Fourier di
+carattere applicativo.
 
 \subsubsection{Linearit\`a della TCF}
-Pu\`o essere conveniente in molti casi esprimere un segnale $x(t)$ come combinazione lineare di due segnali $x_1(t)$ e $x_2(t)$:
+Pu\`o essere conveniente in molti casi esprimere un segnale $x(t)$ come
+combinazione lineare di due segnali $x_1(t)$ e $x_2(t)$:
 \[
 	x(t) = a \cdot x_1(t) + b \cdot x_2(t),
 \]
-con $a$ e $b$ costanti. Indicando come di consueto con $X_1(f)$ e $X_2(f)$ le trasformate rispettivamente dei segnali $x_1(t)$ e $x_2(t)$, la trasformata $X(f)$ di $x(t)$ \`e allora
+con $a$ e $b$ costanti. Indicando come di consueto con $X_1(f)$ e $X_2(f)$ le
+trasformate rispettivamente dei segnali $x_1(t)$ e $x_2(t)$, la trasformata
+$X(f)$ di $x(t)$ \`e allora
 \[
 	X(f) = a \cdot X_1(f) + b \cdot X_2(f).
 \]
 \begin{proof}
-Infatti, applicando semplicemente la definizione trasformata, la tesi segue sfruttando la propriet\`a di linearit\`a dell'integrale stesso
+Infatti, applicando semplicemente la definizione trasformata, la tesi segue
+sfruttando la propriet\`a di linearit\`a dell'integrale stesso
 \[
 	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} [a \cdot x_1(t) + b \cdot x_2(t)] \cdot e^{-j 2 \pi f t} \dt =
 \]
@@ -2363,6 +2389,30 @@ Infatti, applicando semplicemente la definizione trasformata, la tesi segue sfru
 
 \newpage
 \subsubsection{Dualit\`a della TCF}
+La similitudine tra le relazioni di trasformata e antitrasformata intese come
+"operatori" sulle funzioni rispettivamente $x(t)$ e $X(f)$ permette di risolvere
+una questione: se $X(f)$ indica la trasformata del segnale $x(t)$, qual \`e la
+trasformata del segnale \textit{temporale} $X(t)$, avente cio\`e lo stesso
+andamento temporale originariamente posseduto nell'ambito frequenziale dalla
+trasformata di $x(t)$? La risposta \`e la seguente: se
+\[
+	x(t) \iff X(f)
+\]
+allora
+\[
+	X(t) \iff x(-f).
+\]
+Infatti, sappiamo che il segnale $x(t)$ \`e legato alla sua trasformata dalla
+relazione
+\[
+	x(t) = \int\displaylimits_{-\infty}^{+\infty} X(f) e^{j 2 \pi f t} \ df.
+\]
+Scambiando formalmente le variabili $t$ ed $f$ nella precedente relazione, si
+ricava
+\[
+	x(f) = \int\displaylimits_{-\infty}^{+\infty} X(t) e^{j 2 \pi t f} \ dt.
+\]
+Se poi in questa relazione si effettua un cambiamento di variabile
 
 \newpage
 \subsubsection{TCF: Teorema del ritardo}
@@ -2401,8 +2451,22 @@ Infatti, applicando semplicemente la definizione trasformata, la tesi segue sfru
 
 \newpage	
 \section{Segnali Aleatori}
-In moltissimi casi non \`e possibile conoscere con esattezza \textit{a priori} il valore assunto da un segnale in un certo istante. Si pensi per esempio al segnale geofisico colto da sensori posti sul terreno per effettuare rilevazioni minerarie. Tale segnale non \`e noto \textit{a priori} completamente, in particolare non se ne conosce l'evoluzione futura se non dopo l'osservazione, cio\`e \textit{a posteriori}. Prima dell'osservazione, si ha solo una conoscenza generica di alcune propriet\`a di massima di tale segnale, derivante dall'esperienza pregressa in casi simili. Stessa osservazione pu\`o farsi a proposito delle tensioni di disturbo (\textit{rumore}) presenti nei componenti elettronici attivi e passivi e prodotte da fenomeni incontrollabili, tipicamente di origine quantistica. Diremo quindi che questi segnali sono \textit{aleatori}, intendendo che il valore assunto da essi \`e affetto da un certo grado di improbabilit\`a (alea) che ne impedisce una conoscenza esatta. 
-Per modellare e studiare i segnali aleatori \`e indispensabile quindi ricorrere a tecniche basate sulla \textit{teoria della probabilit\`a e dei processi aleatori}.
+In moltissimi casi non \`e possibile conoscere con esattezza \textit{a priori}
+il valore assunto da un segnale in un certo istante. Si pensi per esempio al
+segnale geofisico colto da sensori posti sul terreno per effettuare rilevazioni
+minerarie. Tale segnale non \`e noto \textit{a priori} completamente, in
+particolare non se ne conosce l'evoluzione futura se non dopo l'osservazione,
+cio\`e \textit{a posteriori}. Prima dell'osservazione, si ha solo una conoscenza
+generica di alcune propriet\`a di massima di tale segnale, derivante
+dall'esperienza pregressa in casi simili. Stessa osservazione pu\`o farsi a
+proposito delle tensioni di disturbo (\textit{rumore}) presenti nei componenti
+elettronici attivi e passivi e prodotte da fenomeni incontrollabili, tipicamente
+di origine quantistica. Diremo quindi che questi segnali sono \textit{aleatori},
+intendendo che il valore assunto da essi \`e affetto da un certo grado di
+improbabilit\`a (alea) che ne impedisce una conoscenza esatta. 
+Per modellare e studiare i segnali aleatori \`e indispensabile quindi ricorrere
+a tecniche basate sulla \textit{teoria della probabilit\`a e dei processi
+aleatori}.
 
 \newpage
 \subsection{Teorema di Bayes}
@@ -2416,13 +2480,31 @@ Per modellare e studiare i segnali aleatori \`e indispensabile quindi ricorrere 
 \newpage
 \subsection{Legame tra Varianza $\sigma_x^2$ e Valor quadratico medio $m_x^2$}
 
+%------------------------------------------------
+% Appendices
+%------------------------------------------------
+
 \appendix
+
+%------------------------------------------------
+% Appendice A: Segnali Canonici
+%------------------------------------------------
+
 \chapter{Segnali Canonici}
-\epigraph{"Life is a sexually transmitted disease and the mortality rate is one hundred percent."}{--- \textup{R.D. Laing}}
-La presente appendice contiene una lista di segnali canonici, per ciascuno dei quali sono stati analizzati le propriet\`a principali, utilizzati nel testo.
+\epigraph{"
+	Life is a sexually transmitted disease and the mortality rate is one
+	hundred percent.
+"}{--- \textup{R.D. Laing}}
+La presente appendice contiene una lista di segnali canonici, per ciascuno dei
+quali sono stati analizzati le propriet\`a principali, utilizzati nel testo.
+
+%------------------------------------------------
+% A.1: Gradino Unitario
+%------------------------------------------------
 
 \section{Gradino Unitario}
-Nella teoria dei segnali e dei sistemi \`e utile definire la funzione \textit{gradino unitario} $u(t)$ (detta anche \textit{funzione di Heaviside})
+Nella teoria dei segnali e dei sistemi \`e utile definire la funzione
+\textit{gradino unitario} $u(t)$ (detta anche \textit{funzione di Heaviside})
 \begin{equation}
 	u(t) =
 		\begin{cases}
@@ -2438,9 +2520,19 @@ rappresentata graficamente dalla figura seguente:
 \includegraphics[width=0.5\textwidth]{images/heaviside_function.png}
 \caption{Segnale Gradino Unitario $u(t)$.}
 \end{figure}
-Tale funzione, discontinua nell'origine, consente una rappresentazione concisa dei cosiddetti segnali \textit{causali}\footnote{Un segnale causale \`e una funzione dipendente dal tempo che rappresenta uno stimolo esterno su un sistema fisico. Matematicamente, un segnale causale \`e rappresentato mediante una funzione nulla per $t < 0$. L'istante $t = 0$ rappresenta il momento in cui viene applicato dall'esterno il segnale.} o \textit{cisoidali}, cio\`e \textit{nulli} per $t < 0$. Si noti che, mentre per $t > 0$ $u(t)$ assume un valore unitario, nell'origine assume il valore $1/2$.
+Tale funzione, discontinua nell'origine, consente una rappresentazione concisa
+dei cosiddetti segnali \textit{causali}\footnote{Un segnale causale \`e una
+funzione dipendente dal tempo che rappresenta uno stimolo esterno su un sistema
+fisico. Matematicamente, un segnale causale \`e rappresentato mediante una
+funzione nulla per $t < 0$. L'istante $t = 0$ rappresenta il momento in cui
+viene applicato dall'esterno il segnale.} o \textit{cisoidali}, cio\`e
+\textit{nulli} per $t < 0$. Si noti che, mentre per $t > 0$ $u(t)$ assume un
+valore unitario, nell'origine assume il valore $1/2$.
 \bigbreak
-Il segnale gradino serve a modellare matematicamente l'accensione all'istante $t = 0$ di un generatore ideale di tensione continua. che eroga cos\`i una tensione costante per ogni valore $t \geq 0$. Il  segnale possiede energia illimitata, in quanto
+Il segnale gradino serve a modellare matematicamente l'accensione all'istante
+$t = 0$ di un generatore ideale di tensione continua. che eroga cos\`i una
+tensione costante per ogni valore $t \geq 0$. Il  segnale possiede energia
+illimitata, in quanto
 \begin{equation}
 	\begin{split}
 		E_u = \int\displaylimits_{-\infty}^{+\infty} \abs{u(t)}^2 \dt = \underbrace{\int\displaylimits_{0}^{+\infty} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ \forall \ t \ < \ 0} = \underbrace{\int\displaylimits_{0}^{+\infty} 1 \dt}_{u(t) \ = \ 1 \ \forall \ t \ > \ 0} =
