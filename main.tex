@@ -949,6 +949,10 @@ Dato che $E_y = A^2 = K < \infty$ allora
 \end{equation}
 \end{proof}
 
+%------------------------------------------------
+% Section: Segnali periodici a tempo continuo
+%------------------------------------------------
+
 \newpage
 \section{Segnali periodici a tempo continuo}
 Un segnale $x(t)$ \`e periodico se soddisfa la seguente relazione
@@ -2151,6 +2155,50 @@ essere enunciato come segue:
 \textit{allora} il segnale \`e rappresentabile come integrale di Fourier - cio\`e l'antitrasformata della sua propria trasformata di Fourier $X(f)$.
 
 %------------------------------------------------
+% Subsection: Banda
+%------------------------------------------------
+
+\newpage
+\subsection{Banda}
+In informatica e in telecomunicazioni, il termine \textit{banda} indica la
+quantit\`a di dati informativi che possono essere trasferiti, attraverso una
+connessione, in un dato periodo di tempo, e la cui ampiezza \`e in analogia con
+l'ampiezza di banda in campo fisico.
+\[
+	BANDA \ = \ \frac{DIMENSIONE \ \ DELLE \ \ INFORMAZIONI}
+	{TEMPO \ \ DI \ \ TRASFERIMENTO}
+\]
+Pi\`u precisamente, nell'ambito della trasmissione, per banda si intende
+l'intervallo di frequenze in cui il canale trasmette misurato dall'ampiezza di
+banda $B$ e la velocit\`a di trasmissione espressta in $bit/s$, \`e propozionale
+a tale banda $B$ a mezzo del parametro noto come efficienza spettrale.\\
+Normalmente, la banda dipende dal tipo di mezzo fisico utilizzato e dalle sue
+condizioni fisiche (interferenze, saturazione, ecc...), studiati nel campo delle
+telecomunicazioni, rappresentando di fatto una risorsa limitata e in molti casi
+anche condivisa tra pi\`u utenti.
+
+%------------------------------------------------
+% Subsubsection: Larghezza di banda
+%------------------------------------------------
+
+\subsubsection{Larghezza di banda}
+In telecomunicazioni ed elettronica la larghezza di banda \`e la misura
+dell'ampiezza di banda dello spettro di un segnale informativo trasmesso dalla
+banda passante disponibile o utilizzata in un canale di comunicazione oppure,
+la banda di lavoro di un certo sistema fisico in relazione alla sua risposta in
+frequenza. La sua importanza in telecomunicazioni \`e legata al fatto che essa
+\`e a sua volta strettamente legata alla velocit\`a di trasmissione dei dati:
+la quantit\`a di informazioni trasmissibile sul canale \`e infatti strettamente
+collegata all'intervallo di frequenze utilizzato nella trasmissione in base al
+\textbf{teorema di campionamento di Nyquist-Shannon}.
+\bigbreak
+Nel caso delle comunicazioni analogiche, la banda si misura in modo indiretto,
+ed \`e data dall'intervallo di frequenze occupato dal segnale (per esempio, una
+comunicazioni telefonica analogica occupa le frequenze che vanno da $300 Hz$ a
+$3400 Hz$, quindi ha una larhjezza di banda di $3100 Hz$ ovvero la differenza
+tra $3400 Hz$ e $300 Hz$.
+
+%------------------------------------------------
 % Section: Sistemi monodimensionali a tempo continuo
 %------------------------------------------------
 
@@ -2341,19 +2389,31 @@ In analisi matematica, una funzione $f(x)$ di una variabile reale a valori reali
 La nozione si estende a funzioni definite su di uno spazio di misura a valori in uno spazio vettoriale topologico.\\
 L'insieme di tutte le funzioni misurabili su un dato dominio, che in esso sono a quadrato sommabile, forma uno spazio di Hilbert, il cosiddetto spazio $L^2$.
 
+%------------------------------------------------
+% Subsubsection: Applicazioni nella Meccanica Quantistica
+%------------------------------------------------
+
 \subsubsection{Applicazioni nella Meccanica Quantistica}
-La condizione di quadrato sommabile \`e necessaria particolarmente nella meccanica quantistica, in quanto costituisce una richiesta basilare per le funzioni d'onda che descrivono il comportamento delle particelle elementari e, in particolare, la probabilit\`a di osservare il sistema in un certo stato quantico. Ad esempio, lo stato di una particella (senza spin) associata a un campo scalare \`e una funzione d'onda della forma $\psi(x, y, z)$, dove l'integrale
+La condizione di quadrato sommabile \`e necessaria particolarmente nella
+meccanica quantistica, in quanto costituisce una richiesta basilare per le
+funzioni d'onda che descrivono il comportamento delle particelle elementari e,
+in particolare, la probabilit\`a di osservare il sistema in un certo stato
+quantico. Ad esempio, lo stato di una particella (senza spin) associata a un
+campo scalare \`e una funzione d'onda della forma $\psi(x, y, z)$, dove
+l'integrale
 \begin{equation}
 	p(V) = \int\displaylimits_{V} \abs{\psi(x, y, z)}^2 dx dy dz,
 \end{equation}
 rappresenta la probabilit\`a di trovare la particella $p$ nel volume $V$.\\
-Per questo motivo, dato che la probabilit\`a deve essere necessariamente finita e normalizzabile, si richiede che esista e abbia valore finito un integrale della forma:
+Per questo motivo, dato che la probabilit\`a deve essere necessariamente finita
+e normalizzabile, si richiede che esista e abbia valore finito un integrale
+della forma:
 \begin{equation}
 	\int\displaylimits_{-\infty}^{+\infty} \ dx \int\displaylimits_{-\infty}^{+\infty} \ dy \int\displaylimits_{-\infty}^{+\infty} \ dz \abs{\psi(x, y, z)}^2.
 \end{equation}
 
 %------------------------------------------------
-% Subsection: 
+% Subsection: Relazione Potenza Media, Valore Efficace e Valore Medio
 %------------------------------------------------
 
 \newpage
@@ -2369,10 +2429,10 @@ Dato un segnale $x(t)$, tale che $P_x = 0$, a potenza nulla, risulta
 Ovvero
 \begin{equation}
 	P_x = 0 \Longrightarrow
-				\begin{cases}
-					x_eff = 0\\
-					x_m = 0
-				\end{cases}.
+			\begin{cases}
+				x_eff = 0\\
+				x_m = 0
+			\end{cases}.
 \end{equation}
 \end{theorem}
 \begin{proof}
@@ -2388,7 +2448,10 @@ Resta da dimostrare che
 \begin{equation}
 	P_x = 0 \Longrightarrow x_m = 0.
 \end{equation}
-Per fare ci\`o consideriamo il segnale $x(t) = \tilde x(t)  + x_m$ , dove $x_m$ \`e il valore medio del segnale $x(t)$ stesso. Risulta quindi $\tilde x(t) \triangleq x(t) - x_m$, e quindi per definizione $\tilde x(t)$ \`e un segnale con valore medio nullo. Infatti
+Per fare ci\`o consideriamo il segnale $x(t) = \tilde x(t)  + x_m$ , dove $x_m$
+	\`e il valore medio del segnale $x(t)$ stesso. Risulta quindi
+	$\tilde x(t) \triangleq x(t) - x_m$, e quindi per definizione
+	$\tilde x(t)$ \`e un segnale con valore medio nullo. Infatti
 \begin{equation}\label{eq:valor_medio_x_tilde}
 \begin{split}
 	\tilde x_m = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (x(t) - x_m) \dt =
@@ -2400,7 +2463,8 @@ Per fare ci\`o consideriamo il segnale $x(t) = \tilde x(t)  + x_m$ , dove $x_m$ 
 	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) \dt - x_m \cdot \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 1 \dt = x_m - x_m = 0.
 \end{split}
 \end{equation}
-Sviluppiamo ora i calcoli per ottenere un'espressione per la potenza $P_x$ del segnale $x(t) = \tilde x(t) + x_m$:
+Sviluppiamo ora i calcoli per ottenere un'espressione per la potenza $P_x$ del
+	segnale $x(t) = \tilde x(t) + x_m$:
 \[
 	P_x = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 \dt =\footnote{Dato $z \in \mathbb{C}$ allora $z \cdot z^* = ce^{j\varphi} \cdot ce^{-j\varphi} = c^{2}e^{j(\varphi - \varphi)} = c^2 = \abs{z}^2.$} \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) \cdot x(t)^* \dt =
 	\quads{2}
@@ -2423,7 +2487,8 @@ Sviluppiamo ora i calcoli per ottenere un'espressione per la potenza $P_x$ del s
 	\quads{10}
 \end{split}
 \end{equation}
-Vediamo di risolvere questi tre limiti di integrali separatamente. Il primo integrale \`e ovvio
+Vediamo di risolvere questi tre limiti di integrali separatamente. Il primo
+integrale \`e ovvio
 \begin{equation}
 	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 \dt = P_{\tilde x}.
 \end{equation}
@@ -2473,9 +2538,9 @@ Da cui, dato che si \`e posto $P_x = 0$ come supposizione iniziale, e dato che $
 che dimostra la tesi iniziale:
 \begin{equation}
 	P_x = 0 \Longrightarrow \begin{cases}
-								x_eff = 0\\
-								\abs{x_m} = 0
-							\end{cases}.
+					x_eff = 0\\
+					\abs{x_m} = 0
+				\end{cases}.
 \end{equation}
 \end{proof}
 
@@ -3138,7 +3203,7 @@ $X(f) = -X(-f)$
 \end{proof}
 
 %------------------------------------------------
-% Subsection: 
+% Subsection: Teoremi sulla trasformata continua di Fourier
 %------------------------------------------------
 
 \newpage
@@ -3147,6 +3212,10 @@ Dalla definizione di trasformata, seguono facilmente alcune ulteriori
 propriet\`a, che chiameremo \textit{teoremi}, estremamente utili nel calcolo
 delle trasformate dei segnali e comunque nell'uso dell'analisi di Fourier di
 carattere applicativo.
+
+%------------------------------------------------
+% Subsubsection: Linearita' della TCF
+%------------------------------------------------
 
 \subsubsection{Linearit\`a della TCF}
 Pu\`o essere conveniente in molti casi esprimere un segnale $x(t)$ come
@@ -3178,7 +3247,7 @@ sfruttando la propriet\`a di linearit\`a dell'integrale stesso
 \end{proof}
 
 %------------------------------------------------
-% Subsubsection: 
+% Subsubsection: Dualita' della TCF
 %------------------------------------------------
 
 \newpage
@@ -3214,7 +3283,7 @@ alla variabile $f$ la variabile $-f$, si ottiene
 che dimostra la tesi iniziale.
 
 %------------------------------------------------
-% Subsubsection: 
+% Subsubsection: Teorema del ritardo
 %------------------------------------------------
 
 \newpage
@@ -3344,10 +3413,151 @@ responsabili per cos\`i dire dell'evoluzione del segnale; lo spettro allora di
 
 \newpage
 \subsection{Teorema della Modulazione}
+In telecomunicazioni ed elettronica con il termine modulazione si indica
+l'insieme delle tecniche di trasmissione finalizzate ad imprimere un segnale un
+segnale elettrico o elettromagnetico, detto modulante, generalmente contenente
+informazione cio\`e variabile in maniera aleatoria nel tempo, su di un altro
+segnale elettrico o elettromagnetico, detto portante, sviluppato ad alta
+frequenza (frequenza portante $>>$ frequenza modulante). Il risultato della
+modulazione \`e la conversione del segnale modulante dalla banda base alla
+cosiddetta banda traslata (segnale modulato), secondo il teorema della
+modulazione.
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/modulato_modulante_oscillazione.png}
+	\caption{Treno di impulsi rettangolari.}
+\end{figure}
+L'operazione inversa di ripristino del segnale informativo originario in banda
+base \`e detto demodulazione. Il dispositivo in trasmissione che attua
+l'operazione di modulazione sul segnale informativo \`e detto modulatore, mentre
+il dispositivo in ricezione che attua l'operazione di demodulazione \`e detto
+demodulatore, compresi rispettivamente nel trasmettitore e nel ricevitore. In
+un sistema di ricetrasmissione tali sistemi vengono riuniti entrambi sotto la
+dizione \textit{Modem} (dalla composizione di Modulazione e Demodulazione).\\
+I segnali modulati possono rappresentare le informazioni pi\`u diverse: audio,
+video, dati, ecc... L'onda portante \`e un'onda elettromagnetica o un segnale
+elettrico a frequenza ben determinata (molto maggiore della frequenza del
+segnale modulante), che pu\`o essere trasmessa in aria o nel vuoto (ad esempio
+nelle radiocomunicazioni), o tramite altro mezzo fisico (ad esempio un cavo).
+In caso di comunicazioni in fribra ottica la portante \`e la radiazione laser la
+cui frequenza \`e tipicamente espressa come lunghezza d'onda.
+\bigbreak
+In generale, il motivo per cui si utilizzano le tecniche di modulazione risiede
+nel fatto che i segnali rappresentanti le informazioni da trasmettere sono in
+prevalenza di natura passa-basso (il loro contenuto spettrale \`e concentrato
+per lo pi\`u a basse frequenze), mentre i canali trasmissivi che pi\`u
+comunamente si utilizzano, per poter trasmettere segnali modulati
+contemporaneamente, (come canali hertziani e fibre ottiche) sono tipicamente di
+natura passa-banda cio\`e trasmettono in una banda a frequenza diversa da quella
+del segnale informativo originario. In sostanza occorre quindi convertire in
+frequenza, mediante tale tecnica, lo spettro del segnale rappresentante
+l'informazione.
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/modulatore.png}
+	\caption{Treno di impulsi rettangolari.}
+\end{figure}
+Esistono diversi tipi di modulazione analogica, utilizzate nelle rispettive
+trasmissioni analogiche:
+\begin{itemize}
+	\item AM - (Amplitude Modulation) modulazione di ampiezza;
+	\item FM - (Frequency Modulation) modulazione di frequenza;
+	\item PM - (Phase Modulation) modulazione di fase.
+\end{itemize}
+In sostanza, l'informazione da trasmettere pu\`o essere codificata all'interno
+di variazioni di ampiezza, frequenza e fase, ed in ricezione dovr\`a essere
+recuperata, ovvero demodulata dal segnale portante ricevuto.
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/segnale_modulato.png}
+	\caption{Treno di impulsi rettangolari.}
+\end{figure}
+Enunciamo ora formalmente il cosiddetto teorema della modulazione.
+
+%------------------------------------------------
+% Subsubsection: Modulazione con coseno
+%------------------------------------------------
+
 \newpage
 \subsubsection{Modulazione con coseno}
+Se, come di consueto, $x(t) \iff X(f)$, allora definendo
+\[
+	y(t) = x(t) \cdot \cos(2 \pi f_0 t)
+\]
+segue che
+\[
+	Y(f) = \frac{1}{2} \cdot X(f - f_0) + \frac{1}{2} X(f + f_0) =
+	\frac{X(f - f_0) + X(f + f_0)}{2}.
+\]
+\begin{proof}
+\[
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
+	= \int\displaylimits_{-\infty}^{+\infty} x(t) cos(2 \pi f_0 t)
+	e^{-j 2 \pi f t} \dt =
+\]
+\[
+	\footnote{$\cos(2 \pi f_0 t) = \frac{e^{j 2 \pi f_0 t} +
+	e^{-j 2 \pi f_0 t}}{2}$} = \int\displaylimits_{-\infty}^{+\infty}
+	x(t) \cdot \frac{e^{j 2 \pi f_0 t} + e^{-j 2 \pi f_0 t}}{2} \cdot
+	e^{-j 2 \pi f t} \dt =
+\]
+\[
+	= \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+	\frac{e^{-j 2 \pi (f - f_0) t} + e^{-j 2 \pi (f + f_0) t}}{2} \dt =
+\]
+\[
+	= \frac{1}{2} \int\displaylimits_{-\infty}^{+\infty} x(t)
+	e^{-j 2 \pi (f - f_0)t} \dt + \frac{1}{2}
+	\int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi (f + f_0) t} \dt
+	=
+\]
+\[
+	\frac{1}{2} X(f - f_0) + \frac{1}{2} X(f + f_0),
+\]
+che dimostra la tesi iniziale.
+\end{proof}
+Una prima conclusione che possiamo trarre \`e la seguente: se un segnale viene
+moltiplicato per il fattore esponenziale complesso $e^{j 2 \pi f_0 t}$, la sua
+trasformata di Fourier viene traslato attorno alla frequenza $f_0$. Questo
+risultato rappresenta la cosiddetta propriet\`a di traslazione in frequenza
+della trasformata e pu\`o essere riassunti in
+\[
+	x(t) e^{j 2 \pi f_0 t} \iff X(f - f_0).
+\]
+Allora, dato che abbiamo dimostrato che la trasformata del segnale modulato
+$x(t) \cdot \cos(2 \pi f_0 t)$ pu\`o essere espresso come
+\[
+	\mathcal{F}[x(t) \cdot \cos(2 \pi f_0 t)] =
+	\frac{X(f - f_0) + X(f + f_0)}{2}.
+\]
+Allo stesso modo \`e possibile ottenere
+\[
+	\mathcal{F}[x(t) \cdot \sin(2 \pi f_0 t)] =
+	\frac{X(f - f_0) - X(f + f_0)}{2j}.
+\]
+questo risultato verr\`a approfondito nella sezione successiva.
+
+%------------------------------------------------
+% Subsubsection: Modulazione con seno
+%------------------------------------------------
+
 \newpage
 \subsubsection{Modulazione con seno}
+
+%------------------------------------------------
+% Subsubsection: Modulazione con cosinusoide generica
+%------------------------------------------------
+
+\newpage
+\subsubsection{Modulazione con cosinusoide generica}
+
+%------------------------------------------------
+% Subsubsection: Modulazione con esponenziale complesso
+%------------------------------------------------
+
 \newpage
 \subsubsection{Modulazione con esponenziale complesso}
 
