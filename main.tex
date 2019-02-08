@@ -878,7 +878,8 @@ Ricordando che $f_0 \cdot T_0 = 1$ e che $T_{\cos(x)} = 2\pi$,
 \end{split}
 \end{equation}
 \end{proof}
-Evidentemente, ogni particolare segnale $x(t)$ sar\`a caratterizzato da particolari insiemi di valori di $A_n$ e $\vartheta_n$. Dovremo quindi ricavare formule utili per il calcolo delle ampiezze e delle fasi delle varie armoniche e indicare condizioni matematiche che garantiscano la convergenza della serie \eqref{eq:fourier_series_polar_form}. Il primo di questi problemi fu risolto dal matematico L. Eulero attorno alla fine del 1700 in connessione con lo studio delle corde vibranti. e fu ripreso alcuni anni pi\`u tardi da J.B. Fourier. Quest'ultimo fu il primo a intuire l'importanza e la potenza della rappresentazione \eqref{eq:fourier_series_polar_form}, che us\`o per risolvere questioni di trasmissione del calore. La \textit{convergenza} della \eqref{eq:fourier_series_polar_form} fu dimostrata in seguito in maniera rigorosa da P.D. Dirichlet.
+Evidentemente, ogni particolare segnale $x(t)$ sar\`a caratterizzato da
+particolari insiemi di valori di $A_n$ e $\vartheta_n$. Dovremo quindi ricavare formule utili per il calcolo delle ampiezze e delle fasi delle varie armoniche e indicare condizioni matematiche che garantiscano la convergenza della serie \eqref{eq:fourier_series_polar_form}. Il primo di questi problemi fu risolto dal matematico L. Eulero attorno alla fine del 1700 in connessione con lo studio delle corde vibranti. e fu ripreso alcuni anni pi\`u tardi da J.B. Fourier. Quest'ultimo fu il primo a intuire l'importanza e la potenza della rappresentazione \eqref{eq:fourier_series_polar_form}, che us\`o per risolvere questioni di trasmissione del calore. La \textit{convergenza} della \eqref{eq:fourier_series_polar_form} fu dimostrata in seguito in maniera rigorosa da P.D. Dirichlet.
 
 \subsection{Sviluppo in serie di Fourier in forma complessa}
 Per semplificare gli sviluppi analitici si preferisce usare una forma alternativa della serie di Fourier. Richiamando le formule di Eulero delle funzioni trigonometriche
@@ -1613,8 +1614,24 @@ Infine
 	4T \cdot sinc(2 f T) + T \cdot sinc(f T).
 \]
 
-\subsubsection{Esempio}
 
+\subsubsection{Esempio}
+Consideriamo il segnale
+\[
+	x(t) = A \cdot rect\left(\frac{t - 3T}{T}\right)
+\]
+Graficamente rappresentabile come
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/esempio_14_03_2018_2.png}
+	\caption{Segnale $x(t)$.}
+\end{figure}
+Per calcolarne la trasformata continua possiamo utilizzare il \textbf{teorema
+del ritardo}.
+\[
+	X(f) = A \cdot T sinc(f T) \cdot e^{-j 2 \pi f 3T}.
+\]
 
 \newpage
 \subsection{Criteri di esistenza della Trasformata Continua di Fourier (TCF)}
@@ -1699,7 +1716,7 @@ Di seguito una lista di temi di esame presi dalla pagina "Comunicazioni Numerich
 \section{Prova di Comunicazioni Numeriche - 09 Aprile 2018}
 
 %------------------------------------------------
-%	Chapter 4: Esame Orale
+% Chapter 4: Esame Orale
 %------------------------------------------------
 
 \chapter{Esame Orale}
@@ -2613,6 +2630,10 @@ Infatti, il teorema del ritardo si traduce nelle relazioni
 	\angle Y(f) = \angle X(f) - 2 \pi f t_0.
 \]
 
+%------------------------------------------------
+% Subsubsection: teorema del cambiamento di scala
+%------------------------------------------------
+
 \newpage
 \subsubsection{Teorema del cambiamento di scala}
 Si consideri la situazione generale in cui due segnali siano legati dalla
@@ -2628,10 +2649,70 @@ producono i seguenti effetti:
 	\item $\abs{\alpha} < 1$ $\rightarrow$ \textit{dilatazione} della scala dei tempi
 	\item $\alpha < 0$ $\rightarrow$ \textit{inversione} della scala dei tempi
 \end{itemize}
-In altri termini, se $\abs{\alpha} < 1$ l'evoluzione del segnale viene "rallentata",
-viceversa se $\abs{\alpha} > 1$ il segnale viene "accelerato". Operazoini di questo
-tipo vengono effettuate correntemente nell'elaborazione dei segnali registrando
-il segnale ad una certa velocit\`a e riproducendolo a velocit\`a diversa.
+In altri termini, se $\abs{\alpha} < 1$ l'evoluzione del segnale viene
+"rallentata", viceversa se $\abs{\alpha} > 1$ il segnale viene "accelerato".
+Operazoini di questo tipo vengono effettuate correntemente nell'elaborazione dei
+segnali registrando il segnale ad una certa velocit\`a e riproducendolo a
+velocit\`a diversa.
+\bigbreak\noindent
+Allora
+\[
+	Y(f) = \frac{1}{\abs{\alpha}} \cdot X\left(\frac{f}{\alpha}\right)
+\]
+\begin{proof}
+$\alpha > 0$
+\[
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
+	= \int\displaylimits_{-\infty}^{+\infty} x(\alpha t) e^{-j 2 \pi f t}
+	\dt =
+\]
+\[
+	\footnote{Poniamo $t' = \alpha t$, da cui $dt' = d(\alpha t)$ e $dt' =
+	\alpha dt \rightarrow dt = dt'/\alpha$.}= \int\displaylimits_{-\infty}
+	^{+\infty} x(t') e^{-j 2 \pi f \frac{t'}{\alpha}} \frac{\dt'}{\alpha} =
+	\frac{1}{\alpha} \int\displaylimits_{-\infty}^{+\infty} x(t')
+	e^{-j 2 \pi \frac{f}{\alpha}t'} \dt' =
+\]
+\[
+	= \frac{1}{\alpha} X\left(\frac{f}{\alpha}\right) \quad , \quad
+	\alpha > 0.
+\]
+\end{proof}
+\begin{proof}
+$\alpha < 0$
+\[
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
+	= \int\displaylimits_{-\infty}^{+\infty} x(\alpha t) e^{-j 2 \pi f t}
+	\dt =
+\]
+\[
+	\footnote{Poniamo $t' = \alpha t$, da cui $t = \frac{t'}{\alpha}$,
+	$dt' = d(\alpha t) \rightarrow dt' = \alpha \cdot dt'$,
+	$dt = \frac{dt'}{\alpha}$.}=
+	\int\displaylimits_{-\infty}^{+\infty} x(t')
+	e^{-j 2 \pi f \frac{t'}{\alpha}} -\frac{\dt}{\alpha} = -\frac{1}{\alpha}
+	\int\displaylimits_{-\infty}^{+\infty} x(t')
+	e^{-j 2 \pi \frac{f}{\alpha} t'} \dt' =
+\]
+\[
+	= -\frac{1}{\alpha} X\left(\frac{f}{\alpha}\right) \quad , \quad
+	\alpha < 0.
+\]
+\end{proof}
+I risultati ottenuti per $\alpha > 0$ e $\alpha < 0$ possono allora essere
+riassunti con
+\[
+	x(\alpha t) \iff \frac{1}{\abs{\alpha}} X\left(\frac{f}{\alpha}\right).
+\]
+Si nota quindi che una dilatazione dell'asse dei tempi comporta una compressione
+dell'asse delle frequenze, e viceversa. Se infatti il segnale viene "rallentato"
+, vengono a predominare le componenti frequenziali a bassa frequenza, che sono
+responsabili per cos\`i dire dell'evoluzione del segnale; lo spettro allora di
+"addensa" nell'intorno della frequenza nulla.
+
+%------------------------------------------------
+% Subsection: Teorema della Modulazione
+%------------------------------------------------
 
 \newpage
 \subsection{Teorema della Modulazione}
