@@ -320,15 +320,15 @@ angle of the radius \(OP\) with the positive real axis, and is written as
 \(arg(z)\). As with the modulus, the argument can be found from the rectangular
 form \(a + bj\):
 \[
-	\varphi =
-	arg(z) = \begin{cases}
-			arctan\left(\frac{b}{a}\right) \quads{4} \tab if \quad a > 0\\
-			arctan\left(\frac{b}{a}\right) + \pi \quads{2} if \quad a < 0 \quad and \quad b \geq 0\\
-			arctan\left(\frac{b}{a}\right) - \pi \quads{2} if \quad a < 0 \quad and \quad b < 0\\
-			\frac{\pi}{2} \quads{8} if \quad a = 0 \quad and \quad b > 0\\
-			-\frac{\pi}{2} \quads{7}  if \quad a = 0 \quad and \quad b < 0\\
-			indeterminate \quads{3} if \quad a > 0
-		 \end{cases}
+	\varphi = arg(z) =
+	\begin{cases}
+		arctan\left(\frac{b}{a}\right) \quads{4} \tab if \quad a > 0\\
+		arctan\left(\frac{b}{a}\right) + \pi \quads{2} if \quad a < 0 \quad and \quad b \geq 0\\
+		arctan\left(\frac{b}{a}\right) - \pi \quads{2} if \quad a < 0 \quad and \quad b < 0\\
+		\frac{\pi}{2} \quads{8} if \quad a = 0 \quad and \quad b > 0\\
+		-\frac{\pi}{2} \quads{7}  if \quad a = 0 \quad and \quad b < 0\\
+		indeterminate \quads{3} if \quad a > 0
+	 \end{cases}
 \]
 The value of \(\varphi\) is expressed in radians in this article. It can
 increase by any integer multiple of \(2\pi\) and still give the same angle.
@@ -415,28 +415,39 @@ Using Euler's formula we can now write:
 	\includegraphics[width=0.4\textwidth]{images/complex_conjugate_picture.png}
 	\caption{Geometric representation of z and its conjugate \(\conjugate{z}\)}
 \end{wrapfigure}
-The complex conjugate of the complex number \(z = a + jb\) is given by \(a − jb\). It is denoted by either \(\conjugate{z}\) or \(z^*\). This unary operation on complex numbers cannot be expressed by applying only their basic operations addition, subtraction, multiplication and division.
+The complex conjugate of the complex number \(z = a + jb\) is given by
+\(a − jb\). It is denoted by either \(\conjugate{z}\) or \(z^*\). This unary
+operation on complex numbers cannot be expressed by applying only their basic
+operations addition, subtraction, multiplication and division.
 \bigbreak
-Geometrically, \(\conjugate{z}\) is the "reflection" of z about the real axis. Conjugating twice gives the original complex number
+Geometrically, \(\conjugate{z}\) is the "reflection" of z about the real axis.
+Conjugating twice gives the original complex number
 \[
 	\conjugate{\conjugate{z}},
 \]
-which makes this operation an involution. The reflection leaves both the real part and the magnitude of \(z\) unchanged, that is
+which makes this operation an involution. The reflection leaves both the real
+part and the magnitude of \(z\) unchanged, that is
 \[
-	\Re(\conjugate{z}) = \Re(z) \quad and \quad \abs{\conjugate{z}} = \abs{z}.
+	\Re(\conjugate{z}) = \Re(z) \quad and \quad \abs{\conjugate{z}} =
+	\abs{z}.
 \]
-The imaginary part and the argument of a complex number \(z\) change their sign under conjugation 
+The imaginary part and the argument of a complex number \(z\) change their sign
+under conjugation 
 \[
-	\Im(\conjugate{z}) = -\Im(z) \quad and \quad arg(\conjugate{z}) = -arg(z).
+	\Im(\conjugate{z}) = -\Im(z) \quad and \quad arg(\conjugate{z}) =
+	-arg(z).
 \]
 \vspace{1.0cm}
 \bigbreak
-The real and imaginary parts of a complex number \(z = a + jb\) can be extracted using the conjugation:
+The real and imaginary parts of a complex number \(z = a + jb\) can be extracted
+using the conjugation:
 \[
-	\boldsymbol{\Re(z) = a = \frac{z + \conjugate{z}}{2}} = \frac{a + jb + a - jb}{2} = \frac{2a}{2} = a.
+	\boldsymbol{\Re(z) = a = \frac{z + \conjugate{z}}{2}} =
+	\frac{a + jb + a - jb}{2} = \frac{2a}{2} = a.
 \]
 \[
-	\boldsymbol{\Im(z) = b = \frac{z - \conjugate(z)}{2j}} = \frac{a + jb - a + jb}{2j} = \frac{2jb}{2j} = b.
+	\boldsymbol{\Im(z) = b = \frac{z - \conjugate(z)}{2j}} =
+	\frac{a + jb - a + jb}{2j} = \frac{2jb}{2j} = b.
 \]
 Moreover, a complex number is real if and only if it equals its own conjugate. 
 \[
@@ -444,7 +455,8 @@ Moreover, a complex number is real if and only if it equals its own conjugate.
 \]
 
 \subsubsection{Addition and subtraction}
-Two complex numbers \(z_1\) and \(z_2\) are most easily added by separately adding their real and imaginary parts of the summands. That is to say:
+Two complex numbers \(z_1\) and \(z_2\) are most easily added by separately
+adding their real and imaginary parts of the summands. That is to say:
 \[
 	z_1 + z_2 = a_1 = jb_1 + a_2 + jb_2 = (a_1 + a_2) + j(b_1 + b_2).
 \]
@@ -482,28 +494,51 @@ Similarly, subtraction can be performed as
 \]
 
 \subsubsection{Multiplication}
-Since the real part, the imaginary part, and the indeterminate \(i\) in a complex number are all considered as numbers in themselves, two complex numbers, given as \(z_1 = a_1 + j b_1\) and \(z_2 = a_2 + j b_2\) are multiplied under the rules of the distributive property, the commutative properties and the defining property \(i^{2} = -1\) in the following way
+Since the real part, the imaginary part, and the indeterminate \(i\) in a
+complex number are all considered as numbers in themselves, two complex numbers,
+given as \(z_1 = a_1 + j b_1\) and \(z_2 = a_2 + j b_2\) are multiplied under
+the rules of the distributive property, the commutative properties and the
+defining property \(i^{2} = -1\) in the following way
 \[
 	z_1 \cdot z_2 = (a_1 + j b_1) \cdot (a_2 + j b_2) =
 \]
 \[
 	a_1 a_2 + j a_1 b_2 + j b_1 a_2 + (jj) b_1 b_2 = (a_1 a_2 + b_1 b_2) + j \cdot (a_1 b_2 + b_1 a_2).
 \]
-\textbf{The cartesian form is convenient for additions and subtractions but not for multiplications.}
+\textbf{The cartesian form is convenient for additions and subtractions but not
+for multiplications.}
+
+%------------------------------------------------
+% Subsubsection: Multiplying a complex number by j
+%------------------------------------------------
 
 \subsubsection{Multiplying a complex number by j}
-In our goal toward finding a geometric interpretation of complex multiplication, let's consider next multiplying an arbitrary complex number \(z = a + jb\) by \(j\):
+In our goal toward finding a geometric interpretation of complex multiplication,
+let's consider next multiplying an arbitrary complex number \(z = a + jb\) by
+\(j\):
 \[
 	z \cdot j = (a + jb) \cdot j = -b + ja
 \]
 \bigbreak
 \begin{wrapfigure}{L}{0.4\textwidth}
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.4\textwidth]{images/multiply_by_i.png}
-\caption{Multiplying by i}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.4\textwidth]{images/multiply_by_i.png}
+	\caption{Multiplying by i}
 \end{wrapfigure}
-Let's interpret this statement geometrically. The point \(z\) in \(\mathbb{C}\) is located $a$ units to the right of the imaginary axis and $b$ units above the real axis. The point $z \cdot j$ is located $b$ units to the left, and $a$ units above. What has happened is that multiplying by $j$ has rotated the point $z$ $90^{\degree}$ counterclockwise around the origin to the point $zj$. Stated more briefly, multiplication by $j$ gives a $90^{\degree}$ counterclockwise rotation about 0. You can analyze what multiplication by $-j$ does in the same way. You'll find that multiplication by $-j$ gives a $90^{\degree}$ clockwise rotation about 0. When we don't specify counterclockwise or clockwise when referring to rotations or angles, we'll follow the standard convention that counterclockwise is intended. Then we can say that multiplication by $-j$ gives a $-90^{\degree}$ rotation about 0, or if you prefer, a $270^{\degree}$ rotation about 0. 
+Let's interpret this statement geometrically. The point \(z\) in \(\mathbb{C}\)
+is located $a$ units to the right of the imaginary axis and $b$ units above the
+real axis. The point $z \cdot j$ is located $b$ units to the left, and $a$ units
+above. What has happened is that multiplying by $j$ has rotated the point $z$
+$90^{\degree}$ counterclockwise around the origin to the point $zj$. Stated more
+briefly, multiplication by $j$ gives a $90^{\degree}$ counterclockwise rotation
+about 0. You can analyze what multiplication by $-j$ does in the same way.
+You'll find that multiplication by $-j$ gives a $90^{\degree}$ clockwise
+rotation about 0. When we don't specify counterclockwise or clockwise when
+referring to rotations or angles, we'll follow the standard convention that
+counterclockwise is intended. Then we can say that multiplication by $-j$ gives
+a $-90^{\degree}$ rotation about 0, or if you prefer, a $270^{\degree}$ rotation
+about 0.
 
 %------------------------------------------------
 % Section 2: The Field C of Complex Numbers
@@ -511,32 +546,64 @@ Let's interpret this statement geometrically. The point \(z\) in \(\mathbb{C}\) 
 
 \newpage
 \section{The Field C of Complex Numbers}
-Before continuing with signal processing, I want to spend some time talking about the field of complex numbers $\mathbb{C}$. The motivation for this is to try and provide a much more formal definition of the field $\mathbb{C}$ than the one roughly introduced in the previous section which represents the minimal concepts required for the contents of the following pages. You can simply skip over this section if you are not interested or have previous knowledge.
+Before continuing with signal processing, I want to spend some time talking
+about the field of complex numbers $\mathbb{C}$. The motivation for this is to
+try and provide a much more formal definition of the field $\mathbb{C}$ than the
+one roughly introduced in the previous section which represents the minimal
+concepts required for the contents of the following pages. You can simply skip
+over this section if you are not interested or have previous knowledge.
 
 \subsection{Naive introduction to the field C}
-The usual way to quickly start with complex numbers is to say that we introduce a new object, which I will call $j$ (mathematicians use $i$), such that the following \textit{characteristic} property holds:
+The usual way to quickly start with complex numbers is to say that we introduce
+a new object, which I will call $j$ (mathematicians use $i$), such that the
+following \textit{characteristic} property holds:
 \[
 	i^2 = -1.
 \]
-Now, having this object at my disposal, I can easily define the set of complex numbers as the set with elements of the form $x + iy$ where $x$, $y$ are our familiar real numbers:
+Now, having this object at my disposal, I can easily define the set of complex
+numbers as the set with elements of the form $x + iy$ where $x$, $y$ are our
+familiar real numbers:
 \[
 \mathbb{C} \coloneqq \{x + iy : x,y \in \mathbb{R}, i^2 = -1\}.
 \]
-After this, using the usual rules of arithmetic operations as applied to the real numbers, I can define the four fundamental operations for the complex numbers as well. And I therefore have arithmetic in the set of complex numbers.
+After this, using the usual rules of arithmetic operations as applied to the
+real numbers, I can define the four fundamental operations for the complex
+numbers as well. And I therefore have arithmetic in the set of complex numbers.
 \bigbreak\noindent
-The definition we just saw and the one used in the previous section are, however, not really satisfactory, because they \textit{do not explain} what $i$ is, and hence we get a sense of mystery here (and hence the name "imaginary" numbers). But there is actually nothing imaginary about complex numbers, as was realized by Gauss and others, if we identify them with the elements of our familiar $\mathbb{R}^2$ and add a little more. This is the first formal introduction for the set of complex numbers $\mathbb{C}$ I will provide in the subsection \textbf{Definition of the field C} (as a side remark I note that there are other ways to define complex numbers, but this one is arguably the most natural). A second rigorous definition using matrices is provided in the section \textbf{Constructing the complex numbers via the arithmetic of 2x2 matrices}.
+The definition we just saw and the one used in the previous section are,
+however, not really satisfactory, because they \textit{do not explain} what
+$i$ is, and hence we get a sense of mystery here (and hence the name "imaginary"
+numbers). But there is actually nothing imaginary about complex numbers, as was
+realized by Gauss and others, if we identify them with the elements of our
+familiar $\mathbb{R}^2$ and add a little more. This is the first formal
+introduction for the set of complex numbers $\mathbb{C}$ I will provide in the
+subsection \textbf{Definition of the field C} (as a side remark I note that
+there are other ways to define complex numbers, but this one is arguably the
+most natural). A second rigorous definition using matrices is provided in the
+section \textbf{Constructing the complex numbers via the arithmetic of 2x2
+matrices}.
+
+%------------------------------------------------
+% Subsection: Definition of the field C
+%------------------------------------------------
 
 \subsection{Definition of the field C}
-\textit{The set of complex numbers, which is denoted by $\mathbb{C}$, is, by definition, $\mathbb{R}^2$, this is, the set of all vectors with two real coordinates, on which the operation of addition and multiplication are defined as follows}
+\textit{The set of complex numbers, which is denoted by $\mathbb{C}$, is, by
+definition, $\mathbb{R}^2$, this is, the set of all vectors with two real
+coordinates, on which the operation of addition and multiplication are defined
+as follows}
 \[
 	(x_1, y_1) + (x_2, y_2) = (x_1 + x_2, y_1 + y_2),
 \]
 \[
 	(x_1, y_1) \cdot (x_2, y_2) = (x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2).
 \]
-Definitely, the multiplication rule should look a little strange at the beginning, but of course the motivation comes from the previous subsection.
+Definitely, the multiplication rule should look a little strange at the
+beginning, but of course the motivation comes from the previous subsection.
 \bigbreak\noindent
-\textit{The set $\mathbb{C}$, defined with such an addition and multiplication, is a field. That is, it can be proved that for any $z_1, z_2, z_3 \in \mathbb{C}$, we have}
+\textit{The set $\mathbb{C}$, defined with such an addition and multiplication,
+is a field. That is, it can be proved that for any
+$z_1, z_2, z_3 \in \mathbb{C}$, we have}
 \[
 	z_1 + z_2 = z_2 + z_1,
 \]
@@ -561,13 +628,19 @@ for any nonzero $z \in \mathbb{C}$ there is $z^{-1} \in \mathbb{C}$ such that
 \[
 	z z^{-1} = 1.
 \]
-It should be clear that above $0 = (0, 0)$, where the $0$ on the left of the equal sign is the complex zero, whereas the ones used in the round brackets are in $\mathbb{R}$.
+It should be clear that above $0 = (0, 0)$, where the $0$ on the left of the
+equal sign is the complex zero, whereas the ones used in the round brackets are
+in $\mathbb{R}$.
 \bigbreak
 Now, consider the following equation
 \[
 	z^2 + 1 = 0.
 \]
-Here $1$ and $0$ and the complex unit and the complex zero. We all know  that this equation has  no real roots. But I claim that it has two complex roots being $(0, 1)$ and $-(0, 1)$. This can easily be checked by substitution according to the definition we provided for our addition and multiplication (just keep in mind that .
+Here $1$ and $0$ and the complex unit and the complex zero. We all know  that
+this equation has  no real roots. But I claim that it has two complex roots
+being $(0, 1)$ and $-(0, 1)$. This can easily be checked by substitution
+according to the definition we provided for our addition and multiplication
+(just keep in mind that .
 
 \subsection{Constructing the complex numbers via the arithmetic of 2x2 matrices}
 \improvement[inline]{To be continued.}
@@ -577,76 +650,167 @@ Here $1$ and $0$ and the complex unit and the complex zero. We all know  that th
 %------------------------------------------------
 
 \chapter{Concetti Preliminari}
-\epigraph{"Anyone who has never made a mistake has never tried anything new."}{--- \textup{Albert Einstein}}
+\epigraph{
+	"Anyone who has never made a mistake has never tried anything new."
+}{--- \textup{Albert Einstein}}
 
-Di seguito alcune definizioni essenziali necessarie per poter comprendere i contenuti presentati nei capitoli successivi.
+Di seguito alcune definizioni essenziali necessarie per poter comprendere i
+contenuti presentati nei capitoli successivi.
+
+%------------------------------------------------
+% Section: Introduzione allo studio dei segnali
+%------------------------------------------------
 
 \section{Introduzione allo studio dei segnali}
-La teoria dei segnali studia le propriet\`a matematiche e statistiche dei segnali, definiti come funzioni matematiche del tempo. In generale, un segnale \`e una variazione temporale dello stato fisico di un sistema o di una grandezza fisica (potenziale o corrente elettrica per segnali elettrici, parametri di campo elettromagnetico per segnali radio) che serve per rappresentare e trasmettere messaggi ovvero informazione a distanza; il sistema in questione pu\`o essere il pi\`u disparato. In elettronica un segnale viene dunque studiato attraverso un modello matematico o funzione in cui il tempo (o il suo inverso, la frequenza) \`e considerato variabile indipendente.
+La teoria dei segnali studia le propriet\`a matematiche e statistiche dei
+segnali, definiti come funzioni matematiche del tempo. In generale, un segnale
+\`e una variazione temporale dello stato fisico di un sistema o di una grandezza
+fisica (potenziale o corrente elettrica per segnali elettrici, parametri di
+campo elettromagnetico per segnali radio) che serve per rappresentare e
+trasmettere messaggi ovvero informazione a distanza; il sistema in questione
+pu\`o essere il pi\`u disparato. In elettronica un segnale viene dunque studiato
+attraverso un modello matematico o funzione in cui il tempo (o il suo inverso,
+la frequenza) \`e considerato variabile indipendente.
 \bigbreak
-Un segnale \`e \textit{una qualunque grandezza fisica variabile cui \`e associata una informazione}.
+Un segnale \`e \textit{una qualunque grandezza fisica variabile cui \`e
+associata una informazione}.
 \bigbreak
-In generale esistono diversi tipi di segnali, ma tutti sono accomunati dall'essere in natura segnali casuali e continui e quasi mai deterministici. La teoria dei segnali studia la rappresentazione dei segnali in modo da poter poi manipolarli e trattarli matematicamente. Questa rappresentazione richiede l'uso di matematica astratta e, nel caso di segnali stocastici, della teoria della probabilit\`a.
+In generale esistono diversi tipi di segnali, ma tutti sono accomunati
+dall'essere in natura segnali casuali e continui e quasi mai deterministici. La
+teoria dei segnali studia la rappresentazione dei segnali in modo da poter poi
+manipolarli e trattarli matematicamente. Questa rappresentazione richiede l'uso
+di matematica astratta e, nel caso di segnali stocastici, della teoria della
+probabilit\`a.
 \bigbreak
-La teoria si suddivide in due grandi branche a seconda del tipo di segnale in esame: i "segnali determinati" o deterministici, di cui è possibile predire il valore in un qualunque istante a piacere, e i "segnali stocastici" o aleatori, il cui valore non \`e prevedibile, ma su cui \`e possibile ottenere soltanto delle propriet\`a statistiche e che rientrano nella pi\`u vasta tematica dei processi aleatori o stocastici.
+La teoria si suddivide in due grandi branche a seconda del tipo di segnale in
+esame: i "segnali determinati" o deterministici, di cui è possibile predire il
+valore in un qualunque istante a piacere, e i "segnali stocastici" o aleatori,
+il cui valore non \`e prevedibile, ma su cui \`e possibile ottenere soltanto
+delle propriet\`a statistiche e che rientrano nella pi\`u vasta tematica dei
+processi aleatori o stocastici.
 \bigbreak
-Nella trasmissione di informazione a distanza (telecomunicazione) i segnali determinati vengono utilizzati per la modulazione tramite portante, mentre i segnali contenenti l'informazione sono invece segnali aleatori, quindi processi stocastici, dal momento che l'informazione viaggia sotto forma di "innovazione" ovvero varia in maniera aleatoria nel tempo.
+Nella trasmissione di informazione a distanza (telecomunicazione) i segnali
+determinati vengono utilizzati per la modulazione tramite portante, mentre i
+segnali contenenti l'informazione sono invece segnali aleatori, quindi processi
+stocastici, dal momento che l'informazione viaggia sotto forma di "innovazione"
+ovvero varia in maniera aleatoria nel tempo.
 \bigbreak
-I segnali periodici possono essere trattati mediante l'astrazione in uno spazio vettoriale lineare quale lo spazio di Hilbert e quindi con l'utilizzo della serie di Fourier. Per quanto riguarda i segnali non periodici, questi necessitano della trasformata di Fourier.
+I segnali periodici possono essere trattati mediante l'astrazione in uno spazio
+vettoriale lineare quale lo spazio di Hilbert e quindi con l'utilizzo della
+serie di Fourier. Per quanto riguarda i segnali non periodici, questi
+necessitano della trasformata di Fourier.
 \bigbreak
-Altra suddivisione \`e quella in "segnali continui" e "segnali discreti". Ad essi si associano rispettivamente le comunicazioni analogiche e le comunicazioni digitali.
+Altra suddivisione \`e quella in "segnali continui" e "segnali discreti". Ad
+essi si associano rispettivamente le comunicazioni analogiche e le comunicazioni
+digitali.
 \bigbreak
-Parte della teoria dei segnali \`e intimamente connessa con la teoria dei sistemi giacch\'e molti segnali transitano come input in sistemi che elaborano ovvero trasformano il segnale in ingresso restituendo in uscita un certo output. Centrale \`e anche l'analisi di Fourier ovvero l'analisi spettrale. 
+Parte della teoria dei segnali \`e intimamente connessa con la teoria dei
+sistemi giacch\'e molti segnali transitano come input in sistemi che elaborano
+ovvero trasformano il segnale in ingresso restituendo in uscita un certo output.
+Centrale \`e anche l'analisi di Fourier ovvero l'analisi spettrale. 
+
+%------------------------------------------------
+% Subsection: Prorieta' elementari dei segnali determinati
+%------------------------------------------------
 
 \subsection{Propriet\`a elementari dei segnali determinati}
-Limitiamo per il momento la nostra attenzione ai segnali determinati e definiamo alcune grandezze di fondamentale importanza per il prosieguo dello studio.
-Supponiamo di disporre di un resistore di resistenza $R$ attraversato da una corrente $i(t)$; l'espressione della potenza istantanea dissipata sul resistore per effetto Joule \`e, come \`e noto, $Ri^2(t)$. Osserviamo quindi la proporzionalit\`a tra la potenza istantanea e il \textit{quadrato} del segnale; il coefficiente di proporzionalit\`a \`e legato al particolare esempio. Estendendo in maniera astratta tale definizione, diremo che al segnale $x(t)$ \`e associata una potenza istantanea \textit{normalizzata} (aggettivo che verr\`a poi sistematicamente omesso) pari a
+Limitiamo per il momento la nostra attenzione ai segnali determinati e definiamo
+alcune grandezze di fondamentale importanza per il prosieguo dello studio.
+Supponiamo di disporre di un resistore di resistenza $R$ attraversato da una
+corrente $i(t)$; l'espressione della potenza istantanea dissipata sul resistore
+per effetto Joule \`e, come \`e noto, $Ri^2(t)$. Osserviamo quindi la
+proporzionalit\`a tra la potenza istantanea e il \textit{quadrato} del segnale;
+il coefficiente di proporzionalit\`a \`e legato al particolare esempio.
+Estendendo in maniera astratta tale definizione, diremo che al segnale $x(t)$
+\`e associata una potenza istantanea \textit{normalizzata} (aggettivo che
+verr\`a poi sistematicamente omesso) pari a
 \begin{equation}
 	P_x(t) = P_x \triangleq \abs{x(t)}^2.
 \end{equation}
-Inoltre, tornando all'esempio del resistore, l'energia totale dissipata per effetto del passaggio della corrente $i(t)$ \`e pari a $\int\displaylimits_{-\infty}^{+\infty} Ri^2(t) \dt$. Conseguentemente, definiremo l'\textit{energia} associata al segnale $x(t)$ come
+Inoltre, tornando all'esempio del resistore, l'energia totale dissipata per
+effetto del passaggio della corrente $i(t)$ \`e pari a
+$\int\displaylimits_{-\infty}^{+\infty} Ri^2(t) \dt$. Conseguentemente,
+definiremo l'\textit{energia} associata al segnale $x(t)$ come
 \begin{equation}
-	E_x(t) = E_x \triangleq \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt = \int\displaylimits_{-\infty}^{+\infty} P_x(t) \dt
+	E_x(t) = E_x \triangleq \int\displaylimits_{-\infty}^{+\infty}
+	\abs{x(t)}^2 \dt = \int\displaylimits_{-\infty}^{+\infty} P_x(t) \dt
 \end{equation}
-purch\`e l'integrale risulti convergente (cio\`e $E_x < \infty$). La definizione di energia, bench\`e meno intuitiva, viene banalmente estesa anche ai segnali a tempo discreto:
+purch\`e l'integrale risulti convergente (cio\`e $E_x < \infty$). La definizione
+di energia, bench\`e meno intuitiva, viene banalmente estesa anche ai segnali a
+tempo discreto:
 \begin{equation}
 	E_x \triangleq \sum_{n = -\infty}^{+\infty} \abs{x[n]}^2 < \infty.
 \end{equation}
-Per tutti i segnali \textit{fisici} (cio\`e effettivamente osservati) l'integrale (o la sommatoria) che definisce l'energia risulta convergente, poich\`e ogni segnale proveniente da un sistema fisico \`e portatore di \textit{energia finita}. Molto spesso per\`o conviene considerare \textit{modelli ideali} di segnale, ovvero segnali idealizzati non esistenti in natura, ma assai utili per approssimare casi reali.\\
+Per tutti i segnali \textit{fisici} (cio\`e effettivamente osservati)
+l'integrale (o la sommatoria) che definisce l'energia risulta convergente,
+poich\`e ogni segnale proveniente da un sistema fisico \`e portatore di
+\textit{energia finita}. Molto spesso per\`o conviene considerare
+\textit{modelli ideali} di segnale, ovvero segnali idealizzati non esistenti in
+natura, ma assai utili per approssimare casi reali.\\
 \\
-Consideriamo ora un generico segnale $x(t)$ a valori limitati ma energia infinita, e costruiamo il segnale $x_T(t)$ con una operazione di \textit{troncamento} come segue:
+Consideriamo ora un generico segnale $x(t)$ a valori limitati ma energia
+infinita, e costruiamo il segnale $x_T(t)$ con una operazione di
+\textit{troncamento} come segue:
 \begin{equation}
-	x_T(t) =	\begin{cases}
-				x(t) \quads{2} \abs{t} \leq T/2\\
-				0 \quads{4} altrove
-			\end{cases}
+	x_T(t) = \begin{cases}
+			x(t) \quads{2} \abs{t} \leq T/2\\
+			0 \quads{4} altrove
+		 \end{cases}
 \end{equation}
-Se indichiamo con $E_{x_T}$ l'energia di $x_T(t)$, \`e chiaro che in generale $E_{x_T} < \infty$ poich\`e il segnale \`e diverso da zero e assume valori finiti solo su di un intervallo limitato. Altrettanto chiaro \`e che se ingrandiamo l'intervallo di osservazione per comprendere l'andamento di tutto il segnale $x(t)$ (imponiamo cio\`e $T \rightarrow \infty$) otteniamo $E_{x_T} \rightarrow \infty$. Introduciamo allora il concetto di \textit{potenza} di un segnale: la potenza media del segnale $x_T(t)$ valutata sull'intervallo di osservazione $\left[-T/2, T/2\right]$ \`e per definizione pari all'energia di $x_T(t)$ rapportata alla durata dell'intervallo stesso:
+Se indichiamo con $E_{x_T}$ l'energia di $x_T(t)$, \`e chiaro che in generale
+$E_{x_T} < \infty$ poich\`e il segnale \`e diverso da zero e assume valori
+finiti solo su di un intervallo limitato. Altrettanto chiaro \`e che se
+ingrandiamo l'intervallo di osservazione per comprendere l'andamento di tutto il
+segnale $x(t)$ (imponiamo cio\`e $T \rightarrow \infty$) otteniamo
+$E_{x_T} \rightarrow \infty$. Introduciamo allora il concetto di
+\textit{potenza} di un segnale: la potenza media del segnale $x_T(t)$ valutata
+sull'intervallo di osservazione $\left[-T/2, T/2\right]$ \`e per definizione
+pari all'energia di $x_T(t)$ rapportata alla durata dell'intervallo stesso:
 \begin{equation}
 	P_{x_T} \triangleq \frac{E_{x_T}}{T}.
 \end{equation}
-Siamo ora in grado di estendere a $x(t)$ questa definizione di \textit{potenza media} attraverso un'operazione di passaggio al limite:
+Siamo ora in grado di estendere a $x(t)$ questa definizione di \textit{potenza
+media} attraverso un'operazione di passaggio al limite:
 \begin{equation}\label{eq:signal_power}
-	P_x \triangleq \lim_{T \rightarrow \infty} P_{x_T} = \lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 \dt.
+	P_x \triangleq \lim_{T \rightarrow \infty} P_{x_T} =
+	\lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} =
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2}
+	\abs{x(t)}^2 \dt.
 \end{equation}
-Analogamente a quanto visto per l'energia di un segnale, per i segnali a tempo discreto abbiamo
+Analogamente a quanto visto per l'energia di un segnale, per i segnali a tempo
+discreto abbiamo
 \begin{equation}
-	P_x \triangleq \lim_{N \rightarrow \infty} \frac{1}{2N + 1} \sum_{n = -N}^{N} \abs{x[n]}^2
+	P_x \triangleq \lim_{N \rightarrow \infty} \frac{1}{2N + 1}
+	\sum_{n = -N}^{N} \abs{x[n]}^2
 \end{equation}
 dove la notazione \`e autoesplicativa.
-Talvolta torna utile usare il \textit{valore efficace} di un segnale a potenza finita, definito sia per i segnali a tempo continuo, sia per quelli a tempo discreto come
+Talvolta torna utile usare il \textit{valore efficace} di un segnale a potenza
+finita, definito sia per i segnali a tempo continuo, sia per quelli a tempo
+discreto come
 \begin{equation}
 	x_{eff} \triangleq \sqrt{P_x}.
 \end{equation}
-Ricordiamo che il valore efficace di un dato segnale (chiamato nei paesi anglosassoni RMS, \textit{Root Mean Square}) si pu\`o interpretare come quel valore che dovrebbe assumere un segnale costante per avere la stessa potenza del segnale dato.\\
-Definiamo infine il \textit{valore medio temporale} di un segnale, che richiede un procedimento al limite simile a quello appena visto relativamente alla potenza:
+Ricordiamo che il valore efficace di un dato segnale (chiamato nei paesi
+anglosassoni RMS, \textit{Root Mean Square}) si pu\`o interpretare come quel
+valore che dovrebbe assumere un segnale costante per avere la stessa potenza del
+segnale dato.\\
+Definiamo infine il \textit{valore medio temporale} di un segnale, che richiede
+un procedimento al limite simile a quello appena visto relativamente alla
+potenza:
 \begin{equation}
-	x_m \triangleq \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) dt,
+	x_m \triangleq \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} x(t) dt,
 \end{equation}
 \begin{equation}
-	x_m \triangleq \lim_{N \rightarrow \infty} \frac{1}{2N + 1} \sum_{n = -N}^{N} x[n].
+	x_m \triangleq \lim_{N \rightarrow \infty} \frac{1}{2N + 1}
+	\sum_{n = -N}^{N} x[n].
 \end{equation}
-Nell'ingegneria elettrica, il valore medio rappresenta la "componente continuo" (cio\`e costante) attorno alla quale si svolge l'evoluzione del segnale.
+Nell'ingegneria elettrica, il valore medio rappresenta la "componente continuo"
+(cio\`e costante) attorno alla quale si svolge l'evoluzione del segnale.
+
+%------------------------------------------------
+% Subsubsection: Esercizio Lezione 12 Marzo 2018
+%------------------------------------------------
 
 \subsubsection{Esercizio Lezione 12 Marzo 2018}
 Calcolare $E_y$, $P_y$, $y_{eff}$ e $y_m$ per la funzione $y(t)$ definita  come
@@ -667,7 +831,8 @@ Infine quindi
 \includegraphics[width=1.0\textwidth]{images/esercizio_12_marzo_2018.png}
 \caption{Grafico di $y(t)$ con $A = 1$.}
 \end{figure}
-Come possiamo vedere graficamente, il segnale gradino $u(t)$ fa si che la funzione complessiva $y(t)$ si ottenga come contributo delle due funzioni
+Come possiamo vedere graficamente, il segnale gradino $u(t)$ fa si che la
+funzione complessiva $y(t)$ si ottenga come contributo delle due funzioni
 \[
 	A e^{-t} \quads{2} t \rightarrow +\infty,
 \]
@@ -677,31 +842,48 @@ e
 \]
 \textbf{Calcolo di $\boldsymbol{E_y}$}\\
 \[
-	E_y = \int\displaylimits_{-\infty}^{+\infty} \abs{y(t)}^2 \dt = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t) - x(-t)}^2 \dt =
+	E_y = \int\displaylimits_{-\infty}^{+\infty} \abs{y(t)}^2 \dt =
+	\int\displaylimits_{-\infty}^{+\infty} \abs{x(t) - x(-t)}^2 \dt =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} \abs{A e^{-t} \cdot u(t) - A e^{t} \cdot u(-t)}^2 \dt =
+	= \int\displaylimits_{-\infty}^{+\infty} \abs{A e^{-t} \cdot u(t) -
+	A e^{t} \cdot u(-t)}^2 \dt =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{0} \abs{A e^{-t} \cdot u(t) - A e^{t} \cdot u(-t)}^2 \dt + \int\displaylimits_{0}^{+\infty} \abs{A e^{-t} \cdot u(t) - A e^{t} \cdot u(-t)}^2 \dt =
+	= \int\displaylimits_{-\infty}^{0} \abs{A e^{-t} \cdot u(t) - A e^{t}
+	\cdot u(-t)}^2 \dt + \int\displaylimits_{0}^{+\infty} \abs{A e^{-t}
+	\cdot u(t) - A e^{t} \cdot u(-t)}^2 \dt =
 \]
 \[
-	\footnote{Notiamo che $u(t) = 0$ $[-\infty, 0]$ e $u(-t) = 0$ $[0, +\infty]$.}= \int\displaylimits_{-\infty}^{0} \abs{- A e^{t} \cdot u(-t)}^2 \dt + \int\displaylimits_{0}^{+\infty} \abs{A e^{-t} \cdot u(t)}^2 \dt =
+	\footnote{Notiamo che $u(t) = 0$ $[-\infty, 0]$ e $u(-t) = 0$
+	$[0, +\infty]$.}= \int\displaylimits_{-\infty}^{0} \abs{- A e^{t} \cdot
+	u(-t)}^2 \dt + \int\displaylimits_{0}^{+\infty} \abs{A e^{-t} \cdot
+	u(t)}^2 \dt =
 \]
 \[
-	\footnote{Notiamo che $\abs{u(t)}^2 = \abs{u(-t)}^2 = 1$.}= \int\displaylimits_{-\infty}^{0} \abs{- A e^{t}}^2 \dt + \int\displaylimits_{0}^{+\infty} \abs{A e^{-t}}^2 \dt = \int\displaylimits_{-\infty}^{0} A^2 e^{2t} \dt + \int\displaylimits_{0}^{+\infty} A^2 e^{-2t} \dt =
+	\footnote{Notiamo che $\abs{u(t)}^2 = \abs{u(-t)}^2 = 1$.}=
+	\int\displaylimits_{-\infty}^{0} \abs{- A e^{t}}^2 \dt + 
+	\int\displaylimits_{0}^{+\infty} \abs{A e^{-t}}^2 \dt = 
+	\int\displaylimits_{-\infty}^{0} A^2 e^{2t} \dt + 
+	\int\displaylimits_{0}^{+\infty} A^2 e^{-2t} \dt =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{0} A^2 e^{2t} \dt + \int\displaylimits_{0}^{+\infty} A^2 e^{-2t} \dt = \int\displaylimits_{-\infty}^{+\infty} A^2 e^{-2\abs{t}} \dt =
+	= \int\displaylimits_{-\infty}^{0} A^2 e^{2t} \dt +
+	\int\displaylimits_{0}^{+\infty} A^2 e^{-2t} \dt =
+	\int\displaylimits_{-\infty}^{+\infty} A^2 e^{-2\abs{t}} \dt =
 \]
 \[
-	= 2 \int\displaylimits_{0}^{+\infty} A^2 e^{-2t} \dt = 2 A^2 \int\displaylimits_{0}^{+\infty} e^{-2t} \dt = 2 A^2 \cdot \left(-\frac{1}{2} \left[e^{-2t} \right]_0^\infty\right) =
+	= 2 \int\displaylimits_{0}^{+\infty} A^2 e^{-2t} \dt = 2 A^2
+	\int\displaylimits_{0}^{+\infty} e^{-2t} \dt = 2 A^2 \cdot
+	\left(-\frac{1}{2} \left[e^{-2t} \right]_0^\infty\right) =
 \]
 \[
-	2 A^2 \cdot \left(-\frac{1}{2} e^{-2\cdot(\infty)} - \left(-\frac{1}{2} e^{-2\cdot(0)}\right) \right) = 2 A^2 \cdot \frac{1}{2} = A^2.
+	2 A^2 \cdot \left(-\frac{1}{2} e^{-2\cdot(\infty)} - \left(-\frac{1}{2}
+	e^{-2\cdot(0)}\right) \right) = 2 A^2 \cdot \frac{1}{2} = A^2.
 \]
-\bigbreak
-\noindent\textbf{Calcolo di $\boldsymbol{P_y}$, $\boldsymbol{y_{eff}}$ e $\boldsymbol{y_y}$}\\
+\bigbreak\noindent
+\textbf{Calcolo di $\boldsymbol{P_y}$, $\boldsymbol{y_{eff}}$ e
+$\boldsymbol{y_y}$}\\
 Dato che $E_y = A^2 = K < \infty$ allora
 \[
 	P_y = 0,
@@ -849,20 +1031,48 @@ analogamente a quanto visto per la potenza, l'espressione del \textit{valor medi
 \end{equation}
 \end{proof}
 
+%------------------------------------------------
+% Subsection: Sviluppo in serie di Fourier in forma reale polare
+%------------------------------------------------
+
 \subsection{Sviluppo in serie di Fourier in forma reale polare}
-Ci\`o premesso, ci poniamo una domanda: qual \`e il modo pi\`u appropriato di procedere quando il segnale $x(t)$ \`e periodico con \textit{andamento arbitrario}, e in particolare \textit{non sinusoidale}? La risposta a questo quesito sta nella cosiddetta \textit{analisi di Fourier} che costituisce la base della moderna teoria dei segnali. Infatti, sotto ipotesi piuttosto ampie, che in seguito elencheremo, un segnale reale periodico qualunque pu\`o essere espresso come \textit{somma di oscillazioni sinusoidali di ampiezza, frequenza e fase opportune} cio\`e in una forma che richiami:
+Ci\`o premesso, ci poniamo una domanda: qual \`e il modo pi\`u appropriato di
+procedere quando il segnale $x(t)$ \`e periodico con \textit{andamento
+arbitrario}, e in particolare \textit{non sinusoidale}? La risposta a questo
+quesito sta nella cosiddetta \textit{analisi di Fourier} che costituisce la
+base della moderna teoria dei segnali. Infatti, sotto ipotesi piuttosto ampie,
+che in seguito elencheremo, un segnale reale periodico qualunque pu\`o essere
+espresso come \textit{somma di oscillazioni sinusoidali di ampiezza, frequenza e
+fase opportune} cio\`e in una forma che richiami:
 \begin{equation}\label{eq:periodic_signal_decomposition}
-	x(t) = a_0 + a_1 \cos(2 \pi f_1 t + \vartheta_1) + a_2 \cos(2 \pi f_2 t + \vartheta_2) + \dots
+	x(t) = a_0 + a_1 \cos(2 \pi f_1 t + \vartheta_1) + a_2 \cos(2 \pi f_2 t
+	+ \vartheta_2) + \dots
 \end{equation}
-In particolare, le frequenze di oscillazione includono in generale la "frequenza zero" relative al termine costante, e sono \textit{multiple intere della frequenza fondamentale $f_0$}, cosicch\'e la \eqref{eq:periodic_signal_decomposition} diventa:\footnote{Il termine $A_0$ \`e dato dal fatto che il coseno in $0$ valore $1$ mentre il seno vale $0$.}
+In particolare, le frequenze di oscillazione includono in generale la "frequenza
+zero" relative al termine costante, e sono \textit{multiple intere della
+frequenza fondamentale $f_0$}, cosicch\'e la
+\eqref{eq:periodic_signal_decomposition} diventa:\footnote{Il termine $A_0$ \`e
+dato dal fatto che il coseno in $0$ valore $1$ mentre il seno vale $0$.}
 \begin{equation}\label{eq:fourier_series_polar_form}
 	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t + \vartheta_n)
 \end{equation}
-dove per comodit\`a di notazione si \`e anche posto $A_0 = a_0$ e $2A_n = a_n$ per $n \geq 1$. Questa rappresentazione del segnale prende il nome di \textit{sviluppo in seria di Fourier}; pi\`u precisamente la relazione \eqref{eq:fourier_series_polar_form} costituisce l'\textit{espressione in forma polare} dello sviluppo in serie di Fourier. Essa permette dunque di rappresentare un segnale reale $x(t)$ come somma di una costante $A_0$ e di una \textit{serie} il cui \textit{n}-esimo termine, detto \textit{n}-esima \textit{oscillazione armonica} (o \textit{armonica tout-court}), ha ampiezza $A_n > 0$, frequenza $nf_0$ (la \textit{n}-esima \textit{frequenza armonica}) e fase iniziale $\vartheta_n$.
+dove per comodit\`a di notazione si \`e anche posto $A_0 = a_0$ e $2A_n = a_n$
+per $n \geq 1$. Questa rappresentazione del segnale prende il nome di
+\textit{sviluppo in seria di Fourier}; pi\`u precisamente la relazione
+\eqref{eq:fourier_series_polar_form} costituisce l'\textit{espressione in forma
+polare} dello sviluppo in serie di Fourier. Essa permette dunque di
+rappresentare un segnale reale $x(t)$ come somma di una costante $A_0$ e di una
+\textit{serie} il cui \textit{n}-esimo termine, detto \textit{n}-esima
+\textit{oscillazione armonica} (o \textit{armonica tout-court}), ha ampiezza
+$A_n > 0$, frequenza $nf_0$ (la \textit{n}-esima \textit{frequenza armonica}) e
+fase iniziale $\vartheta_n$.
 \bigbreak
-Prima di procedere ulteriormente, da un punto di vista formale, \`e bene dimostrare che la funzione $A_n \cos(2 \pi n f_0 t + \vartheta_n)$ sia effettivamente periodica:
+Prima di procedere ulteriormente, da un punto di vista formale, \`e bene
+dimostrare che la funzione $A_n \cos(2 \pi n f_0 t + \vartheta_n)$ sia
+effettivamente periodica:
 \[
-	A_n \cos(2 \pi n f_0 t + \vartheta_n) = A_n \cos(2 \pi n f_0 (t - mT_0) + \vartheta_n) \quad \forall m \in \mathbb{Z}.
+	A_n \cos(2 \pi n f_0 t + \vartheta_n) = A_n \cos(2 \pi n f_0 (t - mT_0)
+	+ \vartheta_n) \quad \forall m \in \mathbb{Z}.
 \]
 \begin{proof}
 Ricordando che $f_0 \cdot T_0 = 1$ e che $T_{\cos(x)} = 2\pi$,
@@ -879,12 +1089,29 @@ Ricordando che $f_0 \cdot T_0 = 1$ e che $T_{\cos(x)} = 2\pi$,
 \end{equation}
 \end{proof}
 Evidentemente, ogni particolare segnale $x(t)$ sar\`a caratterizzato da
-particolari insiemi di valori di $A_n$ e $\vartheta_n$. Dovremo quindi ricavare formule utili per il calcolo delle ampiezze e delle fasi delle varie armoniche e indicare condizioni matematiche che garantiscano la convergenza della serie \eqref{eq:fourier_series_polar_form}. Il primo di questi problemi fu risolto dal matematico L. Eulero attorno alla fine del 1700 in connessione con lo studio delle corde vibranti. e fu ripreso alcuni anni pi\`u tardi da J.B. Fourier. Quest'ultimo fu il primo a intuire l'importanza e la potenza della rappresentazione \eqref{eq:fourier_series_polar_form}, che us\`o per risolvere questioni di trasmissione del calore. La \textit{convergenza} della \eqref{eq:fourier_series_polar_form} fu dimostrata in seguito in maniera rigorosa da P.D. Dirichlet.
+particolari insiemi di valori di $A_n$ e $\vartheta_n$. Dovremo quindi ricavare
+formule utili per il calcolo delle ampiezze e delle fasi delle varie armoniche e
+indicare condizioni matematiche che garantiscano la convergenza della serie
+\eqref{eq:fourier_series_polar_form}. Il primo di questi problemi fu risolto dal
+matematico L. Eulero attorno alla fine del 1700 in connessione con lo studio
+delle corde vibranti. e fu ripreso alcuni anni pi\`u tardi da J.B. Fourier.
+Quest'ultimo fu il primo a intuire l'importanza e la potenza della
+rappresentazione \eqref{eq:fourier_series_polar_form}, che us\`o per risolvere
+questioni di trasmissione del calore. La \textit{convergenza} della
+\eqref{eq:fourier_series_polar_form} fu dimostrata in seguito in maniera
+rigorosa da P.D. Dirichlet.
+
+%------------------------------------------------
+% Subsection: Sviluppo in serie di Fourier in forma complessa
+%------------------------------------------------
 
 \subsection{Sviluppo in serie di Fourier in forma complessa}
-Per semplificare gli sviluppi analitici si preferisce usare una forma alternativa della serie di Fourier. Richiamando le formule di Eulero delle funzioni trigonometriche
+Per semplificare gli sviluppi analitici si preferisce usare una forma
+alternativa della serie di Fourier. Richiamando le formule di Eulero delle
+funzioni trigonometriche
 \begin{equation}
-	\cos(x) = \frac{e^{jx} + e^{-jx}}{2} \quads{2} , \quads{2} \sin(x) = \frac{e^{jx} - e^{-jx}}{2j},
+	\cos(x) = \frac{e^{jx} + e^{-jx}}{2} \quads{2} , \quads{2} \sin(x) =
+	\frac{e^{jx} - e^{-jx}}{2j},
 \end{equation}
 la \eqref{eq:fourier_series_polar_form} pu\`o essere riscritta come segue:
 \begin{equation}\label{eq:fourier_series_complex_development}
@@ -919,32 +1146,51 @@ Definiamo ora le quantit\`a
 	X_n \ \triangleq A_{-n} e^{-j \vartheta_{-n}} \quad , \quad n = \dots , -2, -1.
 \end{split}
 \end{equation}
-Se si effettuano le opportune sostituzioni nella \eqref{eq:fourier_series_complex_development} si ricava
+Se si effettuano le opportune sostituzioni nella
+\eqref{eq:fourier_series_complex_development} si ricava
 \begin{equation}\label{eq:fourier_series_complex_form}
 	x(t) = X_0 + \sum_{n = 1}^{\infty} X_n \ e^{j 2 \pi n f_0 t} - \sum_{n = -\infty}^{-1} X_n \ e^{j 2 \pi n f_0 t} = \sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t}
 \end{equation}
-che rappresenta l'\textit{espressione in forma complessa} della serie di Fourier\footnote{Tale rappresentazione pu\`o essere estesa nella stessa forma anche al caso di segnale $x(t)$ \textit{complesso}.}.
-\bigbreak
-\noindent
-Determiniamo ora una espressione per il calcolo del generico coefficiente di Fourier $X_k$, dove $k$ deve intendersi \textit{fissato}. A tal fine moltiplichiamo entrambi i membri della \eqref{eq:fourier_series_complex_form} per il fattore $e^{-j 2 \pi k f_0 t}$
+che rappresenta l'\textit{espressione in forma complessa} della serie di
+Fourier\footnote{Tale rappresentazione pu\`o essere estesa nella stessa forma
+anche al caso di segnale $x(t)$ \textit{complesso}.}.
+\bigbreak\noindent
+Determiniamo ora una espressione per il calcolo del generico coefficiente di
+Fourier $X_k$, dove $k$ deve intendersi \textit{fissato}. A tal fine
+moltiplichiamo entrambi i membri della \eqref{eq:fourier_series_complex_form}
+per il fattore $e^{-j 2 \pi k f_0 t}$
 \begin{equation}
-	x(t) \cdot e^{-j 2 \pi k f_0 t} = \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t}
+	x(t) \cdot e^{-j 2 \pi k f_0 t} = \sum_{n = -\infty}^{\infty} X_n
+	e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t}
 \end{equation}
 e integriamo il risultato in un intervallo pari al periodo $T_0$ del segnale stesso:
 \begin{equation}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \int\displaylimits_{-T_0/2}^{T_0/2} \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt
+	= \int\displaylimits_{-T_0/2}^{T_0/2} \sum_{n = -\infty}^{\infty} X_n
+	e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
-Supponendo che la serie a secondo membro converga \textit{uniformemente} (cosa che peraltro non \`e stata dimostrata fino a questo momento), possiamo considerare il termine $\sum_{k = -\infty}^{\infty} X_n$ una costante:
+Supponendo che la serie a secondo membro converga \textit{uniformemente} (cosa
+che peraltro non \`e stata dimostrata fino a questo momento), possiamo
+considerare il termine $\sum_{k = -\infty}^{\infty} X_n$ una costante:
 \begin{equation}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt
+	= \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2}
+	e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
 Ovvero
 \begin{equation}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt
+	= \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2}
+	e^{j 2 \pi (n - k) f_0 t} \dt.
 \end{equation}
-Procediamo adesso con il calcolo dell'integrale a secondo membro. Ricordando che $f_0 \cdot T_0 = 1$ si ha:
+Procediamo adesso con il calcolo dell'integrale a secondo membro. Ricordando che
+$f_0 \cdot T_0 = 1$ si ha:
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =\footnote{$\int f(t) e^{f(t)} \dt = e^{f(t)}$ quindi si moltiplica e divide per $\frac{d}{dt} \left(j 2 \pi (n - k) f_0 t\right) = j 2 \pi (n - k) f_0.$} \frac{1}{j 2 \pi (n - k) f_0} \int\displaylimits_{-T_0/2}^{T_0/2} j 2 \pi (n - k) f_0 \ e^{j 2 \pi (n - k) f_0 t} \dt =
+	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =
+	\footnote{$\int f(t) e^{f(t)} \dt = e^{f(t)}$ quindi si moltiplica e
+	divide per $\frac{d}{dt} \left(j 2 \pi (n - k) f_0 t\right) = j 2 \pi (n - k) f_0.$}
+	\frac{1}{j 2 \pi (n - k) f_0} \int\displaylimits_{-T_0/2}^{T_0/2} 
+	j 2 \pi (n - k) f_0 \ e^{j 2 \pi (n - k) f_0 t} \dt =
 \]
 \[
 	= \frac{1}{j 2 \pi (n - k) f_0} \left[e^{j 2 \pi (n - k) f_0 t}\right]_{-T_0/2}^{T_0/2} = \frac{e^{j 2 \pi (n - k) f_0 (T_0/2)} - e^{j 2 \pi (n - k) f_0 (-T_0/2)}}{j 2 \pi (n - k) f_0} =
@@ -977,8 +1223,17 @@ X_0 = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) dt
 \end{equation}
 che coincide con l'espressione del valore medio $x_m$ del segnale.
 
+%------------------------------------------------
+% Subsection: Sviluppo in serie di Fourier in forma rettangolare reale
+%------------------------------------------------
+
 \subsection{Sviluppo in serie di Fourier in forma reale rettangolare}
-Abbiamo dunque ricavato due possibili espressioni per la serie di Fourier, e precisamente quella in forma polare \eqref{eq:fourier_series_polar_form} e quella in forma complessa \eqref{eq:fourier_series_complex_form}; ne esiste anche una terza, detta \textit{espressione in forma rettangolare}, che ricaviamo di seguito. Sviluppando le funzioni cosinusoidali della \eqref{eq:fourier_series_polar_form} si ha
+Abbiamo dunque ricavato due possibili espressioni per la serie di Fourier, e
+precisamente quella in forma polare \eqref{eq:fourier_series_polar_form} e
+quella in forma complessa \eqref{eq:fourier_series_complex_form}; ne esiste
+anche una terza, detta \textit{espressione in forma rettangolare}, che
+ricaviamo di seguito. Sviluppando le funzioni cosinusoidali della
+\eqref{eq:fourier_series_polar_form} si ha
 \begin{equation}
 \begin{split}
 	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t + \vartheta_n) =
@@ -992,27 +1247,46 @@ Se adesso si definiscono le quantit\`a $a_0 \triangleq A_0$, $a_n \triangleq A_n
 \begin{equation}
 	x(t) = a_0 + 2 \sum_{n = 1}^{\infty} \left[a_n \cos(2 \pi n f_0 t) - b_n \sin(2 \pi n f_0 t)\right].
 \end{equation}
-I coefficienti dell'espressione in forma rettangolare $a_n$, $b_n$ sono legati a quelli relativi all'espansione in forma complessa $X_n$ della relazioni
+I coefficienti dell'espressione in forma rettangolare $a_n$, $b_n$ sono legati a
+quelli relativi all'espansione in forma complessa $X_n$ della relazioni
 \begin{equation}
 	a_n = \Re[X_n] = \frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \cos(2 \pi n f_0 t) \dt,
 \end{equation}
 \begin{equation}
 	b_n = \Im[X_n] = -\frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \sin(2 \pi n f_0 t) \dt.
 \end{equation}
-Nelle equazioni precedenti, la notazione $\int\displaylimits_{[T_0]}$ sta a indicare che l'integrale pu\`o essere esteso a un qualunque intervallo temporale di ampiezza $T_0$. Per ragioni di simmetria, \`e buona norma scegliere l'intervallo $[-T_0/2, \ T_0/2]$.
+Nelle equazioni precedenti, la notazione $\int\displaylimits_{[T_0]}$ sta a
+indicare che l'integrale pu\`o essere esteso a un qualunque intervallo temporale
+di ampiezza $T_0$. Per ragioni di simmetria, \`e buona norma scegliere
+l'intervallo $[-T_0/2, \ T_0/2]$.
+
+%------------------------------------------------
+% Subsection: Il criterio di Dirichlet
+%------------------------------------------------
 
 \subsection{Il criterio di Dirichlet}
-Ricordiamo che negli sviluppi analitici necessari per ottenere l'espressione del generico coefficiente di Fourier \eqref{eq:fourier_coefficient}
+Ricordiamo che negli sviluppi analitici necessari per ottenere l'espressione del
+generico coefficiente di Fourier \eqref{eq:fourier_coefficient}
 \begin{equation}
-	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt
+	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi k f_0 t} \dt
 \end{equation}
-\`e stata ipotizzata la convergenza uniforme della serie ottenuta in \eqref{eq:fourier_series_complex_form}
+\`e stata ipotizzata la convergenza uniforme della serie ottenuta in
+\eqref{eq:fourier_series_complex_form}
 \begin{equation}
 	\sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t}.
 \end{equation}
-Per i segnali che si incontrano comunemente nella applicazioni pratiche, questa ipotesi \`e sempre verificata; spesso per\`o, per schematizzare fenomeni fisici, si fa ricorso a funzioni che non rappresentano esattamente i segnali in esame, ma che offrono il vantaggio non indifferente di una maggiore \textit{semplicit\`a}. Per tali funzioni, tuttavia, non \`e pi\`u assicurata in generale la possibilit\`a di uno sviluppo in serie di Fourier e diventa quindi necessario disporre di criteri che garantiscano la correttezza di tale sviluppo.
+Per i segnali che si incontrano comunemente nella applicazioni pratiche, questa
+ipotesi \`e sempre verificata; spesso per\`o, per schematizzare fenomeni fisici,
+si fa ricorso a funzioni che non rappresentano esattamente i segnali in esame,
+ma che offrono il vantaggio non indifferente di una maggiore
+\textit{semplicit\`a}. Per tali funzioni, tuttavia, non \`e pi\`u assicurata in
+generale la possibilit\`a di uno sviluppo in serie di Fourier e diventa quindi
+necessario disporre di criteri che garantiscano la correttezza di tale sviluppo.
 \bigbreak
-Un insieme di condizioni sufficienti che garantiscano la possibilit\`a di sviluppare un segnale in serie di Fourier \`e il cosiddetto \textit{criterio di Dirichlet} che pu\`o essere enunciato come segue:
+Un insieme di condizioni sufficienti che garantiscano la possibilit\`a di
+sviluppare un segnale in serie di Fourier \`e il cosiddetto \textit{criterio di
+Dirichlet} che pu\`o essere enunciato come segue:
 \begin{itemize}
 	\item se $x(t)$ \`e assolutamente integrabile\footnote{Una funzione assolutamente integrabile su un intervallo \`e una funzione per la quale esiste finito l'integrale del valore assoluto della funzione sull'intervallo di integrazione considerato.} sul periodo $T_0$, vale a dire se verifica la condizione
 		\begin{equation}
@@ -1036,20 +1310,35 @@ dove il particolare coefficiente $X_k$ della serie \`e dato da
 \begin{equation}
 	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
-Naturalmente, la sequenza $X_n$ \`e in generale \textit{complessa}; per rappresentarla \`e conveniente tracciare due grafici che prendono il nome di \textit{spettro di ampiezza} e \textit{spettro di fase}\footnote{Il termine "spettro" deve intendersi nel significato di "gamma di rappresentazione, gamma di visione" e nasce in fisica nel campo della spettroscopia in cui si \textit{analizza} la composizione dei materiali attraverso le "righe" di emissione caratteristiche dei diversi elementi chimici.}. Il primo illustra l'andamento dell'ampiezza (modulo) dei coefficienti $X_k$, il secondo ne illustra l'andamento della fase, entrambi in funzione dell'ordine $k$ del coefficiente o del valore della $k$-esima frequenza armonica $k f_0$. Esempi stilizzati di queste rappresentazioni sono riportati nelle seguenti figure:
+Naturalmente, la sequenza $X_n$ \`e in generale \textit{complessa}; per
+rappresentarla \`e conveniente tracciare due grafici che prendono il nome di
+\textit{spettro di ampiezza} e \textit{spettro di fase}\footnote{Il termine
+"spettro" deve intendersi nel significato di "gamma di rappresentazione,
+gamma di visione" e nasce in fisica nel campo della spettroscopia in cui si
+\textit{analizza} la composizione dei materiali attraverso le "righe" di
+emissione caratteristiche dei diversi elementi chimici.}. Il primo illustra
+l'andamento dell'ampiezza (modulo) dei coefficienti $X_k$, il secondo ne
+illustra l'andamento della fase, entrambi in funzione dell'ordine $k$ del
+coefficiente o del valore della $k$-esima frequenza armonica $k f_0$. Esempi
+stilizzati di queste rappresentazioni sono riportati nelle seguenti figure:
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/spettro_di_ampiezza_e_di_fase.jpg}
-\caption{Spettro di ampiezza e di fase.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/spettro_di_ampiezza_e_di_fase.jpg}
+	\caption{Spettro di ampiezza e di fase.}
 \end{figure}
+
+%------------------------------------------------
+% Subsubsection: Spettro di un coseno
+%------------------------------------------------
 
 \subsubsection{Spettro di un coseno}
 Consideriamo il segnale
 \begin{equation}
 	x(t) = A \cos(2 \pi f_0 t).
 \end{equation}
-Esso rappresenta un'oscillazione cosinusoidale di frequenza $f_0$; il periodo del segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
+Esso rappresenta un'oscillazione cosinusoidale di frequenza $f_0$; il periodo
+del segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
 \begin{equation}
 	\begin{split}
 		X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \cos(2 \pi f_0 t) e^{-j 2 \pi n f_0 t} \dt =
@@ -1127,12 +1416,14 @@ In conclusione,
 \end{equation}
 Gli spettri di ampiezza e fase del segnale sono mostrati nella seguente figura:
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/cosine_power_phase_spectrum.jpg}
-\caption{Spettri di ampiezza e fase del segnali cosinusoidale.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/cosine_power_phase_spectrum.jpg}
+	\caption{Spettri di ampiezza e fase del segnali cosinusoidale.}
 \end{figure}
-Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento: se si confronta l'espressione in forma polare della serie di Fourier di un segnale generico
+Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento: se si
+confronta l'espressione in forma polare della serie di Fourier di un segnale
+generico
 \begin{equation}
 	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k),
 \end{equation}
@@ -1156,12 +1447,17 @@ ovvero
 	X_1 = \frac{A}{2}, X_{-1} = \frac{A}{2}; \quad X_k = 0 \ \forall k \neq \pm 1.
 \]
 
+%------------------------------------------------
+% Subsubsection: 
+%------------------------------------------------
+
 \subsubsection{Spettro di un seno}
 Consideriamo il segnale
 \begin{equation}
 	x(t) = A \sin(2 \pi f_0 t).
 \end{equation}
-Esso rappresenta un'oscillazione sinusoidale di frequenza $f_0$; il periodo del segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
+Esso rappresenta un'oscillazione sinusoidale di frequenza $f_0$; il periodo del
+segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
 \[
 	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \sin(2 \pi f_0 t) e^{-j 2 \pi n f_0 t} \dt =
 \]
@@ -1287,17 +1583,52 @@ ovvero
 	X_1 = \frac{A}{2} e^{-j\frac{\pi}{2}}, X_{-1} = \frac{A}{2} e^{j\frac{\pi}{2}}; \quad X_k = 0 \ \forall k \neq \pm 1.
 \]
 
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
+
 \newpage
 \subsection{MATLAB 2.1}
-Verifichiamo le properit\`a della serie di Fourier (simmetria e linearit\`a) considerando un esempoi di segnale periodico tratto dalla realt\`a. Prendiamo, in particolare, il tracciato di un \textit{elettrocardiogramma}, che \`e stato acquisito registrando l'attivit\`a elettrica del cuore di un paziente al variare del tempo. Come \`e noto, la differenza di potenziale tra gli elettrodi applicati sul corpo del paziente (cio\`e l'elettrocardiogramma) ha un andamento tipo (pressoch\'e) periodico, in virtu\`u della regolarit\`a temporale con la quale vengono prodotti gli impulsi da parte del miocardio.\\
-Per verificare sperimentalmente quanto abbiamo appena introdotto, facciamo ricorso al pacchetto software per l'analisi e la simulazione di segnali Matlab. Riguardo all'uso di Matlab occorre fare alcune precisazioni: innanzitutto osserviamo che fino ad ora abbiamo sempre ragionato in termini di segnali \textit{analogici}, e in particolare di segnali a \textit{tempo continuo}. Matlab \`e invece un simulatore \textit{a tempo discreto}, che fa uso di segnali numerici o \textit{digitali}. Questi segnali a tempo discreto vengono introdotti per \textit{emulare} o \textit{simulare} segnali a tempo continuo (che non possono essere trattati dai computer digitali). Dunque in luogo di una forma d'onda continua nel tempo $x(t)$, Matlab elabora un vettore temporale $\boldsymbol{x}$ ottenuto, come nelle classiche procedure di calcolo numerico, raccogliendo una successione di \textit{N} valori consecutivi ed equispaziati di $x(t)$. Tali campioni vengono estratti da $x(t)$ su di un dato intervallo (dominio) temporale con un certo quanto temporale $\Delta t$; in breve, si ha che $\boldsymbol{x} = [x(0), x(\Delta t), x(2 \Delta t), \dots, x((N - 1)\Delta t)]$. Un vettore $N$-dimensionale come quello appena definito rappresenta la tipica entit\`a trattata da Matlab per emulare un segnale analogico.
+Verifichiamo le properit\`a della serie di Fourier (simmetria e linearit\`a)
+considerando un esempoi di segnale periodico tratto dalla realt\`a. Prendiamo,
+in particolare, il tracciato di un \textit{elettrocardiogramma}, che \`e stato
+acquisito registrando l'attivit\`a elettrica del cuore di un paziente al variare
+del tempo. Come \`e noto, la differenza di potenziale tra gli elettrodi
+applicati sul corpo del paziente (cio\`e l'elettrocardiogramma) ha un andamento
+tipo (pressoch\'e) periodico, in virtu\`u della regolarit\`a temporale con la
+quale vengono prodotti gli impulsi da parte del miocardio.\\
+Per verificare sperimentalmente quanto abbiamo appena introdotto, facciamo
+ricorso al pacchetto software per l'analisi e la simulazione di segnali Matlab.
+Riguardo all'uso di Matlab occorre fare alcune precisazioni: innanzitutto
+osserviamo che fino ad ora abbiamo sempre ragionato in termini di segnali
+\textit{analogici}, e in particolare di segnali a \textit{tempo continuo}.
+Matlab \`e invece un simulatore \textit{a tempo discreto}, che fa uso di segnali
+numerici o \textit{digitali}. Questi segnali a tempo discreto vengono introdotti
+per \textit{emulare} o \textit{simulare} segnali a tempo continuo (che non
+possono essere trattati dai computer digitali). Dunque in luogo di una forma
+d'onda continua nel tempo $x(t)$, Matlab elabora un vettore temporale
+$\boldsymbol{x}$ ottenuto, come nelle classiche procedure di calcolo numerico,
+raccogliendo una successione di \textit{N} valori consecutivi ed equispaziati di
+$x(t)$. Tali campioni vengono estratti da $x(t)$ su di un dato intervallo
+(dominio) temporale con un certo quanto temporale $\Delta t$; in breve, si ha
+che
+$\boldsymbol{x} = [x(0), x(\Delta t), x(2 \Delta t), \dots, x((N - 1)\Delta t)]$
+. Un vettore $N$-dimensionale come quello appena definito rappresenta la tipica
+entit\`a trattata da Matlab per emulare un segnale analogico.
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/matlab_ecg_signal.jpg}
-\caption{Elettrocardiogramma.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/matlab_ecg_signal.jpg}
+	\caption{Elettrocardiogramma.}
 \end{figure}
-La figura precedente riporta l'andamento nel tempo della differenza di potenziale prodotta dall'attivit\`a cardiaca, registrata su di un paziente che nel passato ha subito un infarto miocardico (segnali di questo tipo sono facilmente estraibili da database disponibili online \footnote{\href{https://www.physionet.org/physiobank/database/mitdb/}{https://www.physionet.org/physiobank/database/mitdb/}}). Nel caso specifico, i dati sono immagazzinati nel file binario 'egc.dat', che utilizza 16 bit per rappresentare ciascun campione temporale, con una spaziatura temporale pari a $\Delta t = 20 ms$. Si consideri il seguente script Matlab
+La figura precedente riporta l'andamento nel tempo della differenza di
+potenziale prodotta dall'attivit\`a cardiaca, registrata su di un paziente
+che nel passato ha subito un infarto miocardico (segnali di questo tipo sono
+facilmente estraibili da database disponibili online
+\footnote{\href{https://www.physionet.org/physiobank/database/mitdb/}{https://www.physionet.org/physiobank/database/mitdb/}}).
+Nel caso specifico, i dati sono immagazzinati nel file binario 'egc.dat', che
+utilizza 16 bit per rappresentare ciascun campione temporale, con una spaziatura
+temporale pari a $\Delta t = 20 ms$. Si consideri il seguente script Matlab
 \lstinputlisting[frame=single, language=Matlab]{resources/ecg.m}
 Le righe di codice
 \begin{lstlisting}[frame=single, language=Matlab]
@@ -1305,14 +1636,17 @@ fOut = fopen('ecg.dat');
 numeroCampioni = 5000;
 x = fread(fOut, numeroCampioni, 'int16');
 \end{lstlisting}
-servono a leggere $500$ campioni dall'elettrocardiogramma e memorizzarli nel vettore $\boldsymbol{x}$. A questo punto, \`e possibile visualizzare l'andamento temporale del segnale con
+servono a leggere $500$ campioni dall'elettrocardiogramma e memorizzarli nel
+vettore $\boldsymbol{x}$. A questo punto, \`e possibile visualizzare l'andamento
+temporale del segnale con
 \begin{lstlisting}[frame=single, language=Matlab]
 deltaT = 0.02;
 tempo = (1:numeroCampioni)*deltaT;
 figure
 plot(tempo, x);
 \end{lstlisting}
-Utilizzando la funzione \texttt{fft} in dotazione a Matlab, \`e possibile valutare sperimentalmente lo spettro del segnale in esame:
+Utilizzando la funzione \texttt{fft} in dotazione a Matlab, \`e possibile
+valutare sperimentalmente lo spettro del segnale in esame:
 \begin{lstlisting}[frame=single, language=Matlab]
 lunghezzaFft = 2^nextpow2(numeroCampioni);
 X=fft(x, lunghezzaFft);
@@ -1321,7 +1655,22 @@ frequenza = linspace(-0.5, 0.5, length(X))/deltaT;
 figure
 plot(frequenza, abs(X));
 \end{lstlisting}
-Il risultato delle precedenti operazioni \`e lo spettro di ampiezza illustrato di seguito. Come possiamo facilmente vedere, sono presenti righe abbastanza marcate (e simmetriche rispetto all'origine), che ci consentono di affermare che lo spettro calcolato \`e quello di un segnale periodico. Possiamo identificare l'armonica fondamentale $f_0$ a un frequenza praticamente uguale a $1 Hz$; ci\`o suggerisce che la pulsazione cardiaca del paziente al momento dell'elettrocardiogramma \`e pari a $60$ battiti al minuto, come del resto ci potevamo aspettare valutando la distanza temporale $T_0$ tra due picchi consecutivi del segnale. Tuttavia, lo spettro ottenuto non \`e esattamente a righe come ci aspetteremo da un segnale periodico: le righe non sono isolate, in quanto si manifestano componenti frequenziali anche tra un'armonica e l'altra, e non sono neanche infinitamente strette. Questi fenomeni sono dovuti al fatto che il battito cardiaco \`e soltanto \textit{approssimativamente} periodico. In realt\`a anche su piccola scala temporale, l'attivit\`a miocardica ha leggere irregolarit\`a temporali e quindi lo spettro risultante non \`e perfettamente a righe.
+Il risultato delle precedenti operazioni \`e lo spettro di ampiezza illustrato
+di seguito. Come possiamo facilmente vedere, sono presenti righe abbastanza
+marcate (e simmetriche rispetto all'origine), che ci consentono di affermare che
+lo spettro calcolato \`e quello di un segnale periodico. Possiamo identificare
+l'armonica fondamentale $f_0$ a un frequenza praticamente uguale a $1 Hz$; ci\`o
+suggerisce che la pulsazione cardiaca del paziente al momento
+dell'elettrocardiogramma \`e pari a $60$ battiti al minuto, come del resto ci
+potevamo aspettare valutando la distanza temporale $T_0$ tra due picchi
+consecutivi del segnale. Tuttavia, lo spettro ottenuto non \`e esattamente a
+righe come ci aspetteremo da un segnale periodico: le righe non sono isolate,
+in quanto si manifestano componenti frequenziali anche tra un'armonica e
+l'altra, e non sono neanche infinitamente strette. Questi fenomeni sono dovuti
+al fatto che il battito cardiaco \`e soltanto \textit{approssimativamente}
+periodico. In realt\`a anche su piccola scala temporale, l'attivit\`a miocardica
+ha leggere irregolarit\`a temporali e quindi lo spettro risultante non \`e
+perfettamente a righe.
 \begin{figure}[H]
 \centering
 \captionsetup{justification=centering}
@@ -1335,61 +1684,84 @@ L'equazione di sintesi
 \begin{equation}\label{eq:fourier_series_complex_form}
 	x(t) = \sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t}
 \end{equation}
-richiede un numero illimitato di armoniche per ricostruire il segnale periodico $x(t)$. Le considerazioni fatte per\`o suggeriscono che una approssimazione soddisfacente del segnale pu\`o essere conseguita anche con un numero \textit{finito} di armoniche. Possiamo verificare "sperimentalmente" l'effetto che il troncamento a un numero finito $K$ di armoniche produce sulla sintesi del segnale \textit{treno di impulsi}
+richiede un numero illimitato di armoniche per ricostruire il segnale periodico
+$x(t)$. Le considerazioni fatte per\`o suggeriscono che una approssimazione
+soddisfacente del segnale pu\`o essere conseguita anche con un numero
+\textit{finito} di armoniche. Possiamo verificare "sperimentalmente" l'effetto
+che il troncamento a un numero finito $K$ di armoniche produce sulla sintesi del
+segnale \textit{treno di impulsi}
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/treno_di_impulsi.png}
-\caption{Rappresentazione grafica del segnale treno di impulsi.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/treno_di_impulsi.png}
+	\caption{Rappresentazione grafica del segnale treno di impulsi.}
 \end{figure}
-sfruttando nuovamente il pacchetto software Matlab. Per riprodurre l'equazione di sintesi dobbiamo generare una rappresentazione vettoriale delle forme d'onda $cos(2 \pi k f_0 t)$ al variare di $k$. In altre parole, occorre calcolare i punti di queste curve utilizzando come supporto dei vettori temporali sufficientemente "fitti" (cio\`e con $\Delta t$ sufficientemente piccolo), che siano in grado di approssimare in maniera accurata l'andamento dei segnali a tempo continuo.
+sfruttando nuovamente il pacchetto software Matlab. Per riprodurre l'equazione
+di sintesi dobbiamo generare una rappresentazione vettoriale delle forme d'onda
+$cos(2 \pi k f_0 t)$ al variare di $k$. In altre parole, occorre calcolare i
+punti di queste curve utilizzando come supporto dei vettori temporali
+sufficientemente "fitti" (cio\`e con $\Delta t$ sufficientemente piccolo), che
+siano in grado di approssimare in maniera accurata l'andamento dei segnali a
+tempo continuo.\\
 Si consideri il seguente script Matlab
 \lstinputlisting[frame=single, language=Matlab]{resources/fourier_approximation.m}
 Di seguito i grafici del seguente script per $K = 3$, $K = 7$, $K = 15$, $K = 30$.
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_1.jpg}
-\caption{Approssimazione del treno di impulsi per $K = 3$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_1.jpg}
+	\caption{Approssimazione del treno di impulsi per $K = 3$.}
 \end{figure}
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_2.jpg}
-\caption{Approssimazione del treno di impulsi per $K = 7$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_2.jpg}
+	\caption{Approssimazione del treno di impulsi per $K = 7$.}
 \end{figure}
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_3.jpg}
-\caption{Approssimazione del treno di impulsi per $K = 15$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_3.jpg}
+	\caption{Approssimazione del treno di impulsi per $K = 15$.}
 \end{figure}
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_4.jpg}
-\caption{Approssimazione del treno di impulsi per $K = 30$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_4.jpg}
+	\caption{Approssimazione del treno di impulsi per $K = 30$.}
 \end{figure}
-\`E interessante fornire la rappresentazione grafica dell'approssimazione che si ottiene per un valore crescete di $K$ sino ad ottenere una quasi perfetta rappresentazione del segnale treno di impulsi.
+\`E interessante fornire la rappresentazione grafica dell'approssimazione che si
+ottiene per un valore crescete di $K$ sino ad ottenere una quasi perfetta
+rappresentazione del segnale treno di impulsi.
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_5.jpg}
-\caption{Approssimazione del treno di impulsi per $K = 300$.}
-\end{figure}
-\begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_6.jpg}
-\caption{Approssimazione del treno di impulsi per $K = 3000$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_5.jpg}
+	\caption{Approssimazione del treno di impulsi per $K = 300$.}
 \end{figure}
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_7.jpg}
-\caption{Approssimazione del treno di impulsi per $K = 30000$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_6.jpg}
+	\caption{Approssimazione del treno di impulsi per $K = 3000$.}
 \end{figure}
-In tutto questo volume gli esperimenti Matlab vengono usati come semplici strumenti per chiarire ulteriormente i concetti esposti nel testo. Non vi \`e nessuna pretesa di \textit{far apprendere} Matlab con le sue regole e/o i suoi trucchi. Non possiamo pre\`o sottrarci, di quando in quando, a qualche osservazione di carattere generale sulla programmazione. In particolare, il codice presentato qui sopra merita alcune precisazioni riguardo allo stile di scrittura. Come \`e possibile notare soprattutto nelle ultime righe, l'approccio adottato fa un uso apprezzabile di \textit{matrici} e \textit{vettori}, a scapito talvolta della leggibilit\`a del codice. Per esempio, invece di utilizzare un ciclo \texttt{for} in funzione dei coefficienti \texttt{k} per l'equazione di sintesi come in
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/matlab_approssimazione_7.jpg}
+	\caption{Approssimazione del treno di impulsi per $K = 30000$.}
+\end{figure}
+In tutto questo volume gli esperimenti Matlab vengono usati come semplici
+strumenti per chiarire ulteriormente i concetti esposti nel testo. Non vi
+\`e nessuna pretesa di \textit{far apprendere} Matlab con le sue regole e/o i
+suoi trucchi. Non possiamo pre\`o sottrarci, di quando in quando, a qualche
+osservazione di carattere generale sulla programmazione. In particolare, il
+codice presentato qui sopra merita alcune precisazioni riguardo allo stile di
+scrittura. Come \`e possibile notare soprattutto nelle ultime righe, l'approccio
+adottato fa un uso apprezzabile di \textit{matrici} e \textit{vettori}, a
+scapito talvolta della leggibilit\`a del codice. Per esempio, invece di
+utilizzare un ciclo \texttt{for} in funzione dei coefficienti \texttt{k} per
+l'equazione di sintesi come in
 \begin{lstlisting}[frame=single, language=Matlab]
 % X_0 = 1/2
 componenteContinua = 0.5;
@@ -1406,20 +1778,35 @@ for k = 1:2:K
 	xApprossimante = xApprossimante + coefficienteK * cos(2*pi*k*tempoNormalizzato);
 end
 \end{lstlisting}
-(e come si farebbe utilizzando un linguaggio di programmazione general-purpose, per esempio C o C++), abbiamo usato il prodotto matriciale tra vettore \texttt{coseni} e \texttt{coefficienti}. Il motivo di tale scelta risiede nel fatto che Matlab, a differenza di altri ambienti di simulazione numerica e altri linguaggi di programmazione, \`e ottimizzato per il calcolo matriciale. \`E buona regola, quindi, sfruttare questa caratteristica, adottando uno stile di programmazione conseguente, per ottenere un codice efficiente che venga eseguito velocemente sulla piattaforma di calcolo utilizzata.
+(e come si farebbe utilizzando un linguaggio di programmazione general-purpose,
+per esempio C o C++), abbiamo usato il prodotto matriciale tra vettore
+\texttt{coseni} e \texttt{coefficienti}. Il motivo di tale scelta risiede nel
+fatto che Matlab, a differenza di altri ambienti di simulazione numerica e altri
+linguaggi di programmazione, \`e ottimizzato per il calcolo matriciale. \`E
+buona regola, quindi, sfruttare questa caratteristica, adottando uno stile di
+programmazione conseguente, per ottenere un codice efficiente che venga eseguito
+velocemente sulla piattaforma di calcolo utilizzata.
+
+%------------------------------------------------
+% Section: Segnali aperiodici a tempo continuo
+%------------------------------------------------
 
 \newpage
 \section{Segnali aperiodici a tempo continuo}
-Consideriamo il segnale detto \textit{treno di impulsi rettangolari di durata $T$ e periodo $T_0$} ($T < T_0$) rappresentato nella seguente figura
+Consideriamo il segnale detto \textit{treno di impulsi rettangolari di durata
+$T$ e periodo $T_0$} ($T < T_0$) rappresentato nella seguente figura
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/treno_di_impulsi_rettangolari.jpg}
-\caption{Treno di impulsi rettangolari.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/treno_di_impulsi_rettangolari.jpg}
+	\caption{Treno di impulsi rettangolari.}
 \end{figure}
-Per questo segnale si definisce il parametro \textit{duty-factor} (o \textit{duty-cycle}) $\delta = T/T_0$ che esprime il rapporto tra la durata $T$ di ciascun impulso e il periodo di ripetizione del segnale $T_0$.
+Per questo segnale si definisce il parametro \textit{duty-factor} (o 
+\textit{duty-cycle}) $\delta = T/T_0$ che esprime il rapporto tra la durata $T$
+di ciascun impulso e il periodo di ripetizione del segnale $T_0$.
 \bigbreak
-Per rappresentare pi\`u comodamente il treno di impulsi rettangolari \`e utile definire la funzione
+Per rappresentare pi\`u comodamente il treno di impulsi rettangolari \`e utile
+definire la funzione
 \begin{equation}
 	rect(\alpha) \triangleq
 		\begin{cases}
@@ -1430,20 +1817,30 @@ Per rappresentare pi\`u comodamente il treno di impulsi rettangolari \`e utile d
 \end{equation}
 il cui andamento (impulso rettangolare) \`e rappresentato nella seguente figura
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/rect_alpha.jpg}
-\caption{Grafico della funzione $rect(\alpha)$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/rect_alpha.jpg}
+	\caption{Grafico della funzione $rect(\alpha)$.}
 \end{figure}
-Ancora una volta, questa semplice funzione rappresenta un'astrazione matematica utile per schematizzare impulsi che hanno \textit{tempo di salita} molto breve rispetto alla propria \textit{durata}. Utilizzando questa funzione \`e possibile scrivere la seguente espressione per il treno di impulsi rettangolari
+Ancora una volta, questa semplice funzione rappresenta un'astrazione matematica
+utile per schematizzare impulsi che hanno \textit{tempo di salita} molto breve
+rispetto alla propria \textit{durata}. Utilizzando questa funzione \`e possibile
+scrivere la seguente espressione per il treno di impulsi rettangolari
 \begin{equation}
 	x(t) = \sum_{n = -\infty}^{+\infty} a \cdot rect\left(\frac{t - nT_0}{T}\right).
 \end{equation}
-Il segnale periodico \textit{treno di impulsi rettangolari} \`e infatti rappresentato come la \textit{sovrapposizione} di infiniti impulsi di durata $T$ ottenuti ciascuno \textit{ritardando} l'impulso "base" non periodico $rect(t/T)$ di $nT_0$ secondi con $n = 0. \pm1,\dots$. In questo caso diremo che l'impulso-base $rect(t/T)$ \`e stato \textit{periodicizzato} con periodo di ripetizione $T_0$ per ottenere il segnale $x(t)$.
+Il segnale periodico \textit{treno di impulsi rettangolari} \`e infatti
+rappresentato come la \textit{sovrapposizione} di infiniti impulsi di durata $T$
+ottenuti ciascuno \textit{ritardando} l'impulso "base" non periodico $rect(t/T)$
+di $nT_0$ secondi con $n = 0. \pm1,\dots$. In questo caso diremo che
+l'impulso-base $rect(t/T)$ \`e stato \textit{periodicizzato} con periodo di
+ripetizione $T_0$ per ottenere il segnale $x(t)$.
 \bigbreak
 Calcoliamo ora i coefficienti dello sviluppo in serie del segnale in esame:
 \[
-	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} a \cdot rect(t/T) e^{-j 2 \pi n f_0 t} \dt
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+	a \cdot rect(t/T) e^{-j 2 \pi n f_0 t} \dt
 \]
 \begin{equation}
 	\begin{split}
@@ -1473,71 +1870,142 @@ per cui
 \end{equation}
 dove si \`e posto $\delta = T/T_0$ e $\alpha = kT/T_0$.
 
+%------------------------------------------------
+% Subsection: Dalla serie all'integrale di Fourier
+%------------------------------------------------
+
 \subsection{Dalla serie all'integrale di Fourier}
-Il significato e l'importanza della rappresentazione in serie di Fourier di un segnale periodico a tempo continuo sono stati ampiamente discussi nella sezione precedente. Molti segnali che si osservano nei fenomeni naturali non sono per\`o periodico. Sorge allora immediata la questione della possibilit\`a di ottenere una scomposizione simile alla serie di Fourier \textit{anche per i segnali aperiodici}. \textbf{\`E possibile cio\`e rappresentare anche un segnale non periodico come una opportuna \textit{sovrapposizione} di segnali elementari, in particolare sinusoidali?}
+Il significato e l'importanza della rappresentazione in serie di Fourier di un
+segnale periodico a tempo continuo sono stati ampiamente discussi nella sezione
+precedente. Molti segnali che si osservano nei fenomeni naturali non sono per\`o
+periodico. Sorge allora immediata la questione della possibilit\`a di ottenere
+una scomposizione simile alla serie di Fourier \textit{anche per i segnali
+aperiodici}. \textbf{\`E possibile cio\`e rappresentare anche un segnale non
+periodico come una opportuna \textit{sovrapposizione} di segnali elementari, in
+particolare sinusoidali?}
 \bigbreak
-Per rispondere a questa domanda, consideriamo come caso di studio il segnale aperiodico appena introdotto impulso rettangolare:
+Per rispondere a questa domanda, consideriamo come caso di studio il segnale
+aperiodico appena introdotto impulso rettangolare:
 \[
 	x(t) = rect(\frac{t}{T}).
 \]
-Mettiamo ora in relazione questo segnale con il treno di impulsi rettangolari \textit{periodico}
+Mettiamo ora in relazione questo segnale con il treno di impulsi rettangolari
+\textit{periodico}
 \begin{equation}
 	x_p(t) = \sum_{n = -\infty}^{+\infty} x(t - nT_0) = \sum_{n = -\infty}^{+\infty} rect\left(\frac{t - nT_0}{T}\right)
 \end{equation}
-di cui gi\`a conosciamo la rappresentazione in serie di Fourier. Come \`e chiaro, $x_p(t)$ \`e ottenuto \textit{periodicizzando} $x(t)$ con periodo di ripetizione $T_0$, come suggerito nella seguente figura
+di cui gi\`a conosciamo la rappresentazione in serie di Fourier. Come \`e chiaro
+, $x_p(t)$ \`e ottenuto \textit{periodicizzando} $x(t)$ con periodo di
+ripetizione $T_0$, come suggerito nella seguente figura
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/treno_di_impulsi_rettangolari_2.jpg}
-\caption{Treno di impulsi rettangolari.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/treno_di_impulsi_rettangolari_2.jpg}
+	\caption{Treno di impulsi rettangolari.}
 \end{figure}
-Il segnale originario $x(t)$ pu\`o essere considerato come una sorta di caso-limite di un segnale periodico: partendo da $x_p(t)$, si riottiene l'impulso "base" $x(t)$ centrato in $t = 0$ se si pensa di \textit{fare una periodicizzazione di periodo $T-0 \rightarrow \infty$}. Al di l\`a del particolare esempio, se si costruisce un segnale periodico $x_p(t)$ per periodicizzazione del segnale aperiodico $x(t)$ \`e vero in generale che
+Il segnale originario $x(t)$ pu\`o essere considerato come una sorta di
+caso-limite di un segnale periodico: partendo da $x_p(t)$, si riottiene
+l'impulso "base" $x(t)$ centrato in $t = 0$ se si pensa di \textit{fare una
+periodicizzazione di periodo $T-0 \rightarrow \infty$}. Al di l\`a del
+particolare esempio, se si costruisce un segnale periodico $x_p(t)$ per
+periodicizzazione del segnale aperiodico $x(t)$ \`e vero in generale che
 \begin{equation}
 	x(t) = \lim_{T_0 \rightarrow \infty} x_p(t).
 \end{equation}
-Naturalmente, il segnale $x_p(t)$, essendo periodico di periodo $T_0$, pu\`o essere rappresentato mediante serie di Fourier tramite la ben nota relazione
+Naturalmente, il segnale $x_p(t)$, essendo periodico di periodo $T_0$, pu\`o
+essere rappresentato mediante serie di Fourier tramite la ben nota relazione
 \[
 	x_p(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t}
 \]
 con $f_0 = 1/T_0$ e con i coefficienti di Fourier $X_n$ dati da
 \[
-	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt.
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t)
+	e^{-j 2 \pi n f_0 t} \dt.
 \]
-\textbf{Questo ci fa gi\`a intuire che, dato che il segnale $x(t)$ rappresenta un caso limite del segnale $x(t)$, sia possibile ottenere una espressione tramite i coefficienti di Fourier anche per il segnale aperiodico $x(t)$ come caso limite dei coefficienti di Fourier del segnale periodico $x_p(t)$.}
+\textbf{Questo ci fa gi\`a intuire che, dato che il segnale $x(t)$ rappresenta
+un caso limite del segnale $x(t)$, sia possibile ottenere una espressione
+tramite i coefficienti di Fourier anche per il segnale aperiodico $x(t)$ come
+caso limite dei coefficienti di Fourier del segnale periodico $x_p(t)$.}
 \bigbreak
-Nase adesso l'esigenza di stabilire il comportamento della serie di Fourier e dei relativi coefficienti $X_n$ quando $T_0 \rightarrow \infty$.\\
-Osserviamo innanzitutto che aumentando il periodo di ripetizione $T_0$ si riduce la frequenza fondamenta $f_ 0 = 1/T_0$, e quindi si riduce la differenza tra due generiche frequenze armoniche consecutive. Ci\`o determina un infittimento dello spettro del segnale se la scala di rappresentazione delle frequenze resta la stessa. Inoltre, dalla relazione 
+Nase adesso l'esigenza di stabilire il comportamento della serie di Fourier e
+dei relativi coefficienti $X_n$ quando $T_0 \rightarrow \infty$.\\
+Osserviamo innanzitutto che aumentando il periodo di ripetizione $T_0$ si riduce
+la frequenza fondamenta $f_ 0 = 1/T_0$, e quindi si riduce la differenza tra due
+generiche frequenze armoniche consecutive. Ci\`o determina un infittimento dello
+spettro del segnale se la scala di rappresentazione delle frequenze resta la
+stessa. Inoltre, dalla relazione 
 \[
-	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t)
+	e^{-j 2 \pi n f_0 t} \dt
 \]
-\`e facile vedere che l'\textit{ampiezza} dei coefficienti tende a ridursi man mano che $T_0$ cresce; al limite, per $T_0 \rightarrow \infty$, lo spettro di $x_p(t)$ tende a divenire sempre pi\`u fitto e ad assumere valori sempre pi\`u piccoli per tutte le frequenze armoniche.\\
-Si pu\`o facilmente ovviare al problema della riduzione delle ampiezze delle righe spettrali definendo, per ciascuna delle frequenze armoniche $nf_0$, una sorta di "coefficiente di Fourier modificato"
+\`e facile vedere che l'\textit{ampiezza} dei coefficienti tende a ridursi man
+mano che $T_0$ cresce; al limite, per $T_0 \rightarrow \infty$, lo spettro di
+$x_p(t)$ tende a divenire sempre pi\`u fitto e ad assumere valori sempre pi\`u
+piccoli per tutte le frequenze armoniche.\\
+Si pu\`o facilmente ovviare al problema della riduzione delle ampiezze delle
+righe spettrali definendo, per ciascuna delle frequenze armoniche $nf_0$, una
+sorta di "coefficiente di Fourier modificato"
 \begin{equation}
 	X(nf_0) \triangleq T_0 \cdot X_n \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt
 \end{equation}
 che evidentemente non \`e una quantit\`a che tende a zero per $T_0 \rightarrow \infty$.\\
-Riscriviamo dunque l'espansione in serie di Fourier di $x_p(t)$ usando il coefficiente modificato\footnote{Dato che si \`e posto $X(nf_0) \triangleq T_0 \cdot X_n$, ne segue che $X_n = X(n f_0) \frac{1}{T_0} = X(n f_0) \cdot f_0$.}
+Riscriviamo dunque l'espansione in serie di Fourier di $x_p(t)$ usando il
+coefficiente modificato\footnote{Dato che si \`e posto
+$X(nf_0) \triangleq T_0 \cdot X_n$, ne segue che
+$X_n = X(n f_0) \frac{1}{T_0} = X(n f_0) \cdot f_0$.}
 \begin{equation}
 	x_p(t) = \sum_{n = -\infty}^{+\infty} X(n f_0) e^{j 2 \pi n f_0 t} \cdot f_0.
 \end{equation}
-Possiamo adesso effettuare il passaggio cruciale al limite per $T+0 \rightarrow \infty$ (ovvero per $f_0 \rightarrow 0$. Il segnale periodico $x_p(t)$ al primo membro si trasforma nel segnale aperiodico $x(t)$. La somma a secondo membro invece, per definizione, si trasforma in un \textit{integrale} e si ottiene uno \textit{sviluppo} del segnale aperiodico $x(t)$ tramite
+Possiamo adesso effettuare il passaggio cruciale al limite per
+$T+0 \rightarrow \infty$ (ovvero per $f_0 \rightarrow 0$. Il segnale periodico
+$x_p(t)$ al primo membro si trasforma nel segnale aperiodico $x(t)$. La somma a
+secondo membro invece, per definizione, si trasforma in un \textit{integrale} e
+si ottiene uno \textit{sviluppo} del segnale aperiodico $x(t)$ tramite
 \begin{equation}\label{eq:fourier_integral}
 	x(t) = \int\displaylimits_{-\infty}^{+\infty} X(f) e^{j 2 \pi f t} \df.
 \end{equation}
-Il segnale aperiodico \`e dunque rappresentabile attraverso il cosiddetto \textbf{integrale di Fourier}. Resta da determinare l'espressione della funzione $X(f)$ che compare nell'integrando della \eqref{eq:fourier_integral}. Innanzitutto, \`e chiaro che tale quantit\`a risulta una funzione complessa della variabile continua $f$, che mantiene il significato di \textit{frequenza}. L'espressione di $X(f)$ si ottiene passando al limite per $T_0 \rightarrow \infty$ nella definizione di $X(nf_0)$ del coefficiente di Fourier modificato:
+Il segnale aperiodico \`e dunque rappresentabile attraverso il cosiddetto
+\textbf{integrale di Fourier}. Resta da determinare l'espressione della funzione
+$X(f)$ che compare nell'integrando della \eqref{eq:fourier_integral}.
+Innanzitutto, \`e chiaro che tale quantit\`a risulta una funzione complessa
+della variabile continua $f$, che mantiene il significato di \textit{frequenza}.
+L'espressione di $X(f)$ si ottiene passando al limite per
+$T_0 \rightarrow \infty$ nella definizione di $X(nf_0)$ del coefficiente di
+Fourier modificato:
 \begin{equation}\label{eq:tcf_coefficient}
 	X(f) = \lim_{\begin{split}T_0 \rightarrow \infty \\ f_0 \rightarrow 0\end{split}} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt = \int\displaylimits_{-\infty}^{\infty} x_p(t) e^{-j 2 \pi n f_0 t} \dt 
 \end{equation}
 che rappresenta la \textbf{trasformata continua di Fourier del segnale $x(t)$}.\\
-In maniera euristica, possiamo dire che la variabile continua $f$ \`e, in un certo senso, il limite della variabile discreta $n f_0$ di partenza, quando $f_0 \rightarrow 0$.
+In maniera euristica, possiamo dire che la variabile continua $f$ \`e, in un
+certo senso, il limite della variabile discreta $n f_0$ di partenza, quando
+$f_0 \rightarrow 0$.
 \bigbreak
-\textbf{Commentiamo il risultato ottenuto.} Nella serie di Fourier per un segnale periodico, quest'ultimo viene rappresentato mediante componenti sinusoidali a frequenze in \textit{relazione armonica}, cio\`e tutti multiple di un'unica fondamentale, nonch\`e di ampiezza \textit{finita}. Nel caso del segnale aperiodico, la \eqref{eq:fourier_integral}, detta anche \textit{antitrasformata di Fourier} (o \textit{trasformata inversa di Fourier}), permette ancora di rappresentare il segnale aperiodico $x(t)$ come la sovrapposizione di componenti sinusoidali, ma questa volta di ampiezza \textit{infinitesima} $\abs{X(f)} \df$ e di frequenza $f$ variabile \textit{con continuit\`a} su tutto l'asse reale. In altre parole, il segnale aperiodico \`e visto come un segnale periodico "di periodo illimitato" e quindi con frequenza fondamentale "infinitamente piccola".
+\textbf{Commentiamo il risultato ottenuto.} Nella serie di Fourier per un
+segnale periodico, quest'ultimo viene rappresentato mediante componenti
+sinusoidali a frequenze in \textit{relazione armonica}, cio\`e tutti multiple di
+un'unica fondamentale, nonch\`e di ampiezza \textit{finita}. Nel caso del
+segnale aperiodico, la \eqref{eq:fourier_integral}, detta anche
+\textit{antitrasformata di Fourier} (o \textit{trasformata inversa di Fourier}),
+permette ancora di rappresentare il segnale aperiodico $x(t)$ come la
+sovrapposizione di componenti sinusoidali, ma questa volta di ampiezza
+\textit{infinitesima} $\abs{X(f)} \df$ e di frequenza $f$ variabile \textit{con
+continuit\`a} su tutto l'asse reale. In altre parole, il segnale aperiodico \`e
+visto come un segnale periodico "di periodo illimitato" e quindi con frequenza
+fondamentale "infinitamente piccola".
 \bigbreak
-Riportiamo di nuovo le due equazioni relative alla rappresentazione del segnale aperiodico, osservando che in generale indicheremo con la lettera maiuscola $X$, $Y$, $Z$, la trasformata di Fourier rispettivamente di un segnale $x$, $y$, $z$:
+Riportiamo di nuovo le due equazioni relative alla rappresentazione del segnale
+aperiodico, osservando che in generale indicheremo con la lettera maiuscola $X$,
+$Y$, $Z$, la trasformata di Fourier rispettivamente di un segnale $x$, $y$, $z$:
 \begin{equation}
 	x(t) = \int\displaylimits_{-\infty}^{\infty} X(f) e^{j 2 \pi f t} \df \quad\quad , \quad\quad X(f) = \int\displaylimits_{-\infty}^{\infty} x(t) e^{-j 2 \pi f t} dt.
 \end{equation}
-La prima delle due rappresenta evidentemente un'equazione di \textit{sintesi} che permette di rappresentale il segnale come sovrapposizione di segnali elementari, ed \`e chiaramente analoga alla \eqref{eq:fourier_series_complex_form} per i segnali periodici; la seconda \`e un'equazione di \textit{analisi}, analoga alla \eqref{eq:fourier_coefficient}, che permette di determinare il \textit{peso} che le varie componenti frequenziali (a tutte le possibili frequenze variabili con continuit\`a da $-\infty$ a $+\infty$). hanno nella composizione di $x(t)$. Tali relazioni mettono in corrispondenza un segnale del tempo con la propria trasformata di Fourier, funzione a valori complessi della frequenza. Come d'uso anche con i coefficienti di Fourier, questa relazione viene riassunta con la notazione
+La prima delle due rappresenta evidentemente un'equazione di \textit{sintesi}
+che permette di rappresentale il segnale come sovrapposizione di segnali
+elementari, ed \`e chiaramente analoga alla
+\eqref{eq:fourier_series_complex_form} per i segnali periodici; la seconda \`e
+un'equazione di \textit{analisi}, analoga alla \eqref{eq:fourier_coefficient},
+che permette di determinare il \textit{peso} che le varie componenti
+frequenziali (a tutte le possibili frequenze variabili con continuit\`a da $-\infty$ a $+\infty$). hanno nella composizione di $x(t)$. Tali relazioni mettono in corrispondenza un segnale del tempo con la propria trasformata di Fourier, funzione a valori complessi della frequenza. Come d'uso anche con i coefficienti di Fourier, questa relazione viene riassunta con la notazione
 \begin{equation}
 	x(t) \iff X(f).
 \end{equation}
