@@ -2005,14 +2005,24 @@ elementari, ed \`e chiaramente analoga alla
 \eqref{eq:fourier_series_complex_form} per i segnali periodici; la seconda \`e
 un'equazione di \textit{analisi}, analoga alla \eqref{eq:fourier_coefficient},
 che permette di determinare il \textit{peso} che le varie componenti
-frequenziali (a tutte le possibili frequenze variabili con continuit\`a da $-\infty$ a $+\infty$). hanno nella composizione di $x(t)$. Tali relazioni mettono in corrispondenza un segnale del tempo con la propria trasformata di Fourier, funzione a valori complessi della frequenza. Come d'uso anche con i coefficienti di Fourier, questa relazione viene riassunta con la notazione
+frequenziali (a tutte le possibili frequenze variabili con continuit\`a da
+$-\infty$ a $+\infty$). hanno nella composizione di $x(t)$. Tali relazioni
+mettono in corrispondenza un segnale del tempo con la propria trasformata di
+Fourier, funzione a valori complessi della frequenza. Come d'uso anche con i
+coefficienti di Fourier, questa relazione viene riassunta con la notazione
 \begin{equation}
 	x(t) \iff X(f).
 \end{equation}
-Un modo alternativo di indicare sinteticamente le operazioni di trasformata e antitrasformata \`e quello mutuato alla notazione degli operatori caratteristica dell'analisi funzione:
+Un modo alternativo di indicare sinteticamente le operazioni di trasformata e
+antitrasformata \`e quello mutuato alla notazione degli operatori caratteristica
+dell'analisi funzione:
 \begin{equation}
 	X(f) = \mathcal{F}[x(t)] \quads{2} , \quads{2} x(t) = \mathcal{F}^{-1}[X(f)]
 \end{equation}
+
+%------------------------------------------------
+% Subsubsection: Esempio
+%------------------------------------------------
 
 \subsubsection{Esempio}
 Conseideriamo il segnale impulso rettangolare
@@ -2021,15 +2031,21 @@ Conseideriamo il segnale impulso rettangolare
 \]
 e calcoliamone la trasformata di Fourier $X(f)$. questa \`e data da
 \[
-	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} rect\left(\frac{t}{T}\right) e^{-j 2 \pi f t} \dt =
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi f t} \dt
+	= \int\displaylimits_{-\infty}^{+\infty} rect\left(\frac{t}{T}\right)
+	e^{-j 2 \pi f t} \dt =
 \]
 \[
-	= \int\displaylimits_{-T/2}^{T/2} rect\left(\frac{t}{T}\right) e^{-j 2 \pi f t} \dt = \int\displaylimits_{-T/2}^{T/2} 1 \cdot e^{-j 2 \pi f t} \dt =
+	= \int\displaylimits_{-T/2}^{T/2} rect\left(\frac{t}{T}\right)
+	e^{-j 2 \pi f t} \dt = \int\displaylimits_{-T/2}^{T/2} 1 \cdot
+	e^{-j 2 \pi f t} \dt =
 \]
 \[
-	= \left[\frac{e^{-j 2 \pi f t}}{-j 2 \pi f}\right]_{-T/2}^{T/2} = \frac{\sin(\pi f T)}{\pi f}.
+	= \left[\frac{e^{-j 2 \pi f t}}{-j 2 \pi f}\right]_{-T/2}^{T/2} =
+	\frac{\sin(\pi f T)}{\pi f}.
 \]
-Gli spettri di ampiezza e di fase del segnale $x(t)$ sono rappresentati nella seguente figura
+Gli spettri di ampiezza e di fase del segnale $x(t)$ sono rappresentati nella
+seguente figura
 \begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -2082,6 +2098,9 @@ Infine
 	4T \cdot sinc(2 f T) + T \cdot sinc(f T).
 \]
 
+%------------------------------------------------
+% Subsubsection: Esempio
+%------------------------------------------------
 
 \subsubsection{Esempio}
 Consideriamo il segnale
@@ -2101,6 +2120,10 @@ del ritardo}.
 	X(f) = A \cdot T sinc(f T) \cdot e^{-j 2 \pi f 3T}.
 \]
 
+%------------------------------------------------
+% Subsubsection: Esempio
+%------------------------------------------------
+
 \newpage
 \subsection{Criteri di esistenza della Trasformata Continua di Fourier (TCF)}
 Indichiamo adesso delle condizioni sufficienti per la rappresentazione del
@@ -2114,8 +2137,12 @@ finita
 \begin{equation}
 	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt < \ +\infty
 \end{equation}
-allora la trasformata $X(f)$ esiste, nel senso che l'integrale \eqref{eq:tcf_coefficient} \`e convergente e la rappresentazione del segnale come integrale di Fourier (antitrasformata) coincide quasi ovunque con il segnale originario $x(t)$.\\
-Un secondo criterio sufficiente meno restrittivo (criterio di Dirichlet) pu\`o essere enunciato come segue:
+allora la trasformata $X(f)$ esiste, nel senso che l'integrale
+\eqref{eq:tcf_coefficient} \`e convergente e la rappresentazione del segnale
+come integrale di Fourier (antitrasformata) coincide quasi ovunque con il
+segnale originario $x(t)$.\\
+Un secondo criterio sufficiente meno restrittivo (criterio di Dirichlet) pu\`o
+essere enunciato come segue:
 \begin{itemize}
 	\item \textit{se} il segnale $x(t)$ \`e assolutamente sommabile, ovvero $\int_{-\infty}^{\infty} \abs{x(t)} \dt < +\infty;$
 	\item \textit{se} in qualunque intervallo finito $t_1 \leq t \leq t_2$ il segnale $x(t)$ ha un numero finito di discotinuit\`a di prima specie;
@@ -2123,25 +2150,49 @@ Un secondo criterio sufficiente meno restrittivo (criterio di Dirichlet) pu\`o e
 \end{itemize}
 \textit{allora} il segnale \`e rappresentabile come integrale di Fourier - cio\`e l'antitrasformata della sua propria trasformata di Fourier $X(f)$.
 
+%------------------------------------------------
+% Section: Sistemi monodimensionali a tempo continuo
+%------------------------------------------------
+
 \newpage
 \section{Sistemi monodimensionali a tempo continuo}
 Sistemi monodimensionali a tempo continuo\change{Work in progress.}
+
+%------------------------------------------------
+% Section: Segnali a tempo discreto
+%------------------------------------------------
 
 \newpage
 \section{Segnali a tempo discreto}
 Segnali a tempo discreto\change{Work in progress.}
 
+%------------------------------------------------
+% Section: Sistemi monodimensionali a tempo discreto
+%------------------------------------------------
+
 \newpage
 \section{Sistemi monodimensionali a tempo discreto}
 Sistemi monodimensionali a tempo discreto\change{Work in progress.}
+
+%------------------------------------------------
+% Section: Progetto di filtri digitali
+%------------------------------------------------
 
 \newpage
 \section{Progetto di filtri digitali}
 Progetto di filtri digitali\change{Work in progress.}
 
+%------------------------------------------------
+% Section: Richiami di teoria della probabilita'
+%------------------------------------------------
+
 \newpage
 \section{Richiami di teoria della probabilit\`a}
 Richiami di teoria della probabilit\`a\change{Work in progress.}
+
+%------------------------------------------------
+% Section: Segnali aleatori a tempo continuo e a tempo discreto
+%------------------------------------------------
 
 \newpage
 \section{Segnali aleatori a tempo continuo e a tempo discreto}
@@ -2152,9 +2203,14 @@ Segnali aleatori a tempo continuo e a tempo discreto\change{Work in progress.}
 %------------------------------------------------
 
 \chapter{Esame Scritto}
-\epigraph{"The reason I talk to myself is because I'm the only one whose answers I accept."}{--- \textup{George Carlin}}
+\epigraph{
+	"The reason I talk to myself is because I'm the only one whose answers I
+	accept."
+}{--- \textup{George Carlin}}
 
-Di seguito una lista di temi di esame presi dalla pagina "Comunicazioni Numeriche 2017-18" sul sito E-learning del Polo di Ingegneria. Le soluzioni fornite sono state arricchite di appunti personali e approfondimenti teorici.
+Di seguito una lista di temi di esame presi dalla pagina "Comunicazioni
+Numeriche 2017-18" sul sito E-learning del Polo di Ingegneria. Le soluzioni
+fornite sono state arricchite di appunti personali e approfondimenti teorici.
 
 \newpage
 \section{Compitino 2014}
@@ -2188,13 +2244,32 @@ Di seguito una lista di temi di esame presi dalla pagina "Comunicazioni Numerich
 %------------------------------------------------
 
 \chapter{Esame Orale}
-\epigraph{"Read less, study less, but think more.	"}{--- \textup{Leo Tolstoy}}
+\epigraph{
+	"Read less, study less, but think more."
+}{--- \textup{Leo Tolstoy}}
 
-Di seguito una lista di domande, con una possibile risposta, riprese dagli orali delle ultime sessioni di esame suddivise tra \textbf{segnali deterministici} e \textbf{segnali aleatori}.
+Di seguito una lista di domande, con una possibile risposta, riprese dagli orali
+delle ultime sessioni di esame suddivise tra \textbf{segnali deterministici} e
+\textbf{segnali aleatori}.
+
+%------------------------------------------------
+% Section: Segnali Deterministici
+%------------------------------------------------
 
 \section{Segnali Deterministici}
-Segnali il quale valore sia univocamente determinabile non appena siano fissati i valori delle variabili indipendenti (in particolare, il tempo per segnali monodimensionali). Questo accade quando il segnale \`e noto attraverso un grafico, o una registrazione magnetica, o pi\`u semplicemente attraverso una ben definita espressione matematica, o ancora perch\`e \`e il prodotto di sistemi e apparati di cui si ha stretto controllo (per esempio, un generatore di forme d'onda di un laboratorio elettronico).
-Per modellare e studiare i segnali determinati sono sufficienti i concetti dell'analisi matematica tradizionale.
+Segnali il quale valore sia univocamente determinabile non appena siano fissati
+i valori delle variabili indipendenti (in particolare, il tempo per segnali
+monodimensionali). Questo accade quando il segnale \`e noto attraverso un
+grafico, o una registrazione magnetica, o pi\`u semplicemente attraverso una ben
+definita espressione matematica, o ancora perch\`e \`e il prodotto di sistemi e
+apparati di cui si ha stretto controllo (per esempio, un generatore di forme
+d'onda di un laboratorio elettronico).\\
+Per modellare e studiare i segnali determinati sono sufficienti i concetti
+dell'analisi matematica tradizionale.
+
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
 
 \newpage
 \subsection{Relazioni tra Potenza Media \textit{$P_x$} ed Energia \textit{$E_x$} di un Segnale}
@@ -2276,6 +2351,10 @@ Per questo motivo, dato che la probabilit\`a deve essere necessariamente finita 
 \begin{equation}
 	\int\displaylimits_{-\infty}^{+\infty} \ dx \int\displaylimits_{-\infty}^{+\infty} \ dy \int\displaylimits_{-\infty}^{+\infty} \ dz \abs{\psi(x, y, z)}^2.
 \end{equation}
+
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
 
 \newpage
 \subsection{Relazione Potenza Media, Valore Efficace e Valore Medio: $P_x = 0 \Longrightarrow x_eff = 0, x_m = 0$}
@@ -2432,6 +2511,10 @@ Si definisce valore efficace di una funzione continua $x(t)$, la radice della me
 \end{equation}
 Se si applica il procedimento ad un segnale costante si può facilmente constatare che il suo valore efficace coincide con il valore reale. 
 
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
+
 \newpage
 \subsection{Biunivocit\`a della trasformata serie di Fourier}
 Ogni segnale $x(t)$ che soddisfi il criterio di Dirichlet pu\`o essere rappresentato con lo sviluppo in serie di Fourier
@@ -2442,12 +2525,32 @@ dove il particolare coefficiente $X_k$ della serie \`e dato da
 \begin{equation}
 	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
-La seconda delle due \`e una equazione di \textit{analisi} che permette di stabilire qual \`e il contenuto in termini di oscillazioni armoniche del segnale (in una parola, di \textit{analizzare} il segnale). La prima delle due, viceversa, \`e una equazione di \textit{sintesi} che, note le ampiezze e fasi delle varie armoniche (cio\`e noti i coefficienti di Fourier), permette di ricostruire, cio\`e di \textit{sintetizzare}, il segnale dato a partire dalle proprie componenti frequenziali (armoniche). Evidentemente, l'equazione di sintesi prevede l'uso di \textit{infinite} armoniche per ricostruire il segnale. D'altronde, condizione necessaria alla convergenza della serie \`e che l'ampiezza $\abs{X_n}$ delle armoniche \textit{tenda a zero} quando $n \rightarrow \infty$. Questo comporta che le armoniche pi\`u "importanti" ai fini della sintesi del segnale sono in numero limitato, e che quindi la serie pu\`o essere sostituita ai fini pratici da una sommatoria di un numero finito di termini.\\
-Le equazioni di analisi e di sintesi permettono di stabilire una corrispondenza tra il segnale $x(t)$ e la \textit{sequenza} $X_n$ costituita dai coefficienti della serie (coefficienti di Fourier o di Eulero). Indicheremo tale corrispondenza con la seguente scrittura:
+La seconda delle due \`e una equazione di \textit{analisi} che permette di
+stabilire qual \`e il contenuto in termini di oscillazioni armoniche del segnale
+(in una parola, di \textit{analizzare} il segnale). La prima delle due,
+viceversa, \`e una equazione di \textit{sintesi} che, note le ampiezze e fasi
+delle varie armoniche (cio\`e noti i coefficienti di Fourier), permette di
+ricostruire, cio\`e di \textit{sintetizzare}, il segnale dato a partire dalle
+proprie componenti frequenziali (armoniche). Evidentemente, l'equazione di
+sintesi prevede l'uso di \textit{infinite} armoniche per ricostruire il segnale.
+D'altronde, condizione necessaria alla convergenza della serie \`e che
+l'ampiezza $\abs{X_n}$ delle armoniche \textit{tenda a zero} quando
+$n \rightarrow \infty$. Questo comporta che le armoniche pi\`u "importanti" ai
+fini della sintesi del segnale sono in numero limitato, e che quindi la serie
+pu\`o essere sostituita ai fini pratici da una sommatoria di un numero finito di
+termini.\\
+Le equazioni di analisi e di sintesi permettono di stabilire una corrispondenza
+tra il segnale $x(t)$ e la \textit{sequenza} $X_n$ costituita dai coefficienti
+della serie (coefficienti di Fourier o di Eulero). Indicheremo tale
+corrispondenza con la seguente scrittura:
 \begin{equation}
 	x(t) \iff X_n
 \end{equation}
-Questo tipo di notazione suggerisce che la conoscenza dell'andamento del segnale $x(t)$ in ambito temporale \`e di fatto \textit{equivalente} alla conoscenza della \textit{successione} dei coefficienti di Fourier $X_n$ in ambito frequenziale, nel senso che il passaggio da un dominio all'altro \`e immediato attraverso le relazioni di analisi e sintesi.
+Questo tipo di notazione suggerisce che la conoscenza dell'andamento del segnale
+$x(t)$ in ambito temporale \`e di fatto \textit{equivalente} alla conoscenza
+della \textit{successione} dei coefficienti di Fourier $X_n$ in ambito
+frequenziale, nel senso che il passaggio da un dominio all'altro \`e immediato
+attraverso le relazioni di analisi e sintesi.
 \begin{proof}
 \begin{equation}
 \begin{split}
@@ -2513,18 +2616,25 @@ Possiamo quindi riprendere
 che dimostra la tesi iniziale.
 \end{proof}
 
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
+
 \newpage
 \subsection{Linearit\`a della trasformata serie di Fourier}
-Consideriamo ora due segnali $x(t)$ e $y(t)$, entrambi periodici dello stesso periodo $T_0$ e aventi coefficienti di Fourier $X_n$ and $Y_n$. Il segnale
+Consideriamo ora due segnali $x(t)$ e $y(t)$, entrambi periodici dello stesso
+periodo $T_0$ e aventi coefficienti di Fourier $X_n$ and $Y_n$. Il segnale
 \begin{equation}
 	z(t) = a \cdot x(t) + b \cdot y(t)
 \end{equation}
-data dalla combinazione lineare di $x(t)$ e $y(t)$, \`e periodico di periodo $T_0$, e ha coefficienti di Fourier $Z_n$ dati da
+data dalla combinazione lineare di $x(t)$ e $y(t)$, \`e periodico di periodo
+$T_0$, e ha coefficienti di Fourier $Z_n$ dati da
 \begin{equation}
 	Z_n = a \cdot X_n + b \cdot Y_n.
 \end{equation}
 \begin{proof}
-Tale propriet\`a di linearit\`a dei coefficienti di Fourier deriva direttamente dalla medesima propriet\`a dell'integrale; si ha infatti che
+Tale propriet\`a di linearit\`a dei coefficienti di Fourier deriva direttamente
+	dalla medesima propriet\`a dell'integrale; si ha infatti che
 \begin{equation}
 \begin{split}
 	Z_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} z(t) e^{-j 2 \pi n f_0 t} \dt =
@@ -2542,8 +2652,16 @@ Tale propriet\`a di linearit\`a dei coefficienti di Fourier deriva direttamente 
 	\quads{11}
 \end{split}
 \end{equation}
-Naturalmente, lo sviluppo in serie di $z(t)$ \`e costituito da una somma di oscillazioni aventi \textit{le stesse frequenze} di quelle che compongono i segnali $x(t)$ e $y(t)$; pertanto, in generale una combinazione lineare di segnali aventi medesimo periodo $T_0$ non introduce nuove armoniche.\\
+Naturalmente, lo sviluppo in serie di $z(t)$ \`e costituito da una somma di
+oscillazioni aventi \textit{le stesse frequenze} di quelle che compongono i
+segnali $x(t)$ e $y(t)$; pertanto, in generale una combinazione lineare di
+segnali aventi medesimo periodo $T_0$ non introduce nuove armoniche.\\
 \end{proof}
+
+%------------------------------------------------
+% Subsubsection: 
+%------------------------------------------------
+
 \subsubsection{Esercizio}
 Consideriamo il segnale
 \begin{equation}
@@ -2587,7 +2705,9 @@ In conclusione possiamo quindi scrivere
 \change{To be continued.}
 \newpage
 \subsection{Simmetria Hermitiana della trasformata serie di Fourier}
-Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$), i coefficienti $X_n$ dello sviluppo in serie di Fourier in forma complessa di $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
+Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$),
+i coefficienti $X_n$ dello sviluppo in serie di Fourier in forma complessa di
+$x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
 \begin{equation}
 	x(t) = x^*(t) \iff X_{-n} = X^*_{n}
 \end{equation}
@@ -2621,23 +2741,31 @@ Dato un segnale reale $x(t)$ ($x(t) \in \mathbb{R} \rightarrow x(t) = x^*(t)$), 
 \newpage
 
 \begin{figure}
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/spettro_di_ampiezza_e_di_fase.jpg}
-\caption{Spettro di ampiezza e di fase.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/spettro_di_ampiezza_e_di_fase.jpg}
+	\caption{Spettro di ampiezza e di fase.}
 \end{figure}
+
+%------------------------------------------------
+% Subsubsection: 
+%------------------------------------------------
 
 \subsubsection{Simmetria pari per il modulo}
 \begin{equation}
 	\abs{X_n} = \abs{X_{-n}}
 \end{equation}
-Sia $f(x)$ una funzione a valori reali di variabile reale e sia $D \subset \mathbb{R}$ il suo dominio. Allora $f$ \`e [aro se per ogni $x \in D$ vale l'equazione:
+Sia $f(x)$ una funzione a valori reali di variabile reale e sia $D \subset
+\mathbb{R}$ il suo dominio. Allora $f$ \`e [aro se per ogni $x \in D$ vale
+l'equazione:
 \[
 	f(x) = f(-x).
 \]
-Geometricamente, il grafico di una funzione pari \`e simmetrico rispetto all'asse $y$.\\
+Geometricamente, il grafico di una funzione pari \`e simmetrico rispetto
+all'asse $y$.\\
 \\
-Il nome \textbf{pari} deriva dal fatto che le serie di Taylor di una funzione pari centrata nell'origine contengono solo potenze pari.\\
+Il nome \textbf{pari} deriva dal fatto che le serie di Taylor di una funzione
+pari centrata nell'origine contengono solo potenze pari.\\
 \\
 Esempi di funzioni pari sono $x^2$, $x^4$, $cos(x)$, $cosh(x)$.\\
 \\
@@ -2645,6 +2773,10 @@ Esempio pratico:
 \[
 	y = x^2 - 1 \Longrightarrow f(-x) = (-x)^2 - 1 = x^2 - 1 = f(x).
 \]
+
+%------------------------------------------------
+% Subsubsection: 
+%------------------------------------------------
 
 \subsubsection{Simmetria dispari per la fase}
 \begin{equation}
@@ -2668,6 +2800,10 @@ Esempio pratico:
 \[
 	y = x^3 - x \Longrightarrow f(-x) = (-x)^3 - (-x) = -x^3 + x = -(x^3 - x) = -f(x).
 \]
+
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
 
 \newpage
 \subsection{Trasformata di un segnale (periodico) reale e pari}
@@ -2724,6 +2860,10 @@ Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e 
 	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \cos(2 \pi n f_0 t).
 \]
 Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i termini sinusoidale per i segnali periodici pari.\\ Questo risultato \`e logicamente giustificabile se si riflette sul fatto che il coseno \`e una funzione pari mentre il seno \`e una funzione dispari e quindi poco si presta a rappresentare l'andamento periodico di un segnale pari.
+
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
 
 \newpage
 \subsection{Trasformata di un segnale (periodico) reale e dispari}
@@ -2787,6 +2927,10 @@ termini cosinusoidale per i segnali periodici dispari.\\ Questo risultato \`e
 logicamente giustificabile se si riflette sul fatto che il seno \`e una funzione
 dispari mentre il coseno \`e una funzione pari e quindi poco si presta a
 rappresentare l'andamento periodico di un segnale dispari.
+
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
 
 \newpage
 \subsection{Trasformata di un segnale (periodico) reale alternativo}
@@ -2854,6 +2998,10 @@ Ne segue quindi che
 \end{proof}
 \noindent
 Che dimostra la nostra tesi.
+
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
 
 \newpage
 \subsection{Simmetrie della Trasformata Continua di Fourier (TCF)}
@@ -2989,6 +3137,10 @@ $X(f) = -X(-f)$
 \]
 \end{proof}
 
+%------------------------------------------------
+% Subsection: 
+%------------------------------------------------
+
 \newpage
 \subsection{Teoremi sulla trasformata continua di Fourier}
 Dalla definizione di trasformata, seguono facilmente alcune ulteriori
@@ -3025,6 +3177,10 @@ sfruttando la propriet\`a di linearit\`a dell'integrale stesso
 \]
 \end{proof}
 
+%------------------------------------------------
+% Subsubsection: 
+%------------------------------------------------
+
 \newpage
 \subsubsection{Dualit\`a della TCF}
 La similitudine tra le relazioni di trasformata e antitrasformata intese come
@@ -3056,6 +3212,10 @@ alla variabile $f$ la variabile $-f$, si ottiene
 	x(-f) = \int\displaylimits_{-\infty}^{+\infty} X(t) e^{-j 2 \pi f t} \dt
 \]
 che dimostra la tesi iniziale.
+
+%------------------------------------------------
+% Subsubsection: 
+%------------------------------------------------
 
 \newpage
 \subsubsection{Teorema del ritardo}
@@ -3191,12 +3351,20 @@ responsabili per cos\`i dire dell'evoluzione del segnale; lo spettro allora di
 \newpage
 \subsubsection{Modulazione con esponenziale complesso}
 
+%------------------------------------------------
+% Subsection: Teorema di derivazione
+%------------------------------------------------
+
 \newpage
 \subsection{Teorema di derivazione}
 \newpage
 \subsubsection{Derivazione nel tempo}
 \newpage
 \subsubsection{Derivazione in frequenza}
+
+%------------------------------------------------
+% Subsection: Teorema di integrazione
+%------------------------------------------------
 
 \newpage
 \subsection{Teorema di integrazione}
@@ -3205,11 +3373,23 @@ responsabili per cos\`i dire dell'evoluzione del segnale; lo spettro allora di
 \newpage
 \subsubsection{Integrazione in frequenza}
 
+%------------------------------------------------
+% Subsection: Teorema del Prodotto di Convoluzione
+%------------------------------------------------
+
 \newpage
 \subsection{Teorema del Prodotto di Convoluzione}
 
+%------------------------------------------------
+% Subsection: Teorema della Convoluzione
+%------------------------------------------------
+
 \newpage
 \subsection{Teorema della Convoluzione}
+
+%------------------------------------------------
+% Section: Segnali Aleatori
+%------------------------------------------------
 
 \newpage	
 \section{Segnali Aleatori}
