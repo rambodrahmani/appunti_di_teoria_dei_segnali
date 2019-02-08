@@ -71,11 +71,14 @@
 	identifierstyle=\color{black},
 	stringstyle=\color{mylilas},
 	commentstyle=\color{mygreen},
-	showstringspaces=false,%without this there will be a symbol in the places where there is a space
+	% without this there will be a symbol in the places where there is a
+	% space
+	showstringspaces=false,
 	numbers=left,
 	numberstyle={\tiny \color{black}},% size of the numbers
 	numbersep=9pt, % this defines how far the numbers are from the text
-	emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+	%some words to emphasise
+	emph=[1]{for,end,break},emphstyle=[1]\color{red},
 	%emph=[2]{word1,word2}, emphstyle=[2]{style},    
 }
 
@@ -163,9 +166,13 @@
 %------------------------------------------------
 
 \title{%
-  Esame Comunicazioni Numeriche\\
-  \vspace{1cm}
-  \large \textit{"What I hear, I forget; What I see, I remember; What I do, I understand."}}
+	Esame Comunicazioni Numeriche\\
+	\vspace{1cm}
+	\large \textit{
+		"What I hear, I forget;
+		What I see, I remember;
+		What I do, I understand."
+	}}
 \author{Rambod Rahmani}
 
 \begin{document}
@@ -195,9 +202,16 @@ To my twin brother Ramtin.
 %------------------------------------------------
 
 \chapter{Disclaimer}
-\epigraph{"Information is power. But like all power, there are those who want to keep it for themselves. The world's entire scientific and cultural heritage, published over centuries in books and journals, is increasingly being digitized and locked up by a handful of private corporations. There is no justice in following unjust laws. It's time to come into the light and, in the grand tradition of civil disobedience, declare our opposition to this private theft of public culture."}{--- \textup{Aaron Swartz}}
+\epigraph{"Information is power. But like all power, there are those who want
+to keep it for themselves. The world's entire scientific and cultural heritage,
+published over centuries in books and journals, is increasingly being digitized
+and locked up by a handful of private corporations. There is no justice in
+following unjust laws. It's time to come into the light and, in the grand
+tradition of civil disobedience, declare our opposition to this private theft
+of public culture."}{--- \textup{Aaron Swartz}}
 
-The material and information in this document are provided "AS IS" in good faith and without warranties of any kind, either expressed or implied.
+The material and information in this document are provided "AS IS" in good faith
+and without warranties of any kind, either expressed or implied.
 \bigbreak\noindent
 This work is licensed under:
 \bigbreak\noindent
@@ -208,9 +222,13 @@ This work is licensed under:
 %------------------------------------------------
 
 \chapter{Introduction}
-\epigraph{"The only person who is educated is the one who has learned how to learn and change."}{--- \textup{Carl Rogers}}
+\epigraph{
+	"The only person who is educated is the one who has learned how to
+	learn and change."
+}{--- \textup{Carl Rogers}}
 
-This chapter contains introductory concepts needed as theoretical base to be able to understand the signal processing topics presented in this text.
+This chapter contains introductory concepts needed as theoretical base to be
+able to understand the signal processing topics presented in this text.
 
 %------------------------------------------------
 % Section 1: Complex Numbers
@@ -223,53 +241,105 @@ where \(a\) is known to be the real part
 \[a = \Re(z),\]
 and \(b\) is known to be the imaginary part
 \[b = \Im(z).\]
-The complex number system can be defined as the algebraic extension of the ordinary real numbers by an imaginary number \(i\). \(i\) is a solution of the equation \(x^2 = −1\). Because no real number satisfies this equation, since the square of a real number cannot be negative, \(i\) is called an imaginary number.
+The complex number system can be defined as the algebraic extension of the
+ordinary real numbers by an imaginary number \(i\). \(i\) is a solution of
+the equation \(x^2 = −1\). Because no real number satisfies this equation, since
+the square of a real number cannot be negative, \(i\) is called an imaginary
+number.
 \bigbreak
-A real number \(a\) can be regarded as a complex number \(a + 0i\) whose imaginary part is \(0\). A purely imaginary number \(bi\) is a complex number \(0 + bi\) whose real part is zero. It is common to write \(a\) for \(a + 0i\) and \(bi\) for \(0 + bi\).
+A real number \(a\) can be regarded as a complex number \(a + 0i\) whose
+imaginary part is \(0\). A purely imaginary number \(bi\) is a complex number
+\(0 + bi\) whose real part is zero. It is common to write \(a\) for \(a + 0i\)
+and \(bi\) for \(0 + bi\).
 \bigbreak
-The complex numbers give rise to the fundamental theorem of algebra: every non-constant polynomial equation with complex coefficients has a complex solution. This property is true of the complex numbers, but not the reals. The 16th century Italian mathematician Gerolamo Cardano is credited with introducing complex numbers in his attempts to find solutions to cubic equations.
+The complex numbers give rise to the fundamental theorem of algebra: every
+non-constant polynomial equation with complex coefficients has a complex
+solution. This property is true of the complex numbers, but not the reals. The
+16th century Italian mathematician Gerolamo Cardano is credited with introducing
+complex numbers in his attempts to find solutions to cubic equations.
 \bigbreak
-Geometrically, complex numbers extend the concept of the one-dimensional number line to the two-dimensional complex plane by using the horizontal axis for the real part and the vertical axis for the imaginary part.
+Geometrically, complex numbers extend the concept of the one-dimensional number
+line to the two-dimensional complex plane by using the horizontal axis for the
+real part and the vertical axis for the imaginary part.
 \bigbreak
-\textbf{Engineers reserve the letter \(i\) for electric current - the derivative of electric charge with respect to time. We will therefore be using the letter \(j\) instead of the letter \(i\).}
+\textbf{Engineers reserve the letter \(i\) for electric current - the derivative
+of electric charge with respect to time. We will therefore be using the letter
+\(j\) instead of the letter \(i\).}
+
+%------------------------------------------------
+% Subsection 1: Cartesian form
+%------------------------------------------------
 
 \subsection{Cartesian form}
 \begin{wrapfigure}{L}{0.5\textwidth}
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/complex_plane.png}
-\caption{A Complex Number in Cartesian Form.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/complex_plane.png}
+	\caption{A Complex Number in Cartesian Form.}
 \end{wrapfigure}
-A complex number can thus be identified with an ordered pair \((\Re(z), \Im(z))\) in the Cartesian plane, an identification sometimes known as the Cartesian form of \(z\). A complex number can be viewed as a point or position vector in a two-dimensional Cartesian coordinate system called the complex plane or Argand diagram, named after Jean-Robert Argand. The numbers are conventionally plotted using the real part as the horizontal component, and imaginary part as vertical (see Figure 1.1). In fact, a complex number can be defined as an ordered pair \((a, b)\), but then rules for addition and multiplication must also be included as part of the definition. William Rowan Hamilton introduced this approach to define the complex number system.
+A complex number can thus be identified with an ordered pair
+\((\Re(z), \Im(z))\) in the Cartesian plane, an identification sometimes known
+as the Cartesian form of \(z\). A complex number can be viewed as a point or
+position vector in a two-dimensional Cartesian coordinate system called the
+complex plane or Argand diagram, named after Jean-Robert Argand. The numbers are
+conventionally plotted using the real part as the horizontal component, and
+imaginary part as vertical (see Figure 1.1). In fact, a complex number can be
+defined as an ordered pair \((a, b)\), but then rules for addition and
+multiplication must also be included as part of the definition. William Rowan
+Hamilton introduced this approach to define the complex number system.
+
+%------------------------------------------------
+% Subsection 2: Polar form
+%------------------------------------------------
 
 \subsection{Polar form}
 \begin{wrapfigure}{L}{0.4\textwidth}
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.4\textwidth]{images/complex_number_polar_form.png}
-\caption{A Complex Number in Polar Form}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.4\textwidth]{images/complex_number_polar_form.png}
+	\caption{A Complex Number in Polar Form}
 \end{wrapfigure}
-An alternative way of defining a point P in the complex plane, other than using the \(a\)- and \(b\)-coordinates, is to use the distance of the point from \(O\), the point whose coordinates are \((0, 0)\) (the origin), together with the angle subtended between the positive real axis and the line segment OP in a counterclockwise direction. This idea leads to the polar form of complex numbers. (see Figure 1.2 where \(x\) and \(y\) were used instead of \(a\) and \(b\)).
+An alternative way of defining a point P in the complex plane, other than using
+the \(a\)- and \(b\)-coordinates, is to use the distance of the point from \(O\)
+, the point whose coordinates are \((0, 0)\) (the origin), together with the
+angle subtended between the positive real axis and the line segment OP in a
+counterclockwise direction. This idea leads to the polar form of complex numbers
+. (see Figure 1.2 where \(x\) and \(y\) were used instead of \(a\) and \(b\)).
 \bigbreak
-The absolute value (or modulus or magnitude) of a complex number \(z = a + bj\) is
+The absolute value (or modulus or magnitude) of a complex number \(z = a + bj\)
+is
 \[c = \abs{z} = \sqrt{a^2 + b^2}\]
-If \(z\) is a real number (that is, if \(b = 0\)), then \(c = \abs{a}\). That is, the absolute value of a real number equals its absolute value as a complex number. By Pythagoras' theorem, the absolute value of complex number is the distance to the origin of the point representing the complex number in the complex plane. 
+If \(z\) is a real number (that is, if \(b = 0\)), then \(c = \abs{a}\). That is
+, the absolute value of a real number equals its absolute value as a complex
+number. By Pythagoras' theorem, the absolute value of complex number is the
+distance to the origin of the point representing the complex number in the
+complex plane. 
 \bigbreak
-The argument of \(z\) (in many applications referred to as the "phase") is the angle of the radius \(OP\) with the positive real axis, and is written as \(arg(z)\). As with the modulus, the argument can be found from the rectangular form \(a + bj\):
+The argument of \(z\) (in many applications referred to as the "phase") is the
+angle of the radius \(OP\) with the positive real axis, and is written as
+\(arg(z)\). As with the modulus, the argument can be found from the rectangular
+form \(a + bj\):
 \[
 	\varphi =
-	arg(z) =	\begin{cases}
-				arctan\left(\frac{b}{a}\right) \quads{4} \tab if \quad a > 0\\
-				arctan\left(\frac{b}{a}\right) + \pi \quads{2} if \quad a < 0 \quad and \quad b \geq 0\\
-				arctan\left(\frac{b}{a}\right) - \pi \quads{2} if \quad a < 0 \quad and \quad b < 0\\
-				\frac{\pi}{2} \quads{8} if \quad a = 0 \quad and \quad b > 0\\
-				-\frac{\pi}{2} \quads{7}  if \quad a = 0 \quad and \quad b < 0\\
-				indeterminate \quads{3} if \quad a > 0
-			\end{cases}
+	arg(z) = \begin{cases}
+			arctan\left(\frac{b}{a}\right) \quads{4} \tab if \quad a > 0\\
+			arctan\left(\frac{b}{a}\right) + \pi \quads{2} if \quad a < 0 \quad and \quad b \geq 0\\
+			arctan\left(\frac{b}{a}\right) - \pi \quads{2} if \quad a < 0 \quad and \quad b < 0\\
+			\frac{\pi}{2} \quads{8} if \quad a = 0 \quad and \quad b > 0\\
+			-\frac{\pi}{2} \quads{7}  if \quad a = 0 \quad and \quad b < 0\\
+			indeterminate \quads{3} if \quad a > 0
+		 \end{cases}
 \]
-The value of \(\varphi\) is expressed in radians in this article. It can increase by any integer multiple of \(2\pi\) and still give the same angle. Hence, the \(arg()\) function is sometimes considered as multivalued. The polar angle for the complex number 0 is indeterminate, but arbitrary choice of the angle 0 is common. Together, \(c\) and \(\varphi\) give another way of representing complex numbers, the polar form, as the combination of modulus and argument fully specify the position of a point on the plane.
+The value of \(\varphi\) is expressed in radians in this article. It can
+increase by any integer multiple of \(2\pi\) and still give the same angle.
+Hence, the \(arg()\) function is sometimes considered as multivalued. The polar
+angle for the complex number 0 is indeterminate, but arbitrary choice of the
+angle 0 is common. Together, \(c\) and \(\varphi\) give another way of
+representing complex numbers, the polar form, as the combination of modulus and
+argument fully specify the position of a point on the plane.
 \bigbreak
-If we are given the polar form to start with, the following formulas can be used to retrieve the cartesian coordinates:
+If we are given the polar form to start with, the following formulas can be used
+to retrieve the cartesian coordinates:
 \[
 	\begin{cases}
 		a = c \cdot \cos(\varphi)\\
@@ -277,44 +347,73 @@ If we are given the polar form to start with, the following formulas can be used
 	\end{cases}
 \]
 
+%------------------------------------------------
+% Subsection 3: Trigonometric form
+%------------------------------------------------
+
 \subsection{Trigonometric form}
-The trigonometric form of a complex number \(z = a + bj\) can be easily obtain by substitution in our previous equations:
+The trigonometric form of a complex number \(z = a + bj\) can be easily obtain
+by substitution in our previous equations:
 \[
-	z = a + bj = c \cdot \cos(\varphi) + c \cdot sin(\varphi) \cdot j = c \cdot (\cos(\varphi) + j \cdot sin(\varphi)).
+	z = a + bj = c \cdot \cos(\varphi) + c \cdot sin(\varphi) \cdot j =
+	c \cdot (\cos(\varphi) + j \cdot sin(\varphi)).
 \]
 
+%------------------------------------------------
+% Subsection 4: Euler's formula
+%------------------------------------------------
+
 \subsection{Euler's formula}
-Euler's formula, named after Leonhard Euler, is a mathematical formula in complex analysis that establishes the fundamental relationship between the trigonometric functions and the complex exponential function. Euler's formula states that for any real number \(\varphi\):
+Euler's formula, named after Leonhard Euler, is a mathematical formula in
+complex analysis that establishes the fundamental relationship between the
+trigonometric functions and the complex exponential function. Euler's formula
+states that for any real number \(\varphi\):
 \[
 	e^{j \varphi} = \cos(\varphi) + j \cdot sin(\varphi)
 \]
-where \(e\) is the base of the natural logarithm, \(j\) is the imaginary unit, and \(cos\) and \(sin\) are the trigonometric functions cosine and sine respectively, with the argument \(\varphi\) given in radians.
+where \(e\) is the base of the natural logarithm, \(j\) is the imaginary unit,
+and \(cos\) and \(sin\) are the trigonometric functions cosine and sine
+respectively, with the argument \(\varphi\) given in radians.
 \bigbreak
-When \(\varphi = \pi\), Euler's formula evaluates to \(e^{j \pi} + 1 = 0\), which is known as Euler's identity.
+When \(\varphi = \pi\), Euler's formula evaluates to \(e^{j \pi} + 1 = 0\),
+which is known as Euler's identity.
 \bigbreak
 \begin{wrapfigure}{L}{0.4\textwidth}
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.4\textwidth]{images/euler_s_formula.png}
-\caption{Euler's formula Interpretation}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.4\textwidth]{images/euler_s_formula.png}
+	\caption{Euler's formula Interpretation}
 \end{wrapfigure}
-This formula can be interpreted as saying that the function \(e^{j \varphi}\) is a unit complex number, i.e., it traces out the unit circle in the complex plane as \(\varphi\) ranges through the real numbers. Here \(\varphi\) is the angle that a line connecting the origin with a point on the unit circle makes with the positive real axis, measured counterclockwise and in radians.
+This formula can be interpreted as saying that the function \(e^{j \varphi}\) is
+a unit complex number, i.e., it traces out the unit circle in the complex plane
+as \(\varphi\) ranges through the real numbers. Here \(\varphi\) is the angle
+that a line connecting the origin with a point on the unit circle makes with the
+positive real axis, measured counterclockwise and in radians.
 \bigbreak
-The original proof is based on the Taylor series expansions of the exponential function \(e^z\) (where \(z\) is a complex number) and of \(sin(x)\) and \(\cos(x)\) for real numbers \(x\). In fact, the same proof shows that Euler's formula is even valid for all complex numbers \(z\). 
+The original proof is based on the Taylor series expansions of the exponential
+function \(e^z\) (where \(z\) is a complex number) and of \(sin(x)\) and
+\(\cos(x)\) for real numbers \(x\). In fact, the same proof shows that Euler's
+formula is even valid for all complex numbers \(z\). 
+
+%------------------------------------------------
+% Subsection 5: Euler's formula and Complex Numbers
+%------------------------------------------------
 
 \subsection{Euler's formula and Complex Numbers}
 Using Euler's formula we can now write:
 \[
-	\boldsymbol{z = a + jb = c \cdot \cos(\varphi) + c \cdot sin(\varphi) \cdot j = c \cdot (\cos(\varphi) + j \cdot sin(\varphi)) = e^{j \varphi}}.
+	\boldsymbol{z = a + jb = c \cdot \cos(\varphi) + c \cdot sin(\varphi)
+	\cdot j = c \cdot (\cos(\varphi) + j \cdot sin(\varphi)) =
+	e^{j \varphi}}.
 \]
 
 \subsection{Elementary operations}
 \subsubsection{Conjugate}
 \begin{wrapfigure}{L}{0.4\textwidth}
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.4\textwidth]{images/complex_conjugate_picture.png}
-\caption{Geometric representation of z and its conjugate \(\conjugate{z}\)}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.4\textwidth]{images/complex_conjugate_picture.png}
+	\caption{Geometric representation of z and its conjugate \(\conjugate{z}\)}
 \end{wrapfigure}
 The complex conjugate of the complex number \(z = a + jb\) is given by \(a − jb\). It is denoted by either \(\conjugate{z}\) or \(z^*\). This unary operation on complex numbers cannot be expressed by applying only their basic operations addition, subtraction, multiplication and division.
 \bigbreak
@@ -1463,16 +1562,70 @@ e calcoliamone la trasformata di Fourier $X(f)$. questa \`e data da
 \]
 Gli spettri di ampiezza e di fase del segnale $x(t)$ sono rappresentati nella seguente figura
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/spettro_rect_alpha.jpg}
-\caption{Spetro \textbf{a)} di ampiezza e \textbf{b)} di fase dell'impulso rettangolare di ampiezza unitaria.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/spettro_rect_alpha.jpg}
+	\caption{Spetro \textbf{a)} di ampiezza e \textbf{b)} di fase
+		dell'impulso rettangolare di ampiezza unitaria.}
 \end{figure}
+
+\subsubsection{Esempio}
+Consideriamo il segnale
+\[
+	x(t) = 2 \cdot rect\left(\frac{t}{2T}\right) +
+	1 \cdot rect\left(\frac{t}{T}\right)
+\]
+graficamente rappresentabile come
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/esempio_14_03_2018.png}
+	\caption{Segnale $x(t)$.}
+\end{figure}
+\noindent
+Possiamo scomporre il nostro segnale come constributo di due segnali
+\[
+	x_1(t) = 2 \cdot rect\left(\frac{t}{2T}\right)
+\]
+\[
+	x_2(t) = 1 \cdot rect\left(\frac{t}{T}\right)
+\]
+Calcoliamone la trasformata di Fourier.
+\bigbreak\noindent
+Sappiamo gi\`a che 
+\[
+	X_2(f) = T \cdot sinc(f T).
+\]
+Calcoliamo quindi la trasformata di $x_1(t)$
+\[
+	x_1(t) = 2 \cdot rect\left(\frac{t}{2T}\right) =
+	2 \cdot rect\left(\frac{t}{T'}\right)
+\]
+da cui segue immediatamente che
+\[
+	X_1(f) = 2 \cdot T' \cdot sinc(f T') =
+	2 \cdot 2T \cdot sinc(f 2T) =
+	4T \cdot sinc(2 f T).
+\]
+Infine
+\[
+	X(f) = X_1(f) + X_2(f) =
+	4T \cdot sinc(2 f T) + T \cdot sinc(f T).
+\]
+
+\subsubsection{Esempio}
+
 
 \newpage
 \subsection{Criteri di esistenza della Trasformata Continua di Fourier (TCF)}
-Indichiamo adesso delle condizioni sufficienti per la rappresentazione del segnale $x(t)$ attraverso la propria trasformata di Fourier $X(f)$, nel senso gi\`a discusso riguardo la serie di Fourier. Se tali condizioni sono soddisfatte \`e possibile affermare che la conoscenza dell'andamento nel tempo del segnale $x(t)$ \`e equivalente alla conoscenza dell'andamento frequenziale della relativa trasformata di Fourier.\\
-Una prima condizione sufficiente afferma che se il segnale $x(t)$ ha energia finita
+Indichiamo adesso delle condizioni sufficienti per la rappresentazione del
+segnale $x(t)$ attraverso la propria trasformata di Fourier $X(f)$, nel senso
+gi\`a discusso riguardo la serie di Fourier. Se tali condizioni sono soddisfatte
+\`e possibile affermare che la conoscenza dell'andamento nel tempo del segnale
+$x(t)$ \`e equivalente alla conoscenza dell'andamento frequenziale della
+relativa trasformata di Fourier.\\
+Una prima condizione sufficiente afferma che se il segnale $x(t)$ ha energia
+finita
 \begin{equation}
 	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt < \ +\infty
 \end{equation}
@@ -2412,13 +2565,73 @@ ricava
 \[
 	x(f) = \int\displaylimits_{-\infty}^{+\infty} X(t) e^{j 2 \pi t f} \ dt.
 \]
-Se poi in questa relazione si effettua un cambiamento di variabile
+Se poi in questa relazione si effettua un cambiamento di variabile sostituendo
+alla variabile $f$ la variabile $-f$, si ottiene
+\[
+	x(-f) = \int\displaylimits_{-\infty}^{+\infty} X(t) e^{-j 2 \pi f t} \dt
+\]
+che dimostra la tesi iniziale.
 
 \newpage
-\subsubsection{TCF: Teorema del ritardo}
+\subsubsection{Teorema del ritardo}
+Come viene modificata la trasformata di un segnale se questo viene traslato
+sull'asse dei tempi (cio\`e, anticipato o ritardato)? Sia dunque $X(f)$ la
+trasformata del segnale $x(t)$; allora la trasformata del segnale traslato a
+destra della quantit\`a $t_0$
+\[
+	y(t) = x(t - t_0)
+\]
+\`e
+\[
+	Y(f) = X(f) e^{-j 2 \pi f t_0}.
+\]
+Questa operazione corrisponde evidentemente a un ritardo se $t_0 > 0$ e ad un
+anticipo se $t_0 < 0$.
+\begin{proof}
+Applicando la definizione di trasformata si ha
+\[
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt =
+	\int\displaylimits_{-\infty}^{+\infty} x(t - t_0) e^{-j 2 \pi f t} \dt =
+\]
+\[
+	\footnote{Poniamo $t' = t - t_0$.}=
+	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f (t' + t_0)} \dt ' =
+	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'} e^{-j 2 \pi f t_0} \dt ' =
+\]
+\[
+	= \int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'} \dt ' \cdot e^{-j 2 \pi f t_0}
+	= X(f) e^{-j 2 \pi f t_0}.
+\]
+\end{proof}
+Questa propriet\`a mostra che un ritardo temporale modifica lo spettro di fase
+della trasformata del segnale ma \textit{non cambia il suo spettro di ampiezza}.
+Infatti, il teorema del ritardo si traduce nelle relazioni
+\[
+	\abs{Y(f)} = \abs{X(f)},
+\]
+\[
+	\angle Y(f) = \angle X(f) - 2 \pi f t_0.
+\]
 
 \newpage
-\subsubsection{TCF: Teorema del cambiamento di scala}
+\subsubsection{Teorema del cambiamento di scala}
+Si consideri la situazione generale in cui due segnali siano legati dalla
+relazione
+\[
+	y(t) = x(\alpha t).
+\]
+Cio\`e si effettua un cambiamento della scala temporale. Moltiplicando la
+variabile indipendente $t$ del segnale $x(t)$ per coefficiente $\alpha$ si
+producono i seguenti effetti:
+\begin{itemize}
+	\item $\abs{\alpha} > 1$ $\rightarrow$ \textit{compressione} della scala dei tempi
+	\item $\abs{\alpha} < 1$ $\rightarrow$ \textit{dilatazione} della scala dei tempi
+	\item $\alpha < 0$ $\rightarrow$ \textit{inversione} della scala dei tempi
+\end{itemize}
+In altri termini, se $\abs{\alpha} < 1$ l'evoluzione del segnale viene "rallentata",
+viceversa se $\abs{\alpha} > 1$ il segnale viene "accelerato". Operazoini di questo
+tipo vengono effettuate correntemente nell'elaborazione dei segnali registrando
+il segnale ad una certa velocit\`a e riproducendolo a velocit\`a diversa.
 
 \newpage
 \subsection{Teorema della Modulazione}

@@ -35,65 +35,67 @@
 \contentsline {section}{\numberline {2.3}Segnali aperiodici a tempo continuo}{48}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Dalla serie all'integrale di Fourier}{50}{subsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.1.1}Esempio}{55}{subsubsection.2.3.1.1}
-\contentsline {subsection}{\numberline {2.3.2}Criteri di esistenza della Trasformata Continua di Fourier (TCF)}{57}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Sistemi monodimensionali a tempo continuo}{58}{section.2.4}
-\contentsline {section}{\numberline {2.5}Segnali a tempo discreto}{59}{section.2.5}
-\contentsline {section}{\numberline {2.6}Sistemi monodimensionali a tempo discreto}{60}{section.2.6}
-\contentsline {section}{\numberline {2.7}Progetto di filtri digitali}{61}{section.2.7}
-\contentsline {section}{\numberline {2.8}Richiami di teoria della probabilit\`a}{62}{section.2.8}
-\contentsline {section}{\numberline {2.9}Segnali aleatori a tempo continuo e a tempo discreto}{63}{section.2.9}
-\contentsline {chapter}{\chapternumberline {3}Esame Scritto}{64}{chapter.3}
-\contentsline {section}{\numberline {3.1}Compitino 2014}{65}{section.3.1}
-\contentsline {section}{\numberline {3.2}Compitino 2015}{66}{section.3.2}
-\contentsline {section}{\numberline {3.3}Compitino 2016}{67}{section.3.3}
-\contentsline {section}{\numberline {3.4}Compitino 2017}{68}{section.3.4}
-\contentsline {section}{\numberline {3.5}Compitino 2018}{69}{section.3.5}
-\contentsline {section}{\numberline {3.6}Prova di Comunicazioni Numeriche - 09 Gennaio 2018}{70}{section.3.6}
-\contentsline {section}{\numberline {3.7}Prova di Comunicazioni Numeriche - 29 Gennaio 2018}{71}{section.3.7}
-\contentsline {section}{\numberline {3.8}Prova di Comunicazioni Numeriche - 20 Febbraio 2018}{72}{section.3.8}
-\contentsline {section}{\numberline {3.9}Prova di Comunicazioni Numeriche - 09 Aprile 2018}{73}{section.3.9}
-\contentsline {chapter}{\chapternumberline {4}Esame Orale}{74}{chapter.4}
-\contentsline {section}{\numberline {4.1}Segnali Deterministici}{74}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Relazioni tra Potenza Media \textit {$P_x$} ed Energia \textit {$E_x$} di un Segnale}{75}{subsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.1.1}Funzione a quadrato sommabile}{76}{subsubsection.4.1.1.1}
-\contentsline {subsubsection}{\numberline {4.1.1.2}Applicazioni nella Meccanica Quantistica}{76}{subsubsection.4.1.1.2}
-\contentsline {subsection}{\numberline {4.1.2}Relazione Potenza Media, Valore Efficace e Valore Medio: $P_x = 0 \DOTSB \Relbar \joinrel \Rightarrow x_eff = 0, x_m = 0$}{78}{subsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.2.1}Media quadratica}{81}{subsubsection.4.1.2.1}
-\contentsline {subsubsection}{\numberline {4.1.2.2}Valore Efficace}{81}{subsubsection.4.1.2.2}
-\contentsline {subsection}{\numberline {4.1.3}Biunivocit\`a della trasformata serie di Fourier}{82}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Linearit\`a della trasformata serie di Fourier}{85}{subsection.4.1.4}
-\contentsline {subsubsection}{\numberline {4.1.4.1}Esercizio}{85}{subsubsection.4.1.4.1}
-\contentsline {subsection}{\numberline {4.1.5}Simmetria Hermitiana della trasformata serie di Fourier}{87}{subsection.4.1.5}
-\contentsline {subsubsection}{\numberline {4.1.5.1}Simmetria pari per il modulo}{88}{subsubsection.4.1.5.1}
-\contentsline {subsubsection}{\numberline {4.1.5.2}Simmetria dispari per la fase}{89}{subsubsection.4.1.5.2}
-\contentsline {subsection}{\numberline {4.1.6}Trasformata di un segnale (periodico) reale e pari}{90}{subsection.4.1.6}
-\contentsline {subsection}{\numberline {4.1.7}Trasformata di un segnale (periodico) reale e dispari}{92}{subsection.4.1.7}
-\contentsline {subsection}{\numberline {4.1.8}Trasformata di un segnale (periodico) reale alternativo}{94}{subsection.4.1.8}
-\contentsline {subsection}{\numberline {4.1.9}Simmetrie della Trasformata Continua di Fourier (TCF)}{97}{subsection.4.1.9}
-\contentsline {subsubsection}{\numberline {4.1.9.1}Simmetrie della TCF: Simmetria Hermitiana}{97}{subsubsection.4.1.9.1}
-\contentsline {subsubsection}{\numberline {4.1.9.2}Simmetrie della TCF: Segnali reali e pari}{99}{subsubsection.4.1.9.2}
-\contentsline {subsubsection}{\numberline {4.1.9.3}Simmetrie della TCF: Segnali reali e dispari}{101}{subsubsection.4.1.9.3}
-\contentsline {subsection}{\numberline {4.1.10}Teoremi sulla trasformata continua di Fourier}{102}{subsection.4.1.10}
-\contentsline {subsubsection}{\numberline {4.1.10.1}Linearit\`a della TCF}{102}{subsubsection.4.1.10.1}
-\contentsline {subsubsection}{\numberline {4.1.10.2}Dualit\`a della TCF}{103}{subsubsection.4.1.10.2}
-\contentsline {subsubsection}{\numberline {4.1.10.3}TCF: Teorema del ritardo}{104}{subsubsection.4.1.10.3}
-\contentsline {subsubsection}{\numberline {4.1.10.4}TCF: Teorema del cambiamento di scala}{105}{subsubsection.4.1.10.4}
-\contentsline {subsection}{\numberline {4.1.11}Teorema della Modulazione}{106}{subsection.4.1.11}
-\contentsline {subsubsection}{\numberline {4.1.11.1}Modulazione con coseno}{107}{subsubsection.4.1.11.1}
-\contentsline {subsubsection}{\numberline {4.1.11.2}Modulazione con seno}{108}{subsubsection.4.1.11.2}
-\contentsline {subsubsection}{\numberline {4.1.11.3}Modulazione con esponenziale complesso}{109}{subsubsection.4.1.11.3}
-\contentsline {subsection}{\numberline {4.1.12}Teorema di derivazione}{110}{subsection.4.1.12}
-\contentsline {subsubsection}{\numberline {4.1.12.1}Derivazione nel tempo}{111}{subsubsection.4.1.12.1}
-\contentsline {subsubsection}{\numberline {4.1.12.2}Derivazione in frequenza}{112}{subsubsection.4.1.12.2}
-\contentsline {subsection}{\numberline {4.1.13}Teorema di integrazione}{113}{subsection.4.1.13}
-\contentsline {subsubsection}{\numberline {4.1.13.1}Integrazione nel tempo}{114}{subsubsection.4.1.13.1}
-\contentsline {subsubsection}{\numberline {4.1.13.2}Integrazione in frequenza}{115}{subsubsection.4.1.13.2}
-\contentsline {subsection}{\numberline {4.1.14}Teorema del Prodotto di Convoluzione}{116}{subsection.4.1.14}
-\contentsline {subsection}{\numberline {4.1.15}Teorema della Convoluzione}{117}{subsection.4.1.15}
-\contentsline {section}{\numberline {4.2}Segnali Aleatori}{118}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Teorema di Bayes}{119}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Teorema della Probabilit\`a Totale}{120}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}{121}{subsubsection.4.2.2.1}
-\contentsline {subsection}{\numberline {4.2.3}Legame tra Varianza $\sigma _x^2$ e Valor quadratico medio $m_x^2$}{122}{subsection.4.2.3}
-\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{123}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Gradino Unitario}{123}{section.Alph1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.2}Esempio}{57}{subsubsection.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.1.3}Esempio}{58}{subsubsection.2.3.1.3}
+\contentsline {subsection}{\numberline {2.3.2}Criteri di esistenza della Trasformata Continua di Fourier (TCF)}{59}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Sistemi monodimensionali a tempo continuo}{60}{section.2.4}
+\contentsline {section}{\numberline {2.5}Segnali a tempo discreto}{61}{section.2.5}
+\contentsline {section}{\numberline {2.6}Sistemi monodimensionali a tempo discreto}{62}{section.2.6}
+\contentsline {section}{\numberline {2.7}Progetto di filtri digitali}{63}{section.2.7}
+\contentsline {section}{\numberline {2.8}Richiami di teoria della probabilit\`a}{64}{section.2.8}
+\contentsline {section}{\numberline {2.9}Segnali aleatori a tempo continuo e a tempo discreto}{65}{section.2.9}
+\contentsline {chapter}{\chapternumberline {3}Esame Scritto}{66}{chapter.3}
+\contentsline {section}{\numberline {3.1}Compitino 2014}{67}{section.3.1}
+\contentsline {section}{\numberline {3.2}Compitino 2015}{68}{section.3.2}
+\contentsline {section}{\numberline {3.3}Compitino 2016}{69}{section.3.3}
+\contentsline {section}{\numberline {3.4}Compitino 2017}{70}{section.3.4}
+\contentsline {section}{\numberline {3.5}Compitino 2018}{71}{section.3.5}
+\contentsline {section}{\numberline {3.6}Prova di Comunicazioni Numeriche - 09 Gennaio 2018}{72}{section.3.6}
+\contentsline {section}{\numberline {3.7}Prova di Comunicazioni Numeriche - 29 Gennaio 2018}{73}{section.3.7}
+\contentsline {section}{\numberline {3.8}Prova di Comunicazioni Numeriche - 20 Febbraio 2018}{74}{section.3.8}
+\contentsline {section}{\numberline {3.9}Prova di Comunicazioni Numeriche - 09 Aprile 2018}{75}{section.3.9}
+\contentsline {chapter}{\chapternumberline {4}Esame Orale}{76}{chapter.4}
+\contentsline {section}{\numberline {4.1}Segnali Deterministici}{76}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Relazioni tra Potenza Media \textit {$P_x$} ed Energia \textit {$E_x$} di un Segnale}{77}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Funzione a quadrato sommabile}{78}{subsubsection.4.1.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Applicazioni nella Meccanica Quantistica}{78}{subsubsection.4.1.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Relazione Potenza Media, Valore Efficace e Valore Medio: $P_x = 0 \DOTSB \Relbar \joinrel \Rightarrow x_eff = 0, x_m = 0$}{80}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Media quadratica}{83}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}Valore Efficace}{83}{subsubsection.4.1.2.2}
+\contentsline {subsection}{\numberline {4.1.3}Biunivocit\`a della trasformata serie di Fourier}{84}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Linearit\`a della trasformata serie di Fourier}{87}{subsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.4.1}Esercizio}{87}{subsubsection.4.1.4.1}
+\contentsline {subsection}{\numberline {4.1.5}Simmetria Hermitiana della trasformata serie di Fourier}{89}{subsection.4.1.5}
+\contentsline {subsubsection}{\numberline {4.1.5.1}Simmetria pari per il modulo}{90}{subsubsection.4.1.5.1}
+\contentsline {subsubsection}{\numberline {4.1.5.2}Simmetria dispari per la fase}{91}{subsubsection.4.1.5.2}
+\contentsline {subsection}{\numberline {4.1.6}Trasformata di un segnale (periodico) reale e pari}{92}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Trasformata di un segnale (periodico) reale e dispari}{94}{subsection.4.1.7}
+\contentsline {subsection}{\numberline {4.1.8}Trasformata di un segnale (periodico) reale alternativo}{96}{subsection.4.1.8}
+\contentsline {subsection}{\numberline {4.1.9}Simmetrie della Trasformata Continua di Fourier (TCF)}{99}{subsection.4.1.9}
+\contentsline {subsubsection}{\numberline {4.1.9.1}Simmetrie della TCF: Simmetria Hermitiana}{99}{subsubsection.4.1.9.1}
+\contentsline {subsubsection}{\numberline {4.1.9.2}Simmetrie della TCF: Segnali reali e pari}{101}{subsubsection.4.1.9.2}
+\contentsline {subsubsection}{\numberline {4.1.9.3}Simmetrie della TCF: Segnali reali e dispari}{103}{subsubsection.4.1.9.3}
+\contentsline {subsection}{\numberline {4.1.10}Teoremi sulla trasformata continua di Fourier}{104}{subsection.4.1.10}
+\contentsline {subsubsection}{\numberline {4.1.10.1}Linearit\`a della TCF}{104}{subsubsection.4.1.10.1}
+\contentsline {subsubsection}{\numberline {4.1.10.2}Dualit\`a della TCF}{105}{subsubsection.4.1.10.2}
+\contentsline {subsubsection}{\numberline {4.1.10.3}Teorema del ritardo}{106}{subsubsection.4.1.10.3}
+\contentsline {subsubsection}{\numberline {4.1.10.4}Teorema del cambiamento di scala}{107}{subsubsection.4.1.10.4}
+\contentsline {subsection}{\numberline {4.1.11}Teorema della Modulazione}{108}{subsection.4.1.11}
+\contentsline {subsubsection}{\numberline {4.1.11.1}Modulazione con coseno}{109}{subsubsection.4.1.11.1}
+\contentsline {subsubsection}{\numberline {4.1.11.2}Modulazione con seno}{110}{subsubsection.4.1.11.2}
+\contentsline {subsubsection}{\numberline {4.1.11.3}Modulazione con esponenziale complesso}{111}{subsubsection.4.1.11.3}
+\contentsline {subsection}{\numberline {4.1.12}Teorema di derivazione}{112}{subsection.4.1.12}
+\contentsline {subsubsection}{\numberline {4.1.12.1}Derivazione nel tempo}{113}{subsubsection.4.1.12.1}
+\contentsline {subsubsection}{\numberline {4.1.12.2}Derivazione in frequenza}{114}{subsubsection.4.1.12.2}
+\contentsline {subsection}{\numberline {4.1.13}Teorema di integrazione}{115}{subsection.4.1.13}
+\contentsline {subsubsection}{\numberline {4.1.13.1}Integrazione nel tempo}{116}{subsubsection.4.1.13.1}
+\contentsline {subsubsection}{\numberline {4.1.13.2}Integrazione in frequenza}{117}{subsubsection.4.1.13.2}
+\contentsline {subsection}{\numberline {4.1.14}Teorema del Prodotto di Convoluzione}{118}{subsection.4.1.14}
+\contentsline {subsection}{\numberline {4.1.15}Teorema della Convoluzione}{119}{subsection.4.1.15}
+\contentsline {section}{\numberline {4.2}Segnali Aleatori}{120}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Teorema di Bayes}{121}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Teorema della Probabilit\`a Totale}{122}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}{123}{subsubsection.4.2.2.1}
+\contentsline {subsection}{\numberline {4.2.3}Legame tra Varianza $\sigma _x^2$ e Valor quadratico medio $m_x^2$}{124}{subsection.4.2.3}
+\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{125}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Gradino Unitario}{125}{section.Alph1.1}
