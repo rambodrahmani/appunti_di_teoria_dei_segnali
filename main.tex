@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Template:
 % Exam Notes LaTeX Template
 % Version 1.0 (30/08/2018)
@@ -12,11 +12,11 @@
 % License: 
 % Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 % License.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \documentclass[12pt,oneside,openany]{memoir}
 
@@ -161,9 +161,9 @@
 
 \epigraphfontsize{\small\itshape}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % TITLE PAGE
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \title{%
 	Esame Comunicazioni Numeriche\\
@@ -185,9 +185,9 @@
 To my twin brother Ramtin.
 \end{dedication}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % TABLE OF CONTENTS
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \pagenumbering{roman}
@@ -197,9 +197,9 @@ To my twin brother Ramtin.
 \newpage
 \pagenumbering{arabic}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Chapter 0: Disclaimer
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \chapter{Disclaimer}
 \epigraph{"Information is power. But like all power, there are those who want
@@ -217,9 +217,9 @@ This work is licensed under:
 \bigbreak\noindent
 \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{\includegraphics[height=\baselineskip]{images/cc_88x31.png} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Chapter 1: Introduction
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \chapter{Introduction}
 \epigraph{
@@ -230,9 +230,9 @@ This work is licensed under:
 This chapter contains introductory concepts needed as theoretical base to be
 able to understand the signal processing topics presented in this text.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section 1: Complex Numbers
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Complex Numbers}
 A complex number is a number that can be expressed in the form
@@ -266,9 +266,9 @@ real part and the vertical axis for the imaginary part.
 of electric charge with respect to time. We will therefore be using the letter
 \(j\) instead of the letter \(i\).}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection 1: Cartesian form
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Cartesian form}
 \begin{wrapfigure}{L}{0.5\textwidth}
@@ -288,9 +288,9 @@ defined as an ordered pair \((a, b)\), but then rules for addition and
 multiplication must also be included as part of the definition. William Rowan
 Hamilton introduced this approach to define the complex number system.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection 2: Polar form
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Polar form}
 \begin{wrapfigure}{L}{0.4\textwidth}
@@ -347,9 +347,9 @@ to retrieve the cartesian coordinates:
 	\end{cases}
 \]
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection 3: Trigonometric form
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Trigonometric form}
 The trigonometric form of a complex number \(z = a + bj\) can be easily obtain
@@ -359,9 +359,9 @@ by substitution in our previous equations:
 	c \cdot (\cos(\varphi) + j \cdot sin(\varphi)).
 \]
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection 4: Euler's formula
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Euler's formula}
 Euler's formula, named after Leonhard Euler, is a mathematical formula in
@@ -395,9 +395,9 @@ function \(e^z\) (where \(z\) is a complex number) and of \(sin(x)\) and
 \(\cos(x)\) for real numbers \(x\). In fact, the same proof shows that Euler's
 formula is even valid for all complex numbers \(z\). 
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection 5: Euler's formula and Complex Numbers
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Euler's formula and Complex Numbers}
 Using Euler's formula we can now write:
@@ -406,6 +406,10 @@ Using Euler's formula we can now write:
 	\cdot j = c \cdot (\cos(\varphi) + j \cdot sin(\varphi)) =
 	e^{j \varphi}}.
 \]
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Elementary Operations
+%-------------------------------------------------------------------------------
 
 \subsection{Elementary operations}
 \subsubsection{Conjugate}
@@ -454,6 +458,10 @@ Moreover, a complex number is real if and only if it equals its own conjugate.
 	z = \conjugate{z} \quad \rightarrow \quad z \in \mathbb{R}
 \]
 
+%-------------------------------------------------------------------------------
+% Subsubsection: Additions and subtraction
+%-------------------------------------------------------------------------------
+
 \subsubsection{Addition and subtraction}
 Two complex numbers \(z_1\) and \(z_2\) are most easily added by separately
 adding their real and imaginary parts of the summands. That is to say:
@@ -466,32 +474,45 @@ Similarly, subtraction can be performed as
 \]
 \textbf{Please keep in mind that this is completely wrong:}
 \[
-	z_1 = c_1 \cdot e^{j \varphi_1} \quad , \quad z_2 = c_2 \cdot e^{j \varphi_2}
+	z_1 = c_1 \cdot e^{j \varphi_1} \quad , \quad z_2 = c_2
+	\cdot e^{j \varphi_2}
 \]
 \[
-	z_1 + z_2 = c_1 \cdot e^{j \varphi_1} + c_2 \cdot e^{j \varphi_2} = (c_1 + c_2) \cdot e^{j(\varphi_1 + \varphi_2)}
+	z_1 + z_2 = c_1 \cdot e^{j \varphi_1} + c_2 \cdot e^{j \varphi_2} =
+	(c_1 + c_2) \cdot e^{j(\varphi_1 + \varphi_2)}
 \]
 \textbf{As a matter of fact:}
 \[
-	c_1 \cdot e^{j \varphi_1} = c_1 \cdot \cos(\varphi_1) + j \cdot c_1 \cdot sin(\varphi_1),
+	c_1 \cdot e^{j \varphi_1} = c_1 \cdot \cos(\varphi_1) + j \cdot
+	c_1 \cdot sin(\varphi_1),
 \]
 \[
-	c_2 \cdot e^{j \varphi_2} = c_2 \cdot \cos(\varphi_2) + j \cdot c_2 \cdot sin(\varphi_2),
+	c_2 \cdot e^{j \varphi_2} = c_2 \cdot \cos(\varphi_2) + j \cdot
+	c_2 \cdot sin(\varphi_2),
 \]
 \[
-	c_1 \cdot e^{j \varphi_1} + c_2 \cdot e^{j \varphi_2} = c_1 \cdot \cos(\varphi_1) + c_2 \cdot \cos(\varphi_2) + j \cdot (c_1 \cdot sin(\varphi_1) + c_2 \cdot sin(\varphi_2)),
+	c_1 \cdot e^{j \varphi_1} + c_2 \cdot e^{j \varphi_2} = c_1 \cdot
+	\cos(\varphi_1) + c_2 \cdot \cos(\varphi_2) + j \cdot
+	(c_1 \cdot sin(\varphi_1) + c_2 \cdot sin(\varphi_2)),
 \]
 \textbf{while:}
 \[
-	(c_1 + c_2) \cdot e^{j (\varphi_1 + \varphi_2)} = (c_1 + c_2) \cdot (\cos(\varphi_1 + \varphi_2) + j \cdot sin(\varphi_1 + \varphi_2)) =
+	(c_1 + c_2) \cdot e^{j (\varphi_1 + \varphi_2)} = (c_1 + c_2) \cdot
+	(\cos(\varphi_1 + \varphi_2) + j \cdot sin(\varphi_1 + \varphi_2)) =
 \]
 \[
-	c_1 \cdot \cos(\varphi_1 + \varphi_2) + c_2 \cdot \cos(\varphi_1 + \varphi_2) + j \cdot (c_1 \cdot sin(\varphi_1 + \varphi_2) + c_2 \cdot sin(\varphi_1 + \varphi_2)),
+	c_1 \cdot \cos(\varphi_1 + \varphi_2) + c_2 \cdot
+	\cos(\varphi_1 + \varphi_2) + j \cdot (c_1 \cdot
+	sin(\varphi_1 + \varphi_2) + c_2 \cdot sin(\varphi_1 + \varphi_2)),
 \]
 \textbf{and:}
 \[
 	\cos(\varphi_1 + \varphi_2) \neq \cos(\varphi_1) + \cos(\varphi_2).
 \]
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Multiplication
+%-------------------------------------------------------------------------------
 
 \subsubsection{Multiplication}
 Since the real part, the imaginary part, and the indeterminate \(i\) in a
@@ -503,14 +524,15 @@ defining property \(i^{2} = -1\) in the following way
 	z_1 \cdot z_2 = (a_1 + j b_1) \cdot (a_2 + j b_2) =
 \]
 \[
-	a_1 a_2 + j a_1 b_2 + j b_1 a_2 + (jj) b_1 b_2 = (a_1 a_2 + b_1 b_2) + j \cdot (a_1 b_2 + b_1 a_2).
+	a_1 a_2 + j a_1 b_2 + j b_1 a_2 + (jj) b_1 b_2 = (a_1 a_2 + b_1 b_2) +
+	j \cdot (a_1 b_2 + b_1 a_2).
 \]
 \textbf{The cartesian form is convenient for additions and subtractions but not
 for multiplications.}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Multiplying a complex number by j
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsubsection{Multiplying a complex number by j}
 In our goal toward finding a geometric interpretation of complex multiplication,
@@ -540,9 +562,9 @@ counterclockwise is intended. Then we can say that multiplication by $-j$ gives
 a $-90^{\degree}$ rotation about 0, or if you prefer, a $270^{\degree}$ rotation
 about 0.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section 2: The Field C of Complex Numbers
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{The Field C of Complex Numbers}
@@ -552,6 +574,10 @@ try and provide a much more formal definition of the field $\mathbb{C}$ than the
 one roughly introduced in the previous section which represents the minimal
 concepts required for the contents of the following pages. You can simply skip
 over this section if you are not interested or have previous knowledge.
+
+%-------------------------------------------------------------------------------
+% Subsection: Naive introduction to the field C
+%-------------------------------------------------------------------------------
 
 \subsection{Naive introduction to the field C}
 The usual way to quickly start with complex numbers is to say that we introduce
@@ -564,7 +590,7 @@ Now, having this object at my disposal, I can easily define the set of complex
 numbers as the set with elements of the form $x + iy$ where $x$, $y$ are our
 familiar real numbers:
 \[
-\mathbb{C} \coloneqq \{x + iy : x,y \in \mathbb{R}, i^2 = -1\}.
+	\mathbb{C} \coloneqq \{x + iy : x,y \in \mathbb{R}, i^2 = -1\}.
 \]
 After this, using the usual rules of arithmetic operations as applied to the
 real numbers, I can define the four fundamental operations for the complex
@@ -583,9 +609,9 @@ most natural). A second rigorous definition using matrices is provided in the
 section \textbf{Constructing the complex numbers via the arithmetic of 2x2
 matrices}.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Definition of the field C
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Definition of the field C}
 \textit{The set of complex numbers, which is denoted by $\mathbb{C}$, is, by
@@ -645,9 +671,9 @@ according to the definition we provided for our addition and multiplication
 \subsection{Constructing the complex numbers via the arithmetic of 2x2 matrices}
 \improvement[inline]{To be continued.}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Chapter 2: Concetti Preliminari
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \chapter{Concetti Preliminari}
 \epigraph{
@@ -657,9 +683,9 @@ according to the definition we provided for our addition and multiplication
 Di seguito alcune definizioni essenziali necessarie per poter comprendere i
 contenuti presentati nei capitoli successivi.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Introduzione allo studio dei segnali
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Introduzione allo studio dei segnali}
 La teoria dei segnali studia le propriet\`a matematiche e statistiche dei
@@ -709,9 +735,9 @@ sistemi giacch\'e molti segnali transitano come input in sistemi che elaborano
 ovvero trasformano il segnale in ingresso restituendo in uscita un certo output.
 Centrale \`e anche l'analisi di Fourier ovvero l'analisi spettrale. 
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Prorieta' elementari dei segnali determinati
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Propriet\`a elementari dei segnali determinati}
 Limitiamo per il momento la nostra attenzione ai segnali determinati e definiamo
@@ -808,18 +834,20 @@ potenza:
 Nell'ingegneria elettrica, il valore medio rappresenta la "componente continuo"
 (cio\`e costante) attorno alla quale si svolge l'evoluzione del segnale.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Esercizio Lezione 12 Marzo 2018
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
-\subsubsection{Esercizio Lezione 12 Marzo 2018}
+\subsubsection{Esercizio 12 Marzo 2018}
 Calcolare $E_y$, $P_y$, $y_{eff}$ e $y_m$ per la funzione $y(t)$ definita  come
 \begin{equation}
 	y(t) = x(t) - x(-t),
 \end{equation}
 dove $x(t)$ \`e definita come
 \[
-	x(t) = A e^{-t} \cdot u(t)\footnote{Il segnale canonico "gradino unitario" \`e presente nell'Appendice A: Segnali Canonici.}.
+	x(t) = A e^{-t} \cdot u(t)
+	\footnote{Il segnale canonico "gradino unitario" \`e presente
+	nell'Appendice A: Segnali Canonici.}.
 \]
 Infine quindi
 \begin{equation}
@@ -897,27 +925,49 @@ Dato che $E_y = A^2 = K < \infty$ allora
 \begin{proof}
 \begin{equation}
 \begin{split}
-	P_y = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{y(t)}^2 \dt =
+	P_y = \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} \abs{y(t)}^2 \dt = 
 	\quads{13}
 	\\
-	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{A e^{-t} u(t) - A e^t u(-t)}^2 \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} \abs{A e^{-t} u(t) - A e^t u(-t)}^2
+	\dt =
 	\quads{10}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} \abs{A e^{-t} u(t) - A e^t u(-t)}^2 \dt + \int\displaylimits_{0}^{T/2} \abs{A e^{-t} u(t) - A e^t u(-t)}^2 \dt \right] =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		\int\displaylimits_{-T/2}^{0} \abs{A e^{-t} u(t) -
+		A e^t u(-t)}^2 \dt + \int\displaylimits_{0}^{T/2}
+		\abs{A e^{-t} u(t) - A e^t u(-t)}^2 \dt
+	\right] =
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} \abs{- A e^t u(-t)}^2 \dt + \int\displaylimits_{0}^{T/2} \abs{A e^{-t} u(t)}^2 \dt \right] =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		\int\displaylimits_{-T/2}^{0} \abs{- A e^t u(-t)}^2 \dt +
+		\int\displaylimits_{0}^{T/2} \abs{A e^{-t} u(t)}^2 \dt
+	\right] =
 	\quads{7}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} A^2 e^{2t} \dt + \int\displaylimits_{0}^{T/2} A^2 e^{-2t} \dt \right] 	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} A^2 e^{-2\abs{t}} \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		\int\displaylimits_{-T/2}^{0} A^2 e^{2t} \dt + 
+		\int\displaylimits_{0}^{T/2} A^2 e^{-2t} \dt
+	\right] =
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2}
+	A^2 e^{-2\abs{t}} \dt =
 	\quads{3}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} 2 \int\displaylimits_{0}^{T/2} A^2 e^{-2t} \dt = \lim_{T \rightarrow \infty} \frac{1}{T} 2 A^2 \int\displaylimits_{0}^{T/2} e^{-2t} \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 2 \int\displaylimits_{0}^{T/2}
+	A^2 e^{-2t} \dt = \lim_{T \rightarrow \infty} \frac{1}{T} 2 A^2
+	\int\displaylimits_{0}^{T/2} e^{-2t} \dt =
 	\quads{8}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} 2 A^2 \int\displaylimits_{0}^{T/2} \frac{1}{2} \cdot 2 \cdot e^{-2t} \dt = \lim_{T \rightarrow \infty} \frac{1}{T} A^2 \int\displaylimits_{0}^{T/2} 2 \cdot e^{-2t} \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 2 A^2
+	\int\displaylimits_{0}^{T/2} \frac{1}{2} \cdot 2 \cdot e^{-2t} \dt =
+	\lim_{T \rightarrow \infty} \frac{1}{T} A^2 \int\displaylimits_{0}^{T/2}
+	2 \cdot e^{-2t} \dt =
 	\quads{7}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} A^2 \left[e^{-2t}\right]_0^{T/2} = \lim_{T \rightarrow \infty} \frac{A^2}{T} \left[e^{-T} - 1\right] = 0.
+	= \lim_{T \rightarrow \infty} \frac{1}{T} A^2 \left[
+		e^{-2t}\right]_0^{T/2} = \lim_{T \rightarrow \infty}
+		\frac{A^2}{T} \left[e^{-T} - 1\right] = 0.
 	\quads{8}
 \end{split}
 \end{equation}
@@ -926,32 +976,48 @@ Dato che $E_y = A^2 = K < \infty$ allora
 \end{equation}
 \begin{equation}
 \begin{split}
-	y_m = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} y(t) \dt = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) - x(-t) \dt =
+	y_m = \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} y(t) \dt = \lim_{T \rightarrow \infty}
+	\frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) - x(-t) \dt =
 	\quads{4}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} A e^{-t} u(t) - A e^{t} u(-t) \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} A e^{-t} u(t) - A e^{t} u(-t) \dt =
 	\quads{7}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} A e^{-t} u(t) - A e^{t} u(-t) \dt + \int\displaylimits_{0}^{T/2} A e^{-t} u(t) - A e^{t} u(-t) \dt \right] =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		\int\displaylimits_{-T/2}^{0} A e^{-t} u(t) - A e^{t} u(-t) \dt
+		+ \int\displaylimits_{0}^{T/2} A e^{-t} u(t) - A e^{t} u(-t) \dt
+	\right] =
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} - A e^{t} u(-t) \dt + \int\displaylimits_{0}^{T/2} A e^{-t} u(t) \dt \right] =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		\int\displaylimits_{-T/2}^{0} - A e^{t} u(-t) \dt +
+		\int\displaylimits_{0}^{T/2} A e^{-t} u(t) \dt
+	\right] =
 	\quads{4}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[\int\displaylimits_{-T/2}^{0} - A e^{t} \dt + \int\displaylimits_{0}^{T/2} A e^{-t} \dt \right] =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		\int\displaylimits_{-T/2}^{0} - A e^{t} \dt +
+		\int\displaylimits_{0}^{T/2} A e^{-t} \dt
+	\right] =
 	\quads{7}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[-A \left(e^0 - e^{-T/2}\right) + A \left(-e^{-T/2} + e^0\right)\right] =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		-A \left(e^0 - e^{-T/2}\right) + A \left(-e^{-T/2} + e^0\right)
+	\right] =
 	\quads{5}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[-A + Ae^{-T/2} - Ae^{-T/2} + A\right] = 0.
+	= \lim_{T \rightarrow \infty} \frac{1}{T} \left[
+		-A + Ae^{-T/2} - Ae^{-T/2} + A
+	\right] = 0.
 	\quads{6}
 \end{split}
 \end{equation}
 \end{proof}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Segnali periodici a tempo continuo
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Segnali periodici a tempo continuo}
@@ -959,29 +1025,40 @@ Un segnale $x(t)$ \`e periodico se soddisfa la seguente relazione
 \begin{equation}
 	x(t) = x(t + T_0)
 \end{equation}
-per ogni valore della variabile $t$. La grandezza $T_0$ rappresenta il \textit{periodo} del segnale che \`e legato alla \textit{frequenza di ripetizione $f_0$} del segnale stesso dalla relazione
+per ogni valore della variabile $t$. La grandezza $T_0$ rappresenta il
+\textit{periodo} del segnale che \`e legato alla \textit{frequenza di
+ripetizione $f_0$} del segnale stesso dalla relazione
 \begin{equation}
 	f_0 = \frac{1}{T_0}.
 \end{equation}
 \textit{L'energia $E_x$} del segnale periodico \`e infinita:
 \begin{equation}
 \begin{split}
-	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt = \sum_{k = -\infty}^{+\infty} \int\displaylimits_{-T_0/2 + k T_0}^{T_0/2 + k T_0} \abs{x(t)}^2 \dt =
+	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 \dt =
+	\sum_{k = -\infty}^{+\infty}
+	\int\displaylimits_{-T_0/2 + k T_0}^{T_0/2 + k T_0} \abs{x(t)}^2 \dt =
 	\\
-	= \sum_{k = -\infty}^{+\infty} E_{T_0} = \lim_{k \rightarrow \infty} k \cdot E_{T_0} = \infty.
+	= \sum_{k = -\infty}^{+\infty} E_{T_0} =
+	\lim_{k \rightarrow \infty} k \cdot E_{T_0} = \infty.
 	\quads{4}
 \end{split}
 \end{equation}
 Dove si \`e posto
 \begin{equation}
-	E_{T_0} = \int\displaylimits_{-T_0/2 + k T_0}^{T_0/2 + k T_0} \abs{x(t)}^2 \dt.
+	E_{T_0} = \int\displaylimits_{-T_0/2 + k T_0}^{T_0/2 + k T_0}
+	\abs{x(t)}^2 \dt.
 \end{equation}
-\textbf{Per la precedente (2.13) \`e di fondamentale importanza la seguente considerazione:}
+\textbf{Per la precedente (2.13) \`e di fondamentale importanza la seguente
+considerazione:}
 \begin{lemma}
-L'integrale di una funzione periodica lungo intervalli pari al periodo stesso della funzione \`e uguale indipendentemente dall'intervallo considerato.\\
-Ovvero, sia $x(t) = x(t + T_0)$ $\forall t$ un funzione periodica di periodo $T_0$, allora
+L'integrale di una funzione periodica lungo intervalli pari al periodo stesso
+della funzione \`e uguale indipendentemente dall'intervallo considerato.
+\\
+Ovvero, sia $x(t) = x(t + T_0)$ $\forall t$ un funzione periodica di periodo
+$T_0$, allora
 \begin{equation}
-	\int\displaylimits_{0}^{T_0} x(t) \dt = \int\displaylimits_{b}^{b + T_0} x(t) \dt.
+	\int\displaylimits_{0}^{T_0} x(t) \dt =
+	\int\displaylimits_{b}^{b + T_0} x(t) \dt.
 \end{equation}
 \end{lemma}
 \begin{proof}
@@ -991,42 +1068,62 @@ Poniamo
 \end{equation}
 Calcoliamo la derivata di $H(b)$:
 \[
-	\frac{dH(b)}{db} = x(b + T_0) - x(b) =\footnote{Essendo $x(t)$ periodica infatti risulta $x(b + T_0) = x(b)$.} \ 0.
+	\frac{dH(b)}{db} = x(b + T_0) - x(b) =
+	\footnote{Essendo $x(t)$ periodica infatti risulta $x(b + T_0) = x(b)$.}
+	\ 0.
 \]
 Ne segue che $H(b)$ \`e costante, in particolare $H(b) = H(0)$.
 \end{proof}
-In generale invece $x(t)$ ha \textit{potenza} $P_x$ finita, per calcolare la quale, non \`e necessario il procedimento di passaggio al limite definito dalla \eqref{eq:signal_power}, ma \`e sufficiente calcolare
+In generale invece $x(t)$ ha \textit{potenza} $P_x$ finita, per calcolare la 
+quale, non \`e necessario il procedimento di passaggio al limite definito dalla
+\eqref{eq:signal_power}, ma \`e sufficiente calcolare
 \begin{equation}
-	P_x = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt.
+	P_x = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2
+	\dt.
 \end{equation}
 \begin{proof}
 \begin{equation}
 \begin{split}
-	P_x = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 \dt = \lim_{k \rightarrow \infty} \frac{1}{kT_0} \cdot \int\displaylimits_{-kT_0/2}^{kT_0/2} \abs{x(t)}^2 \dt =
+	P_x = \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 \dt = 
+	\lim_{k \rightarrow \infty} \frac{1}{kT_0} \cdot 
+	\int\displaylimits_{-kT_0/2}^{kT_0/2} \abs{x(t)}^2 \dt =
 	\\
-	= \lim_{k \rightarrow \infty} \frac{1}{kT_0} \cdot k \cdot \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt = \lim_{k \rightarrow \infty} \frac{1}{T_0} \cdot \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt =
+	= \lim_{k \rightarrow \infty} \frac{1}{kT_0} \cdot k \cdot 
+	\int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt = 
+	\lim_{k \rightarrow \infty} \frac{1}{T_0} \cdot 
+	\int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt =
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt.
 	\quads{8}
 \end{split}
 \end{equation}
 \end{proof}
-\textbf{Con segnali periodici \`e bene fare attenzione a non confondere il periodo $T_0$ della funzione $x(t)$ con il troncamento $T$ della funzione stessa.}
+\textbf{Con segnali periodici \`e bene fare attenzione a non confondere il
+periodo $T_0$ della funzione $x(t)$ con il troncamento $T$ della funzione
+stessa.}
 \bigbreak
-Mentre il \textit{valore efficace} di un segnale periodico segue dalla definizione della potenza $P_x$
+Mentre il \textit{valore efficace} di un segnale periodico segue dalla
+definizione della potenza $P_x$
 \begin{equation}
 	x_eff = \sqrt{P_x},
 \end{equation}
-analogamente a quanto visto per la potenza, l'espressione del \textit{valor medio} si semplifica, per il segnale periodico $x(t)$, come segue:
+analogamente a quanto visto per la potenza, l'espressione del \textit{valor
+medio} si semplifica, per il segnale periodico $x(t)$, come segue:
 \begin{equation}
 	x_m = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \dt.
 \end{equation}
 \begin{proof}
 \begin{equation}
 \begin{split}
-	x_m = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) \dt = \lim_{k \rightarrow \infty} \frac{1}{kT_0} \int\displaylimits_{-kT_0/2}^{kT_0/2} x(t) \dt =
+	x_m = \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} x(t) \dt = \lim_{k \rightarrow \infty}
+	\frac{1}{kT_0} \int\displaylimits_{-kT_0/2}^{kT_0/2} x(t) \dt =
 	\\
-	= \lim_{k \rightarrow \infty} \frac{1}{kT_0} k \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \dt = \lim_{k \rightarrow \infty} \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \dt =
+	= \lim_{k \rightarrow \infty} \frac{1}{kT_0} k 
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \dt = 
+	\lim_{k \rightarrow \infty} \frac{1}{T_0} 
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \dt =
 	\quad
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \dt.
@@ -1035,9 +1132,9 @@ analogamente a quanto visto per la potenza, l'espressione del \textit{valor medi
 \end{equation}
 \end{proof}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Sviluppo in serie di Fourier in forma reale polare
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Sviluppo in serie di Fourier in forma reale polare}
 Ci\`o premesso, ci poniamo una domanda: qual \`e il modo pi\`u appropriato di
@@ -1088,7 +1185,8 @@ Ricordando che $f_0 \cdot T_0 = 1$ e che $T_{\cos(x)} = 2\pi$,
 	= A_n \cos(2 \pi n f_0 t + \vartheta_n - 2 \pi n f_0 m T_0) =
 	\quads{4}
 	\\
-	= A_n \cos(2 \pi n f_0 t + \vartheta_n - 2 \pi n m) = A_n \cos(2 \pi n f_0 t + \vartheta_n).
+	= A_n \cos(2 \pi n f_0 t + \vartheta_n - 2 \pi n m) = A_n
+	\cos(2 \pi n f_0 t + \vartheta_n).
 \end{split}
 \end{equation}
 \end{proof}
@@ -1105,9 +1203,9 @@ questioni di trasmissione del calore. La \textit{convergenza} della
 \eqref{eq:fourier_series_polar_form} fu dimostrata in seguito in maniera
 rigorosa da P.D. Dirichlet.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Sviluppo in serie di Fourier in forma complessa
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Sviluppo in serie di Fourier in forma complessa}
 Per semplificare gli sviluppi analitici si preferisce usare una forma
@@ -1120,22 +1218,32 @@ funzioni trigonometriche
 la \eqref{eq:fourier_series_polar_form} pu\`o essere riscritta come segue:
 \begin{equation}\label{eq:fourier_series_complex_development}
 \begin{split}
-	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t + \vartheta_n) =
+	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n
+	\cos(2 \pi n f_0 t + \vartheta_n) =
 	\quads{3}
 	\\
-	= A_0 + 2 \sum_{n = 1}^{\infty} A_n \ \frac{e^{j(2 \pi n f_0 t + \vartheta_n)} + e^{-j(2 \pi n f_0 t + \vartheta_n)}}{2} =
+	= A_0 + 2 \sum_{n = 1}^{\infty} A_n \ 
+	\frac{e^{j(2 \pi n f_0 t + \vartheta_n)} + 
+	e^{-j(2 \pi n f_0 t + \vartheta_n)}}{2} =
 	\quads{2}
 	\\
-	= A_0 + \sum_{n = 1}^{\infty} A_n \left( e^{j(2 \pi n f_0 t + \vartheta_n)} + e^{-j(2 \pi n f_0 t + \vartheta_n)} \right) =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \left(
+		e^{j(2 \pi n f_0 t + \vartheta_n)} + 
+		e^{-j(2 \pi n f_0 t + \vartheta_n)}
+	\right) =
 	\quads{2}
 	\\
-	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j(2 \pi n f_0 t + \vartheta_n)} + \sum_{n = 1}^{\infty} A_n \ e^{-j(2 \pi n f_0 t + \vartheta_n)} =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j(2 \pi n f_0 t + \vartheta_n)} +
+	\sum_{n = 1}^{\infty} A_n \ e^{-j(2 \pi n f_0 t + \vartheta_n)} =
 	\quad
 	\\
-	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j\vartheta_n}e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{\infty} A_n \ e^{-j\vartheta_n}e^{-j 2 \pi n f_0 t} =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j\vartheta_n}e^{j 2 \pi n f_0 t}
+	+ \sum_{n = 1}^{\infty} A_n \ e^{-j\vartheta_n}e^{-j 2 \pi n f_0 t} =
 	\quad
 	\\
-	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j\vartheta_n}e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1} A_{-n} \ e^{-j\vartheta_{-n}}e^{j 2 \pi n f_0 t} =
+	= A_0 + \sum_{n = 1}^{\infty} A_n \ e^{j\vartheta_n}e^{j 2 \pi n f_0 t}
+	+ \sum_{n = -\infty}^{-1} A_{-n} \ 
+	e^{-j\vartheta_{-n}}e^{j 2 \pi n f_0 t} =
 \end{split}
 \end{equation}
 Definiamo ora le quantit\`a
@@ -1147,13 +1255,16 @@ Definiamo ora le quantit\`a
 	X_n \ \triangleq A_n e^{j \vartheta_n} \quad , \quad n = 1, 2, 3, \dots
 	\quad
 	\\
-	X_n \ \triangleq A_{-n} e^{-j \vartheta_{-n}} \quad , \quad n = \dots , -2, -1.
+	X_n \ \triangleq A_{-n} e^{-j \vartheta_{-n}} \quad , \quad n = \dots , 
+	-2, -1.
 \end{split}
 \end{equation}
 Se si effettuano le opportune sostituzioni nella
 \eqref{eq:fourier_series_complex_development} si ricava
 \begin{equation}\label{eq:fourier_series_complex_form}
-	x(t) = X_0 + \sum_{n = 1}^{\infty} X_n \ e^{j 2 \pi n f_0 t} - \sum_{n = -\infty}^{-1} X_n \ e^{j 2 \pi n f_0 t} = \sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t}
+	x(t) = X_0 + \sum_{n = 1}^{\infty} X_n \ e^{j 2 \pi n f_0 t} - 
+	\sum_{n = -\infty}^{-1} X_n \ e^{j 2 \pi n f_0 t} = 
+	\sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t}
 \end{equation}
 che rappresenta l'\textit{espressione in forma complessa} della serie di
 Fourier\footnote{Tale rappresentazione pu\`o essere estesa nella stessa forma
@@ -1167,7 +1278,8 @@ per il fattore $e^{-j 2 \pi k f_0 t}$
 	x(t) \cdot e^{-j 2 \pi k f_0 t} = \sum_{n = -\infty}^{\infty} X_n
 	e^{j 2 \pi n f_0 t} \cdot e^{-j 2 \pi k f_0 t}
 \end{equation}
-e integriamo il risultato in un intervallo pari al periodo $T_0$ del segnale stesso:
+e integriamo il risultato in un intervallo pari al periodo $T_0$ del segnale
+stesso:
 \begin{equation}
 	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt
 	= \int\displaylimits_{-T_0/2}^{T_0/2} \sum_{n = -\infty}^{\infty} X_n
@@ -1192,17 +1304,28 @@ $f_0 \cdot T_0 = 1$ si ha:
 \[
 	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =
 	\footnote{$\int f(t) e^{f(t)} \dt = e^{f(t)}$ quindi si moltiplica e
-	divide per $\frac{d}{dt} \left(j 2 \pi (n - k) f_0 t\right) = j 2 \pi (n - k) f_0.$}
+	divide per $\frac{d}{dt} \left(j 2 \pi (n - k) f_0 t\right) = 
+	j 2 \pi (n - k) f_0.$}
 	\frac{1}{j 2 \pi (n - k) f_0} \int\displaylimits_{-T_0/2}^{T_0/2} 
 	j 2 \pi (n - k) f_0 \ e^{j 2 \pi (n - k) f_0 t} \dt =
 \]
 \[
-	= \frac{1}{j 2 \pi (n - k) f_0} \left[e^{j 2 \pi (n - k) f_0 t}\right]_{-T_0/2}^{T_0/2} = \frac{e^{j 2 \pi (n - k) f_0 (T_0/2)} - e^{j 2 \pi (n - k) f_0 (-T_0/2)}}{j 2 \pi (n - k) f_0} =
+	= \frac{1}{j 2 \pi (n - k) f_0} \left[
+		e^{j 2 \pi (n - k) f_0 t}
+	\right]_{-T_0/2}^{T_0/2} = \frac{e^{j 2 \pi (n - k) f_0 (T_0/2)} - 
+	e^{j 2 \pi (n - k) f_0 (-T_0/2)}}{j 2 \pi (n - k) f_0} =
 \]
 \[
-	= \frac{e^{j \pi (n - k)} - e^{-j \pi (n - k)}}{j 2 \pi (n - k) f_0} =\footnote{$\frac{e^{j \pi (n - k)} - e^{-j \pi (n - k)}}{j 2} = \frac{\sin[\pi(n - k)]}{2j}$.} \ \frac{\sin[\pi (n - k)]}{\pi (n - k) f_0}
+	= \frac{e^{j \pi (n - k)} - e^{-j \pi (n - k)}}{j 2 \pi (n - k) f_0} =
+	\footnote{$\frac{e^{j \pi (n - k)} - e^{-j \pi (n - k)}}{j 2} = 
+	\frac{\sin[\pi(n - k)]}{2j}$.}
+	\ \frac{\sin[\pi (n - k)]}{\pi (n - k) f_0}
 \]
-Il valore dell'integrale \`e pertanto nullo se $n \neq k$, essendo $\sin[\pi (n - k)] = 0$. Se $n = k$ allora si ottiene $\sin[0] = 0$ e il risultato perde di significato in quanto si ottiene una forma $\frac{0}{0}$. Tuttavia, ponendo $n = k$ direttamente nell'espressione di partenza si ricava che l'integrale cercato vale in questo caso $T_0$:
+Il valore dell'integrale \`e pertanto nullo se $n \neq k$, essendo 
+$\sin[\pi (n - k)] = 0$. Se $n = k$ allora si ottiene $\sin[0] = 0$ e il 
+risultato perde di significato in quanto si ottiene una forma $\frac{0}{0}$. 
+Tuttavia, ponendo $n = k$ direttamente nell'espressione di partenza si ricava 
+che l'integrale cercato vale in questo caso $T_0$:
 \[
 	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =
 		\begin{cases}
