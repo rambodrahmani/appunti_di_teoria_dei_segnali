@@ -1333,26 +1333,34 @@ che l'integrale cercato vale in questo caso $T_0$:
 			0 \quad\quad \ \ n \neq k
 		\end{cases}
 \]
-Riprendendo quindi da dove avevamo lasciato la nostra ricerca per una espressione per il generico coefficiente di Fourier,
+Riprendendo quindi da dove avevamo lasciato la nostra ricerca per una
+espressione per il generico coefficiente di Fourier,
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt
+	= \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2}
+	e^{j 2 \pi (n - k) f_0 t} \dt.
 \]
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt = X_k T_0.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot e^{-j 2 \pi k f_0 t} \dt
+	= X_k T_0.
 \]
-Dalla quale si deduce infine, l'espressione del generico coefficiente di Fourier $X_k$ data da:
+Dalla quale si deduce infine, l'espressione del generico coefficiente di Fourier
+$X_k$ data da:
 \begin{equation}\label{eq:fourier_coefficient}
-	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt
+	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi k f_0 t} \dt
 \end{equation}
-Questa relazione permette quindi di effettuare il calcolo dei \textit{coefficienti della serie di Fourier} di un segnale $x(t)$ dato. In particolare, per $k = 0$ si ha
+Questa relazione permette quindi di effettuare il calcolo dei
+\textit{coefficienti della serie di Fourier} di un segnale $x(t)$ dato. In
+particolare, per $k = 0$ si ha
 \begin{equation}
-X_0 = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) dt
+	X_0 = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) dt
 \end{equation}
 che coincide con l'espressione del valore medio $x_m$ del segnale.
 
-%------------------------------------------------
-% Subsection: Sviluppo in serie di Fourier in forma rettangolare reale
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Sviluppo in serie di Fourier in forma reale rettangolare
+%-------------------------------------------------------------------------------
 
 \subsection{Sviluppo in serie di Fourier in forma reale rettangolare}
 Abbiamo dunque ricavato due possibili espressioni per la serie di Fourier, e
@@ -1363,33 +1371,42 @@ ricaviamo di seguito. Sviluppando le funzioni cosinusoidali della
 \eqref{eq:fourier_series_polar_form} si ha
 \begin{equation}
 \begin{split}
-	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t + \vartheta_n) =
+	x(t) = A_0 + 2 \sum_{n = 1}^{\infty} A_n \cos(2 \pi n f_0 t +
+	\vartheta_n) =
 	\quads{4}
 	\\
-	= A_0 + 2 \sum_{n = 1}^{\infty} A_n \left[\cos(2 \pi n f_0 t) \cos\vartheta_n - \sin(2 \pi n f_0 t) \sin\vartheta_n\right],
+	= A_0 + 2 \sum_{n = 1}^{\infty} A_n \left[\cos(2 \pi n f_0 t)
+	\cos\vartheta_n - \sin(2 \pi n f_0 t) \sin\vartheta_n\right],
 \end{split}
 \end{equation}
-dove \`e stata sfruttata l'identit\`a $\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta$.\\
-Se adesso si definiscono le quantit\`a $a_0 \triangleq A_0$, $a_n \triangleq A_n \cos\vartheta_n$ e $b_n \triangleq A_n \sin\vartheta_n$, con $n = 1, 2, \dots$, si ricava la relazione cercata:
+dove \`e stata sfruttata l'identit\`a
+$\cos(\alpha + \beta) = \cos\alpha \cos\beta - \sin\alpha \sin\beta$.\\
+Se adesso si definiscono le quantit\`a
+$a_0 \triangleq A_0$, $a_n \triangleq A_n \cos\vartheta_n$ e
+$b_n \triangleq A_n \sin\vartheta_n$, con $n = 1, 2, \dots$,
+si ricava la relazione cercata:
 \begin{equation}
-	x(t) = a_0 + 2 \sum_{n = 1}^{\infty} \left[a_n \cos(2 \pi n f_0 t) - b_n \sin(2 \pi n f_0 t)\right].
+	x(t) = a_0 + 2 \sum_{n = 1}^{\infty} \left[a_n \cos(2 \pi n f_0 t) -
+	b_n \sin(2 \pi n f_0 t)\right].
 \end{equation}
 I coefficienti dell'espressione in forma rettangolare $a_n$, $b_n$ sono legati a
 quelli relativi all'espansione in forma complessa $X_n$ della relazioni
 \begin{equation}
-	a_n = \Re[X_n] = \frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \cos(2 \pi n f_0 t) \dt,
+	a_n = \Re[X_n] = \frac{1}{T_0} \int\displaylimits_{[T_0]} x(t)
+	\cos(2 \pi n f_0 t) \dt,
 \end{equation}
 \begin{equation}
-	b_n = \Im[X_n] = -\frac{1}{T_0} \int\displaylimits_{[T_0]} x(t) \sin(2 \pi n f_0 t) \dt.
+	b_n = \Im[X_n] = -\frac{1}{T_0} \int\displaylimits_{[T_0]} x(t)
+	\sin(2 \pi n f_0 t) \dt.
 \end{equation}
 Nelle equazioni precedenti, la notazione $\int\displaylimits_{[T_0]}$ sta a
 indicare che l'integrale pu\`o essere esteso a un qualunque intervallo temporale
 di ampiezza $T_0$. Per ragioni di simmetria, \`e buona norma scegliere
 l'intervallo $[-T_0/2, \ T_0/2]$.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Il criterio di Dirichlet
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Il criterio di Dirichlet}
 Ricordiamo che negli sviluppi analitici necessari per ottenere l'espressione del
@@ -1415,27 +1432,46 @@ Un insieme di condizioni sufficienti che garantiscano la possibilit\`a di
 sviluppare un segnale in serie di Fourier \`e il cosiddetto \textit{criterio di
 Dirichlet} che pu\`o essere enunciato come segue:
 \begin{itemize}
-	\item se $x(t)$ \`e assolutamente integrabile\footnote{Una funzione assolutamente integrabile su un intervallo \`e una funzione per la quale esiste finito l'integrale del valore assoluto della funzione sull'intervallo di integrazione considerato.} sul periodo $T_0$, vale a dire se verifica la condizione
+	\item se $x(t)$ \`e assolutamente integrabile\footnote{Una funzione
+		assolutamente integrabile su un intervallo \`e una funzione per
+		la quale esiste finito l'integrale del valore assoluto della
+		funzione sull'intervallo di integrazione considerato.} sul
+		periodo $T_0$, vale a dire se verifica la condizione
 		\begin{equation}
-			\int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt < \infty.
+			\int\displaylimits_{-T_0/2}^{T_0/2} \abs{x(t)}^2 \dt <
+			\infty.
 		\end{equation}
-	\item se $x(t)$ \`e continuo o presenta in un periodo un numero finito di discontinuit\`a di prima specie;
-	\item se $x(t)$ \`e derivabile rispetto al tempo nel periodo, escluso al pi\`u un numero finito di punti nei quali esistono finite la derivata destra e sinistra,\\
+	\item se $x(t)$ \`e continuo o presenta in un periodo un numero finito
+		di discontinuit\`a di prima specie;
+	\item se $x(t)$ \`e derivabile rispetto al tempo nel periodo, escluso al
+		pi\`u un numero finito di punti nei quali esistono finite la
+		derivata destra e sinistra,\\
 	\\
-	\textit{allora la serie di Fourier converge al valore assunto dalla funzione $x(t)$ nei punti in cui questa \`e continua, e alla semisomma dei limiti destro e sinistro nei punti in cui $x(t)$ presenta le eventuali discontinuit\`a di prima specie.}\\
+	\textit{allora la serie di Fourier converge al valore assunto dalla
+		funzione $x(t)$ nei punti in cui questa \`e continua, e alla
+		semisomma dei limiti destro e sinistro nei punti in cui $x(t)$
+		presenta le eventuali discontinuit\`a di prima specie.}\\
 	\\	
-	La terza ipotesi del criterio pu\`o anche essere sostituita con la seguente, che risulta del tutto equivalente:
-	\item se il segnale presenta un numero finito di massimi e minimi nel periodo.
+	La terza ipotesi del criterio pu\`o anche essere sostituita con la
+		seguente, che risulta del tutto equivalente:
+	\item se il segnale presenta un numero finito di massimi e minimi nel
+		periodo.
 \end{itemize}
 
+%-------------------------------------------------------------------------------
+% Subsection: Spettri di ampiezza e di fase
+%-------------------------------------------------------------------------------
+
 \subsection{Spettri di ampiezza e di fase}
-Dunque, ogni segnale $x(t)$ che soddisfi il criterio di Dirichlet pu\`o essere rappresentato con lo sviluppo in serie di Fourier
+Dunque, ogni segnale $x(t)$ che soddisfi il criterio di Dirichlet pu\`o essere
+rappresentato con lo sviluppo in serie di Fourier
 \begin{equation}
 	x(t) = \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t},
 \end{equation}
 dove il particolare coefficiente $X_k$ della serie \`e dato da
 \begin{equation}
-	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt.
+	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
 Naturalmente, la sequenza $X_n$ \`e in generale \textit{complessa}; per
 rappresentarla \`e conveniente tracciare due grafici che prendono il nome di
@@ -1455,9 +1491,9 @@ stilizzati di queste rappresentazioni sono riportati nelle seguenti figure:
 	\caption{Spettro di ampiezza e di fase.}
 \end{figure}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Spettro di un coseno
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsubsection{Spettro di un coseno}
 Consideriamo il segnale
@@ -1468,23 +1504,41 @@ Esso rappresenta un'oscillazione cosinusoidale di frequenza $f_0$; il periodo
 del segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
 \begin{equation}
 	\begin{split}
-		X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \cos(2 \pi f_0 t) e^{-j 2 \pi n f_0 t} \dt =
+		X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+		e^{-j 2 \pi n f_0 t} = \frac{1}{T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} A \cos(2 \pi f_0 t)
+		e^{-j 2 \pi n f_0 t} \dt =
 		\\
-		= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \ \frac{e^{j 2 \pi f_0 t} + e^{-j 2 \pi f_0 t}}{2} \ e^{-j 2 \pi n f_0 t} \dt =
+		= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \ 
+		\frac{e^{j 2 \pi f_0 t} + e^{-j 2 \pi f_0 t}}{2} \ 
+		e^{-j 2 \pi n f_0 t} \dt =
 		\quads{6}
 		\\
-		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 - n) t} \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 + n) t} \dt =
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		e^{j 2 \pi f_0 (1 - n) t} \dt + \frac{A}{2 T_0} 
+		\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 + n) t} 
+		\dt =
 		\quads{4}
 		\\
-		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 - n) t] + j \sin[2 \pi f_0 (1 - n) t] \right) \dt +
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( 
+		\cos[2 \pi f_0 (1 - n) t] + j \sin[2 \pi f_0 (1 - n) t] \right)
+		\dt +
 		\quads{3}
 		\\
-		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 + n) t] - j \sin[2 \pi f_0 (1 + n) t] \right) \dt =
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left(
+		\cos[2 \pi f_0 (1 + n) t] - j \sin[2 \pi f_0 (1 + n) t] \right)
+		\dt =
 		\quads{3}
 		\\
-		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		\cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t]
+		\dt +
 		\\
-		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		\cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t]
+		\dt =
 	\end{split}
 \end{equation}
 Osserviamo a questo punto che
@@ -1522,9 +1576,15 @@ Osserviamo a questo punto che
 Ne segue quindi che
 \begin{equation}
 	\begin{split}
-		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} 
+		\cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0} 
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] 
+		\dt +
 		\\
-		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		\cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t]
+		\dt =
 		\\
 		=
 		\begin{cases}
@@ -1552,7 +1612,8 @@ Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento: se si
 confronta l'espressione in forma polare della serie di Fourier di un segnale
 generico
 \begin{equation}
-	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k),
+	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k
+	\cos(2 \pi k f_0 t + \vartheta_k),
 \end{equation}
 comparandola a
 \begin{equation}
@@ -1563,7 +1624,10 @@ comparandola a
 	A_0 = 0
 \]
 \[
-	2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k) = A \cos(2 \pi f_0 t)\footnote{Notare che $\cos(2 \pi f_0 t)$ ha fase iniziale nulla.} \Longrightarrow 
+	2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k) = A
+	\cos(2 \pi f_0 t)
+	\footnote{Notare che $\cos(2 \pi f_0 t)$ ha fase iniziale nulla.}
+	\Longrightarrow 
 		\begin{cases}
 			A_1 = \frac{A}{2}, \vartheta_1 = 0\\
 			A_k, \vartheta_K = 0 \ \forall k \neq 1
@@ -1571,12 +1635,13 @@ comparandola a
 \]
 ovvero
 \[
-	X_1 = \frac{A}{2}, X_{-1} = \frac{A}{2}; \quad X_k = 0 \ \forall k \neq \pm 1.
+	X_1 = \frac{A}{2}, X_{-1} = \frac{A}{2};
+	\quad X_k = 0 \ \forall k \neq \pm 1.
 \]
 
-%------------------------------------------------
-% Subsubsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsubsection: Spettro di un seno
+%-------------------------------------------------------------------------------
 
 \subsubsection{Spettro di un seno}
 Consideriamo il segnale
@@ -1586,25 +1651,39 @@ Consideriamo il segnale
 Esso rappresenta un'oscillazione sinusoidale di frequenza $f_0$; il periodo del
 segnale \`e $T_0 = 1/f_0$. Ricaviamo i coefficienti di Fourier:
 \[
-	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \sin(2 \pi f_0 t) e^{-j 2 \pi n f_0 t} \dt =
+	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+	A \sin(2 \pi f_0 t) e^{-j 2 \pi n f_0 t} \dt =
 \]
 \[
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \ \frac{e^{j 2 \pi f_0 t} - e^{-j 2 \pi f_0 t}}{2j} \ e^{-j 2 \pi n f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} A \ 
+	\frac{e^{j 2 \pi f_0 t} - e^{-j 2 \pi f_0 t}}{2j} \ e^{-j 2 \pi n f_0 t}
+	\dt =
 \]
 \[
-	= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 - n) t} \dt - \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 + n) t} \dt =
+	= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+	e^{j 2 \pi f_0 (1 - n) t} \dt - \frac{A}{j 2 T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi f_0 (1 + n) t} \dt =
 \]
 \[
-	= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 - n) t] + j \sin[2 \pi f_0 (1 - n) t] \right) \dt +
+	= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left(
+	\cos[2 \pi f_0 (1 - n) t] + j \sin[2 \pi f_0 (1 - n) t] \right) \dt +
 \]
 \[
-	- \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi f_0 (1 + n) t] - j \sin[2 \pi f_0 (1 + n) t] \right) \dt =
+	- \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left(
+	\cos[2 \pi f_0 (1 + n) t] - j \sin[2 \pi f_0 (1 + n) t] \right) \dt =
 \]
 \begin{equation}
 	\begin{split}
-		= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		= \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		\cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{j 2 T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t]
+		\dt +
 		\\
-		- \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt + \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+		- \frac{A}{j 2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		\cos[2 \pi f_0 (1 + n) t] \dt + \frac{A}{j 2 T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t]
+		\dt =
 	\end{split}
 \end{equation}
 Osserviamo a questo punto che
@@ -1643,9 +1722,15 @@ Osserviamo a questo punto che
 Ne segue quindi che
 \begin{equation}
 	\begin{split}
-		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t] \dt +
+		= \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		\cos[2 \pi f_0 (1 - n) t] \dt + \frac{A}{2 T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 - n) t]
+		\dt +
 		\\
-		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t] \dt =
+		+ \frac{A}{2 T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+		\cos[2 \pi f_0 (1 + n) t] \dt - \frac{A}{2 T_0}
+		\int\displaylimits_{-T_0/2}^{T_0/2} j \sin[2 \pi f_0 (1 + n) t]
+		\dt =
 		\\
 		=
 		\begin{cases}
@@ -1670,25 +1755,32 @@ possiamo scrivere che
 \begin{equation}
 	\angle X_{\pm 1} =
 		\begin{cases}
-			\angle -j \cdot \frac{A}{2} = \angle \frac{A}{2} e^{-j} = -\frac{\pi}{2}\\
-			\angle \ j \cdot \frac{A}{2} = \angle \frac{A}{2} e^{j} = \frac{\pi}{2}\\
+			\angle -j \cdot \frac{A}{2} = \angle \frac{A}{2} e^{-j}
+			= -\frac{\pi}{2}\\
+			\angle \ j \cdot \frac{A}{2} = \angle \frac{A}{2} e^{j}
+			= \frac{\pi}{2}\\
 		\end{cases}.
 \end{equation}
-Gli spettri di ampiezza e fase del segnale sono mostrati nella seguente figura:\\
-\textbf{Lo spettro di ampiezza \`e ovviamente uguale a quello del coseno visto precedentemente, mentre lo spettro di fase \`e differente.}
+Gli spettri di ampiezza e fase del segnale sono mostrati nella seguente
+figura:\\
+\textbf{Lo spettro di ampiezza \`e ovviamente uguale a quello del coseno visto
+precedentemente, mentre lo spettro di fase \`e differente.}
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/sine_phase_spectrum.jpg}
-\caption{Spettro di fase del segnale sinusoidale.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/sine_phase_spectrum.jpg}
+	\caption{Spettro di fase del segnale sinusoidale.}
 \end{figure}
-Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento: riscriviamo il segnale come
+Il calcolo pu\`o essere effettuato anche tramite un rapido ragionamento:
+riscriviamo il segnale come
 \begin{equation}
 	x(t) = A \sin(2 \pi f_0 t) = A \cos(2 \pi f_0 t - \frac{\pi}{2}),
 \end{equation}
-ora, se si confronta l'espressione in forma polare della serie di Fourier di un segnale generico
+ora, se si confronta l'espressione in forma polare della serie di Fourier di un
+segnale generico
 \begin{equation}
-	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k),
+	x(t) = A_0 + 2 \sum_{k = 1}^{\infty} A_k
+	\cos(2 \pi k f_0 t + \vartheta_k),
 \end{equation}
 comparandola a
 \begin{equation}
@@ -1699,7 +1791,11 @@ comparandola a
 	A_0 = 0
 \]
 \[
-	2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k) = A \cos(2 \pi f_0 t - \frac{\pi}{2})\footnote{Notare che $\cos(2 \pi f_0 t - \frac{\pi}{2})$ ha fase iniziale $-\frac{\pi}{2}$.} \Longrightarrow 
+	2 \sum_{k = 1}^{\infty} A_k \cos(2 \pi k f_0 t + \vartheta_k) = A
+	\cos(2 \pi f_0 t - \frac{\pi}{2})
+	\footnote{Notare che $\cos(2 \pi f_0 t - \frac{\pi}{2})$ ha fase
+	iniziale $-\frac{\pi}{2}$.}
+	\Longrightarrow 
 		\begin{cases}
 			A_1 = \frac{A}{2}, \vartheta_1 = -\frac{\pi}{2}\\
 			A_k, \vartheta_K = 0 \ \forall k \neq 1
@@ -1707,12 +1803,13 @@ comparandola a
 \]
 ovvero
 \[
-	X_1 = \frac{A}{2} e^{-j\frac{\pi}{2}}, X_{-1} = \frac{A}{2} e^{j\frac{\pi}{2}}; \quad X_k = 0 \ \forall k \neq \pm 1.
+	X_1 = \frac{A}{2} e^{-j\frac{\pi}{2}}, X_{-1} = \frac{A}{2}
+	e^{j\frac{\pi}{2}}; \quad X_k = 0 \ \forall k \neq \pm 1.
 \]
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Matlab 2.1
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{MATLAB 2.1}
@@ -1799,11 +1896,15 @@ periodico. In realt\`a anche su piccola scala temporale, l'attivit\`a miocardica
 ha leggere irregolarit\`a temporali e quindi lo spettro risultante non \`e
 perfettamente a righe.
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/matlab_ecg_spectrum.jpg}
-\caption{Elettrocardiogramma.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/matlab_ecg_spectrum.jpg}
+	\caption{Elettrocardiogramma.}
 \end{figure}
+
+%-------------------------------------------------------------------------------
+% Subsection: Matlab 2.2
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{MATLAB 2.2}
@@ -1914,9 +2015,9 @@ buona regola, quindi, sfruttare questa caratteristica, adottando uno stile di
 programmazione conseguente, per ottenere un codice efficiente che venga eseguito
 velocemente sulla piattaforma di calcolo utilizzata.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Segnali aperiodici a tempo continuo
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Segnali aperiodici a tempo continuo}
@@ -1954,7 +2055,8 @@ utile per schematizzare impulsi che hanno \textit{tempo di salita} molto breve
 rispetto alla propria \textit{durata}. Utilizzando questa funzione \`e possibile
 scrivere la seguente espressione per il treno di impulsi rettangolari
 \begin{equation}
-	x(t) = \sum_{n = -\infty}^{+\infty} a \cdot rect\left(\frac{t - nT_0}{T}\right).
+	x(t) = \sum_{n = -\infty}^{+\infty} a \cdot rect\left(\frac{t - nT_0}{T}
+	\right).
 \end{equation}
 Il segnale periodico \textit{treno di impulsi rettangolari} \`e infatti
 rappresentato come la \textit{sovrapposizione} di infiniti impulsi di durata $T$
@@ -1966,20 +2068,32 @@ ripetizione $T_0$ per ottenere il segnale $x(t)$.
 Calcoliamo ora i coefficienti dello sviluppo in serie del segnale in esame:
 \[
 	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi n f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
-	a \cdot rect(t/T) e^{-j 2 \pi n f_0 t} \dt
+	e^{-j 2 \pi n f_0 t} \dt = \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} a \cdot rect(t/T)
+	e^{-j 2 \pi n f_0 t} \dt
 \]
 \begin{equation}
 	\begin{split}
-		= \underbrace{\frac{1}{T_0} \int\displaylimits_{-T/2}^{T/2} a \cdot e^{-j 2 \pi n f_0 t} \dt}_{rect(t/T) \ = \ 1 \ \forall \ t \ \in \ [-T/2, \ T/2]} = \frac{1}{T_0} \int\displaylimits_{-T/2}^{T/2} a \cdot \frac{-j 2 \pi n f_0}{-j 2 \pi n f_0} \cdot e^{-j 2 \pi n f_0 t} \dt =
+		= \underbrace{\frac{1}{T_0} \int\displaylimits_{-T/2}^{T/2} a
+		\cdot e^{-j 2 \pi n f_0 t} \dt}_{rect(t/T) \ = \ 1 \ \forall \ 
+		t \ \in \ [-T/2, \ T/2]} = \frac{1}{T_0}
+		\int\displaylimits_{-T/2}^{T/2} a \cdot
+		\frac{-j 2 \pi n f_0}{-j 2 \pi n f_0} \cdot e^{-j 2 \pi n f_0 t}
+		\dt =
 		\\
-		= \frac{a}{T_0} \cdot \frac{1}{-j 2 \pi n f_0} \int\displaylimits_{-T/2}^{T/2} (-j 2 \pi n f_0) \cdot e^{-j 2 \pi n f_0 t} \dt =
+		= \frac{a}{T_0} \cdot \frac{1}{-j 2 \pi n f_0}
+		\int\displaylimits_{-T/2}^{T/2} (-j 2 \pi n f_0) \cdot
+		e^{-j 2 \pi n f_0 t} \dt =
 		\quads{4}
 		\\
-		= \frac{a}{T_0} \cdot \left[\frac{e^{-j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)}\right]_{-T/2}^{T/2} = \frac{a}{T_0} \cdot \frac{e^{-j 2 \pi n f_0 t} - e^{j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)} =
+		= \frac{a}{T_0} \cdot \left[
+			\frac{e^{-j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)}
+		\right]_{-T/2}^{T/2} = \frac{a}{T_0} \cdot
+		\frac{e^{-j 2 \pi n f_0 t} - e^{j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)} =
 		\quads{3}
 		\\
-		= \frac{a}{T_0} \frac{e^{-j 2 \pi n f_0 t} - e^{j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)} = \frac{a}{T_0} \frac{sin(\pi n f_0 T}{\pi n / T_0} =
+		= \frac{a}{T_0} \frac{e^{-j 2 \pi n f_0 t} - e^{j 2 \pi n f_0 t}}{(-j 2 \pi n f_0)}
+		= \frac{a}{T_0} \frac{sin(\pi n f_0 T}{\pi n / T_0} =
 		\quads{4}
 		\\
 		= \frac{a T}{T_0} \cdot \frac{sin(\pi n T/T_0)}{\pi n T/T_0}
@@ -1987,7 +2101,8 @@ Calcoliamo ora i coefficienti dello sviluppo in serie del segnale in esame:
 		\\
 	\end{split}
 \end{equation}
-Per esprimere $X_n$ in una forma pi\`u concisa, definiamo una ulteriore funzione notevole
+Per esprimere $X_n$ in una forma pi\`u concisa, definiamo una ulteriore funzione
+notevole
 \begin{equation}
 	sinc(\alpha) \triangleq \frac{sin(\pi \alpha)}{\pi \alpha},
 \end{equation}
@@ -1997,9 +2112,9 @@ per cui
 \end{equation}
 dove si \`e posto $\delta = T/T_0$ e $\alpha = kT/T_0$.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Dalla serie all'integrale di Fourier
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{Dalla serie all'integrale di Fourier}
 Il significato e l'importanza della rappresentazione in serie di Fourier di un
@@ -2019,7 +2134,8 @@ aperiodico appena introdotto impulso rettangolare:
 Mettiamo ora in relazione questo segnale con il treno di impulsi rettangolari
 \textit{periodico}
 \begin{equation}
-	x_p(t) = \sum_{n = -\infty}^{+\infty} x(t - nT_0) = \sum_{n = -\infty}^{+\infty} rect\left(\frac{t - nT_0}{T}\right)
+	x_p(t) = \sum_{n = -\infty}^{+\infty} x(t - nT_0) =
+	\sum_{n = -\infty}^{+\infty} rect\left(\frac{t - nT_0}{T}\right)
 \end{equation}
 di cui gi\`a conosciamo la rappresentazione in serie di Fourier. Come \`e chiaro
 , $x_p(t)$ \`e ottenuto \textit{periodicizzando} $x(t)$ con periodo di
@@ -2073,15 +2189,18 @@ Si pu\`o facilmente ovviare al problema della riduzione delle ampiezze delle
 righe spettrali definendo, per ciascuna delle frequenze armoniche $nf_0$, una
 sorta di "coefficiente di Fourier modificato"
 \begin{equation}
-	X(nf_0) \triangleq T_0 \cdot X_n \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt
+	X(nf_0) \triangleq T_0 \cdot X_n \int\displaylimits_{-T_0/2}^{T_0/2}
+	x_p(t) e^{-j 2 \pi n f_0 t} \dt
 \end{equation}
-che evidentemente non \`e una quantit\`a che tende a zero per $T_0 \rightarrow \infty$.\\
+che evidentemente non \`e una quantit\`a che tende a zero per
+$T_0 \rightarrow \infty$.\\
 Riscriviamo dunque l'espansione in serie di Fourier di $x_p(t)$ usando il
 coefficiente modificato\footnote{Dato che si \`e posto
 $X(nf_0) \triangleq T_0 \cdot X_n$, ne segue che
 $X_n = X(n f_0) \frac{1}{T_0} = X(n f_0) \cdot f_0$.}
 \begin{equation}
-	x_p(t) = \sum_{n = -\infty}^{+\infty} X(n f_0) e^{j 2 \pi n f_0 t} \cdot f_0.
+	x_p(t) = \sum_{n = -\infty}^{+\infty} X(n f_0) e^{j 2 \pi n f_0 t}
+	\cdot f_0.
 \end{equation}
 Possiamo adesso effettuare il passaggio cruciale al limite per
 $T+0 \rightarrow \infty$ (ovvero per $f_0 \rightarrow 0$. Il segnale periodico
@@ -2100,7 +2219,10 @@ L'espressione di $X(f)$ si ottiene passando al limite per
 $T_0 \rightarrow \infty$ nella definizione di $X(nf_0)$ del coefficiente di
 Fourier modificato:
 \begin{equation}\label{eq:tcf_coefficient}
-	X(f) = \lim_{\begin{split}T_0 \rightarrow \infty \\ f_0 \rightarrow 0\end{split}} \int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t} \dt = \int\displaylimits_{-\infty}^{\infty} x_p(t) e^{-j 2 \pi n f_0 t} \dt 
+	X(f) = \lim_{\begin{split}T_0 \rightarrow \infty \\ f_0 \rightarrow 0\end{split}}
+		\int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t}
+		\dt = \int\displaylimits_{-\infty}^{\infty} x_p(t)
+		e^{-j 2 \pi n f_0 t} \dt 
 \end{equation}
 che rappresenta la \textbf{trasformata continua di Fourier del segnale $x(t)$}.\\
 In maniera euristica, possiamo dire che la variabile continua $f$ \`e, in un
@@ -2124,7 +2246,9 @@ Riportiamo di nuovo le due equazioni relative alla rappresentazione del segnale
 aperiodico, osservando che in generale indicheremo con la lettera maiuscola $X$,
 $Y$, $Z$, la trasformata di Fourier rispettivamente di un segnale $x$, $y$, $z$:
 \begin{equation}
-	x(t) = \int\displaylimits_{-\infty}^{\infty} X(f) e^{j 2 \pi f t} \df \quad\quad , \quad\quad X(f) = \int\displaylimits_{-\infty}^{\infty} x(t) e^{-j 2 \pi f t} dt.
+	x(t) = \int\displaylimits_{-\infty}^{\infty} X(f) e^{j 2 \pi f t} \df
+	\quad\quad , \quad\quad X(f) =
+	\int\displaylimits_{-\infty}^{\infty} x(t) e^{-j 2 \pi f t} dt.
 \end{equation}
 La prima delle due rappresenta evidentemente un'equazione di \textit{sintesi}
 che permette di rappresentale il segnale come sovrapposizione di segnali
@@ -2144,12 +2268,13 @@ Un modo alternativo di indicare sinteticamente le operazioni di trasformata e
 antitrasformata \`e quello mutuato alla notazione degli operatori caratteristica
 dell'analisi funzione:
 \begin{equation}
-	X(f) = \mathcal{F}[x(t)] \quads{2} , \quads{2} x(t) = \mathcal{F}^{-1}[X(f)]
+	X(f) = \mathcal{F}[x(t)] \quads{2} , \quads{2} x(t) =
+	\mathcal{F}^{-1}[X(f)]
 \end{equation}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Esempio
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsubsection{Esempio}
 Conseideriamo il segnale impulso rettangolare
@@ -2225,9 +2350,9 @@ Infine
 	4T \cdot sinc(2 f T) + T \cdot sinc(f T).
 \]
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Esempio
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsubsection{Esempio}
 Consideriamo il segnale
@@ -2271,15 +2396,20 @@ segnale originario $x(t)$.\\
 Un secondo criterio sufficiente meno restrittivo (criterio di Dirichlet) pu\`o
 essere enunciato come segue:
 \begin{itemize}
-	\item \textit{se} il segnale $x(t)$ \`e assolutamente sommabile, ovvero $\int_{-\infty}^{\infty} \abs{x(t)} \dt < +\infty;$
-	\item \textit{se} in qualunque intervallo finito $t_1 \leq t \leq t_2$ il segnale $x(t)$ ha un numero finito di discotinuit\`a di prima specie;
-	\item \textit{se} in qualunque intervallo finito $t_1 \leq t \leq t_2$ il senglae $x(t)$ ha un numero finito di massimi e minimi;
+	\item \textit{se} il segnale $x(t)$ \`e assolutamente sommabile, ovvero
+		$\int_{-\infty}^{\infty} \abs{x(t)} \dt < +\infty;$
+	\item \textit{se} in qualunque intervallo finito $t_1 \leq t \leq t_2$
+		il segnale $x(t)$ ha un numero finito di discotinuit\`a di
+		prima specie;
+	\item \textit{se} in qualunque intervallo finito $t_1 \leq t \leq t_2$
+		il senglae $x(t)$ ha un numero finito di massimi e minimi;
 \end{itemize}
-\textit{allora} il segnale \`e rappresentabile come integrale di Fourier - cio\`e l'antitrasformata della sua propria trasformata di Fourier $X(f)$.
+\textit{allora} il segnale \`e rappresentabile come integrale di Fourier -
+cio\`e l'antitrasformata della sua propria trasformata di Fourier $X(f)$.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Banda
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Banda}
@@ -2300,9 +2430,9 @@ condizioni fisiche (interferenze, saturazione, ecc...), studiati nel campo delle
 telecomunicazioni, rappresentando di fatto una risorsa limitata e in molti casi
 anche condivisa tra pi\`u utenti.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Larghezza di banda
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsubsection{Larghezza di banda}
 In telecomunicazioni ed elettronica la larghezza di banda \`e la misura
@@ -2321,57 +2451,57 @@ comunicazioni telefonica analogica occupa le frequenze che vanno da $300 Hz$ a
 $3400 Hz$, quindi ha una larhjezza di banda di $3100 Hz$ ovvero la differenza
 tra $3400 Hz$ e $300 Hz$.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Sistemi monodimensionali a tempo continuo
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Sistemi monodimensionali a tempo continuo}
 Sistemi monodimensionali a tempo continuo\change{Work in progress.}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Segnali a tempo discreto
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Segnali a tempo discreto}
 Segnali a tempo discreto\change{Work in progress.}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Sistemi monodimensionali a tempo discreto
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Sistemi monodimensionali a tempo discreto}
 Sistemi monodimensionali a tempo discreto\change{Work in progress.}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Progetto di filtri digitali
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Progetto di filtri digitali}
 Progetto di filtri digitali\change{Work in progress.}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Richiami di teoria della probabilita'
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Richiami di teoria della probabilit\`a}
 Richiami di teoria della probabilit\`a\change{Work in progress.}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Segnali aleatori a tempo continuo e a tempo discreto
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Segnali aleatori a tempo continuo e a tempo discreto}
 Segnali aleatori a tempo continuo e a tempo discreto\change{Work in progress.}
 
-%------------------------------------------------
-%	Chapter 3: Esame Scritto
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Chapter 3: Esame Scritto
+%-------------------------------------------------------------------------------
 
 \chapter{Esame Scritto}
 \epigraph{
@@ -2383,36 +2513,72 @@ Di seguito una lista di temi di esame presi dalla pagina "Comunicazioni
 Numeriche 2017-18" sul sito E-learning del Polo di Ingegneria. Le soluzioni
 fornite sono state arricchite di appunti personali e approfondimenti teorici.
 
+%-------------------------------------------------------------------------------
+% Section: Compitino 2014}
+%-------------------------------------------------------------------------------
+
 \newpage
 \section{Compitino 2014}
+
+%-------------------------------------------------------------------------------
+% Section: Compitino 2015
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Compitino 2015}
 
+%-------------------------------------------------------------------------------
+% Section: Compitino 2016
+%-------------------------------------------------------------------------------
+
 \newpage
 \section{Compitino 2016}
+
+%-------------------------------------------------------------------------------
+% Section: Compitino 2017
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Compitino 2017}
 
+%-------------------------------------------------------------------------------
+% Section: Compitino 2018
+%-------------------------------------------------------------------------------
+
 \newpage
 \section{Compitino 2018}
+
+%-------------------------------------------------------------------------------
+% Section: Prova di Comunicazioni Numeriche - 09 Gennaio 2018
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Prova di Comunicazioni Numeriche - 09 Gennaio 2018}
 
+%-------------------------------------------------------------------------------
+% Section: Prova di Comunicazioni Numeriche - 29 Gennaio 2018
+%-------------------------------------------------------------------------------
+
 \newpage
 \section{Prova di Comunicazioni Numeriche - 29 Gennaio 2018}
+
+%-------------------------------------------------------------------------------
+% Section: Prova di Comunicazioni Numeriche - 20 Febbraio 2018
+%-------------------------------------------------------------------------------
 
 \newpage
 \section{Prova di Comunicazioni Numeriche - 20 Febbraio 2018}
 
+%-------------------------------------------------------------------------------
+% Section: Prova di Comunicazioni Numeriche - 09 Aprile 2018
+%-------------------------------------------------------------------------------
+
 \newpage
 \section{Prova di Comunicazioni Numeriche - 09 Aprile 2018}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Chapter 4: Esame Orale
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \chapter{Esame Orale}
 \epigraph{
@@ -2423,9 +2589,9 @@ Di seguito una lista di domande, con una possibile risposta, riprese dagli orali
 delle ultime sessioni di esame suddivise tra \textbf{segnali deterministici} e
 \textbf{segnali aleatori}.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Segnali Deterministici
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Segnali Deterministici}
 Segnali il quale valore sia univocamente determinabile non appena siano fissati
@@ -2438,9 +2604,9 @@ d'onda di un laboratorio elettronico).\\
 Per modellare e studiare i segnali determinati sono sufficienti i concetti
 dell'analisi matematica tradizionale.
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Relazioni tra Potenza Media ed Energia di un Segnale
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Relazioni tra Potenza Media \textit{$P_x$} ed Energia \textit{$E_x$} di un Segnale}
@@ -2448,13 +2614,15 @@ Un segnale ad energia finita (matematicamente, a quadrato sommabile) ha potenza 
 \begin{equation}
 	E_x = K < \infty \Longrightarrow P_x = 0.
 \end{equation}
-Viceversa, un segnale che abbia un valore finito diverso da zero della potenza media ha necessariamente energia infinita:
+Viceversa, un segnale che abbia un valore finito diverso da zero della potenza
+media ha necessariamente energia infinita:
 \begin{equation}
 	P_x = K < \infty, K \neq 0 \Longrightarrow E_x = \infty.
 \end{equation}
 
 \begin{lemma}
-Un segnale ad energia finita (matematicamente, a quadrato sommabile) ha potenza media nulla:
+Un segnale ad energia finita (matematicamente, a quadrato sommabile) ha potenza
+	media nulla:
 \begin{equation}
 	E_x = K < \infty \Longrightarrow P_x = 0.
 \end{equation}
@@ -2462,7 +2630,8 @@ Un segnale ad energia finita (matematicamente, a quadrato sommabile) ha potenza 
 \begin{proof}
 Dato un segnale $x(t)$ tale che $E_x = K < \infty$, ad energia finita, risulta
 \begin{equation}
-	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 dt = K < \infty,
+	E_x = \int\displaylimits_{-\infty}^{+\infty} \abs{x(t)}^2 dt = K < 
+	\infty,
 \end{equation}
 ricordando poi che
 \begin{equation}
@@ -2475,7 +2644,10 @@ ne segue che
 Allora
 \begin{equation}
 	\begin{split}
-		P_x = \lim_{T \rightarrow \infty} P_{x_T} = \lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} = \lim_{T \rightarrow \infty} E_{x_T} \cdot \lim_{T \rightarrow \infty} \frac{1}{T} =
+		P_x = \lim_{T \rightarrow \infty} P_{x_T} =
+		\lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} =
+		\lim_{T \rightarrow \infty} E_{x_T} \cdot
+		\lim_{T \rightarrow \infty} \frac{1}{T} =
 		\\
 		= K \cdot \lim_{T \rightarrow \infty} \frac{1}{T} = 0.
 		\quads{7}
@@ -2485,36 +2657,53 @@ che dimostra la tesi iniziale.
 \end{proof}
 
 \begin{lemma}
-Un segnale che abbia un valore finito diverso da zero della potenza media ha necessariamente energia infinita:
+Un segnale che abbia un valore finito diverso da zero della potenza media ha
+	necessariamente energia infinita:
 \begin{equation}
 	P_x = K < \infty, K \neq 0 \Longrightarrow E_x = \infty.
 \end{equation}
 \end{lemma}
 \begin{proof}
-Dato un segnale $x(t)$ tale che $P_x = K < \infty$, con $K \neq \infty$, a potenza finita non nulla, risulta
+Dato un segnale $x(t)$ tale che $P_x = K < \infty$, con $K \neq \infty$, a
+	potenza finita non nulla, risulta
 \begin{equation}
-	P_x \triangleq \lim_{T \rightarrow \infty} P_{x_T} = \lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 dt = K.
+	P_x \triangleq \lim_{T \rightarrow \infty} P_{x_T} =
+	\lim_{T \rightarrow \infty} \frac{E_{x_T}}{T} = 
+	\lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 dt = K.
 \end{equation}
 Da cui segue che
 \begin{equation}
-	E_x = \lim_{T \rightarrow \infty} E_{x_T} = \lim_{T \rightarrow \infty} T \cdot \frac{E_{x_T}}{T} = \lim_{T \rightarrow \infty} T \cdot P_{x_T} = \lim_{T \rightarrow \infty} T \cdot K = \infty,
+	E_x = \lim_{T \rightarrow \infty} E_{x_T} = \lim_{T \rightarrow \infty}
+	T \cdot \frac{E_{x_T}}{T} = \lim_{T \rightarrow \infty} T \cdot P_{x_T}
+	= \lim_{T \rightarrow \infty} T \cdot K = \infty,
 \end{equation}
 che dimostra la tesi iniziale.
 \end{proof}
 
-\noindent\textbf{I due precedenti lemmi sono validi solo ed esclusivamente nell'ordine in cui sono stati posti.}
+\noindent\textbf{I due precedenti lemmi sono validi solo ed esclusivamente
+nell'ordine in cui sono stati posti.}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Funzione a quadrato sommabile
+%-------------------------------------------------------------------------------
 
 \subsubsection{Funzione a quadrato sommabile}
-In analisi matematica, una funzione $f(x)$ di una variabile reale a valori reali e complessi si dice a quadrato sommabile, o anche a quadrato integrabile, in un determinato intervallo $I = \left[a, b\right]$ se l'integrale del suo modulo in $I$ \`e finito:
+In analisi matematica, una funzione $f(x)$ di una variabile reale a valori reali
+e complessi si dice a quadrato sommabile, o anche a quadrato integrabile, in un
+determinato intervallo $I = \left[a, b\right]$ se l'integrale del suo modulo in
+$I$ \`e finito:
 \begin{equation}
 	\int\displaylimits_{a}^{b} \abs{f(x)}^2 dx < \infty.
 \end{equation}
-La nozione si estende a funzioni definite su di uno spazio di misura a valori in uno spazio vettoriale topologico.\\
-L'insieme di tutte le funzioni misurabili su un dato dominio, che in esso sono a quadrato sommabile, forma uno spazio di Hilbert, il cosiddetto spazio $L^2$.
+La nozione si estende a funzioni definite su di uno spazio di misura a valori in
+uno spazio vettoriale topologico.\\
+L'insieme di tutte le funzioni misurabili su un dato dominio, che in esso sono a
+quadrato sommabile, forma uno spazio di Hilbert, il cosiddetto spazio $L^2$.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Applicazioni nella Meccanica Quantistica
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsubsection{Applicazioni nella Meccanica Quantistica}
 La condizione di quadrato sommabile \`e necessaria particolarmente nella
@@ -2532,15 +2721,18 @@ Per questo motivo, dato che la probabilit\`a deve essere necessariamente finita
 e normalizzabile, si richiede che esista e abbia valore finito un integrale
 della forma:
 \begin{equation}
-	\int\displaylimits_{-\infty}^{+\infty} \ dx \int\displaylimits_{-\infty}^{+\infty} \ dy \int\displaylimits_{-\infty}^{+\infty} \ dz \abs{\psi(x, y, z)}^2.
+	\int\displaylimits_{-\infty}^{+\infty} \ dx
+	\int\displaylimits_{-\infty}^{+\infty} \ dy
+	\int\displaylimits_{-\infty}^{+\infty} \ dz \abs{\psi(x, y, z)}^2.
 \end{equation}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Relazione Potenza Media, Valore Efficace e Valore Medio
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
-\subsection{Relazione Potenza Media, Valore Efficace e Valore Medio: $P_x = 0 \Longrightarrow x_eff = 0, x_m = 0$}
+\subsection{Relazione Potenza Media, Valore Efficace e Valore Medio:
+$P_x = 0 \Longrightarrow x_eff = 0, x_m = 0$}
 \begin{theorem}
 Dato un segnale $x(t)$, tale che $P_x = 0$, a potenza nulla, risulta
 \begin{equation}
@@ -2577,80 +2769,127 @@ Per fare ci\`o consideriamo il segnale $x(t) = \tilde x(t)  + x_m$ , dove $x_m$
 	$\tilde x(t)$ \`e un segnale con valore medio nullo. Infatti
 \begin{equation}\label{eq:valor_medio_x_tilde}
 \begin{split}
-	\tilde x_m = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (x(t) - x_m) \dt =
+	\tilde x_m = \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt = 
+	\lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} (x(t) - x_m) \dt =
 	\quads{2}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) \dt - \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x_m \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} x(t) \dt - \lim_{T \rightarrow \infty} 
+	\frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x_m \dt =
 	\quads{3}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) \dt - x_m \cdot \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 1 \dt = x_m - x_m = 0.
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} x(t) \dt - x_m \cdot 
+	\lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} 1 \dt = x_m - x_m = 0.
 \end{split}
 \end{equation}
 Sviluppiamo ora i calcoli per ottenere un'espressione per la potenza $P_x$ del
 	segnale $x(t) = \tilde x(t) + x_m$:
 \[
-	P_x = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 \dt =\footnote{Dato $z \in \mathbb{C}$ allora $z \cdot z^* = ce^{j\varphi} \cdot ce^{-j\varphi} = c^{2}e^{j(\varphi - \varphi)} = c^2 = \abs{z}^2.$} \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x(t) \cdot x(t)^* \dt =
+	P_x = \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \abs{x(t)}^2 \dt =
+	\footnote{Dato $z \in \mathbb{C}$ allora
+	$z \cdot z^* = ce^{j\varphi} \cdot ce^{-j\varphi} =
+	c^{2}e^{j(\varphi - \varphi)} = c^2 = \abs{z}^2.$}
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2}
+	x(t) \cdot x(t)^* \dt =
 	\quads{2}
 \]
 \begin{equation}
 \begin{split}
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (\tilde x(t) + x_m) \cdot (\tilde x(t)^* + x_m^*) \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} (\tilde x(t) + x_m) \cdot 
+	(\tilde x(t)^* + x_m^*) \dt =
 	\quads{4}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \tilde x(t) \tilde x(t)^* + x_m^* \tilde x(t) + x_m \tilde x(t)^* + x_m x_m^* \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} \tilde x(t) \tilde x(t)^* + x_m^* 
+	\tilde x(t) + x_m \tilde x(t)^* + x_m x_m^* \dt =
 	\quads{2}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 + (x_m^* \tilde x(t) + x_m \tilde x(t)^*) + \abs{x_m}^2 \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 + 
+	(x_m^* \tilde x(t) + x_m \tilde x(t)^*) + \abs{x_m}^2 \dt =
 	\quads{2}
 	\\
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 \dt + \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (x_m^* \tilde x(t) + x_m \tilde x(t)^*) \dt
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 \dt + 
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 
+	(x_m^* \tilde x(t) + x_m \tilde x(t)^*) \dt
 	\quad
 	\\
-	+ \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x_m}^2 \dt.
+	+ \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \abs{x_m}^2 \dt.
 	\quads{10}
 \end{split}
 \end{equation}
 Vediamo di risolvere questi tre limiti di integrali separatamente. Il primo
 integrale \`e ovvio
 \begin{equation}
-	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 \dt = P_{\tilde x}.
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2}
+	\abs{\tilde x(t)}^2 \dt = P_{\tilde x}.
 \end{equation}
 Il terzo integrale \`e di facile risoluzione
 \begin{equation}
 \begin{split}
-	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x_m}^2 \dt = \abs{x_m}^2 \cdot \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 1 \dt =
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2}
+	\abs{x_m}^2 \dt = \abs{x_m}^2 \cdot \lim_{T \rightarrow \infty}
+	\frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 1 \dt =
 	\\
-	= \abs{x_m}^2 \cdot \left[\frac{T}{2} + \frac{T}{2}\right] = \abs{x_m}^2.
+	= \abs{x_m}^2 \cdot \left[\frac{T}{2} + \frac{T}{2}\right] =
+	\abs{x_m}^2.
 	\quads{5}
 \end{split}
 \end{equation}
 Per quanto riguarda il secondo invece, possiamo procedere cos\`i
 \[
-	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (x_m^* \tilde x(t) + x_m \tilde x(t)^*) \dt =\footnote{Dato $z = a + ib$ con $z \in \mathbb{C}$, allora $\frac{z + \conjugate{z}}{2} = \frac{a + ib + a - ib}{2} = \frac{2a}{2} = a = \Re(z)$} \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (x_m^* \tilde x(t) + (x_m^* \tilde x(t))^*) \dt =
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2}
+	(x_m^* \tilde x(t) + x_m \tilde x(t)^*) \dt =
+	\footnote{Dato $z = a + ib$ con $z \in \mathbb{C}$, allora 
+	$\frac{z + \conjugate{z}}{2} = \frac{a + ib + a - ib}{2} = \frac{2a}{2} 
+	= a = \Re(z)$}
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 
+	(x_m^* \tilde x(t) + (x_m^* \tilde x(t))^*) \dt =
 \]
 \begin{equation}
 \begin{split}
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 2 \cdot \Re\left(x_m^* \tilde x(t)\right) \dt =
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} 2 \cdot 
+	\Re\left(x_m^* \tilde x(t)\right) \dt =
 	\\
-	= 2 \cdot \Re\left(\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} x_m^* \tilde x(t) \dt\right) =
+	= 2 \cdot \Re\left(\lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} x_m^* \tilde x(t) \dt\right) =
 \end{split}
 \end{equation}
 \[
-	= 2 \cdot \Re\left(x_m^* \cdot \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt\right) = 2 \cdot \Re\left(x_m^* \ \tilde x_m\right) =\footnote{Nella \eqref{eq:valor_medio_x_tilde} abbiamo calcolato che $\tilde x_m = 0.$} \ 2 \cdot \Re\left(x_m^* \cdot 0\right) = 0.
+	= 2 \cdot \Re\left(x_m^* \cdot \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \tilde x(t) \dt\right) = 2 \cdot 
+	\Re\left(x_m^* \ \tilde x_m\right) =
+	\footnote{Nella \eqref{eq:valor_medio_x_tilde} abbiamo calcolato che 
+	$\tilde x_m = 0.$} \ 2 \cdot \Re\left(x_m^* \cdot 0\right) = 0.
 \]
 A questo punto, riportando i risultati ottenuti nell'integrale di partenza:
 \begin{equation}
 \begin{split}
-	= \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 \dt + \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} (x_m^* \tilde x(t) + x_m \tilde x(t)^*) \dt
+	= \lim_{T \rightarrow \infty} \frac{1}{T} 
+	\int\displaylimits_{-T/2}^{T/2} \abs{\tilde x(t)}^2 \dt + 
+	\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} 
+	(x_m^* \tilde x(t) + x_m \tilde x(t)^*) \dt
 	\\
-	+ \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{x_m}^2 \dt = P_{\tilde x} + 0 + \abs{x_m}^2 = P_{\tilde x} + \abs{x_m}^2.
+	+ \lim_{T \rightarrow \infty} \frac{1}{T}
+	\int\displaylimits_{-T/2}^{T/2} \abs{x_m}^2 \dt = P_{\tilde x} + 0 + 
+	\abs{x_m}^2 = P_{\tilde x} + \abs{x_m}^2.
 \end{split}
 \end{equation}
 Infine risulta quindi
 \begin{equation}
 P_x = P_{\tilde x} + \abs{x_m}.
 \end{equation}
-Da cui, dato che si \`e posto $P_x = 0$ come supposizione iniziale, e dato che $P_{\tilde x} \geq 0$ e $\abs{x_m}^2 \geq 0$ per definizione, risulta
+Da cui, dato che si \`e posto $P_x = 0$ come supposizione iniziale, e dato che
+$P_{\tilde x} \geq 0$ e $\abs{x_m}^2 \geq 0$ per definizione, risulta
 \begin{equation}
 	P_x = 0 \Longrightarrow P_{\tilde x} + \abs{x_m} = 0 \Longrightarrow
 		\begin{cases}
@@ -2667,51 +2906,72 @@ che dimostra la tesi iniziale:
 \end{equation}
 \end{proof}
 
-\noindent\textbf{Come conseguenza dei due teoremi visti nelle sezioni \textit{4.1.1} e \textit{4.1.2} possiamo scrivere che}
+\noindent\textbf{Come conseguenza dei due teoremi visti nelle sezioni
+\textit{4.1.1} e \textit{4.1.2} possiamo scrivere che}
 \begin{equation}
-\begin{cases}
-\boldsymbol{SISTEMI \quad AD}\\
-\boldsymbol{ENERGIA \quad FINITA}\\
-\boldsymbol{(E_x = K < \infty)}
-\end{cases}
-\Longrightarrow
-\begin{cases}
-\boldsymbol{P_x = 0}\\
-\boldsymbol{x_eff = 0}\\
-\boldsymbol{x_m = 0}
-\end{cases}.
+	\begin{cases}
+		\boldsymbol{SISTEMI \quad AD}\\
+		\boldsymbol{ENERGIA \quad FINITA}\\
+		\boldsymbol{(E_x = K < \infty)}
+	\end{cases}
+	\Longrightarrow
+	\begin{cases}
+		\boldsymbol{P_x = 0}\\
+		\boldsymbol{x_eff = 0}\\
+		\boldsymbol{x_m = 0}
+	\end{cases}.
 \end{equation}
 
+%-------------------------------------------------------------------------------
+% Subsubsection: Media quadratica
+%-------------------------------------------------------------------------------
+
 \subsubsection{Media quadratica}
-La media quadratica di due o pi\`u numeri \`e definita come la radice quadrata del rapporto tra la somma dei quadrati dei valori numerici ed il numero di valori, ed \`e un indicatore statistico definito a partire dai quadrati dei valori considerati.
+La media quadratica di due o pi\`u numeri \`e definita come la radice quadrata
+del rapporto tra la somma dei quadrati dei valori numerici ed il numero di
+valori, ed \`e un indicatore statistico definito a partire dai quadrati dei
+valori considerati.
 Formalmente, dai n valori numerici
 \begin{equation}
-x_1, x_2, \dots , x_n
+	x_1, x_2, \dots , x_n
 \end{equation}
 la formula di calcolo della media quadratica \`e data da
 \begin{equation}
-Media \ \ quadratica = \sqrt{\frac{x_1^2 + x_2^2 + \dots + x_n^2}{n}} = \sqrt{\frac{\sum_{i = 1}^{n} x_i^2}{n}}.
+	Media \ \ quadratica = \sqrt{\frac{x_1^2 + x_2^2 + \dots + x_n^2}{n}} =
+	\sqrt{\frac{\sum_{i = 1}^{n} x_i^2}{n}}.
 \end{equation}
-\subsubsection{Valore Efficace}
-Si definisce valore efficace di una funzione continua $x(t)$, la radice della media quadratica (ovvero la "radice della media dei quadrati" detta anche \textit{valore quadratico medio}, in inglese \textit{root mean square}, da cui la sigla RMS), sul periodo della funzione stessa: 
-\begin{equation}
-	x_rms = \sqrt{\frac{1}{T} \cdot \int\displaylimits_{0}^{T} \left[x(t)\right]^2 \dt}.
-\end{equation}
-Se si applica il procedimento ad un segnale costante si può facilmente constatare che il suo valore efficace coincide con il valore reale. 
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsubsection: Valore Efficace
+%-------------------------------------------------------------------------------
+
+\subsubsection{Valore Efficace}
+Si definisce valore efficace di una funzione continua $x(t)$, la radice della
+media quadratica (ovvero la "radice della media dei quadrati" detta anche
+\textit{valore quadratico medio}, in inglese \textit{root mean square}, da cui
+la sigla RMS), sul periodo della funzione stessa: 
+\begin{equation}
+	x_rms = \sqrt{\frac{1}{T} \cdot \int\displaylimits_{0}^{T}
+	\left[x(t)\right]^2 \dt}.
+\end{equation}
+Se si applica il procedimento ad un segnale costante si può facilmente
+constatare che il suo valore efficace coincide con il valore reale. 
+
+%-------------------------------------------------------------------------------
+% Subsection: Biunivocita' della trasformata serie di Fourier
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Biunivocit\`a della trasformata serie di Fourier}
-Ogni segnale $x(t)$ che soddisfi il criterio di Dirichlet pu\`o essere rappresentato con lo sviluppo in serie di Fourier
+Ogni segnale $x(t)$ che soddisfi il criterio di Dirichlet pu\`o essere
+rappresentato con lo sviluppo in serie di Fourier
 \begin{equation}
 	x(t) = \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t},
 \end{equation}
 dove il particolare coefficiente $X_k$ della serie \`e dato da
 \begin{equation}
-	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt.
+	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
 La seconda delle due \`e una equazione di \textit{analisi} che permette di
 stabilire qual \`e il contenuto in termini di oscillazioni armoniche del segnale
@@ -2742,26 +3002,38 @@ attraverso le relazioni di analisi e sintesi.
 \begin{proof}
 \begin{equation}
 \begin{split}
-	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi k f_0 t} \dt =
+	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi k f_0 t} \dt =
 	\quads{2}
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi k f_0 t} e^{-j 2 \pi k f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+	\sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi k f_0 t} e^{-j 2 \pi k f_0 t}
+	\dt =
 	\quads{1}
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi (n - k) f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+	\sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi (n - k) f_0 t} \dt =
 	\quads{2}
 	\\
-	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =
+	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n
+	\int\displaylimits_{-T_0/2}^{T_0/2} e^{j 2 \pi (n - k) f_0 t} \dt =
 	\quads{2}
 \end{split}
 \end{equation}
 \[
-	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[ \int\displaylimits_{-T_0/2}^{T_0/2} \left( \cos[2 \pi (n - k) f_0 t] \dt + j \sin[2 \pi (n - k) f_0 t] \right) \dt \right] =
+	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[
+		\int\displaylimits_{-T_0/2}^{T_0/2} \left( 
+		\cos[2 \pi (n - k) f_0 t] \dt + j \sin[2 \pi (n - k) f_0 t]
+		\right) \dt \right] =
 \]
 \[
-	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[\int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi (n - k) f_0 t] \dt + j \int\displaylimits_{-T_0/2}^{T_0/2} \sin[2 \pi (n - k) f_0 t] \dt\right].
+	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[
+		\int\displaylimits_{-T_0/2}^{T_0/2} \cos[2 \pi (n - k) f_0 t] 
+		\dt + j \int\displaylimits_{-T_0/2}^{T_0/2} 
+		\sin[2 \pi (n - k) f_0 t] \dt\right].
 \]
-I due integrali sono risolvibili senza effettuare eccessivi calcoli matematici, infatti
+I due integrali sono risolvibili senza effettuare eccessivi calcoli matematici,
+infatti
 \[
 	\cos(2 \pi (n - k) f_0 t) = 
 		\begin{cases}
@@ -2778,7 +3050,9 @@ I due integrali sono risolvibili senza effettuare eccessivi calcoli matematici, 
 \]
 da cui segue che
 \[
-	\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt =\footnote{Poich\`e integriamo il $coseno$ lungo intervalli pari al periodo.}
+	\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt =
+	\footnote{Poich\`e integriamo il $coseno$ lungo intervalli pari al
+	periodo.}
 		\begin{cases}
 			T_0 \quad se \quad n = k\\
 			0 \quad \ se \quad n \neq k
@@ -2793,10 +3067,16 @@ da cui segue che
 \]
 Possiamo quindi riprendere
 \[
-	X_k = \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t) \dt + j \int\displaylimits_{-T_0/2}^{T_0/2} \sin(2 \pi (n - k) f_0 t) \dt\right] =
+	X_k = \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n \left[
+		\int\displaylimits_{-T_0/2}^{T_0/2} \cos(2 \pi (n - k) f_0 t)
+		\dt + j \int\displaylimits_{-T_0/2}^{T_0/2}
+		\sin(2 \pi (n - k) f_0 t) \dt\right] =
 \]
 \[
-	=\footnote{Di tutti i termini della sommatoria $\sum_{n = -\infty}^{\infty} X_n$ rimane infatti solo il \textit{k}-esimo per cui il primo dei due integrali non \`e nullo.} \ \frac{1}{T_0} \ X_k \ T_0 = X_k
+	=\footnote{Di tutti i termini della sommatoria
+	$\sum_{n = -\infty}^{\infty} X_n$ rimane infatti solo il
+	\textit{k}-esimo per cui il primo dei due integrali non \`e nullo.} \ 
+	\frac{1}{T_0} \ X_k \ T_0 = X_k
 \]
 \[
 	X_k = X_k,
@@ -2804,9 +3084,9 @@ Possiamo quindi riprendere
 che dimostra la tesi iniziale.
 \end{proof}
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Linearita' della trasformata serie di Fourier
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Linearit\`a della trasformata serie di Fourier}
@@ -2825,16 +3105,23 @@ Tale propriet\`a di linearit\`a dei coefficienti di Fourier deriva direttamente
 	dalla medesima propriet\`a dell'integrale; si ha infatti che
 \begin{equation}
 \begin{split}
-	Z_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} z(t) e^{-j 2 \pi n f_0 t} \dt =
+	Z_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} z(t)
+	e^{-j 2 \pi n f_0 t} \dt =
 	\quads{8}
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left[a \cdot x(t) + b \cdot y(t)\right] e^{-j 2 \pi n f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left[a \cdot x(t) +
+	b \cdot y(t)\right] e^{-j 2 \pi n f_0 t} \dt =
 	\quads{6}
 	\\
-	= \frac{a}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt + \frac{b}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t} \dt =
+	= \frac{a}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} \dt + \frac{b}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t} \dt =
 	\quads{3}
 	\\
-	= a \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt \right] + b \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t} \dt \right] =
+	= a \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} \dt \right] + b \cdot \left[\frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t}
+	\dt \right] =
 	\\
 	= a \cdot X_n + b \cdot Y_n.
 	\quads{11}
@@ -2846,9 +3133,9 @@ segnali $x(t)$ e $y(t)$; pertanto, in generale una combinazione lineare di
 segnali aventi medesimo periodo $T_0$ non introduce nuove armoniche.\\
 \end{proof}
 
-%------------------------------------------------
-% Subsubsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsubsection: Esercizio
+%-------------------------------------------------------------------------------
 
 \subsubsection{Esercizio}
 Consideriamo il segnale
@@ -2909,20 +3196,33 @@ $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
 \begin{proof}
 \begin{equation}
 \begin{split}
-	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi (-n) f_0 t} \dt =
+	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi (-n) f_0 t} \dt =
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{j 2 \pi n f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{j 2 \pi n f_0 t} \dt =
 	\quad
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x^*(t) e^{j 2 \pi n f_0 t} \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x^*(t)
+	e^{j 2 \pi n f_0 t} \dt =
 	\quad
 	\\
-	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( x(t) e^{-j 2 \pi n f_0 t} \right)^* \dt =
+	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( x(t)
+	e^{-j 2 \pi n f_0 t} \right)^* \dt =
 	\quad
 \end{split}
 \end{equation}
 \[
-=\footnote{Sia $z = re^{j\varphi} \in \mathbb{C}$ un numero complesso espresso in forma esponenziale. Allora: $\conjugate{z} = re^{-j\varphi}$ dove $\conjugate{z}$ denota il complesso coniugato di $z$.} \footnote{Siano $z_1 , z_2 \in \mathbb{C}$. Allora: $(z_1 \cdot z_2)^* = \left[c_1 e^{j \varphi_1} \cdot c_2 e^{j \varphi_2}\right]^* = \left[c_1 c_2 \cdot e^{j (\varphi_1 + \varphi_2)}\right]^* = c_1 c_2 \cdot e^{-j (\varphi_1 + \varphi_2)} = c_1 e^{-j \varphi_1} \cdot c_2 e^{-j \varphi_2} = z_1^* \cdot z_2^*.$} \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt\right]^* = X^*_{n}.
+	=\footnote{Sia $z = re^{j\varphi} \in \mathbb{C}$ un numero complesso
+	espresso in forma esponenziale. Allora: $\conjugate{z} = re^{-j\varphi}$
+	dove $\conjugate{z}$ denota il complesso coniugato di $z$.}
+	\footnote{Siano $z_1 , z_2 \in \mathbb{C}$. Allora: $(z_1 \cdot z_2)^* =
+	\left[c_1 e^{j \varphi_1} \cdot c_2 e^{j \varphi_2}\right]^* =
+	\left[c_1 c_2 \cdot e^{j (\varphi_1 + \varphi_2)}\right]^* = c_1 c_2
+	\cdot e^{-j (\varphi_1 + \varphi_2)} = c_1 e^{-j \varphi_1} \cdot c_2
+	e^{-j \varphi_2} = z_1^* \cdot z_2^*.$} \left[\frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t}
+	\dt\right]^* = X^*_{n}.
 \]
 \end{proof}
 
@@ -2935,9 +3235,9 @@ $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
 	\caption{Spettro di ampiezza e di fase.}
 \end{figure}
 
-%------------------------------------------------
-% Subsubsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsubsection: Simmetria pari per il modulo
+%-------------------------------------------------------------------------------
 
 \subsubsection{Simmetria pari per il modulo}
 \begin{equation}
@@ -2962,15 +3262,17 @@ Esempio pratico:
 	y = x^2 - 1 \Longrightarrow f(-x) = (-x)^2 - 1 = x^2 - 1 = f(x).
 \]
 
-%------------------------------------------------
-% Subsubsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsubsection: Simmetria dispari per la fase
+%-------------------------------------------------------------------------------
 
 \subsubsection{Simmetria dispari per la fase}
 \begin{equation}
 	\angle X_n = - \angle X_{-n}
 \end{equation}
-Sia $f(x)$ una funzione a valori reali di variabile reale e sia $D \subset \mathbb{R}$ il suo dominio. Allora $f$ \`e dispari se per ogni $x \in D$ sussiste l'equazione:
+Sia $f(x)$ una funzione a valori reali di variabile reale e sia $D \subset
+\mathbb{R}$ il suo dominio. Allora $f$ \`e dispari se per ogni $x \in D$
+sussiste l'equazione:
 \[
 	f(-x) = - f(x),
 \]
@@ -2978,20 +3280,23 @@ vale a dire
 \[
 	f(x) = - f(-x).
 \]
-Geometricamente, il grafico di una funzione dispari \`e simmetrico rispetto all'origine degli assi.\\
+Geometricamente, il grafico di una funzione dispari \`e simmetrico rispetto
+all'origine degli assi.\\
 \\
-Il nome \textbf{dispari} deriva dal fatto che le serie di Taylor di una funzione dispari centrate nell'origine contengono solo potenze dispari.\\
+Il nome \textbf{dispari} deriva dal fatto che le serie di Taylor di una funzione
+dispari centrate nell'origine contengono solo potenze dispari.\\
 \\
 Esempi di funzioni dispari sono $x$, $x^3•$, $sin(x)$, $sinh(x)$.\\
 \\
 Esempio pratico:
 \[
-	y = x^3 - x \Longrightarrow f(-x) = (-x)^3 - (-x) = -x^3 + x = -(x^3 - x) = -f(x).
+	y = x^3 - x \Longrightarrow f(-x) = (-x)^3 - (-x) = -x^3 + x =
+	-(x^3 - x) = -f(x).
 \]
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Trasformata di un segnale (periodico) reale e pari
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Trasformata di un segnale (periodico) reale e pari}
@@ -3007,51 +3312,74 @@ e pari
 \[
 	x(t) = x(-t).
 \]
-In tal caso, il generico coefficiente di Fourier di $x(t)$ \`e una funzione pari di $n$:
+In tal caso, il generico coefficiente di Fourier di $x(t)$ \`e una funzione pari
+di $n$:
 \[
 	X_n = X_{-n}.
 \]
 \begin{proof}
 \[
-	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{j 2 \pi n f_0 t} \dt =
+	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{j 2 \pi n f_0 t} \dt =
 \]
 \[
-	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0} \int\displaylimits_{T_0/2}^{-T_0/2} x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} -\dt^{'} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = 
+	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0}
+	\int\displaylimits_{T_0/2}^{-T_0/2} x(-t^{'})
+	e^{-j 2 \pi n f_0 t^{'}} -\dt^{'} = \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}}
+	\dt^{'} = 
 \]
 \[
-	\footnote{Dato che $x(t) = x(-t)$.}= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = X_n.
+	\footnote{Dato che $x(t) = x(-t)$.}= \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'})
+	e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = X_n.
 \]
 \end{proof}
 \noindent
 Che dimostra la nostra tesi.
 \bigbreak
-Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e sia pari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per $x(t)$ in forma semplificata. Infatti:
+Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e
+sia pari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per
+$x(t)$ in forma semplificata. Infatti:
 \[
-	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1} X_n e^{j 2 \pi n f_0 t} =
+	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 +
+	\sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1}
+	X_n e^{j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	\footnote{$X_n = X_{-n}$. dato che $x(t)$ \`e un segnale pari.}= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_n e^{-j 2 \pi n f_0 t} =
+	\footnote{$X_n = X_{-n}$. dato che $x(t)$ \`e un segnale pari.}= X_0 +
+	\sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty}
+	X_n e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} + e^{-j 2 \pi n f_0 t}\right) =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} +
+	e^{-j 2 \pi n f_0 t}\right) =
 \]
 \[
-	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \left( \frac{e^{j 2 \pi n f_0 t} + e^{-j 2 \pi n f_0 t}}{2} \right) =
+	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \left(
+	\frac{e^{j 2 \pi n f_0 t} + e^{-j 2 \pi n f_0 t}}{2} \right) =
 \]
 \[
 	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \cos(2 \pi n f_0 t).
 \]
-Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i termini sinusoidale per i segnali periodici pari.\\ Questo risultato \`e logicamente giustificabile se si riflette sul fatto che il coseno \`e una funzione pari mentre il seno \`e una funzione dispari e quindi poco si presta a rappresentare l'andamento periodico di un segnale pari.
+Abbiamo quindi semplificato l'espressione in serie di Fourier eliminando i
+termini sinusoidale per i segnali periodici pari.\\ Questo risultato \`e
+logicamente giustificabile se si riflette sul fatto che il coseno \`e una
+funzione pari mentre il seno \`e una funzione dispari e quindi poco si presta a
+rappresentare l'andamento periodico di un segnale pari.
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Trasformata di un segnale (periodico) reale e dispari
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Trasformata di un segnale (periodico) reale e dispari}
@@ -3067,45 +3395,64 @@ e dispari
 \[
 	x(t) = -x(-t).
 \]
-In tal caso, il generico coefficiente di Fourier di $x(t)$ \`e una funzione dispari di $n$:
+In tal caso, il generico coefficiente di Fourier di $x(t)$ \`e una funzione
+dispari di $n$:
 \[
 	X_n = -X_{-n}.
 \]
 \begin{proof}
 \[
-	-X_{-n} = -\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} -x(t) e^{j 2 \pi n f_0 t} \dt =
+	-X_{-n} = -\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} -x(t) e^{j 2 \pi n f_0 t} \dt =
 \]
 \[
-	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0} \int\displaylimits_{T_0/2}^{-T_0/2} -x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} -\dt^{'} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} -x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = 
+	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0}
+	\int\displaylimits_{T_0/2}^{-T_0/2} -x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}}
+	-\dt^{'} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} -x(-t^{'})
+	e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = 
 \]
 \[
-	\footnote{Dato che $x(t) = -x(-t)$.}= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = X_n.
+	\footnote{Dato che $x(t) = -x(-t)$.}= \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}}
+	\dt^{'} = X_n.
 \]
 \end{proof}
 \noindent
 Che dimostra la nostra tesi.
 \bigbreak
-Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e sia dispari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per $x(t)$ in forma semplificata. Infatti:
+Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e
+sia dispari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per
+$x(t)$ in forma semplificata. Infatti:
 \[
-	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1} X_n e^{j 2 \pi n f_0 t} =
+	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 +
+	\sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1}
+	X_n e^{j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	\footnote{$X_n = -X_{-n}$. dato che $x(t)$ \`e un segnale dispari.}= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty} (-X_n) e^{-j 2 \pi n f_0 t} =
+	\footnote{$X_n = -X_{-n}$. dato che $x(t)$ \`e un segnale dispari.}= X_0
+	+ \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} (-X_n) e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} - \sum_{n = 1}^{+\infty} X_n e^{-j 2 \pi n f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} -
+	\sum_{n = 1}^{+\infty} X_n e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}\right) =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} -
+	e^{-j 2 \pi n f_0 t}\right) =
 \]
 \[
-	= X_0 + 2 j \cdot \sum_{n = 1}^{+\infty} X_n \left( \frac{e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}}{2 j} \right) =
+	= X_0 + 2 j \cdot \sum_{n = 1}^{+\infty} X_n \left(
+	\frac{e^{j 2 \pi n f_0 t} - e^{-j 2 \pi n f_0 t}}{2 j} \right) =
 \]
 \[
 	= X_0 + 2 j \cdot \sum_{n = 1}^{+\infty} X_n \sin(2 \pi n f_0 t).
@@ -3116,9 +3463,9 @@ logicamente giustificabile se si riflette sul fatto che il seno \`e una funzione
 dispari mentre il coseno \`e una funzione pari e quindi poco si presta a
 rappresentare l'andamento periodico di un segnale dispari.
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Trasformata di un segnale (periodico) reale alternativo
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Trasformata di un segnale (periodico) reale alternativo}
@@ -3132,64 +3479,95 @@ reale
 \]
 e alternativo
 \[
-	x(t) = -x\left(t + \frac{T_0}{2}\right).\footnote{L'andamento del segnale in un qualunque semiperiodo $t_0 \leq t < t_0 + T_0/2$ \`e identico all'andamento nel semiperiodo precedente $t_0 - T_0/2 \leq t < t$, cambiato di segno.}
+	x(t) = -x\left(t + \frac{T_0}{2}\right).
+	\footnote{L'andamento del segnale in un qualunque semiperiodo
+	$t_0 \leq t < t_0 + T_0/2$ \`e identico all'andamento nel semiperiodo
+	precedente $t_0 - T_0/2 \leq t < t$, cambiato di segno.}
 \]
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/segnale_alternativo.jpg}
-\caption{Rappresentazione grafica di un segnale alternativo.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1.0\textwidth]{images/segnale_alternativo.jpg}
+	\caption{Rappresentazione grafica di un segnale alternativo.}
 \end{figure}
-In tal caso, il generico coefficiente $X_n$ di Fourier di $x(t)$ \`e \textit{nullo} per tutti i valori pari dell'indice $n$:
+In tal caso, il generico coefficiente $X_n$ di Fourier di $x(t)$ \`e
+\textit{nullo} per tutti i valori pari dell'indice $n$:
 \begin{equation}
 	X_n =
-		\begin{cases}
-			\frac{2}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt \quad\quad\quad\quad n \ dispari\\
-			0 \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \ \ \ n \ pari
-		\end{cases}.
+	\begin{cases}
+		\frac{2}{T_0} \int\displaylimits_{0}^{T_0/2} x(t)
+		e^{-j 2 \pi n f_0 t} \dt \quad\quad\quad\quad n \ dispari\\
+		0 \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+		\quad \ \ \ n \ pari
+	\end{cases}.
 \end{equation}
 \begin{proof}
 \[
-	X_{n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt =
+	X_{n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} \dt =
 \]
 \[
-	\footnote{Avendo suddiviso l'intervallo di integrazione $[-T_0/2, T_0/2]$ in due smeiperiodi.}= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{0} x(t) e^{-j 2 \pi n f_0 t} \dt + \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt =
+	\footnote{Avendo suddiviso l'intervallo di integrazione
+	$[-T_0/2, T_0/2]$ in due smeiperiodi.}= \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{0} x(t) e^{-j 2 \pi n f_0 t} \dt +
+	\frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t}
+	\dt =
 \]
 Il primo integrale pu\`o essere riscritto come
 \[
-	\footnote{Poniamo $t^{'} = t + \frac{T_0}{2}$ nel primo integrale. Quindi $t = t^{'} - \frac{T_0}{2}$, e se $t$ va da $-\frac{T_0}{2}$ a $0$, allora $t^{'} = t + \frac{T_0}{2}$ va da $0$ a $\frac{T_0}{2}$.}= \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x\left(t^{'} - \frac{T_0}{2}\right) e^{-j 2 \pi n f_0 \left(t^{'} - \frac{T_0}{2}\right)} \dt^{'} = \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 \left(t^{'} - \frac{T_0}{2}\right)} \dt^{'} =
+	\footnote{Poniamo $t^{'} = t + \frac{T_0}{2}$ nel primo integrale.
+	Quindi $t = t^{'} - \frac{T_0}{2}$, e se $t$ va da $-\frac{T_0}{2}$ a
+	$0$, allora $t^{'} = t + \frac{T_0}{2}$ va da $0$ a $\frac{T_0}{2}$.}=
+	\frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x\left(t^{'} -
+	\frac{T_0}{2}\right) e^{-j 2 \pi n f_0 \left(t^{'} -
+	\frac{T_0}{2}\right)} \dt^{'} = \frac{1}{T_0}
+	\int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 \left(t^{'} -
+	\frac{T_0}{2}\right)} \dt^{'} =
 \]
 \[
-	= \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} e^{j 2 \pi n f_0 \frac{T_0}{2}} \dt^{'} = \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} e^{j \pi n} \dt^{'} =
+	= \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'})
+	e^{-j 2 \pi n f_0 t^{'}} e^{j 2 \pi n f_0 \frac{T_0}{2}} \dt^{'} =
+	\frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'})
+	e^{-j 2 \pi n f_0 t^{'}} e^{j \pi n} \dt^{'} =
 \]
 \[
-	\footnote{$e^{j \pi n} = \cos(\pi n) - j \sin(\pi n) = \pm 1$.}= \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} (-1)^{n} \dt^{'} = (-1)^{n} \cdot \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} =
+	\footnote{$e^{j \pi n} = \cos(\pi n) - j \sin(\pi n) = \pm 1$.}=
+	\frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'})
+	e^{-j 2 \pi n f_0 t^{'}} (-1)^{n} \dt^{'} = (-1)^{n} \cdot
+	\frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} -x(t^{'})
+	e^{-j 2 \pi n f_0 t^{'}} \dt^{'} =
 \]
 \[
-	= -\frac{(-1)^{n}}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt.
+	= -\frac{(-1)^{n}}{T_0} \int\displaylimits_{0}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} \dt.
 \]
 Ora, sostituendo questo risultato nell'integrale iniziale
-
 \[
-	= -\frac{(-1)^{n}}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt + \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} =
+	= -\frac{(-1)^{n}}{T_0} \int\displaylimits_{0}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} \dt + \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2}
+	x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'} =
 \]
 \[
-	= \left[1 - (-1)^{n}\right] \cdot \frac{1}{T_0} \int\displaylimits_{0}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}} \dt^{'}.
+	= \left[1 - (-1)^{n}\right] \cdot \frac{1}{T_0}
+	\int\displaylimits_{0}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}}
+	\dt^{'}.
 \]
 Ne segue quindi che
 \[
-	X_n = \frac{2}{T_0} \int\displaylimits_{0}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t} \dt \quad\quad\quad n \ dispari
+	X_n = \frac{2}{T_0} \int\displaylimits_{0}^{T_0/2} x(t)
+	e^{-j 2 \pi n f_0 t} \dt \quad\quad\quad n \ dispari
 \]
 \[
-	X_n = 0 \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad n \ pari.
+	X_n = 0 \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad
+	\quad n \ pari.
 \]
 \end{proof}
 \noindent
 Che dimostra la nostra tesi.
 
-%------------------------------------------------
-% Subsection: 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+% Subsection: Simmetrie della Trasformata Continua di Fourier (TCF)
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Simmetrie della Trasformata Continua di Fourier (TCF)}
@@ -3242,13 +3620,18 @@ per cui lo spettro di ampiezza di un segnale reale \`e una funzione pari, mentre
 il suo spettro di fase \`e dispari.
 \begin{proof}
 \[
-	X(-f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (-f) t} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{j 2 \pi f t} \dt =
+	X(-f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+	e^{-j 2 \pi (-f) t} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t)
+	\cdot e^{j 2 \pi f t} \dt =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} x^*(t) \cdot e^{j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} \left[x(t) \cdot e^{-j 2 \pi f t}\right]^* \dt =
+	= \int\displaylimits_{-\infty}^{+\infty} x^*(t) \cdot e^{j 2 \pi f t}
+	\dt = \int\displaylimits_{-\infty}^{+\infty} \left[x(t) \cdot
+	e^{-j 2 \pi f t}\right]^* \dt =
 \]
 \[
-	= \left[\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt\right]^* = X^*(f).
+	= \left[\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+	e^{-j 2 \pi f t} \dt\right]^* = X^*(f).
 \]
 \end{proof}
 
