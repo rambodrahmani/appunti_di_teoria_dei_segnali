@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.20)  1 MAR 2019 09:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.20)  1 MAR 2019 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2036,64 +2036,64 @@ ML/zplm/m/it/12 t[]\OT1/zplm/m/n/12 )\OML/zplm/m/it/12 e[] dt[] \OT1/zplm/m/n/1
 File: images/modulato_modulante_oscillazione.png Graphic file (type png)
 <use images/modulato_modulante_oscillazione.png>
 Package pdftex.def Info: images/modulato_modulante_oscillazione.png  used on in
-put line 3934.
+put line 3978.
 (pdftex.def)             Requested size: 383.0pt x 161.27052pt.
  [110 <./images/modulato_modulante_oscillazione.png>]
 <images/modulatore.png, id=1491, 120.45pt x 96.36pt>
 File: images/modulatore.png Graphic file (type png)
 <use images/modulatore.png>
-Package pdftex.def Info: images/modulatore.png  used on input line 3965.
+Package pdftex.def Info: images/modulatore.png  used on input line 4009.
 (pdftex.def)             Requested size: 383.0pt x 306.43062pt.
  [111]
 <images/segnale_modulato.png, id=1496, 289.08pt x 115.632pt>
 File: images/segnale_modulato.png Graphic file (type png)
 <use images/segnale_modulato.png>
-Package pdftex.def Info: images/segnale_modulato.png  used on input line 3981.
+Package pdftex.def Info: images/segnale_modulato.png  used on input line 4025.
 (pdftex.def)             Requested size: 383.0pt x 153.20813pt.
  [112 <./images/modulatore.png>] [113 <./images/segnale_modulato.png>] [114] [1
 15] [116] [117] [118] [119]
 [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4139.
+(hyperref)                removing `math shift' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 4139.
+(hyperref)                removing `\sigma' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 4139.
+(hyperref)                removing `subscript' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 4139.
+(hyperref)                removing `superscript' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4139.
+(hyperref)                removing `math shift' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4139.
+(hyperref)                removing `math shift' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 4139.
+(hyperref)                removing `subscript' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 4139.
+(hyperref)                removing `superscript' on input line 4219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4139.
+(hyperref)                removing `math shift' on input line 4219.
 
 [131]
 <images/heaviside_function.png, id=1588, 326.21875pt x 244.915pt>
 File: images/heaviside_function.png Graphic file (type png)
 <use images/heaviside_function.png>
-Package pdftex.def Info: images/heaviside_function.png  used on input line 4178
+Package pdftex.def Info: images/heaviside_function.png  used on input line 4258
 .
 (pdftex.def)             Requested size: 191.5pt x 143.77733pt.
  [132
@@ -2102,11 +2102,11 @@ Package pdftex.def Info: images/heaviside_function.png  used on input line 4178
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4224.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4224.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4321.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4321.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4224.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4321.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4321.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 612377BD4BE9A5E3F7FB4EA172C1B1B2;8636.
@@ -2148,7 +2148,7 @@ r/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-d
 ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/
 palatino/uplbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
 ></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (143 pages, 2727200 bytes).
+Output written on main.pdf (143 pages, 2727197 bytes).
 PDF statistics:
  1826 PDF objects out of 2073 (max. 8388607)
  1575 compressed objects within 16 object streams

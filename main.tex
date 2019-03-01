@@ -3581,6 +3581,10 @@ immaginaria.\\
 Vogliamo ora stabilire in che modo le propriet\`a della funzione $x(t)$ si
 riflettano sulla sua trasformata.
 
+%-------------------------------------------------------------------------------
+% Subsubsection: Simmetrie della TCF: Simmetria Hermitiana
+%-------------------------------------------------------------------------------
+
 \subsubsection{Simmetrie della TCF: Simmetria Hermitiana}
 Supponiamo che $x(t)$ sia una funzione \textit{reale}:
 \[
@@ -3635,6 +3639,10 @@ il suo spettro di fase \`e dispari.
 \]
 \end{proof}
 
+%-------------------------------------------------------------------------------
+% Subsubsection: Simmetrie della TCF: Segnali reali e pari
+%-------------------------------------------------------------------------------
+
 \newpage
 \subsubsection{Simmetrie della TCF: Segnali reali e pari}
 Supponiamo adesso che $x(t)$ sia un segnale \textit{reale e pari}
@@ -3657,27 +3665,47 @@ Ovvero, la trasformata di un segnale reale e pari \`e una funzione
 \begin{proof}
 $X(f) = X^*(f)$
 \[
-	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt =\footnote{Poniamo $t = -t^{'}$, $dt = dt^{'}$, se $t$ va da $-\infty$ a $+\infty$, allora $t^{'}$ va da $+\infty$ a $-\infty$.} \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{-j 2 \pi f (-t^{'})} \ -dt^{'} =
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+	e^{-j 2 \pi f t} \dt =\footnote{Poniamo $t = -t^{'}$, $dt = dt^{'}$, se
+	$t$ va da $-\infty$ a $+\infty$, allora $t^{'}$ va da $+\infty$ a
+	$-\infty$.} \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot
+	e^{-j 2 \pi f (-t^{'})} \ -dt^{'} =
 \]
 \[
-	= - \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty} x(-t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} =
+	= - \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot
+	e^{j 2 \pi f t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty}
+	x(-t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty} x^*(t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} =
+	= \int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot
+	e^{j 2 \pi f t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty}
+	x^*(t^{'}) \cdot e^{j 2 \pi f t^{'}} \ dt^{'} =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} \left[x(t^{'}) \cdot e^{-j 2 \pi f t^{'}}\right]^* \ dt^{'} = \left[\int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{-j 2 \pi f t^{'}} \ dt^{'}\right]^* = X^*(f).
+	= \int\displaylimits_{-\infty}^{+\infty} \left[x(t^{'}) \cdot
+	e^{-j 2 \pi f t^{'}}\right]^* \ dt^{'} = \left[
+		\int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot
+		e^{-j 2 \pi f t^{'}} \ dt^{'}\right]^* = X^*(f).
 \]
 \end{proof}
 \begin{proof}
 $X(f) = X(-f)$
 \[
-	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt = \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{-j 2 \pi f (-t^{'})} \ -dt^{'} =
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot 
+	e^{-j 2 \pi f t} \dt = \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) 
+	\cdot e^{-j 2 \pi f (-t^{'})} \ -dt^{'} =
 \]
 \[
-	= - \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot e^{-j 2 \pi (-f) t^{'}} \ dt^{'} = \int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{-j 2 \pi (-f) t^{'}} \ dt^{'} = X(-f).
+	= - \int\displaylimits_{+\infty}^{-\infty} x(-t^{'}) \cdot 
+	e^{-j 2 \pi (-f) t^{'}} \ dt^{'} = 
+	\int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot 
+	e^{-j 2 \pi (-f) t^{'}} \ dt^{'} = X(-f).
 \]
 \end{proof}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Simmetrie della TCF: Segnali reali e dispari
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Simmetrie della TCF: Segnali reali e dispari}
@@ -3701,16 +3729,20 @@ Ovvero, la trasformata di un segnale reale e dispari \`e una funzione
 \begin{proof}
 $X(f) = -X(-f)$
 \[
-	-X(-f) = -\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (-f) t} \dt = \int\displaylimits_{-\infty}^{+\infty} -x(t) \cdot e^{j 2 \pi f t} \dt =
+	-X(-f) = -\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+	e^{-j 2 \pi (-f) t} \dt = \int\displaylimits_{-\infty}^{+\infty} -x(t)
+	\cdot e^{j 2 \pi f t} \dt =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} -x(-t^{'}) \cdot e^{j 2 \pi f (-t^{'})} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t^{'}) \cdot e^{-j 2 \pi f t^{'}} \dt = X(f).
+	= \int\displaylimits_{-\infty}^{+\infty} -x(-t^{'}) \cdot
+	e^{j 2 \pi f (-t^{'})} \dt = \int\displaylimits_{-\infty}^{+\infty}
+	x(t^{'}) \cdot e^{-j 2 \pi f t^{'}} \dt = X(f).
 \]
 \end{proof}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Teoremi sulla trasformata continua di Fourier
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Teoremi sulla trasformata continua di Fourier}
@@ -3719,9 +3751,9 @@ propriet\`a, che chiameremo \textit{teoremi}, estremamente utili nel calcolo
 delle trasformate dei segnali e comunque nell'uso dell'analisi di Fourier di
 carattere applicativo.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Linearita' della TCF
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsubsection{Linearit\`a della TCF}
 Pu\`o essere conveniente in molti casi esprimere un segnale $x(t)$ come
@@ -3739,22 +3771,28 @@ $X(f)$ di $x(t)$ \`e allora
 Infatti, applicando semplicemente la definizione trasformata, la tesi segue
 sfruttando la propriet\`a di linearit\`a dell'integrale stesso
 \[
-	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} [a \cdot x_1(t) + b \cdot x_2(t)] \cdot e^{-j 2 \pi f t} \dt =
+	X(f) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+	e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} [a 
+	\cdot x_1(t) + b \cdot x_2(t)] \cdot e^{-j 2 \pi f t} \dt =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} a \cdot x_1(t) \cdot e^{-j 2 \pi f t} \dt + \int\displaylimits_{-\infty}^{+\infty} b \cdot x_2(t) \cdot e^{-j 2 \pi f t} \dt =
+	= \int\displaylimits_{-\infty}^{+\infty} a \cdot x_1(t) \cdot 
+	e^{-j 2 \pi f t} \dt + \int\displaylimits_{-\infty}^{+\infty} b 
+	\cdot x_2(t) \cdot e^{-j 2 \pi f t} \dt =
 \]
 \[
-	= a \cdot \int\displaylimits_{-\infty}^{+\infty} x_1(t) \cdot e^{-j 2 \pi f t} \dt + b \cdot \int\displaylimits_{-\infty}^{+\infty} x_2(t) \cdot e^{-j 2 \pi f t} \dt =
+	= a \cdot \int\displaylimits_{-\infty}^{+\infty} x_1(t) \cdot 
+	e^{-j 2 \pi f t} \dt + b \cdot \int\displaylimits_{-\infty}^{+\infty} 
+	x_2(t) \cdot e^{-j 2 \pi f t} \dt =
 \]
 \[
 	= a \cdot X_1(f) + b \cdot X_2(f).
 \]
 \end{proof}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Dualita' della TCF
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Dualit\`a della TCF}
@@ -3788,9 +3826,9 @@ alla variabile $f$ la variabile $-f$, si ottiene
 \]
 che dimostra la tesi iniziale.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Teorema del ritardo
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Teorema del ritardo}
@@ -3810,16 +3848,19 @@ anticipo se $t_0 < 0$.
 \begin{proof}
 Applicando la definizione di trasformata si ha
 \[
-	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt =
-	\int\displaylimits_{-\infty}^{+\infty} x(t - t_0) e^{-j 2 \pi f t} \dt =
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
+	= \int\displaylimits_{-\infty}^{+\infty} x(t - t_0) e^{-j 2 \pi f t} \dt
+	=
 \]
 \[
 	\footnote{Poniamo $t' = t - t_0$.}=
-	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f (t' + t_0)} \dt ' =
-	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'} e^{-j 2 \pi f t_0} \dt ' =
+	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f (t' + t_0)}
+	\dt ' =	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'}
+	e^{-j 2 \pi f t_0} \dt ' =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'} \dt ' \cdot e^{-j 2 \pi f t_0}
+	= \int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'} \dt '
+	\cdot e^{-j 2 \pi f t_0}
 	= X(f) e^{-j 2 \pi f t_0}.
 \]
 \end{proof}
@@ -3833,9 +3874,9 @@ Infatti, il teorema del ritardo si traduce nelle relazioni
 	\angle Y(f) = \angle X(f) - 2 \pi f t_0.
 \]
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: teorema del cambiamento di scala
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Teorema del cambiamento di scala}
@@ -3848,9 +3889,12 @@ Cio\`e si effettua un cambiamento della scala temporale. Moltiplicando la
 variabile indipendente $t$ del segnale $x(t)$ per coefficiente $\alpha$ si
 producono i seguenti effetti:
 \begin{itemize}
-	\item $\abs{\alpha} > 1$ $\rightarrow$ \textit{compressione} della scala dei tempi
-	\item $\abs{\alpha} < 1$ $\rightarrow$ \textit{dilatazione} della scala dei tempi
-	\item $\alpha < 0$ $\rightarrow$ \textit{inversione} della scala dei tempi
+	\item $\abs{\alpha} > 1$ $\rightarrow$ \textit{compressione} della scala
+		dei tempi
+	\item $\abs{\alpha} < 1$ $\rightarrow$ \textit{dilatazione} della scala
+		dei tempi
+	\item $\alpha < 0$ $\rightarrow$ \textit{inversione} della scala dei
+		tempi
 \end{itemize}
 In altri termini, se $\abs{\alpha} < 1$ l'evoluzione del segnale viene
 "rallentata", viceversa se $\abs{\alpha} > 1$ il segnale viene "accelerato".
@@ -3913,9 +3957,9 @@ dell'asse delle frequenze, e viceversa. Se infatti il segnale viene "rallentato"
 responsabili per cos\`i dire dell'evoluzione del segnale; lo spettro allora di
 "addensa" nell'intorno della frequenza nulla.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Teorema della Modulazione
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Teorema della Modulazione}
@@ -3983,9 +4027,9 @@ recuperata, ovvero demodulata dal segnale portante ricevuto.
 \end{figure}
 Enunciamo ora formalmente il cosiddetto teorema della modulazione.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Modulazione con coseno
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Modulazione con coseno}
@@ -4046,66 +4090,86 @@ Allo stesso modo \`e possibile ottenere
 \]
 questo risultato verr\`a approfondito nella sezione successiva.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Modulazione con seno
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Modulazione con seno}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Modulazione con cosinusoide generica
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Modulazione con cosinusoide generica}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsubsection: Modulazione con esponenziale complesso
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsubsection{Modulazione con esponenziale complesso}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Teorema di derivazione
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Teorema di derivazione}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Derivazione nel tempo
+%-------------------------------------------------------------------------------
+
 \newpage
 \subsubsection{Derivazione nel tempo}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Derivazione in frequenza
+%-------------------------------------------------------------------------------
+
 \newpage
 \subsubsection{Derivazione in frequenza}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Teorema di integrazione
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Teorema di integrazione}
+
+%-------------------------------------------------------------------------------
+% Subsection: Integrazione nel tempo
+%-------------------------------------------------------------------------------
+
 \newpage
 \subsubsection{Integrazione nel tempo}
+
+%-------------------------------------------------------------------------------
+% Subsection: Integrazione in frequenza
+%-------------------------------------------------------------------------------
+
 \newpage
 \subsubsection{Integrazione in frequenza}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Teorema del Prodotto di Convoluzione
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Teorema del Prodotto di Convoluzione}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Subsection: Teorema della Convoluzione
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Teorema della Convoluzione}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Section: Segnali Aleatori
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newpage	
 \section{Segnali Aleatori}
@@ -4126,27 +4190,43 @@ Per modellare e studiare i segnali aleatori \`e indispensabile quindi ricorrere
 a tecniche basate sulla \textit{teoria della probabilit\`a e dei processi
 aleatori}.
 
+%-------------------------------------------------------------------------------
+% Subsection: Teorema di Bayes
+%-------------------------------------------------------------------------------
+
 \newpage
 \subsection{Teorema di Bayes}
+
+%-------------------------------------------------------------------------------
+% Subsection: Teorema della Probabilita' Totale
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Teorema della Probabilit\`a Totale}
 
+%-------------------------------------------------------------------------------
+% Subsection: Esempio Teorema di Bayes e Teorema della Probabilita' Totale
+%-------------------------------------------------------------------------------
+
 \newpage
 \subsubsection{Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}
+
+%-------------------------------------------------------------------------------
+% Subsection: Legame tra Varianza sigma_x^2 e Valore quadratico medio
+%-------------------------------------------------------------------------------
 
 \newpage
 \subsection{Legame tra Varianza $\sigma_x^2$ e Valor quadratico medio $m_x^2$}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Appendices
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \appendix
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % Appendice A: Segnali Canonici
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \chapter{Segnali Canonici}
 \epigraph{"
@@ -4156,9 +4236,9 @@ aleatori}.
 La presente appendice contiene una lista di segnali canonici, per ciascuno dei
 quali sono stati analizzati le propriet\`a principali, utilizzati nel testo.
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 % A.1: Gradino Unitario
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Gradino Unitario}
 Nella teoria dei segnali e dei sistemi \`e utile definire la funzione
@@ -4166,17 +4246,17 @@ Nella teoria dei segnali e dei sistemi \`e utile definire la funzione
 \begin{equation}
 	u(t) =
 		\begin{cases}
-			1 \quads{3} t > 0\\
+			1 \quads{4} t > 0\\
 			1/2 \quads{3} t = 0\\
-			0 \quads{3} t < 0
+			0 \quads{4} t < 0
 		\end{cases}
 \end{equation}
 rappresentata graficamente dalla figura seguente:
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=0.5\textwidth]{images/heaviside_function.png}
-\caption{Segnale Gradino Unitario $u(t)$.}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.5\textwidth]{images/heaviside_function.png}
+	\caption{Segnale Gradino Unitario $u(t)$.}
 \end{figure}
 Tale funzione, discontinua nell'origine, consente una rappresentazione concisa
 dei cosiddetti segnali \textit{causali}\footnote{Un segnale causale \`e una
@@ -4193,7 +4273,11 @@ tensione costante per ogni valore $t \geq 0$. Il  segnale possiede energia
 illimitata, in quanto
 \begin{equation}
 	\begin{split}
-		E_u = \int\displaylimits_{-\infty}^{+\infty} \abs{u(t)}^2 \dt = \underbrace{\int\displaylimits_{0}^{+\infty} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ \forall \ t \ < \ 0} = \underbrace{\int\displaylimits_{0}^{+\infty} 1 \dt}_{u(t) \ = \ 1 \ \forall \ t \ > \ 0} =
+		E_u = \int\displaylimits_{-\infty}^{+\infty} \abs{u(t)}^2 \dt =
+		\underbrace{\int\displaylimits_{0}^{+\infty} \abs{u(t)}^2 \dt}_{
+			u(t) \ = \ 0 \ \forall \ t \ < \ 0}
+		= \underbrace{\int\displaylimits_{0}^{+\infty} 1 \dt}_{u(t) \
+		= \ 1 \ \forall \ t \ > \ 0} =
 		\\
 		= \left[ t \right]_0^{+\infty} = +\infty - 0 = +\infty.
 		\quads{6}
@@ -4202,12 +4286,21 @@ illimitata, in quanto
 La potenza media $P_u$, invece, \`e espressa dalla relazione
 \begin{equation}
 	\begin{split}
-		P_u = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} \abs{u(t)}^2 \dt = \underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{0}^{T/2} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ \forall \ t \ < \ 0} =
+		P_u = \lim_{T \rightarrow \infty} \frac{1}{T} 
+		\int\displaylimits_{-T/2}^{T/2} \abs{u(t)}^2 \dt = 
+		\underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} 
+		\int\displaylimits_{0}^{T/2} \abs{u(t)}^2 \dt}_{u(t) \ = \ 0 \ 
+		\forall \ t \ < \ 0} =
 		\\
-		= \underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{0}^{T/2} 1 \dt}_{u(t) \ = \ 1 \ \forall \ t \ > \ 0} = \lim_{T \rightarrow \infty} \frac{1}{T} \left[ t \right]_0^{T/2} =
+		= \underbrace{\lim_{T \rightarrow \infty} \frac{1}{T} 
+		\int\displaylimits_{0}^{T/2} 1 \dt}_{u(t) \ = \ 1 \ \forall \ 
+		t \ > \ 0} = \lim_{T \rightarrow \infty} \frac{1}{T} \left[ t 
+		\right]_0^{T/2} =
 		\quads{4}
 		\\
-		= \lim_{T \rightarrow \infty} \frac{1}{T} \left(\frac{T}{2} - 0\right) = \lim_{T \rightarrow \infty} \frac{1}{T} \cdot \frac{T}{2} = \frac{1}{2}.
+		= \lim_{T \rightarrow \infty} \frac{1}{T} \left(\frac{T}{2} - 0
+		\right) = \lim_{T \rightarrow \infty} \frac{1}{T} \cdot 
+		\frac{T}{2} = \frac{1}{2}.
 		\quads{4}
 	\end{split}
 \end{equation}
@@ -4218,7 +4311,11 @@ Il valore efficace \`e dato da
 mentre il valore medio \`e ottenibile da
 \begin{equation}
 	\begin{split}
-		u_m = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{-T/2}^{T/2} u(t) \dt = \lim_{T \rightarrow \infty} \frac{1}{T} \int\displaylimits_{0}^{T/2} 1 \dt = \lim_{T \rightarrow \infty} \frac{1}{T} \cdot \frac{T}{2} = \frac{1}{2}.
+		u_m = \lim_{T \rightarrow \infty} \frac{1}{T} 
+		\int\displaylimits_{-T/2}^{T/2} u(t) \dt = \lim_{T \rightarrow 
+		\infty} \frac{1}{T} \int\displaylimits_{0}^{T/2} 1 \dt = 
+		\lim_{T \rightarrow \infty} \frac{1}{T} \cdot \frac{T}{2} = 
+		\frac{1}{2}.
 	\end{split}
 \end{equation}
 \end{document}
