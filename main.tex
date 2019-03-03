@@ -215,7 +215,10 @@ and without warranties of any kind, either expressed or implied.
 \bigbreak\noindent
 This work is licensed under:
 \bigbreak\noindent
-\href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{\includegraphics[height=\baselineskip]{images/cc_88x31.png} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.
+\href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{
+	\includegraphics[height=\baselineskip]{images/cc_88x31.png} 
+	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 
+	License}.
 
 %-------------------------------------------------------------------------------
 % Chapter 1: Introduction
@@ -322,12 +325,14 @@ form \(a + bj\):
 \[
 	\varphi = arg(z) =
 	\begin{cases}
-		arctan\left(\frac{b}{a}\right) \quads{4} \tab if \quad a > 0\\
-		arctan\left(\frac{b}{a}\right) + \pi \quads{2} if \quad a < 0 \quad and \quad b \geq 0\\
-		arctan\left(\frac{b}{a}\right) - \pi \quads{2} if \quad a < 0 \quad and \quad b < 0\\
+		arctan\left(\frac{b}{a}\right) \quads{4} \ if \quad a > 0\\
+		arctan\left(\frac{b}{a}\right) + \pi \quads{2} \ if \quad a < 0 
+		\quad and \quad b \geq 0\\
+		arctan\left(\frac{b}{a}\right) - \pi \quads{2} \ if \quad a < 0 
+		\quad and \quad b < 0\\
 		\frac{\pi}{2} \quads{8} if \quad a = 0 \quad and \quad b > 0\\
-		-\frac{\pi}{2} \quads{7}  if \quad a = 0 \quad and \quad b < 0\\
-		indeterminate \quads{3} if \quad a > 0
+		-\frac{\pi}{2} \quads{7} if \quad a = 0 \quad and \quad b < 0\\
+		indeterminate \quads{2} \ \ if \quad a > 0
 	 \end{cases}
 \]
 The value of \(\varphi\) is expressed in radians in this article. It can
@@ -667,6 +672,11 @@ this equation has  no real roots. But I claim that it has two complex roots
 being $(0, 1)$ and $-(0, 1)$. This can easily be checked by substitution
 according to the definition we provided for our addition and multiplication
 (just keep in mind that .
+
+%-------------------------------------------------------------------------------
+% Subsection: Constructing the complex numbers via the arithmetic of 2x2 
+% matrices
+%-------------------------------------------------------------------------------
 
 \subsection{Constructing the complex numbers via the arithmetic of 2x2 matrices}
 \improvement[inline]{To be continued.}
@@ -1849,7 +1859,8 @@ La figura precedente riporta l'andamento nel tempo della differenza di
 potenziale prodotta dall'attivit\`a cardiaca, registrata su di un paziente
 che nel passato ha subito un infarto miocardico (segnali di questo tipo sono
 facilmente estraibili da database disponibili online
-\footnote{\href{https://www.physionet.org/physiobank/database/mitdb/}{https://www.physionet.org/physiobank/database/mitdb/}}).
+\footnote{\href{https://www.physionet.org/physiobank/database/mitdb/}{
+	https://www.physionet.org/physiobank/database/mitdb/}}).
 Nel caso specifico, i dati sono immagazzinati nel file binario 'egc.dat', che
 utilizza 16 bit per rappresentare ciascun campione temporale, con una spaziatura
 temporale pari a $\Delta t = 20 ms$. Si consideri il seguente script Matlab
@@ -2061,16 +2072,18 @@ scrivere la seguente espressione per il treno di impulsi rettangolari
 Il segnale periodico \textit{treno di impulsi rettangolari} \`e infatti
 rappresentato come la \textit{sovrapposizione} di infiniti impulsi di durata $T$
 ottenuti ciascuno \textit{ritardando} l'impulso "base" non periodico $rect(t/T)$
-di $nT_0$ secondi con $n = 0. \pm1,\dots$. In questo caso diremo che
+di $nT_0$ secondi con $n = 0, \pm1,\dots$. In questo caso diremo che
 l'impulso-base $rect(t/T)$ \`e stato \textit{periodicizzato} con periodo di
 ripetizione $T_0$ per ottenere il segnale $x(t)$.
 \bigbreak
 Calcoliamo ora i coefficienti dello sviluppo in serie del segnale in esame:
 \[
 	X_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi n f_0 t} \dt = \frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} a \cdot rect(t/T)
-	e^{-j 2 \pi n f_0 t} \dt
+	e^{-j 2 \pi n f_0 t} \dt =\footnote{Calcolare il coefficiente per
+	$rect(t/T)$ \`e equivalente a calcolarlo per
+	$rect\left(\frac{t - nT_0}{T}\right)$ dato che la funzione \`e
+	periodica.} \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} a 
+	\cdot rect(t/T) e^{-j 2 \pi n f_0 t} \dt =
 \]
 \begin{equation}
 	\begin{split}
@@ -2108,7 +2121,7 @@ notevole
 \end{equation}
 per cui
 \begin{equation}
-	X_n = \frac{aT}{T_0} sinc(\frac{kT}{T_0}) = a \delta sinc(k \delta),
+	X_n = \frac{aT}{T_0} sinc(\frac{kT}{T_0}) = a \ \delta \ sinc(k \delta),
 \end{equation}
 dove si \`e posto $\delta = T/T_0$ e $\alpha = kT/T_0$.
 
@@ -2120,7 +2133,7 @@ dove si \`e posto $\delta = T/T_0$ e $\alpha = kT/T_0$.
 Il significato e l'importanza della rappresentazione in serie di Fourier di un
 segnale periodico a tempo continuo sono stati ampiamente discussi nella sezione
 precedente. Molti segnali che si osservano nei fenomeni naturali non sono per\`o
-periodico. Sorge allora immediata la questione della possibilit\`a di ottenere
+periodici. Sorge allora immediata la questione della possibilit\`a di ottenere
 una scomposizione simile alla serie di Fourier \textit{anche per i segnali
 aperiodici}. \textbf{\`E possibile cio\`e rappresentare anche un segnale non
 periodico come una opportuna \textit{sovrapposizione} di segnali elementari, in
@@ -2129,7 +2142,7 @@ particolare sinusoidali?}
 Per rispondere a questa domanda, consideriamo come caso di studio il segnale
 aperiodico appena introdotto impulso rettangolare:
 \[
-	x(t) = rect(\frac{t}{T}).
+	x(t) = rect\left(\frac{t}{T}\right).
 \]
 Mettiamo ora in relazione questo segnale con il treno di impulsi rettangolari
 \textit{periodico}
@@ -2149,7 +2162,7 @@ ripetizione $T_0$, come suggerito nella seguente figura
 Il segnale originario $x(t)$ pu\`o essere considerato come una sorta di
 caso-limite di un segnale periodico: partendo da $x_p(t)$, si riottiene
 l'impulso "base" $x(t)$ centrato in $t = 0$ se si pensa di \textit{fare una
-periodicizzazione di periodo $T-0 \rightarrow \infty$}. Al di l\`a del
+periodicizzazione di periodo $T_0 \rightarrow \infty$}. Al di l\`a del
 particolare esempio, se si costruisce un segnale periodico $x_p(t)$ per
 periodicizzazione del segnale aperiodico $x(t)$ \`e vero in generale che
 \begin{equation}
@@ -2173,7 +2186,7 @@ caso limite dei coefficienti di Fourier del segnale periodico $x_p(t)$.}
 Nase adesso l'esigenza di stabilire il comportamento della serie di Fourier e
 dei relativi coefficienti $X_n$ quando $T_0 \rightarrow \infty$.\\
 Osserviamo innanzitutto che aumentando il periodo di ripetizione $T_0$ si riduce
-la frequenza fondamenta $f_ 0 = 1/T_0$, e quindi si riduce la differenza tra due
+la frequenza fondamentale $f_0 = 1/T_0$, e quindi si riduce la differenza tra due
 generiche frequenze armoniche consecutive. Ci\`o determina un infittimento dello
 spettro del segnale se la scala di rappresentazione delle frequenze resta la
 stessa. Inoltre, dalla relazione 
@@ -2189,7 +2202,7 @@ Si pu\`o facilmente ovviare al problema della riduzione delle ampiezze delle
 righe spettrali definendo, per ciascuna delle frequenze armoniche $nf_0$, una
 sorta di "coefficiente di Fourier modificato"
 \begin{equation}
-	X(nf_0) \triangleq T_0 \cdot X_n \int\displaylimits_{-T_0/2}^{T_0/2}
+	X(nf_0) \triangleq T_0 \cdot X_n = \int\displaylimits_{-T_0/2}^{T_0/2}
 	x_p(t) e^{-j 2 \pi n f_0 t} \dt
 \end{equation}
 che evidentemente non \`e una quantit\`a che tende a zero per
@@ -2203,7 +2216,7 @@ $X_n = X(n f_0) \frac{1}{T_0} = X(n f_0) \cdot f_0$.}
 	\cdot f_0.
 \end{equation}
 Possiamo adesso effettuare il passaggio cruciale al limite per
-$T+0 \rightarrow \infty$ (ovvero per $f_0 \rightarrow 0$. Il segnale periodico
+$T_0 \rightarrow \infty$ (ovvero per $f_0 \rightarrow 0$. Il segnale periodico
 $x_p(t)$ al primo membro si trasforma nel segnale aperiodico $x(t)$. La somma a
 secondo membro invece, per definizione, si trasforma in un \textit{integrale} e
 si ottiene uno \textit{sviluppo} del segnale aperiodico $x(t)$ tramite
@@ -2222,7 +2235,7 @@ Fourier modificato:
 	X(f) = \lim_{\begin{split}T_0 \rightarrow \infty \\ f_0 \rightarrow 0\end{split}}
 		\int\displaylimits_{-T_0/2}^{T_0/2} x_p(t) e^{-j 2 \pi n f_0 t}
 		\dt = \int\displaylimits_{-\infty}^{\infty} x_p(t)
-		e^{-j 2 \pi n f_0 t} \dt 
+		e^{-j 2 \pi n f t} \dt 
 \end{equation}
 che rappresenta la \textbf{trasformata continua di Fourier del segnale $x(t)$}.\\
 In maniera euristica, possiamo dire che la variabile continua $f$ \`e, in un
@@ -2305,6 +2318,10 @@ seguente figura
 	\caption{Spetro \textbf{a)} di ampiezza e \textbf{b)} di fase
 		dell'impulso rettangolare di ampiezza unitaria.}
 \end{figure}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Esempio
+%-------------------------------------------------------------------------------
 
 \subsubsection{Esempio}
 Consideriamo il segnale
@@ -2610,7 +2627,8 @@ dell'analisi matematica tradizionale.
 
 \newpage
 \subsection{Relazioni tra Potenza Media \textit{$P_x$} ed Energia \textit{$E_x$} di un Segnale}
-Un segnale ad energia finita (matematicamente, a quadrato sommabile) ha potenza media nulla:
+Un segnale ad energia finita (matematicamente, a quadrato sommabile) ha potenza
+media nulla:
 \begin{equation}
 	E_x = K < \infty \Longrightarrow P_x = 0.
 \end{equation}
@@ -4319,3 +4337,4 @@ mentre il valore medio \`e ottenibile da
 	\end{split}
 \end{equation}
 \end{document}
+
