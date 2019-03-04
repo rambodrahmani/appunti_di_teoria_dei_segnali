@@ -88,19 +88,17 @@
 \contentsline {subsubsection}{\numberline {4.1.11.3}Modulazione con cosinusoide generica}{103}{subsubsection.4.1.11.3}% 
 \contentsline {subsubsection}{\numberline {4.1.11.4}Modulazione con esponenziale complesso}{104}{subsubsection.4.1.11.4}% 
 \contentsline {subsection}{\numberline {4.1.12}Teorema di derivazione}{105}{subsection.4.1.12}% 
-\contentsline {subsubsection}{\numberline {4.1.12.1}Teorema della derivazione nel tempo (Prof. Martorella)}{106}{subsubsection.4.1.12.1}% 
-\contentsline {subsubsection}{\numberline {4.1.12.2}Teorema della derivazione in frequenza (Prof. Martorella)}{106}{subsubsection.4.1.12.2}% 
-\contentsline {subsubsection}{\numberline {4.1.12.3}Derivazione nel tempo}{107}{subsubsection.4.1.12.3}% 
-\contentsline {subsubsection}{\numberline {4.1.12.4}Derivazione in frequenza}{108}{subsubsection.4.1.12.4}% 
-\contentsline {subsection}{\numberline {4.1.13}Teorema di integrazione}{109}{subsection.4.1.13}% 
-\contentsline {subsubsection}{\numberline {4.1.13.1}Integrazione nel tempo}{110}{subsubsection.4.1.13.1}% 
-\contentsline {subsubsection}{\numberline {4.1.13.2}Integrazione in frequenza}{111}{subsubsection.4.1.13.2}% 
-\contentsline {subsection}{\numberline {4.1.14}Teorema del Prodotto di Convoluzione}{112}{subsection.4.1.14}% 
-\contentsline {subsection}{\numberline {4.1.15}Teorema della Convoluzione}{113}{subsection.4.1.15}% 
-\contentsline {section}{\numberline {4.2}Segnali Aleatori}{114}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Teorema di Bayes}{115}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}Teorema della Probabilit\`a Totale}{116}{subsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.2.1}Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}{117}{subsubsection.4.2.2.1}% 
-\contentsline {subsection}{\numberline {4.2.3}Legame tra Varianza $\sigma _x^2$ e Valor quadratico medio $m_x^2$}{118}{subsection.4.2.3}% 
-\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{119}{appendix.Alph1}% 
-\contentsline {section}{\numberline {A.1}Gradino Unitario}{119}{section.Alph1.1}% 
+\contentsline {subsubsection}{\numberline {4.1.12.1}Teorema di derivazione nel tempo (Prof. Martorella)}{106}{subsubsection.4.1.12.1}% 
+\contentsline {subsubsection}{\numberline {4.1.12.2}Teorema di derivazione in frequenza (Prof. Martorella)}{107}{subsubsection.4.1.12.2}% 
+\contentsline {subsection}{\numberline {4.1.13}Teorema di integrazione}{108}{subsection.4.1.13}% 
+\contentsline {subsubsection}{\numberline {4.1.13.1}Integrazione nel tempo}{109}{subsubsection.4.1.13.1}% 
+\contentsline {subsubsection}{\numberline {4.1.13.2}Integrazione in frequenza}{110}{subsubsection.4.1.13.2}% 
+\contentsline {subsection}{\numberline {4.1.14}Teorema del Prodotto di Convoluzione}{111}{subsection.4.1.14}% 
+\contentsline {subsection}{\numberline {4.1.15}Teorema della Convoluzione}{112}{subsection.4.1.15}% 
+\contentsline {section}{\numberline {4.2}Segnali Aleatori}{113}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Teorema di Bayes}{114}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Teorema della Probabilit\`a Totale}{115}{subsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.2.1}Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}{116}{subsubsection.4.2.2.1}% 
+\contentsline {subsection}{\numberline {4.2.3}Legame tra Varianza $\sigma _x^2$ e Valor quadratico medio $m_x^2$}{117}{subsection.4.2.3}% 
+\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{118}{appendix.Alph1}% 
+\contentsline {section}{\numberline {A.1}Gradino Unitario}{118}{section.Alph1.1}% 

@@ -4297,35 +4297,59 @@ l'operazione di derivata comporta in particolare una esaltazione delle
 componenti alle alte frequenze.
 
 %-------------------------------------------------------------------------------
-% Subsubsection: Teorema della derivazione nel tempo (Prof. Martorella)
+% Subsubsection: Teorema di derivazione nel tempo (Prof. Martorella)
 %-------------------------------------------------------------------------------
 
-\subsubsection{Teorema della derivazione nel tempo (Prof. Martorella)}
+\subsubsection{Teorema di derivazione nel tempo (Prof. Martorella)}
 \[
     y(t) = \frac{d}{dt} x(t) \Longrightarrow Y(f) = j 2 \pi f \cdot X(f).
 \]
 \begin{proof}
-    y(t) 
+\[
+    y(t) = \frac{d}{dt} x(t) = \frac{d}{dt} \left[
+        \int\displaylimits_{-\infty}^{+\infty} X(f) e^{j 2 \pi f t} \df
+    \right] = \int\displaylimits_{-\infty}^{+\infty} X(f) \frac{d}{dt}
+    \left[e^{j 2 \pi f t}\right] \df =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} (2 j \pi f) e^{j 2 \pi f t} \df =
+    \int\displaylimits_{-\infty}^{+\infty} \left[j 2 \pi f \cdot X(f)\right]
+    e^{j 2 \pi f t} \df,
+\]
+da cui
+\[
+    y(t) = ATCF\left[j 2 \pi f \cdot X(f)\right]
+\]
+\[
+    Y(f) = j 2 \pi f \cdot X(f).
+\]
 \end{proof}
-%-------------------------------------------------------------------------------
-% Subsubsection: Teorema della derivazione in frequenza (Prof. Martorella)
-%-------------------------------------------------------------------------------
-
-\subsubsection{Teorema della derivazione in frequenza (Prof. Martorella)}
 
 %-------------------------------------------------------------------------------
-% Subsubsection: Derivazione nel tempo
+% Subsubsection: Teorema di derivazione in frequenza (Prof. Martorella)
 %-------------------------------------------------------------------------------
 
-\newpage
-\subsubsection{Derivazione nel tempo}
-
-%-------------------------------------------------------------------------------
-% Subsubsection: Derivazione in frequenza
-%-------------------------------------------------------------------------------
-
-\newpage
-\subsubsection{Derivazione in frequenza}
+\subsubsection{Teorema di derivazione in frequenza (Prof. Martorella)}
+\[
+    Y(f) = \frac{d}{df} X(f) \Longrightarrow y(t) = -j 2 \pi f \cdot x(t).
+\]
+\begin{proof}
+\[
+    Y(f) = \frac{d}{df} X(f) = \frac{d}{df} \left[
+        \int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi f t} \dt
+    \right] = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot \frac{d}{df}
+    \left[e^{-j 2 \pi f t}\right] \dt =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} x(t) (-j 2 \pi t) e^{-j 2 \pi f t}
+    \dt
+\]
+da cui segue che
+\[
+    Y(f) = TCF\left[-j 2 \pi t \cdot x(t)\right] \Longrightarrow y(t) = -j 2
+    \pi t \cdot x(t) = TCF\left[y(t)\right].
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Teorema di integrazione
