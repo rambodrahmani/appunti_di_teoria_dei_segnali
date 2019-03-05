@@ -12,6 +12,9 @@
 % License: 
 % Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 % License.
+% 
+% Compilation:
+% $ pdflatex main.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-------------------------------------------------------------------------------
@@ -2469,6 +2472,63 @@ $3400 Hz$, quindi ha una larhjezza di banda di $3100 Hz$ ovvero la differenza
 tra $3400 Hz$ e $300 Hz$.
 
 %-------------------------------------------------------------------------------
+% Subsection: Convoluzione
+%-------------------------------------------------------------------------------
+
+\newpage
+\subsection{Convoluzione}
+In matematica, in particolare nell'analisi funzionale, la convoluzione \`e
+un'operazione tra due funzioni di una variabile che consiste nell'integrare il
+prodotto fra la prima e la seconda traslata di un certo valore.
+\bigbreak
+Formalmente si considerino due funzioni $f(t)$ e $g(t)$ definite da $\mathbb{R}$
+in s\`e, con $f$ e $g$ integrabili secondo Lebesgue su $\mathbb{R}$. Si
+definisce convoluzione di $f$ e $g$ la funzione definita nel seguente modo:
+\[
+    (f \cdot g)(t) \coloneqq \int\displaylimits_{-\infty}^{+\infty} f(\tau)
+    \cdot g(t - \tau) \ d \tau = \int\displaylimits_{-\infty}^{+\infty}
+    f(t - \tau) \cdot g(\tau) \ d \tau
+\]
+dove $\int\displaylimits_{-\infty}^{+\infty}$ denota l'integrale definito
+nell'insieme dei numeri reali.\\
+Le limitazioni poste alle funzioni $f$ e $g$ assicurano che l'integrale sia un
+numero reale.
+\bigbreak
+La convoluzione viene utilizzata in vari campi della fisica, della statistica,
+dell'elettronica, dell'analisi d'immagini e della grafica computerizzata.
+Quando si studiano sistemi dinamici lineari stazionari, l'uscita è data dalla
+convoluzione tra il segnale in ingresso e la risposta all'impulso del sistema,
+la cui trasformata di Laplace (o la trasformata di Fourier) \`e la funzione di
+trasferimento del sistema.
+\bigbreak
+A parole, si tratta dell'integrale del prodotto delle funzioni dopo che una
+delle funzioni di partenza \`e stata rovesciata e traslata, e si pu\`o
+considerare una forma di trasformata integrale.\\
+Pi\`u in generale, si possono considerare due funzioni $f(t)$ e $g(t)$ definite
+su $\mathbb{R}^d$ a valori in $\mathbb{C}$, la cui convoluzione\`e data da
+\[
+    (f \cdot g)(z) = \int\displaylimits_{\mathbb{R}^d}^{} f(y) g(x - y) \ dy =
+    \int\displaylimits_{\mathbb{R}^d}^{} f(x - y) g(x) \ dy.
+\]
+\bigbreak
+La convoluzione tra due segnali $x(t)$ e $y(t)$, reali o complessi, indicata
+simbolicamente come
+\[
+    C_{xy}(\tau) = x(t) \ast y(t)
+\]
+\`e data, indifferentemente, dalle due espressioni
+\[
+    C_{xy}(\tau) = \int\displaylimits_{-\infty}^{+\infty} x(t) y(\tau - t) \dt.
+\]
+e
+\[
+    C_{xy}(\tau) = \int\displaylimits_{-\infty}^{+\infty} x(\tau - t) y(t) \dt.
+\]
+La convoluzione \`e un operatore lineare: questa propriet\`a \`e molto utile per
+semplificare il calcolo di convoluzioni di segnalidecomponibili nella somma di
+segnali pi\`u semplici.
+
+%-------------------------------------------------------------------------------
 % Section: Sistemi monodimensionali a tempo continuo
 %-------------------------------------------------------------------------------
 
@@ -4357,20 +4417,110 @@ da cui segue che
 
 \newpage
 \subsection{Teorema di integrazione}
+Nell'elaborazione dei segnali a tempo continuo, si effettuano spesso operazioni
+di derivazione e/o integrazione temporale dei segnali stessi. Sorge quindi la
+necessit\`a di determinare le trasformate dei nuovi segnali ottenuti con tali
+operazioni.\\
+Risolviamo adesso il problema inverso a quello della derivazione trattato nella
+sezione precedente. Indichiamo con $y(t)$ la funzione integrale (o segnale
+integrale, o primitiva) di $x(t)$, definita come
+\[
+    \begin{dcases}
+        y(t) = \int\displaylimits_{-\infty}^{t} x(\alpha) \ d \alpha\\
+        \int\displaylimits_{-\infty}^{+\infty} x(t) \dt = 0
+    \end{dcases}
+    \Longrightarrow
+    Y(f) = \frac{X(f)}{j 2 \pi f}.
+\]
+\begin{proof}
+Essendo $y(t)$ la funzione integrale di $x(t)$, risulta ovviamente
+\[
+    x(t) = \frac{d}{dt} y(t),
+\]
+utilizzando il teorema della derivazione ora
+\[
+    X(f) = j 2 \pi f \cdot Y(f),
+\]
+da cui si ricava banalmente
+\[
+    Y(f) = \frac{X(f)}{2 j \pi f}.
+\]
+\end{proof}
+Questo risultato \`e noto come \textbf{teorema di integrazione} e si riassume
+con
+\[
+    \int\displaylimits_{-\infty}^{t} x(\alpha) \ d \alpha \iff \frac{X(f)
+    }{j 2 \pi f}.
+\]
+Ancora una volta, una operazione di calcolo differenziale in ambito temporale si
+traduce in una semplice operazione algebrica (una divisione per il fattore
+$j 2 \pi f$) in ambito frequenziale.\\
+In questo caso, dualmente al teorema di derivazione, vengono esaltate le
+componenti a bassa frequenza nello spettro del segnale e attenuate quelle alle
+alte frequenze.
 
 %-------------------------------------------------------------------------------
-% Subsection: Integrazione nel tempo
+% Subsection: Teorema di Integrazione nel tempo (Prof. Martorella)
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsubsection{Integrazione nel tempo}
+\subsubsection{Teorema di Integrazione nel tempo (Prof. Martorella)}
+\[
+    \begin{dcases}
+        y(t) = \int\displaylimits_{-\infty}^{t} x(\alpha) \ d \alpha\\
+        \int\displaylimits_{-\infty}^{+\infty} x(t) \dt = 0
+    \end{dcases}
+    \Longrightarrow
+    Y(f) = \frac{X(f)}{j 2 \pi f}.
+\]
+\begin{proof}
+\[
+    y(t) = \int\displaylimits_{-\infty}^{+\infty} x(\alpha) \ d \alpha
+    \Longrightarrow
+    x(t) = \frac{d}{dt} y(t)
+    \Longrightarrow
+\]
+\[
+    \Longrightarrow
+    \boldsymbol{\begin{split}teorema \ \ della\\ derivazione\end{split}}
+    \Longrightarrow X(f) = j 2 \pi f \cdot Y(f) \Longrightarrow Y(f) = \frac{
+    X(f)}{j 2 \pi f}.
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
-% Subsection: Integrazione in frequenza
+% Subsection: Teorema di Integrazione in frequenza (Prof. Martorella)
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsubsection{Integrazione in frequenza}
+\subsubsection{Teorema di Integrazione in frequenza (Prof. Martorella)}
+\[
+    \begin{dcases}
+        Y(f) = \int\displaylimits_{-\infty}^{f} X(\alpha) \ d \alpha\\
+        \int\displaylimits_{-\infty}^{+\infty} X(\alpha) \ d \alpha = 0
+    \end{dcases}
+    \Longrightarrow
+    y(t) = - \frac{x(t)}{j 2 \pi t}.
+\]
+\begin{proof}
+Dato che
+\[
+    Y(f) = \int\displaylimits_{-\infty}^{f} X(\alpha) \ d \alpha \Longrightarrow
+    X(f) = \frac{d}{df} Y(f).
+\]
+Applicando il teorema della derivazione in frequenza a quanto abbiamo ottenuto
+\[
+    X(f) = \frac{d}{df} Y(f).
+\]
+otteniamo che
+\[
+    x(t) = - 2 j \pi t \cdot y(t)
+\]
+da cui segue infine che
+\[
+    y(t) = - \frac{x(t)}{2 j \pi t}.
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Teorema del Prodotto di Convoluzione
@@ -4378,6 +4528,90 @@ da cui segue che
 
 \newpage
 \subsection{Teorema del Prodotto di Convoluzione}
+Consideriamo adesso due segnali $x(t)$ e $y(t)$ con le rispettive trasformate di
+Fourier date da $X(f)$ e $Y(f)$. Si vuole calcolare la trasformata del segnale
+prodotto $z(t) = x(t) \cdot y(t)$. Essa \`e espressa da
+\[
+    Z(f) = \int\displaylimits_{-\infty}^{+\infty} z(t) \cdot 
+    e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot 
+    y(t) \cdot e^{-j 2 \pi f t} \dt.
+\]
+Sostituendo a $x(t)$ la sua espressione come integrale di Fourier,
+\[
+    x(t) = \int\displaylimits_{-\infty}^{+\infty} X(f) \cdot e^{j 2 \pi f t}
+    \df,
+\]
+si ricava
+\[
+    Z(f) = \int\displaylimits_{t = -\infty}^{+\infty} \left[
+        \int\displaylimits_{\nu = -\infty}^{+\infty} X(\nu) \cdot
+        e^{j 2 \pi \nu t} \ d \nu
+    \right] \cdot y(t) \cdot e^{-j 2 \pi f t} \dt.
+\]
+Poich\`e nel passaggio precedente compaiono due operazioni di integrazione,
+abbiamo esplicitamente indicato sugli estremi di ogni integrale la variabile di
+integrazione cui si riferisce; inoltre, nell'espressione di $x(t)$ come
+integrale di Fourier, si \`e usata una variabile di integrazione "muta" $\nu$ 
+con un nome differente da $f$ per non creare conflitti con la variabile $f$ di
+cui la trasformata $Z(f)$ risulta funzione. Se nella precedente equazione si
+inverte l'ordine delle operazioni di integrazione, ammettendo che questa
+operazione sia lecita, si ricava
+\[
+    Z(f) = \int\displaylimits_{\nu = -\infty}^{+\infty} X(\nu) \left[
+        \int\displaylimits_{t = -\infty}^{+\infty} y(t) \cdot
+        e^{-j 2 \pi (f - \nu) t} \dt
+    \right] \ d \nu
+\]
+L'integrale entro parentesi quadre rappresenta la trasformata di $y(t)$
+calcolata per il valore della frequenza pari a $(f - \nu)$; di conseguenza
+l'equazione precedente pu\`o essere scritta come
+\[
+    Z(f) = \int\displaylimits_{\nu = -\infty}^{+\infty} X(\nu) \cdot Y(f - \nu)
+    \ d \nu = X(f) \otimes Y(f).
+\]
+L'operazione indicata con il simbolo $\otimes$ prende il nome di integrale (o
+talvola impropriamente di prodotto) di convoluzione, o \textit{convoluzione
+tout-court}. La convoluzione, introdotta qui in ambito frequenziale per il
+calcolo della trasformata del prodotto di due segnali, ha un'importanza 
+cardinale nella teoria dei sistemi lineari stazionari.\\
+Dunque, il risultato ottenuto pu\`o essere riassunto come:
+\[
+    x(t) \cdot y(t) \iff X(f) \otimes Y(f).
+\]
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Teorema del Prodotto (Prof. Martorella)
+%-------------------------------------------------------------------------------
+
+\subsubsection{Teorema del Prodotto (Prof. Martorella)}
+\[
+    z(t) = x(t) \cdot y(t) \Longrightarrow Z(f) = X(f) \otimes Y(f).
+\]
+\begin{proof}
+\[
+    Z(f) = \int\displaylimits_{-\infty}^{+\infty} z(t)
+    e^{-j 2 \pi f t} \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    y(t) \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+    \footnote{Avendo posto $x(t) = \int\displaylimits_{\alpha = -\infty}^{
+    +\infty} X(\alpha) e^{j 2 \pi \alpha t} \ d \alpha$} = 
+    \int\displaylimits_{t = -\infty}^{+\infty} \left[
+        \int\displaylimits_{\alpha = -\infty}^{+\infty} X(\alpha)
+    e^{j 2 \pi \alpha t} \ d \alpha 
+    \right] \cdot y(t) \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+    = \int\displaylimits_{\alpha = -\infty}^{+\infty} X(\alpha) \left[
+        \int\displaylimits_{t = -\infty}^{+\infty} y(t) \cdot
+        e^{-j 2 \pi (f - \alpha)} \dt
+    \right] \ d \alpha =
+\]
+\[
+    = \int\displaylimits_{\alpha = -\infty}^{+\infty} X(\alpha) Y(f - \alpha) =
+    X(f) \otimes Y(f).
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Teorema della Convoluzione
