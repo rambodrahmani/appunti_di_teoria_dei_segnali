@@ -4614,11 +4614,182 @@ Dunque, il risultato ottenuto pu\`o essere riassunto come:
 \end{proof}
 
 %-------------------------------------------------------------------------------
-% Subsection: Teorema della Convoluzione
+% Subsection: Teorema di Convoluzione
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsection{Teorema della Convoluzione}
+\subsection{Teorema di Convoluzione}
+Consideriamo ora il caso duale del precedente (teorema del prodotto di 
+convoluzione), ovvero un segnale $z(t)$ dato dall'integrale di convoluzione in
+ambito temporale tra $x(t)$ e $y(t)$:
+\[
+    z(t) = x(t) \otimes y(t) = \int\displaylimits_{\alpha = -\infty}^{+\infty}
+    x(\alpha) \cdot y(t - \alpha) \ d \alpha
+\]
+\[
+    = \int\displaylimits_{\alpha = -\infty}^{+\infty} y(\alpha) x(\alpha - t)
+    \ d \alpha,
+\]
+e calcoliamone la trasformata di Fourier:
+\[
+    Z(f) = TCF\left[z(t)\right].
+\]
+Procedendo come nel caso della convoluzione in frequenza ricaviamo
+\[
+    Z(f) = \int\displaylimits_{t = -\infty}^{+\infty} z(t) \cdot
+    e^{-j 2 \pi f t} \dt = \int\displaylimits_{t = -\infty}^{+\infty} \left[
+        \int\displaylimits_{\alpha = -\infty}^{+\infty} x(\alpha) \cdot
+        y(t - \alpha) \ d \alpha
+    \right] e^{-j 2 \pi f t} \dt =
+\]
+\[
+    = \int\displaylimits_{\alpha = -\infty}^{+\infty} x(\alpha)
+    \int\displaylimits_{t = -\infty}^{+\infty} y(t - \alpha) \cdot
+    e^{-j 2 \pi f t} \dt \ \ d \alpha =
+\]
+da cui, con la sostituzione $\beta = t - \alpha$, otteniamo
+\[
+    Z(f) = \int\displaylimits_{\alpha = -\infty}^{+\infty} x(\alpha)
+    \int\displaylimits_{\beta = -\infty}^{+\infty} y(\beta) \cdot
+    e^{-j 2 \pi f (\beta + \alpha)} \ d \beta \ \ d \alpha =
+\]
+\[
+    = \int\displaylimits_{\alpha = -\infty}^{+\infty} x(\alpha)
+    \int\displaylimits_{\beta = -\infty}^{+\infty} y(\beta) \cdot
+    e^{-j 2 \pi f \beta} \ d \beta \ e^{-j 2 \pi f \alpha} \ d \alpha =
+\]
+\[
+    = \int\displaylimits_{\alpha = -\infty}^{+\infty} x(\alpha) Y(f) \cdot
+    e^{-j 2 \pi f \alpha} \ d \alpha = Y(f) \cdot
+    \int\displaylimits_{\alpha = -\infty}^{+\infty} x(\alpha) \cdot
+    e^{-j 2 \pi f \alpha} \ d \alpha = X(f) \cdot Y(f).
+\]
+Dunque il risultato ottenuto pu\`o essere riassunto come
+\[
+    x(t) \otimes y(t) \iff X(f) \cdot Y(f).
+\]
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Teorema di Convoluzione (Prof. Martorella)
+%-------------------------------------------------------------------------------
+
+\subsubsection{Teorema di Convoluzione (Prof. Martorella)}
+\[
+    z(t) = x(t) \otimes y(t) = \int\displaylimits_{-\infty}^{+\infty} x(\tau)
+    \cdot y(t - \tau) \ d \tau \iff X(f) \cdot Y(f).
+\]
+\begin{proof}
+\[
+    Z(f) = \int\displaylimits_{-\infty}^{+\infty} z(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{t = -\infty}^{+\infty}
+    \int\displaylimits_{\tau = -\infty}^{+\infty} x(\tau) \cdot y(t - \tau) \ 
+    d \tau \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+    = \int\displaylimits_{t = -\infty}^{+\infty} x(\tau)
+    \int\displaylimits_{\tau = -\infty}^{+\infty} y(t - \tau)
+    \cdot e^{-j 2 \pi f t} \ d \tau \dt =
+\]
+\[
+    \footnote{Per il teorema del ritardo $y(t - \tau) \iff Y(f) \cdot
+    e^{-j 2 \pi f \tau}$}= \int\displaylimits_{\tau = -\infty}^{+\infty} x(\tau)
+    \cdot Y(f) \cdot e ^{-j 2 \pi f \tau} \ \ d \tau =
+\]
+\[
+    = Y(f) \cdot \int\displaylimits_{\tau = -\infty}^{+\infty} x(\tau)
+    e^{-j 2 \pi f \tau} \ d \tau = X(f) \cdot Y(f).
+\]
+\end{proof}
+\bigbreak
+\textbf{Uso della TCF per il calcolo del prodotto di convoluzione:}
+\[
+    x(t) \otimes y(t) = z(t)
+\]
+\[
+    \downarrow \quads{2} \downarrow \quads{2} \downarrow
+\]
+\[
+    X(f) \cdot Y(f) = Z(f)
+\]
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Proprieta' della Convoluzione
+%-------------------------------------------------------------------------------
+
+\subsubsection{Propriet\`a della Convoluzione}
+\textbf{Commutativa:}
+\[
+    x(t) \otimes y(t) = y(t) \otimes x(t)
+\]
+\begin{proof}
+\[
+    x(t) \otimes y(t) = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    y(t - \tau) \ d \tau =\footnote{Poniamo $\alpha = t - \tau \Longrightarrow
+    \tau = t - \alpha, \ d \alpha = - \ d \tau$. $\alpha$ va da $+\infty$ a
+    $-\infty$} \int\displaylimits_{+\infty}^{-\infty} x(t - \alpha) \cdot
+    y(\alpha) \ - d \alpha = 
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} y(\alpha) \cdot x(t - \alpha) \ d 
+    \alpha = y(t) \otimes x(t).
+\]
+\end{proof}
+\bigbreak\noindent
+\textbf{Distributiva}
+\[
+    x(t) \otimes \left[y(t) + z(t)\right] = x(t) \otimes y(t) + x(t) \otimes
+    z(t).
+\]
+\begin{proof}
+\[
+    x(t) \otimes \left[y(t) + z(t)\right] =
+    \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot \left[
+        y(t - \tau) + z(t - \tau)
+    \right] \ d \tau =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot y(t - \tau) \ d \tau
+    + \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot z(t - \tau) \ d \tau
+    =
+\]
+\[
+    = x(t) \otimes y(t) + x(t) \otimes z(t).
+\]
+\end{proof}
+\bigbreak\noindent
+\textbf{Associativa}
+\[
+    x(t) \otimes \left(y(t) \otimes z(t)\right) = (x(t) \otimes y(t)) \otimes 
+    z(t).
+\]
+\begin{proof}
+Dal teorema della convoluzione sappiamo che
+\[
+    z(t) = x(t) \otimes y(t) \iff Z(f) = X(f) \cdot Y(f).
+\]
+Ora, ponendo $w(t) = y(t) \cdot z(t)$ possiamo scrivere:
+\[
+    x(t) \otimes \left(y(t) \otimes z(t)\right) = x(t) \otimes w(t).
+\]
+Calcoliamo ora la trasformata di Fourier
+\[
+    x(t) \otimes w(t) \iff X(f) \cdot W(f)
+\]
+con
+\[
+    W(f) = Y(f) \cdot Z(f).
+\]
+Quindi possiamo scrivere
+\[
+    TCD\left[x(t) \otimes \left(y(t) \otimes z(t)\right)\right] = X(f) \cdot
+    \left(Y(f) \cdot Z(f)\right) = \left(X(f) \cdot Y(f)\right) \cdot Z(f) =
+\]
+\[
+    \footnote{$ATCF\left[\left(X(f) \cdot Y(f)\right) \cdot Z(f)\right] = \left(
+    x(t) \otimes y(t)\right) \otimes z(t)$.}=
+    \left(x(t) \otimes y(t)\right) \otimes z(t).
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Section: Segnali Aleatori
