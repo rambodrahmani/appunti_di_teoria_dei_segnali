@@ -2561,13 +2561,52 @@ Progetto di filtri digitali.\change{Work in progress.}
 % Section: Richiami di teoria della probabilita'
 %-------------------------------------------------------------------------------
 
+\newpage
 \section{Richiami di teoria della probabilit\`a}
-Richiami di teoria della probabilit\`a.\change{Work in progress.}
+
+%-------------------------------------------------------------------------------
+% Subsection: Probabilita' Condizionata
+%-------------------------------------------------------------------------------
+
+\subsection{Probabilit\`a Condizionata}
+In teoria della probabilit\`a la probabilit\`a condizionata di un evento $A$
+rispetto ad un evento $B$ \`e la probabilit\`a che si verifichi $A$, sapendo che
+$B$ \`e verificato. Questa probabilit\`a, indicata con $Pr(A | B)$ o $P_{B}(A)$,
+esprime una "correzione" delle aspettative per $A$, dettata dall'osservazione di
+$B$.\\
+Poich\`e, come si vedr\`a nella successiva definizione, $Pr(B)$ compare al
+suo denominatore, $Pr(A | B)$ ha senso se e solo se $B$ ha una probabilit\`a non
+nulla di verificarsi.
+\bigbreak
+Data una coppia di eventi $A$ e $B$, con $Pr(B) \neq 0$, la probabilit\`a
+$Pr(A|B)$ dell'evento $A$ condizionata al verificarsi dell'evento $B$ \`e
+definita dalla relazione
+\[
+    Pr(A | B) \triangleq \frac{Pr(AB)}{Pr(B)}.
+\]
+\bigbreak
+Nella teoria della probabilit\`a $Pr(A)$ \`e detta comunemente probabilit\`a a
+priori dell'evento $A$ e $Pr(A | B)$ probabilit\`a a posteriori di $A$ dato $B$.
+La probabilit\`a condizionata (in alcuni testi chiamata anche condizionale) ha
+un significato importante, che ruota attorno all'evento condizionante $B$.
+Infatti, $Pr(A | B)$ \`e la probabilit\`a che l'evento $A$ assume una volta che
+l'evento $B$ si \`e gi\`a verificato. La definizione suggerisce proprio questo:
+la probabilit\`a a priori di $A$ viene scalata del fattore $1/Pr(B)$ per tenere
+conto che l'evento $B$, essendosi gi\`a verificato, deve considerarsi come una
+sorta di "nuovo spazio campione" in quanto al di fuori di questo niente pu\`o
+verificarsi. In questo senso bisogna rinormalizzare tutte le probabilit\`a
+rispetto a quello di $B$.\\
+Si noti inoltre che $Pr(B | B) = 1)$.
+
+%-------------------------------------------------------------------------------
+%
+%-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
 % Section: Segnali aleatori a tempo continuo e a tempo discreto
 %-------------------------------------------------------------------------------
 
+\newpage
 \section{Segnali aleatori a tempo continuo e a tempo discreto}
 Segnali aleatori a tempo continuo e a tempo discreto.\change{Work in progress.}
 
