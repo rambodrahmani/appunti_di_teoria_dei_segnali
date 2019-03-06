@@ -2581,9 +2581,14 @@ nulla di verificarsi.
 Data una coppia di eventi $A$ e $B$, con $Pr(B) \neq 0$, la probabilit\`a
 $Pr(A|B)$ dell'evento $A$ condizionata al verificarsi dell'evento $B$ \`e
 definita dalla relazione
-\[
-    Pr(A | B) \triangleq \frac{Pr(AB)}{Pr(B)}.
-\]
+\begin{equation}
+    \begin{split}
+        Pr(A | B) \triangleq \frac{Pr(AB)}{Pr(B)} = \frac{Pr(A \cap B)}{Pr(B)} =
+        \\
+        = \frac{Pr(A) + Pr(B) - Pr(A \cup B)}{Pr(B)}.
+        \quads{2}
+    \end{split}
+\end{equation}
 \bigbreak
 Nella teoria della probabilit\`a $Pr(A)$ \`e detta comunemente probabilit\`a a
 priori dell'evento $A$ e $Pr(A | B)$ probabilit\`a a posteriori di $A$ dato $B$.
@@ -2599,8 +2604,99 @@ rispetto a quello di $B$.\\
 Si noti inoltre che $Pr(B | B) = 1)$.
 
 %-------------------------------------------------------------------------------
-%
+% Subsubsection: Esempi Probabilita' Condizionata
 %-------------------------------------------------------------------------------
+
+\subsubsection{Esempi Probabilit\`a Condizionata}
+\textbf{Esempio 1}\\
+La probabilit\`a di ottenere $4$ con il lancio di un dado a sei facce (evento
+$A$) ha probabilit\`a $Pr(A) = 1/6$ di verificarsi. Sapendo per\`o che il
+risultato del lancio \`e un numero tra $4$, $5$, $6$ (evento $B$ verificato) la
+probabilit\`a di $A$ diventa
+\[
+    \frac{Pr(A \cap B)}{Pr(B)} = \frac{Pr(A) + Pr(B) - Pr(A \cup B)}{Pr(B)}
+    \footnote{Dati due eventi $A$ e $B$, la loro unione:  $A \cup B$ \`e data
+    dall'evento "Almeno uno degli eventi $A$ e $B$ si verifica".}=
+    \frac{\frac{1}{6} + \frac{3}{6} - \frac{3}{6}}{\frac{3}{6}} =
+\]
+\[
+    = \frac{\frac{1}{6}}{\frac{3}{6}}.
+\]
+\bigbreak\noindent
+\textbf{Esempio 2}\\
+Si consideri questo secondo esempio: la probabilit\`a di ottenere $1$ con il
+lancio di un comune dado (evento $A$) ha probabilit\`a $Pr(A) = 1/6$ di
+verificarsi. Sapendo per\`o che il risultato del lancio \`e un numero tra $4$,
+$5$, $6$ (evento $B$ verificato), la probabilit\`a di $A$ diventa
+\[
+    \frac{Pr(A \cap B)}{Pr(B)} = \frac{Pr(A) + Pr(B) - Pr(A \cup B)}{Pr(B)} 
+    \footnote{La probabilit\`a dell'unione di due eventi incompatibili \`e
+    uguale alla somma delle probabilit\`a di ciascun evento.}=
+    \frac{1/6 + 3/6 - 4/6}{} = 0.
+\]
+\bigbreak\noindent
+\textbf{Note Aggiuntive:} Dati due eventi mutuamente esclusivi (o
+\textit{incompatibili} o \textit{disgiunti}, cio\`e che non possono verificarsi
+contemporaneamente), la probabilit\`a dell'evento unione \`e data dalla somma
+delle probabilit\`a di $A$ e $B$:
+\[
+    A \cap B = \emptyset \Longrightarrow Pr(A \cup B) = Pr(A) + Pr(B).
+\]
+Dati due eventi $A$ e $B$ conpatibili (quando cio\`e il verificarsi dell'uno non
+esclude il verificarsi dell'altro), la probabilit\`a dell'evento unione
+$A \cup B$ \`e espressa dall'uguaglianza:
+\[
+    Pr(A \cup B) = Pr(A) + Pr(B) - Pr(A \cap B).
+\]
+
+%-------------------------------------------------------------------------------
+% Subsection: Teorema della Probabilita' Composta
+%-------------------------------------------------------------------------------
+
+\subsection{Teorema della Probabilit\`a Composta}
+Il teorema della probabilit\`a composta deriva dal concetto di probabilit\`a
+condizionata
+\begin{equation}
+    Pr(A \cap B) = Pr(B) Pr(A|B) = Pr(A) Pr(B|A),
+\end{equation}
+per cui la probabilit\`a che si verifichino entrambi i due eventi \`e pari alla
+probabilit\`a di uno dei due eventi moltiplicato con la probabilit\`a dell'altro
+evento condizionato al verificarsi del primo.
+\bigbreak\noindent
+Nel caso di indipendenza stocastica\footnote{Nell'ambito del calcolo delle
+probabilit\`a, l'indipendenza stocastica di due eventi $A$ e $B$ si ha quando il
+verificarsi di uno non modifica la probabilit\`a di verificarsi dell'altro,
+ovvero quando la probabilit\`a condizionata $Pr(A | B)$ oppure $Pr(B | A)$\`e
+pari rispettivamente a $Pr(A)$ e $Pr(B)$.} si ottiene che la probabilit\`a
+congiunta \`e pari al prodotto delle probabilit\`a:
+\begin{equation}
+    Pr(A|B) = Pr(A) Pr(B).
+\end{equation}
+\bigbreak\noindent
+Il teorema della probabilit\`a composta può essere generalizzato al caso
+dell'intersezione di un numero arbitrario di eventi:
+\begin{equation}
+    Pr(A_1 \cap A_2 \cap A_3 \cap \dots \cap A_n) =
+\end{equation}
+\[
+    Pr(A_1) Pr(A_2 | A_1) Pr(A_3 | A_1 \cap A_2) \dots Pr(A_n | A_1 \cap \dots
+    \cap A_{n-1}).
+\]
+
+%-------------------------------------------------------------------------------
+% Subsection: Teorema della Probabilita' Assoluta
+%-------------------------------------------------------------------------------
+
+\subsection{Teorema della Probabilit\`a Assoluta}
+In teoria della probabilit\`a il teorema della probabilit\`a assoluta (detto 
+anche teorema delle partizioni) afferma che se $A_1, \dots, A_n$ formano una
+partizione dello spazio campionario di tutti gli eventi possibili $\Omega$
+(ossia $A_i \cap A_j = \emptyset \ \forall i \neq j$ e $\cup_{i = 1}^{n} A_i =
+\Omega$) e $B$ \`e un qualsiasi evento (dipendente dagli eventi $A_i$), allora:
+\begin{equation}
+    Pr(B) = \sum_{i = 1}^{n} Pr(A_i \cap B) = \sum_{i = 1}^{n} Pr(A_i)
+    Pr(B | A_i).
+\end{equation}
 
 %-------------------------------------------------------------------------------
 % Section: Segnali aleatori a tempo continuo e a tempo discreto
@@ -4859,6 +4955,51 @@ aleatori}.
 
 \newpage
 \subsection{Teorema di Bayes}
+Il teorema di Bayes (conosciuto anche come formula di Bayes o teorema della
+probabilit\`a delle cause), prodotto da Thomas Bayes, deriva da due teoremi
+fondamentali delle probabilit\`a: il teorema della probabilit\`a composta e il
+teorema della probabilit\`a assoluta. Viene impiegato per calcolare la
+probabilit\`a di una causa che ha scatenato l'evento verificato.\\
+Formalmente, il teorema di Bayes \`e valido in tutte le interpretazioni della
+probabilit\`a. In ogni caso, l'importanza di questo teorema per la statistica
+\`e tale che la divisione tra le due scuole (statistica bayesiana e statistica
+frequentista) nasce dall'interpretazione che si da al teorema stesso.
+\bigbreak\noindent
+\textbf{Enunciato}\\
+Consideriamo la coppia di eventi $A$ e $B$, ciascuno avente probabilit\`a non
+nulla. La probabilit\`a condizionata $Pr(A | B)$ pu\`o essere ricavata con la
+relazione
+\begin{equation}
+    Pr(A | B) = \frac{Pr(B | A) \cdot Pr(A)}{Pr(B)},
+\end{equation}
+nota come teorema (o formula) di Bayes.
+\begin{proof}
+Il teorema deriva dalla definizione di probabilit\`a condizionata. La
+probabilit\`a probabilit\`a di un evento $A$, noto un evento $B$, risulta:
+\[
+    Pr(A | B) = \frac{Pr(A \cap B)}{Pr(B)} = \frac{Pr(AB)}{Pr(B)}.
+\]
+In modo analogo, la probabilit\`a di un evento $B$ noto un evento $A$
+\[
+    Pr(B | A) = \frac{Pr(A \cap B)}{Pr(A)} = \frac{Pr(AB)}{Pr(B)},
+\]
+dalla quale otteniamo
+\[
+    Pr(A \cap B) = Pr(B | A) Pr(A).
+\]
+Sostituendo questo risultato nella prima uguaglianza, si trova il teorema di
+Bayes
+\[
+    Pr(A | B) = \frac{Pr(A \cap B)}{Pr(B)} = \frac{Pr(B | A) \cdot
+    Pr(A)}{Pr(B)}.
+\]
+\end{proof}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Esempio Teorema di Bayes
+%-------------------------------------------------------------------------------
+
+\subsubsection{Esempio Teorema di Bayes}
 
 %-------------------------------------------------------------------------------
 % Subsection: Teorema della Probabilita' Totale
