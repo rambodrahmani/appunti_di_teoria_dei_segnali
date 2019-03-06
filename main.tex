@@ -278,10 +278,10 @@ of electric charge with respect to time. We will therefore be using the letter
 
 \subsection{Cartesian form}
 \begin{wrapfigure}{L}{0.5\textwidth}
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=0.5\textwidth]{images/complex_plane.png}
-	\caption{A Complex Number in Cartesian Form.}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{images/complex_plane.png}
+    \caption{A Complex Number in Cartesian Form.}
 \end{wrapfigure}
 A complex number can thus be identified with an ordered pair
 \((\Re(z), \Im(z))\) in the Cartesian plane, an identification sometimes known
@@ -300,10 +300,10 @@ Hamilton introduced this approach to define the complex number system.
 
 \subsection{Polar form}
 \begin{wrapfigure}{L}{0.4\textwidth}
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=0.4\textwidth]{images/complex_number_polar_form.png}
-	\caption{A Complex Number in Polar Form}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.4\textwidth]{images/complex_number_polar_form.png}
+    \caption{A Complex Number in Polar Form}
 \end{wrapfigure}
 An alternative way of defining a point P in the complex plane, other than using
 the \(a\)- and \(b\)-coordinates, is to use the distance of the point from \(O\)
@@ -867,10 +867,10 @@ Infine quindi
 	y(t) = A e^{-t} \cdot u(t) - A e^{t} \cdot u(-t).
 \end{equation}
 \begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\includegraphics[width=1.0\textwidth]{images/esercizio_12_marzo_2018.png}
-\caption{Grafico di $y(t)$ con $A = 1$.}
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1.0\textwidth]{images/esercizio_12_marzo_2018.png}
+    \caption{Grafico di $y(t)$ con $A = 1$.}
 \end{figure}
 Come possiamo vedere graficamente, il segnale gradino $u(t)$ fa si che la
 funzione complessiva $y(t)$ si ottenga come contributo delle due funzioni
@@ -5000,6 +5000,94 @@ Bayes
 %-------------------------------------------------------------------------------
 
 \subsubsection{Esempio Teorema di Bayes}
+Si consideri una scuola che ha il $60 \%$ di studenti maschi e il $40 \%$ di
+studentesse femmine.\\
+Le studentesse indossano in egual numero gonne e pantaloni; gli studenti
+indossano tutti quanti i pantaloni. Un osservatore, da lontano, nota un generico
+studente coi pantaloni. Qual \`e la probabilit\`a che quello studente sia una
+fenmina?
+\bigbreak
+Il problema pu\`o essere risolto con il teorema di Bayes, ponendo l'evento $A$
+che lo studente osservato sia femmina, e l'evento $B$ che lo studente osservato
+indossi i pantaloni. Per calcolare la probabilit\`a $Pr(A | B)\footnote{$Pr(A |
+B) =$ probabilit\`a dell'evento che lo studente sia femmina una volta osservato
+l'evento che lo studente visto indossa i pantaloni.}$, dovremo sapere:
+\begin{itemize}
+    \item $Pr(A)$, ovvero la probabilit\`a che lo studente sia femmina senza
+        nessun'altra informazione. Dato che l'osservatore vede uno studente a
+        caso, ci\`o significa che tutti gli studenti hanno la stessa
+        probabilit\`a di essere osservati. Essendo le studentesse il $40 \%$ del
+        totale, la probabilit\`a risulter\`a
+        \[
+            Pr(A) = 40 \% = \frac{40}{100} = 0.4 = \frac{4}{10} = \frac{2}{5}.
+        \]
+    \item $Pr(\overline{A})$, la probabilit\`a dell'evento complementare ad $A$,
+        ovvero la probabilit\`a che lo studente sia maschio senza nessun'altra 
+        informazione. Essendo $\overline{A}$ l'evento complementare di $A$,
+        risulta
+        \[
+            Pr(\overline{A}) = 1 - Pr(A) = 1 - \frac{2}{5} = \frac{3}{5}.
+        \]
+        Equivalentemente:
+        \[
+            60 \% = \frac{60}{100} = 0.6 = \frac{6}{10} = \frac{3}{5}.
+        \]
+    \item $Pr(B | A)$, ovvero la probabilit\`a che uno studente femmina indossi i
+        pantaloni (ossia la probabilit\`a cje, verificato che lo studente
+        osservato \`e una femmina, si verifichi l'evento che indossi i
+        pantaloni). Poich\`e le studentesse indossano gonne e pantaloni in egual
+        numero, la probabilit\`a sar\`a $\frac{1}{2}$.
+    \item $Pr(B | \overline{A})$, ovvero la probabilit\`a che uno studente
+        indossi i pantaloni, noto che lo studente osservato \`e un maschio.
+        Tutti gli studenti maschi indossano i pantaloni, quindi l'evento \`e
+        certo:
+        \[
+            Pr(B | \overline{A}) = 1.
+        \]
+    \item $Pr(B)$, ovvero la probabilit\`a che uno studente qualsiasi (maschio o
+        femmina) indossi i pantaloni. Poich\`e il numero di coloro che indossano
+        i pantaloni \`e $80 \%$ (il $60 \%$ di maschi e il $40/2 \%$ di femmine)
+        sul totale $100 \%$ di studenti, la probabilit\`a $Pr(B)$ \`e di
+        $80 \%/100 \% = 8/10 = 4/5$.
+\end{itemize}
+Ci\`o detto, possiamo applicare il teorema:
+\[
+    Pr(A | B) = \frac{Pr(B | A) \cdot Pr(A)}{Pr(B)} = \frac{\frac{1}{2} \cdot
+    \frac{2}{5}}{\frac{4}{5}} = \frac{\frac{1}{5}}{\frac{4}{5}} = \frac{1}{5}
+    \cdot \frac{5}{4} = \frac{1}{4}.
+\]
+\bigbreak\noindent
+\textbf{\underline{Note Aggiuntive}}\\
+\textbf{Conversione Percentuale $\Longrightarrow$ Frazione:}\\
+\begin{enumerate}
+    \item Dividere il valore in percentuale per $100$:
+        $\frac{percentuale}{100}$;
+    \item Se si ottiene un numero non intero, moltiplicare e dividere per $10$
+        sino ad ottenere una frazione;
+    \item Ridurre la frazione ottenuta.
+\end{enumerate}
+Ad esempio, per ottenere la frazione corrispondente al $40 \%$:
+\begin{enumerate}
+    \item $\frac{40}{100} = 0.4$;
+    \item $0.4 \cdot \frac{10}{10} = \frac{4}{10}$;
+    \item $\frac{4}{10} = \frac{2}{5}$.
+\end{enumerate}
+\bigbreak\noindent
+\textbf{Evento Complementare:}\\
+Dato un evento $A$, la probabilit\`a dell'evento complementare $\overline{A}$
+\`e data dal complemento a uno di $Pr(A)$:
+\[
+    Pr(\overline{A}) = 1 - Pr(A).
+\]
+\bigbreak\noindent
+\textbf{\underline{Assiomi utilizzati}}
+\begin{itemize}
+    \item \textbf{Assioma di Normalizzazione}\\
+        La probabilit\`a dell'evento certo \`e unitaria:
+        \[
+            Pr(\Omega) = 1.
+        \]
+\end{itemize}
 
 %-------------------------------------------------------------------------------
 % Subsection: Teorema della Probabilita' Totale
@@ -5007,13 +5095,198 @@ Bayes
 
 \newpage
 \subsection{Teorema della Probabilit\`a Totale}
+Il teorema della probabilit\`a totale consente di calcolare la probabilit\`a che
+si verifichi almeno uno di due o pi\`u eventi, ovvero la probabilit\`a
+dell'unione di essi.
+\bigbreak
+Il teorema di Bayes \`e spesso usato insieme al teorema della probabilit\`a
+totale che esaminiamo di seguito.
+\begin{proof}
+Costruiamo una partizione dello spazio $\Omega$ scegliendo $N$ eventi,
+$i = 1, 2, \dots, N$ con le seguenti propriet\`a:
+\[
+    \begin{dcases}
+        B_i \cap B_k = \emptyset \ \ se \ \ i \neq k\\
+        \cup_{i = 1}^{N} = \Omega
+    \end{dcases}
+\]
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{images/set_partition.jpg}
+    \caption{Una partizione dello spazio $\Omega$ che rispetta le propriet\`a
+    date.}
+\end{figure}
+La propriet\`a di un evento $A$ pu\`o allora essere calcolata come segue
+\change{Aggiungere assioma A.3}
+\[
+    Pr(A) = Pr(A \cap \Omega) = Pr(A \cap \cup_{i = 1}^{N} B_i) =
+    Pr(\cup_{i = 1}^{N} A \cap B_i) =
+\]
+\[
+    = \sum_{i = 1}^{N} Pr(A \cap B_i).
+\]
+Se in questa relazione si esprime poi ciascuna probabilit\`a congiunta
+$Pr(A \cap B_i)$ come prodotto tra la probabilit\`a condizionata $Pr(A | B_i)$ e
+la probabilit\`a marginale $Pr(B_i)$, si ricava l'uguaglianza
+\[
+    Pr(a) = \sum_{i = 1}^{N} Pr(A|B_i) Pr(B_i)
+\]
+che rappresenta appunto l'enunciato del teorema della probabilit\`a totale.
+\end{proof}
+\bigbreak\noindent
+\textbf{N.B.:} $A$ \`e un sottoinsieme do $\Omega$, quindi
+\[
+    A = A \cap \Omega = A \cdot \Omega = A \cdot \left(\sum_{i = 1}^{N} B_i
+    \right) = \sum_{i = 1}^{N} A \cdot B_i.
+\]
 
 %-------------------------------------------------------------------------------
 % Subsection: Esempio Teorema di Bayes e Teorema della Probabilita' Totale
 %-------------------------------------------------------------------------------
 
-\newpage
 \subsubsection{Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}
+In una rete radio cellulare, un terminale mobile (telefonico) trasmette verso la
+stazione radio base un flusso di dati binario: in tale flusso la probabilit\`a
+che ciscun bit assuma valore logico $1$ \`e pari a $\rho = 0.3$, mentre quella
+che assuma valore logico $0$ \`e pari a $1 - \rho = 0.7$.\\
+A causa di disturbi introdotti dal canale radio, la probabilit\`a di errore sul
+bit, cio\`e la probabilit\`a che un bit venga ricevuto erroneamente, \`e pari a
+$P_e = 0.01$. Supponiamo ora che il ricevitore della stazione radio base abbia
+rivelato la trasmissione di un bit pari a zero e valutiamo la probabilit\`a che
+il trasmettitore abbia effettivamente trasmesso un dato nullo.\\
+Per risolvere questo problema con gli strumenti del calcolo delle probabilit\`a,
+definiamo innanzitutto gli eventi:
+\begin{itemize}
+    \item $A$ = \{\`e stato tramesso un bit 0\};
+    \item $\overline{A}$ = \{\`e stato trasmesso un bit 1\};
+    \item $B$ = \{\`e stato ricevuto un bit 0\};
+    \item $\overline{B}$ = \{\`e stato ricevuto un bit 1\}.
+\end{itemize}
+E osserviamo poi che, sulla base delle definizioni date e dei dati iniziali del
+problema, risulta
+\[
+    Pr(\overline{A}) = 0.3
+\]
+\[
+    Pr(A) = 1 - Pr(\overline{A}) = 0.7
+\]
+e
+\[
+    Pr(B | \overline{A}) = Pr(\overline{B} | A) = P_e = 0.01.
+\]
+Occorre determinare la probabilit\`a che il trasmettitore (telefono mobile)
+abbia effettivamente trasmesso un bit event valore nullo quando sia stato
+ricevuto un dato dello stesso tipo (dalla stazione radio base), cio\`e la
+probabilit\`a condizionata $Pr(A | B)$; a tal fine possiamo usare la formula di
+Bayes:
+\[
+    Pr(A | B) = \frac{Pr(B | A) \cdot Pr(A)}{Pr(B)}.
+\]
+Il calcolo di $Pr(A | B)$ mediante questa formula richiede la conoscienza delle
+probabilit\`a $Pr(B | A)$ e $Pr(B)$ (dato che $Pr(A)$ \`e gi\`a nota). La prima
+\`e ottenibile dai dati del problema:
+\[
+    Pr(B | A) = 1 - Pr(B | \overline{A}) = 1 - Pr(\overline{B} | A) = 1 - P_e =
+    0.99,
+\]
+e rappresentata la probabilit\`a di corretta decisione, inversa alla
+probabilit\`a di errore.\\
+Mentre la seconda pu\`o essere ottenuta mediante il teorema della probabilit\`a
+totale:
+\[
+    \Omega = \{A, \overline{A}, B, \overline{B}\}
+\]
+\[
+    Pr(B) = Pr(B | A) \cdot Pr(A) + Pr(B | \overline{A}) \cdot Pr(A) +
+    Pr(B | \overline{B}) \cdot Pr(\overline{B})
+\]
+dato che $Pr(B | \overline{B}) = 0$
+\[
+    Pr(B) = Pr(B | A) \cdot Pr(A) + Pr(B | \overline{A}) \cdot Pr(A) = 0.99
+    \cdot 0.7 + 0.01 \cdot 0.3 = 0.696.
+\]
+Infine, possiamo calcolare $Pr(A | B)$ sostituendo questi valori nell'equazione
+iniziale della formula di Bayes:
+\[
+    Pr(A | B) = \frac{Pr(B | A) \cdot Pr(A)}{Pr(B)} =
+    \frac{0.99 \cdot 0.7}{0.696}.
+\]
+\`E chiaro che, quando si decide a favore di un valore $0$ di un bit, \`e stato
+effettivamente trasmesso con elevata probabilit\`a proprio un bit con quel
+valore logico (la probabilit\`a \`e quasi pari a quella dell'evento certo. La
+terza cifra dopo la virgola di $Pr(A | B)$ pu\`o essere motivata ricordando che
+il bit $0$ ha probabilit\`a $0.7$ contro il $0.3$ del bit $1$ di presentarsi).\\
+Inoltre, questa "affidabilit\`a" \`e motivata dal piccolo valore della
+probabilit\`a di errore, cio\`e dalla scarsa frequenza di eventi di rivelazione
+errata dei dati. Infatti, se $P_e = 0$ (cio\`e la trasmissione \`e priva di
+errori) risulta chiaramente $Pr(A | B) = Pr(B | A) = 1$ qualunque sia $\rho$. In
+questo caso infatti, se il ricevitore ha ricevuto un bit di valore nullo, con
+certezza \`e stato trasmesso un bit con quel valore, in quanto la probabilit\`a
+di errore \`e nulla. Il caso limite opposto \`e quello in cui il canale di
+trasmissione radio \`e cos\`i disturbato da provocare $P_e = 0.5$. In questo
+caso, la probabilit\`a di rilevare un bit nullo quando il trasmettitore ha
+inviato proprio un bit di quel valore ($Pr(B | A)$) \`e esattamente uguale alla
+probabilit\`a di ricevere un bit nullo quando \`e stato trasmesso un bit di
+valore complementare ($Pr(B | \overline{A})$) ed entrambe queste probabilit\`a
+sono pari a $0.5$
+\bigbreak\noindent
+\textbf{1.} Nel caso in cui $P_e = 0.5$, il rilevare un particolare valore di un
+bit non aggiunge alcuna informazione, cosicch\`e $Pr(A | B) = Pr(A)$ qualunque
+sia il valore di $\rho$:
+\begin{proof}
+\[
+    Pr(A) = 1 - Pr(\overline{A}) = 1 - \rho = 0.7, \ \ \ \ avendo \ \ preso \ \ 
+    \rho = 0.3.
+\]
+\[
+    Pr(B | \overline{A}) = Pr(\overline{B} | A) = P_e = 0.5.
+\]
+\[
+    Pr(B | A) = 1 - Pr(B | \overline{A}) = 1 - Pr(\overline{B} | A) = 1 - P_e =
+    0.5.
+\]
+\[
+    Pr(B) = Pr(B|A) \cdot Pr(A) + Pr(B | \overline{A}) \cdot Pr(\overline{A}) =
+    0.5 \cdot 0.7 + 0.5 \cdot 0.3 = 0.5.
+\]
+In conclusione:
+\[
+    Pr(A | B) = \frac{Pr(B | A) \cdot Pr(A)}{Pr(B)} = \frac{0.5 \cdot 0.7}{0.5}
+    = 0.7 = Pr(A),
+\]
+che dimostra la tesi iniziale.
+\end{proof}
+\bigbreak\noindent
+\textbf{2.} Nello scenario in esame il caso peggiore corrisponde proprio alla
+scelta $P_e = 0.5$, anche se $P_e$ pu\`o assumere un valore arbitrario
+nell'intervallo $[0, 1]$.
+\begin{proof}
+A partire dalle formule del punto 1:
+\[
+    Pr(A | B) = \frac{Pr(B | A) \cdot Pr(A)}{Pr(B)} = \frac{(1 - P_e) \cdot 
+    (1 - \rho)}{Pr(B | A) \cdot Pr(A) + Pr(B | \overline{A}) \cdot
+    Pr(\overline{A})} =
+\]
+\[
+    = \frac{(1 - P_e) \cdot (1 - \rho)}{(1 - P_e) \cdot (1 - \rho) + P_e \cdot
+    \rho} = \frac{(1 - P_e) \cdot (1 - \rho)}{1 - \rho - P_e \cdot (1 - \rho) +
+    P_e \cdot \rho} =
+\]
+\[
+    = \frac{(1 - P_e) \cdot (1 - \rho)}{1 - \rho - P_e \cdot (1 - \rho + \rho)}
+    = \frac{(1 - P_e) \cdot (1 - \rho)}{(1 - \rho) - P_e} = \frac{(1 - P_e)
+    \cdot Pr(A)}{Pr(A) - P_e}.
+\]
+A partire da questo risultato si dimostra la tesi iniziale con una serie di
+\textbf{Considerazioni}\\
+\begin{itemize}
+    \item $P_e \rightarrow 0$, errore nullo, $(1 - P_e) \rightarrow 1$,
+        $Pr(A | B) = \frac{Pr(A)}{Pr(A)} = 1$.
+    \item $P_e \rightarrow 1$, errore massimo, $(1 - P_e) \rightarrow 0$,
+        $Pr(A | B) = 0$.
+\end{itemize}
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Legame tra Varianza sigma_x^2 e Valore quadratico medio
