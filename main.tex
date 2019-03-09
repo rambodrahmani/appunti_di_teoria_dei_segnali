@@ -2529,6 +2529,61 @@ semplificare il calcolo di convoluzioni di segnalidecomponibili nella somma di
 segnali pi\`u semplici.
 
 %-------------------------------------------------------------------------------
+% Subsection: Sommario
+%-------------------------------------------------------------------------------
+
+\newpage
+\subsection{Sommario}
+Questo capitolo ha dimostrato che l'analisi di Fourier \`e applicabile anche ai
+segnali \textbf{aperiodici}. Immaginando infatti di ottenere un segnale
+aperiodico come il \textbf{limite} di un segnale periodico quando il
+\textbf{periodo di ripetizione $T_0$ tende a infinito}, si riesce a estendere
+l'espansione in serie di Fourier, valida per il segnale periodico, anche ai
+segnali non periodici, ottenendo cos\`i l'\textbf{integrale} di Fourier. In 
+questa equazione di \textbf{sintesi}, il ruolo che nella serie giocavano i
+coefficienti $X_k$ viene riservato alla \textbf{trasformata continua}
+di Fourier $X(f)$ del segnale aperiodico $x(t)$. Il segnale \`e ancora scomposto
+come una \textbf{sovrapposizione} di infinite componenti sinusoidali di
+frequenza variabile \textbf{con continuit\`a} da $-\infty$ a $+\infty$, con fase
+$\angle X(f)$ e con ampiezza \textbf{infinitesima} $\abs{X(f)} \df$. Molte delle
+propriet\`a di simmetria degli spettri di ampiezza $A(f) = \abs{X(f)}$ e di fase
+$\vartheta(f) = \angle X(f)$ del segnale aperiodico sono analoghe a quelle gi\`a
+discusse per i segnali periodici.
+\bigbreak
+Sono state ricavate molte propriet\`a notevoli della trasformata continua di
+Fourier, che permettono di calcolare lo spettro di un segnale che subisce
+particolari operazioni di trasformazione: \textbf{ritardo},
+\textbf{modulazione}, \textbf{combinazione lineare} tra pi\`u segnali, ed \`e
+stata messa in evidenza la \textbf{dualit\`a} tra i domini del tempo e della
+frequenza. Tra le propriet\`a pi\`u importanti, menzioniamo i teoremi di
+\textbf{integrazione} e \textbf{derivazione}, secondo i quali operazioni di
+carattere \textbf{differenziale} sul segnale temporale equivalgono a pi\`u
+semplici operazioni \textbf{algebriche} sulle trasformate. Analoga
+considerazione pu\`o farsi a proposito del teorema della \textbf{convoluzione},
+per cui l'operazione di integrale di convoluzione nel tempo corrisponde a un
+semplice \textbf{prodotto} in ambito frequenziale.
+\bigbreak
+La necessit\`a di estendere l'operazione di derivata anche in casi in cui
+segnale temporale \`e \textbf{discontinuo} ha portato all'introduzione della
+funzione generalizzata $\delta(t)$ di Dirac, formalmente definita come la
+derivata della funzione gradino unitario. Da questa definizione, precisata poi
+in senso limite, sono state ricavate numerose altre propriet\`a, come la
+propriet\`a \textbf{campionatrice} e la \textbf{neutralit\`a} nei confronti
+della convoluzione. Attraverso la $\delta(t)$ di Dirac, \`e possibile ricavare
+le trasformate di Fourier \textbf{generalizzate} di segnali non trasformabili
+in senso ordinario: il segnale costante, il gradino unitario, le funzioni seno e
+coseno, e i segnali periodici. A quest'ultimo proposito, si \`e poi ricavata la
+relazione di \textbf{campionamento in frequenza} che sussiste tra la trasformata
+continua di un segnale aperiodico e i coefficienti di Fourier del segnale
+periodico ottenuto \textbf{periodicizzando} il segnale aperiodico dato.
+\bigbreak
+Il capitolo si \`e chiuso infine con l'esame della relazione tra la trasofrmata
+di Fourier $X(f)$ e la \textbf{trasformata di Laplace} $X(s)$ di un segnale
+causale. Si \`e messo in luce, in particolare, che la trasformata di Fourier si
+pu\`o direttamente ricavare da quella di Laplace solo quando la \textbf{zona di
+convergenza} di quest'ultima comprende l'asse immaginario $s = j 2 \pi f$.
+
+%-------------------------------------------------------------------------------
 % Section: Sistemi monodimensionali a tempo continuo
 %-------------------------------------------------------------------------------
 
@@ -4022,22 +4077,27 @@ allora
 \[
 	X(t) \iff x(-f).
 \]
+\begin{proof}
 Infatti, sappiamo che il segnale $x(t)$ \`e legato alla sua trasformata dalla
 relazione
 \[
-	x(t) = \int\displaylimits_{-\infty}^{+\infty} X(f) e^{j 2 \pi f t} \ df.
+	x(t) = \int\displaylimits_{-\infty}^{+\infty} X(f) \cdot
+    e^{j 2 \pi f t} \ df.
 \]
 Scambiando formalmente le variabili $t$ ed $f$ nella precedente relazione, si
 ricava
 \[
-	x(f) = \int\displaylimits_{-\infty}^{+\infty} X(t) e^{j 2 \pi t f} \ dt.
+	x(f) = \int\displaylimits_{-\infty}^{+\infty} X(t) \cdot
+    e^{j 2 \pi t f} \ dt.
 \]
 Se poi in questa relazione si effettua un cambiamento di variabile sostituendo
 alla variabile $f$ la variabile $-f$, si ottiene
 \[
-	x(-f) = \int\displaylimits_{-\infty}^{+\infty} X(t) e^{-j 2 \pi f t} \dt
+	x(-f) = \int\displaylimits_{-\infty}^{+\infty} X(t) \cdot
+    e^{-j 2 \pi f t} \dt
 \]
 che dimostra la tesi iniziale.
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Teorema del ritardo
