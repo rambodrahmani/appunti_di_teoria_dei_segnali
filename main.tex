@@ -4994,6 +4994,14 @@ Quindi possiamo scrivere
 \end{proof}
 
 %-------------------------------------------------------------------------------
+% Subsection: Formule di Somma di Poisson
+%-------------------------------------------------------------------------------
+
+\newpage
+\subsection{}
+
+
+%-------------------------------------------------------------------------------
 % Section: Segnali Aleatori
 %-------------------------------------------------------------------------------
 
@@ -5356,11 +5364,77 @@ A partire da questo risultato si dimostra la tesi iniziale con una serie di
 \end{proof}
 
 %-------------------------------------------------------------------------------
-% Subsection: Legame tra Varianza sigma_x^2 e Valore quadratico medio
+% Subsection: Legame tra Varianza sigma_X^2 e Valore quadratico medio
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsection{Legame tra Varianza $\sigma_x^2$ e Valor quadratico medio $m_x^2$}
+\subsection{Legame tra Varianza $\sigma_X^2$ e Valor quadratico medio $m_X^2$}
+La conoscienza della funzione densit\`a (o distribuzione) di probabilit\`a di
+una variabile aleatoria rappresenta il massimo di informazione che si pu\`o
+avere sul comportamento statistico dei valori assunti dalla variabile stessa.
+Naturalmente, per\`o, non sempre \`e possibile arrivare a una conoscenza cos\`i
+completa riguardo a un problema aleatoria che si trattando. Molti pi\`u spesso,
+ci si accontenta della conoscenza di alcuni \textit{parametri statistici
+semplificati} o \textit{indici} relativi alla distribuzione di probabilit\`a
+presentata dalla variabile.\\
+Il \textit{valore atteso} (chiamato anche \textit{valor medio},
+\textit{speranza}, \textit{attesa}) $\eta_X$ di una variabile aleatoria $X$
+con densit\`a di probabilit\`a $f_X(x)$ \`e definito dalla relazione
+\[
+    \eta_X \triangleq \int\displaylimits_{-\infty}^{+\infty} x \cdot f_X(x)
+    \ dx,
+\]
+e rappresenta in un certo senso un valore "baricentro" attorno al quale si
+distribuiscono i valori della variabile aleatoria stessa (indice di
+\textit{posizione}).
+\bigbreak
+Quando si ha a che fare con un problema di \textit{trasformazione} di una
+variabile aleatoria $Y = g(X)$, si introduce il cosiddetto \textit{operatore
+valor medio}:
+\[
+    E\{g(X)\} \triangleq \int\displaylimits_{-\infty}^{+\infty} g(x) \cdot
+    f_X(x) \ dx.
+\]
+La lettera $E$ nell'operatore valori medio $E\{\cdot\}$ \`e l'iniziale della
+parola inglese \textit{Expectation} che traduce l'italiano "aspettativa".
+Notiamo che anche il valore atteso $\eta_X$ pu\`o essere riscritto formalmente
+usando questo operatore
+\[
+    \eta_X = \int\displaylimits_{-\infty}^{+\infty} x \cdot fX(x) \ dx = E\{X\},
+\]
+cio\`e il valore atteso \`e anche il valor medio della variabile aleatoria
+stessa.
+\bigbreak
+Si definisce la \textit{varianza} $\sigma_X^2$ di una variabile aleatoria $X$
+come:
+\[
+    \sigma_X^2 \triangleq E\{(X - \eta_X)^2\} =
+    \int\displaylimits_{-\infty}^{+\infty} (x - \eta_X)^2 \cdot f_X(x) \ dx.
+\]
+Il parametro $\eta_X$, redice quadrata della varianza, \`e la cosiddetta
+\textit{derivazione standard}. A maggiore varianza della variabile aleatoria
+corrispondono valori molto disparsi attorno al valor medio, e viceversa.
+\bigbreak
+Il \textit{valore quadratico medio} (tavolta chiamato anche \textit{potenza}) di
+una variabile aleatoria \`e infine definito come
+\[
+    m_X^2 \triangleq E\{X^2\} = \int\displaylimits_{-\infty}^{+\infty} x^2 \cdot
+    f_X(x) \ dx.
+\]
+Poich\`e l'operatore valor medio $E\{\cdot\}$ \`e un operatore \textit{lineare},
+\`e facile trovare il legame tra la varianza $\sigma_X^2$ e il valore quadratico
+medio $m_X^2$:
+\[
+    \sigma_X^2 \triangleq E\{(X - n_X)^2\} = E\{X^2 + \eta_X^2 - 2 \cdot
+    \eta_X \cdot X\} =
+\]
+\[
+    = E\{X^2\} + E\{\eta_X^2\} - E\{2 \cdot \eta_X \cdot X\} = m_X^2 + \eta_X^2
+    - 2 \cdot \eta_X^2 =
+\]
+\[
+    = m_X^2 - \eta_X^2.
+\]
 
 %-------------------------------------------------------------------------------
 % Appendices

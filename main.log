@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.20)  28 MAR 2019 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.20)  28 MAR 2019 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2120,36 +2120,36 @@ Overfull \hbox (8.62543pt too wide) detected at line 4988
 /12 f\OT1/zplm/m/n/12 ) =
  []
 
-[123] [124] [125] [126]
-Overfull \hbox (2.77576pt too wide) in paragraph at lines 5077--5083
+[123] [124] [125] [126] [127]
+Overfull \hbox (2.77576pt too wide) in paragraph at lines 5085--5091
 \T1/ppl/m/n/12 den-te os-ser-va-to in-dos-si i pan-ta-lo-ni. Per cal-co-la-re l
 a pro-ba-bi-li-tà $\OML/zplm/m/it/12 Pr\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 A\OM
 S/zplm/m/n/12 j\OML/zplm/m/it/12 B\OT1/zplm/m/n/12 )[][][]$\T1/ppl/m/n/12 ,
  []
 
-[127]
-Underfull \hbox (badness 10000) in paragraph at lines 5126--5130
+[128]
+Underfull \hbox (badness 10000) in paragraph at lines 5134--5138
 
  []
 
-[128] [129]
-<images/set_partition.jpg, id=1673, 1284.8pt x 601.24625pt>
+[129] [130]
+<images/set_partition.jpg, id=1679, 1284.8pt x 601.24625pt>
 File: images/set_partition.jpg Graphic file (type jpg)
 <use images/set_partition.jpg>
-Package pdftex.def Info: images/set_partition.jpg  used on input line 5183.
+Package pdftex.def Info: images/set_partition.jpg  used on input line 5191.
 (pdftex.def)             Requested size: 191.5pt x 89.61423pt.
 
-Overfull \hbox (1.04475pt too wide) in paragraph at lines 5188--5188
+Overfull \hbox (1.04475pt too wide) in paragraph at lines 5196--5196
 [][]\T1/cmr/m/n/8 Aggiungere 
  []
 
 
-Overfull \hbox (1.04475pt too wide) in paragraph at lines 5188--5188
+Overfull \hbox (1.04475pt too wide) in paragraph at lines 5196--5196
 [][]\T1/cmr/m/n/8 Aggiungere 
  []
 
-[130 <./images/set_partition.jpg>] [131]
-Overfull \hbox (9.25783pt too wide) detected at line 5275
+[131 <./images/set_partition.jpg>] [132]
+Overfull \hbox (9.25783pt too wide) detected at line 5283
 \OML/zplm/m/it/12 Pr\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 B\OT1/zplm/m/n/12 ) = \
 OML/zplm/m/it/12 Pr\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 B\OMS/zplm/m/n/12 j\OML/
 zplm/m/it/12 A\OT1/zplm/m/n/12 ) \OMS/zplm/m/n/12 ^^A \OML/zplm/m/it/12 Pr\OT1/
@@ -2161,79 +2161,85 @@ plm/m/n/12 + \OT1/ppl/m/n/12 0.01 \OMS/zplm/m/n/12 ^^A \OT1/ppl/m/n/12 0.3 \OT1
 /zplm/m/n/12 = \OT1/ppl/m/n/12 0.696.
  []
 
-[132]
-Underfull \hbox (badness 10000) in paragraph at lines 5347--5351
+[133]
+Underfull \hbox (badness 10000) in paragraph at lines 5355--5359
 
  []
 
-[133] [134]
+[134] [135]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5363.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 5363.
+(hyperref)                removing `math shift' on input line 5371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 5363.
+(hyperref)                removing `\sigma' on input line 5371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 5363.
+(hyperref)                removing `subscript' on input line 5371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5363.
+(hyperref)                removing `superscript' on input line 5371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5363.
+(hyperref)                removing `math shift' on input line 5371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 5363.
+(hyperref)                removing `math shift' on input line 5371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 5363.
+(hyperref)                removing `subscript' on input line 5371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5363.
+(hyperref)                removing `superscript' on input line 5371.
 
-[135]
-<images/heaviside_function.png, id=1703, 326.21875pt x 244.915pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5371.
+
+[136] [137]
+<images/heaviside_function.png, id=1713, 326.21875pt x 244.915pt>
 File: images/heaviside_function.png Graphic file (type png)
 <use images/heaviside_function.png>
-Package pdftex.def Info: images/heaviside_function.png  used on input line 5402
+Package pdftex.def Info: images/heaviside_function.png  used on input line 5476
 .
 (pdftex.def)             Requested size: 191.5pt x 143.77733pt.
- [136
+ [138
 
-] [137 <./images/heaviside_function.png>] [138]
+] [139 <./images/heaviside_function.png>] [140]
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5465.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5465.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5539.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5539.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5465.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5465.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5539.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5539.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BB628209D42D4F1EB94D7D0085F46EF7;9662.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: E53DCF109C02D5063878A2FE12827102;9662
+(rerunfilecheck)             After:  20679FA8E50A06EB7EC81BC20E0708F4;9718.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38348 strings out of 492616
- 668561 string characters out of 6135177
- 891952 words of memory out of 5000000
- 41018 multiletter control sequences out of 15000+600000
+ 38344 strings out of 492616
+ 668463 string characters out of 6135177
+ 891854 words of memory out of 5000000
+ 41011 multiletter control sequences out of 15000+600000
  616291 words of font info for 234 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,22n,81p,769b,2535s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2263,10 +2269,10 @@ dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type
 1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplbi
 8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (147 pages, 2884296 bytes).
+Output written on main.pdf (149 pages, 2888457 bytes).
 PDF statistics:
- 1955 PDF objects out of 2073 (max. 8388607)
- 1698 compressed objects within 17 object streams
- 614 named destinations out of 1000 (max. 500000)
+ 1965 PDF objects out of 2073 (max. 8388607)
+ 1705 compressed objects within 18 object streams
+ 617 named destinations out of 1000 (max. 500000)
  1165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
