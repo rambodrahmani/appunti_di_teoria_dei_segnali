@@ -4998,8 +4998,82 @@ Quindi possiamo scrivere
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsection{}
-
+\subsection{Formule di Somma di Poisson}
+Consideriamo un segnale aperiodico $x(t)$ e costruiamo il segnale $y(t)$
+periodico di periodo $T_0$ secondo la relazione di \textit{periodicizzazione}
+\[
+    y(t) = \sum\displaylimits_{n = -\infty}^{+\infty} x(t - nT),
+\]
+gi\`a incontrata pi\`u volte precedentemente. Il segnale $y(t)$ pu\`o allora
+essere sviluppato in serie di Fourier
+\[
+    y(t) = \sum\displaylimits_{k = -\infty}^{+\infty} Y_k \cdot e^{j 2 \pi k
+    f_0 t}.
+\]
+dove $f_0 = 1/T_0$ e
+\[
+    Y_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) \cdot e^{-j 2
+    \pi k f_0 t} \dt.
+\]
+Vediamo come stabilire una relazione fra il \textit{coefficiente} $Y_k$ dello
+sviluppo in serie del segnale \textit{periodico} $y(t)$ e la
+\textit{trasformata} $X(f)$ del segnale base \textit{aperiodico} $x(t)$.
+Sostituiamo dunque la periodicizzazione che fornisce il segnale  $y(t)$
+nell'espressione del coefficiente $Y_k$:
+\[
+    Y_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} y(t) \cdot e^{-j 2
+    \pi k f_0 t} \dt = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+    \sum\displaylimits_{n = -\infty}^{+\infty} x(t - nT) \cdot
+    e^{-j 2 \pi k f_0 t} \dt
+\]
+scambiando poi l'operazione di sommatoria e di integrazione, si ha
+\[
+    Y_k = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+    \int\displaylimits_{-T_0/2}^{T_0/2} x(t - nT) \cdot
+    e^{-j 2 \pi k f_0 t} \dt =
+\]
+\[
+    = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+    \int\displaylimits_{-T_0/2 - n T_0}^{T_0/2 - nT_0} x(\alpha) \cdot
+    e^{-j 2 \pi k f_0 (\alpha + nT_0)} \ d \alpha =
+    \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+    \int\displaylimits_{-T_0/2 - nT_0}^{T_0/2 - nT_0} x(\alpha) \cdot
+    e^{-j 2 \pi k f_0 \alpha}
+\]
+dove si \`e giunti al risultato finale dopo aver effettuato il cambiamento di
+variabile $\alpha = t - nT_0$ e avendo osservato che $e^{-j 2 \pi k n f_0 T_0} =
+e^{-j 2 \pi k n} \equiv 1$.\\
+La funzione integranda a secondo membro non dipende dall'indice della serie $n$;
+tale indice agisce sugli \textit{estremi di integrazione}. Ci si rende allora
+conto facilmente che, al variare di $n$ tra $-\infty$ e $+\infty$, gli
+intervalli di integrazione $(-T_0/2 - nT_0, T_0/2 - nT_0)$ \textit{della stessa
+funzione integranda} ricoprono tutto l'asse reale senza sovrapposizioni.
+Pertanto \`e possibile semplificare la precedente relazione in
+\[
+    Y_k = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+    \int\displaylimits_{-T_0/2 - nT_0}^{T_0/2 - nT_0} x(\alpha) \cdot
+    e^{-j 2 \pi k f_0 \alpha} =
+    \frac{1}{T_0} \int\displaylimits_{-\infty}^{+\infty} x(\alpha) \cdot
+    e^{-j 2 \pi k f_0 \alpha} \ d \alpha = 
+\]
+\[
+    = \frac{1}{T_0} \cdot X\left(\frac{k}{T_0}\right) = \frac{1}{T_0} \cdot
+    X(k \cdot f_0),
+\]
+che stabilisce la relazione cercata, detta di \textit{campionamento in
+frequenza}. I coefficienti di Fourier del segnale periodico $y(t)$ sono dunque,
+a meno del fattore $1/T_0$, i valori (campioni) della trasformata continua del
+segnale-base $x(t)$ presi in corrispondeza delle \textit{frequenze armoniche}
+$k f_0$.
+\bigbreak
+Se usiamo l'espressione appena ricavata del coefficiente di Fourier nel
+corrispondente sviluppo in serie si ottiene
+\[
+    y(t) = \sum\displaylimits_{n = -\infty}^{+\infty} x(t - nT) =
+    \sum\displaylimits_{k = -\infty}^{+\infty} \frac{1}{T_0} \cdot
+    X\left(\frac{k}{T_0}\right) \cdot e^{j \cdot \frac{2 \pi k t}{T_0}}
+\]
+che \`e nota come \textit{prima formula di somma di Poisson}.
 
 %-------------------------------------------------------------------------------
 % Section: Segnali Aleatori
