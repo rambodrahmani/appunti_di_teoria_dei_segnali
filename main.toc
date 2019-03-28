@@ -48,8 +48,8 @@
 \contentsline {section}{\numberline {2.7}Progetto di filtri digitali}{65}{section.2.7}% 
 \contentsline {section}{\numberline {2.8}Richiami di teoria della probabilit\`a}{66}{section.2.8}% 
 \contentsline {subsection}{\numberline {2.8.1}Probabilit\`a Condizionata}{66}{subsection.2.8.1}% 
-\contentsline {subsubsection}{\numberline {2.8.1.1}Esempi Probabilit\`a Condizionata}{66}{subsubsection.2.8.1.1}% 
-\contentsline {subsection}{\numberline {2.8.2}Teorema della Probabilit\`a Composta}{67}{subsection.2.8.2}% 
+\contentsline {subsubsection}{\numberline {2.8.1.1}Esempi Probabilit\`a Condizionata}{67}{subsubsection.2.8.1.1}% 
+\contentsline {subsection}{\numberline {2.8.2}Teorema della Probabilit\`a Composta}{68}{subsection.2.8.2}% 
 \contentsline {subsection}{\numberline {2.8.3}Teorema della Probabilit\`a Assoluta}{68}{subsection.2.8.3}% 
 \contentsline {section}{\numberline {2.9}Segnali aleatori a tempo continuo e a tempo discreto}{69}{section.2.9}% 
 \contentsline {chapter}{\chapternumberline {3}Esame Scritto}{70}{chapter.3}% 
