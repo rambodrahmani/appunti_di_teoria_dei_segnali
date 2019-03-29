@@ -2662,7 +2662,7 @@ conto che l'evento $B$, essendosi gi\`a verificato, deve considerarsi come una
 sorta di "nuovo spazio campione" in quanto al di fuori di questo niente pu\`o
 verificarsi. In questo senso bisogna rinormalizzare tutte le probabilit\`a
 rispetto a quello di $B$.\\
-Si noti inoltre che $Pr(B | B) = 1)$.
+Si noti inoltre che $Pr(B | B) = 1$.
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Esempi Probabilita' Condizionata
@@ -2675,13 +2675,14 @@ $A$) ha probabilit\`a $Pr(A) = 1/6$ di verificarsi. Sapendo per\`o che il
 risultato del lancio \`e un numero tra $4$, $5$, $6$ (evento $B$ verificato) la
 probabilit\`a di $A$ diventa
 \[
-    \frac{Pr(A \cap B)}{Pr(B)} = \frac{Pr(A) + Pr(B) - Pr(A \cup B)}{Pr(B)}
-    \footnote{Dati due eventi $A$ e $B$, la loro unione:  $A \cup B$ \`e data
-    dall'evento "Almeno uno degli eventi $A$ e $B$ si verifica".}=
-    \frac{\frac{1}{6} + \frac{3}{6} - \frac{3}{6}}{\frac{3}{6}} =
+    Pr(A | B) \triangleq \frac{Pr(A B)}{Pr(B)} = \frac{Pr(A) + Pr(B) -
+    Pr(A \cup B)}{Pr(B)}\footnote{Dati due eventi $A$ e $B$, la loro unione: 
+    $A \cup B$ \`e data dall'evento "Almeno uno degli eventi $A$ e $B$ si
+    verifica".}=
 \]
 \[
-    = \frac{\frac{1}{6}}{\frac{3}{6}}.
+    = \frac{\frac{1}{6} + \frac{3}{6} - \frac{3}{6}}{\frac{3}{6}} =
+    \frac{\frac{1}{6}}{\frac{3}{6}}.
 \]
 \bigbreak\noindent
 \textbf{Esempio 2}\\
@@ -5037,7 +5038,9 @@ scambiando poi l'operazione di sommatoria e di integrazione, si ha
     = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
     \int\displaylimits_{-T_0/2 - n T_0}^{T_0/2 - nT_0} x(\alpha) \cdot
     e^{-j 2 \pi k f_0 (\alpha + nT_0)} \ d \alpha =
-    \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+\]
+\[
+    = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
     \int\displaylimits_{-T_0/2 - nT_0}^{T_0/2 - nT_0} x(\alpha) \cdot
     e^{-j 2 \pi k f_0 \alpha}
 \]
@@ -5058,8 +5061,8 @@ Pertanto \`e possibile semplificare la precedente relazione in
     e^{-j 2 \pi k f_0 \alpha} \ d \alpha = 
 \]
 \[
-    = \frac{1}{T_0} \cdot X\left(\frac{k}{T_0}\right) = \frac{1}{T_0} \cdot
-    X(k \cdot f_0),
+    = \frac{1}{T_0} \cdot X(k f_0) = \frac{1}{T_0} \cdot
+    X\left(\frac{k}{T_0}\right),
 \]
 che stabilisce la relazione cercata, detta di \textit{campionamento in
 frequenza}. I coefficienti di Fourier del segnale periodico $y(t)$ sono dunque,
@@ -5077,7 +5080,10 @@ Se usiamo l'espressione appena ricavata del coefficiente di Fourier nel
 corrispondente sviluppo in serie si ottiene
 \[
     y(t) = \sum\displaylimits_{n = -\infty}^{+\infty} x(t - nT) =
-    \sum\displaylimits_{k = -\infty}^{+\infty} \frac{1}{T_0} \cdot
+    \sum\displaylimits_{k = -\infty}^{+\infty} Y_k \cdot e^{j 2 \pi k f_0 t} =
+\]
+\[
+    = \sum\displaylimits_{k = -\infty}^{+\infty} \frac{1}{T_0} \cdot
     X\left(\frac{k}{T_0}\right) \cdot e^{j \cdot \frac{2 \pi k t}{T_0}}
 \]
 che \`e nota come \textit{prima formula di somma di Poisson}.
@@ -5096,8 +5102,30 @@ alla prima formula di Poisson, ottenendo
 \[
     \sum\displaylimits_{n = -\infty}^{+\infty} X(t - nT_0) =
     \sum\displaylimits_{k = -\infty}^{+\infty} \frac{1}{T_0}
-    x\left(-\frac{k}{T_0}\right) \cdot e^{j \cdot \frac{2 \pi k t}{T_0}} =
+    x\left(-\frac{k}{T_0}\right) \cdot e^{j \cdot \frac{2 \pi k t}{T_0}}
 \]
+\[
+    \Rightarrow \sum\displaylimits_{n = -\infty}^{+\infty} X(t - nT_0) =
+    \sum\displaylimits_{k = -\infty}^{+\infty} \frac{1}{T_0}
+    x\left(\frac{k}{T_0}\right) \cdot e^{-j \cdot \frac{2 \pi k t}{T_0}}
+\]
+\[
+    \Rightarrow \sum\displaylimits_{n = -\infty}^{+\infty} X\left(t -
+    \frac{n}{T}\right) = \sum\displaylimits_{k = -\infty}^{+\infty} T
+    x(kT) \cdot e^{-j 2 \pi k t T}
+\]
+avendo cambiato segno all'indice di sommatoria nel secondo membro e avendo posto
+$T = 1/T_0$. Se adesso, dal punto di vista puramente formale, cambiamo nome alla
+variabile corrente da $t$ a $f$, otteniamo un'espressione "duale" alla prima
+formula di Poisson che costituisce la \textit{seconda formula di somma di
+Poisson}
+\[
+    \sum\displaylimits_{n = -\infty}^{+\infty} x(nT) \cdot e^{-j 2 \pi n f T} =
+    \frac{1}{T} \sum\displaylimits_{k = -\infty}^{+\infty} X\left(f -
+    \frac{k}{T}\right)
+\]
+la quale riveste importanza fondamentale nel \textit{campionamento} dei segnali
+a tempo continuo.
 
 %-------------------------------------------------------------------------------
 % Subsection: Teorema di Parseval
