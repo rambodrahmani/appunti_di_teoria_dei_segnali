@@ -2622,8 +2622,212 @@ Progetto di filtri digitali.
 
 \newpage
 \section{Richiami di teoria della probabilit\`a}
-Richiami di teoria della probabilit\`a.
-\improvement[inline]{To be continued.}
+\textbf{Premessa}
+\bigbreak
+\noindent
+Dobbiamo momentaneamente abbandonare lo studio dei segnali in senso stretto per
+richiamare alcuni concetti matematici fondamentali alla compresione della natura
+e delle particolari propriet\`a dei segnali aleatori. Questi ultimi infatti
+vengono studiati attraverso gli strumenti della \textit{teoria della
+probabilit\`a e delle variabili aleatorie}, che si presuppone gi\`a nota al
+lettore. Lo scopo di questo capitolo \`e soltanto quello di \textit{richiamare}
+i risultati principali della teoria della probabilit\`a, e di riformularli con
+le notazioni che saranno poi riprese nel prossimo capitolo. Il lettore che si
+ritiene ferrato su questi argomenti pu\`o usare questo capitolo soltanto come
+\textit{rifetimento}, e pu\`o proseguire lo studio dei segnali procedendo
+direttamente alla lettura del capitolo successivo.
+
+%-------------------------------------------------------------------------------
+% Subsection: Esperimenti deterministici e aleatori
+%-------------------------------------------------------------------------------
+
+\subsection{Esperimenti deterministici e aleatori}
+Ogni volta che si devono compiere misurazioni per controllare il verificarsi di
+certi avvenimenti, \`e necessario effettuare un \textit{esperimento}. La
+definizione di esperimento che possiamo dare, cos\`i come potrebbe trovarsi su
+di un vocabolario, \`e appunto quella di una \textit{prova pratica intesa alla
+verifica di una certa ipotesi di lavoro}. Supponiamo che si desideri studiare la
+"caduta di un grave", cio\`e di un corpo materiale, lasciato libero a una certa
+altezza $h$ dal suolo, e in particolare che si desideri verificare la formula
+galileiana del tempo di caduta $t_0 = \sqrt{2 \cdot h/g}$ (dove $g$ \`e
+l'accelerazione di gravit\`a). Dobbiamo costruire un \textit{esperimento} che
+consiste nell'effettuare una \textit{prova} di caduta, misurando con la massima
+accuratezza possibile il tempo impiegato per arrivare al suolo. I dati raccolti
+in molte prove permetteranno quindi di \textit{verificare l'ipotesi} che sta
+alla vase dell'\textit{experimento} stesso. \bigbreak Dobbiamo per\`o notare una
+importante diversit\`a di fondo tra certi tipi di esperimento e altri, che porta
+alla introduzione di due diverse \textit{categorie} di esperimenti. Tornando
+all'esempio precedente di caduta di un grave, e supponendo di effettuare molte
+prove, notiamo che i \textit{risultati} che otteniamo in ogni prova sono molto
+simili fra loro. Nel limite in cui l'effetto della resistenza dell'aria risulta
+trascurabile o pu\`o essere a sua volta calcolato (ad esempio, conducendo
+l'esperimento in ambiente controllato al chiuso e usando corpi sferici costruiti
+con materiale ad alta densit\`a) otteniamo risultati praticamente
+\textit{identici} di volta in volta. Possiamo allora dire che l'esperimento
+condotto \`e di carattere \textit{deterministico}, nel senso che \`e possibile
+\textit{prevedere} il risultato \textit{a priori}, cio\`e prima di effettuare
+una prova dell'esperimento stesso. Quest'ultimo mostra dunque una completa
+predicibilit\`a: esiste una \textit{legge} di carattere matematico che rende di
+fatto inutile la materiale effettuazione di una prova perch\`e ne predice
+accuramente il risultato. \bigbreak Sorvoliamo ovviamente sulle implicazioni che
+questo concetto di determinismo ha sulla visione del mondo e della vita umana, e
+procediamo presentando un diverso tipo di esperimento. Immaginiamo dunque di
+sederci alla cassa di un supermercato e di contare il numero di clienti che si
+presentano nell'intervallo di tempo di un'ora dalle $11:00$ alla $12:00$ di ogni
+giorno. Questo pu\`o ritenersi a buon diritto un \textit{esperimento} in virt\`u
+del quale \`e possibile verificare il numero di casse che sono necessarie per
+evitare lunghe code. Sfortunatamente, questo esperimento d\`a risultati anche
+molto diversi da prova a prova, e non \`e possibile \textit{prevedere} a priori
+il risultato di nessuna delle prove effettuate. Il numero di persone osservato
+di volta in volta cambia in maniera \textit{aleatoria}\footnote{L'aggettivo
+\textit{aleatorio} deriva dal latino \textit{alea}, cio\`e dado, che \`e
+ritenuto l'oggetto casuale per antonomasia.}, cio\`e casuale. Bisogna dunque
+rinunciare a descrivere questo esperimento con una legge? La risposta
+fortunatamente \`e \textit{no}. Ovviamente, sar\`a comunque impossibile trovare
+una leggere che potr\`a \textit{predire} in ogni prova il numero di clienti
+osservato: questo dato \`e ricavabile solo \textit{a posteriori}, cio\`e
+\textit{dopo} che la prova stessa \`e stata effettuata. Quel che \`e possibile
+fare in questo caso per\`o \`e predire il comportamento \textit{globale} dei
+dati che si ottengono \textit{effettuando molte prove
+dell'esperimento}\footnote{La legge dei grandi numeri oppure teorema di
+Bernoulli (in quanto la sua prima formulazione \`e dovuta a Jakob Bernoulli),
+descrive il comportamento della media di una sequenza di $n$ prove di una
+variabile casuale, indipendenti e caratterizzate dalla stessa distribuzione di
+probabilit\`a ($n$ misure della stessa grandezza, $n$ lanci della stessa moneta,
+ecc\dots), al tendere ad infinito della numerosit\`a della sequenza stessa
+($n$). In altre parole, grazie alla legge dei grandi numeri, possiamo fidarci
+che la media sperimentale, che calcoliamo a partire da un numero sufficiente di
+campioni, sia sufficientemente vicina alla media vera, ovvero quella calcolabile
+teoricamente. Che cosa significhi "ragionevolmente sicuri" dipende da quanto
+vogliamo essere precisi nel nostro test: con dieci prove, avremmo una stima
+grossolana, con cento, ne otterremmo una molto pi\`u precisa, con mille, ancora
+di pi\`u, e così via: il valore di $n$ che siamo disposti ad accettare come
+sufficiente dipende dal grado di casualit\`a che riteniamo necessario per il
+dado in questione.}. In quest'ultimo caso, infatti, i dati raccolti mostrano
+quella che viene chiamata \textit{regolarit\`a statistica}. Nell'esperimento
+aleatorio per antonomasia, il lancio di un dado, nessuno \`e in grado di predire
+il risultato di una prova, e cio\`e la faccia che si presenta lanciando il dado
+a un certo istante. L'esperienza per\`o suggerisce che se abbiamo la pazienza di
+effettuare molti lanci del dado, diciamo $6000$ (possibilmente con un apposito
+meccanismo!), osserviamo all'incirca $1000$ volte la faccia $1$, all'incirca
+$1000$ volte la faccia 2, \dots, all'incirca $1000$ volte la faccia $6$. Questa
+regolarit\`a permette di ricavare \textit{anche per l'esperimento aleatorio}
+alcune leggi cui l'esperimento ottempera, per\`o nel senso statistico appena
+accennato. \bigbreak Come l'analisi matematica tradizionale \`e lo strumento
+matematico per eccellenza che descrive gli esperimenti deterministici (si pensi
+alla relazione tra l'analisi infinitesimale e la dinamica dei corpi), cos\`i la
+\textit{teoria della probabilit\`a} \`e lo strumento matematico sviluppato
+appositamente per descrivere gli esperimenti aleatori. Quello che un tempo
+veniva chiamato "calcolo delle probabilit\`a" nasce infatti tra il
+diciassettesimo e il diciottesimo secolo a opera principalmente del matematico
+svizzero J. Bernoulli e dei matematici francesi B. Pascal e P.S. de Laplace per
+quantificare le vincite di giocatori e gestori dei giochi d'azzardo (dadi,
+carte, estrazioni di palline ecc\dots). E a giudicare dai gudagni dei casin\`o
+in tutto il mondo, \`e palese che questa teoria funziona alquanto bene!
+
+%-------------------------------------------------------------------------------
+% Subsection: Elementi di teoria della probabilit\`a
+%-------------------------------------------------------------------------------
+
+\subsection{Elementi di teoria della probabilit\`a}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Esperimento aleatorio, spazio di probabilita' e proprieta'
+%                elementari
+%-------------------------------------------------------------------------------
+
+\subsubsection{Esperimento aleatorio, spazio di probabilit\`a e propriet\`a
+elementari}
+Immaginiamo dunque di effettuare un esperimento aleatorio. Vediamo come la
+teoria della probabilit\`a permetta di \textit{modellare} questo esperimento, e
+come si possano poi ricavare delle \textit{leggi} applicabili all'esperimento
+stesso. Per caratterizzare tale esperimento dobbiamo individuare innanzitutto
+l'insieme di tutti i suoi possibili risultati (ad esempio, le possibili facce
+del dado, o il numero di clienti che si possono presentare in un'ora alla
+cassa): tale insieme \`e detto \textit{spazio campione} e si indica,
+convenzionalmente, con la lettera $\Omega$. Se l'esperimento prevede un numero
+finito (dado) o infinito numerabile (clienti alla cassa) di risultati, questi
+verranno indicati con il simbolo $\omega_i$, $i = 1, \dots$. Quindi, con la
+notazione tipica della teoria degli insiemi, possiamo scrivere \[     \Omega =
+{\omega_1, \ \omega_2, \ \dots}. \] Oltre che i singoli risultati
+dell'esperimento, \`e spesso importante considerare anche dei \textit{gruppi} di
+risultati. Ad esempio, nell'esperimento della cassa del supermercato, \`e
+importnate considerare tutti i casi in cui il numero di clienti in un'ora \`e
+maggiore (ad esempio) di $20$, perch\`e essi potrebbero rappresentare un numero
+eccessivo per quella cassa. L'interesse nell'esperimento potrebbe essere allora
+concentrato su questo \textit{evento}: "numero di clienti in un'ora superiore a
+$20$", cio\`e su tutti quei risultati dello spazio campione contenuti nel
+\textit{sottoinsieme} $\{21, 22, \dots\}$. I gruppi di risultati dello spazio
+campione sono chiamati \textit{eventi}. Formalmente, gli \textit{eventi} sono
+tutti i sottoinsiemi dello spazio campione che soddisfano le seguenti
+condizioni:
+\begin{itemize}
+    \item se $A$ \`e un evento, anche il complemento $\overline{A}$, rispetto 
+        all'insieme $\Omega$, \`e un evento;
+    \item se $A$ e $B$ sono eventi, anche la loro unione $A \cup B$ \`e un
+        evento.
+\end{itemize}
+Usando queste propriet\`a si pu\`o anche dimostrare che
+\begin{itemize}
+    \item l'intersezione $A \cap B$ di due eventi arbitrari $A$ e $B$ \`e un
+        evento;
+    \item dato un evento $A$, gli insiemi $A \cup \overline{A}$ e $A \cap 
+        \overline{A}$ sono eventi, il primo, coincidente con $\Omega$ (ovvero 
+        con tutto lo spazio campione), \`e detto \textit{evento certo}, mentre 
+        il secondo, indicato con il simbolo $\varnothing$ e non centenente alcun 
+        risultato dell'esperimento, \`e detto \textit{evento impossibile}.
+\end{itemize}
+Le definizioni e propriet\`a sopra elencate dicono che gli evneti di uno spazio
+campione costituiscono una \textit{classe} $S$, ovvero un insieme
+\textit{chiuso} rispetto alle operazioni di unione e di intersezione. \bigbreak
+A questo punto possiamo introdurre la \textit{caratterizzazione completa di un
+esperimento aleatorio} che richiede sostanzialmente tre elementi: \textit{a}) la
+descrizione del suo \textit{spazio campione} $\Omega$; \textit{b})
+l'individuazione della sua \textit{classe degli eventi} $S$, e infine
+\textit{c}) la descrizione della sua \textit{legge di probabilit\`a} $Pr(\cdot)$
+che associa ad ogni evento una misura della sua probabilit\`a di presentazione.
+La terna $(\Omega, S, Pr(\cdot))$ che rappresenta la descrizione
+dell'esperimento \`e chiama \textit{spazio di probabilit\`a}. Qualche volte, con
+libert\`a di linguaggio, identificheremo con \textit{esperimento aleatorio}
+ci\`o che in realt\`a \`e lo \textit{spazio di probabilit\`a}, identificando
+cio\`e l'esperimento con la propria descrizione matematica astratta.
+\bigbreak
+Non \`e il caso di esaminare qui le verie definizioni e interpretazioni della
+probabilit\`a di un evento, che sono oggetto di discussione nei testi
+specificamente dedicati alla teoria dell probabilit\`a e alla statistica (si
+veda comunque a questo proposito l'esempio del \textbf{lancio di un dado non
+truccato} presentato nelle pagine successive). Secondo lo scopo di questo
+capitolo, ci limiteremo qui a richiamare le propriet\`a base della probabilit\`a
+la cui conoscenza sar\`a indispensabile allo studio elementare dei processi
+aleatori.
+\bigbreak
+La probabilit\`a di una classe di eventi pu\`o essere definita secondo la
+\textit{teoria assiomatica} la cui forma moderna si pu\`o sostanzialmente far
+risalire al matematico russo A.N. Kolmogorov. Secondo questo approcio, assegnato
+un esperimento aleatorio con uno spazio campione $\Omega$ e la relativa classe
+degli eventi $S$, una leggere di probabilit\`a $Pr(\cdot)$ \`e semplicemente una
+\textit{corrispondenza} che associa a ogni elemento di $S$ cio\`e a ogni
+\textit{evento} di interesse in una prova dell'esperimento, un numero reale che
+soddisfa i seguenti \textit{assiomi}:
+\begin{itemize}
+	\item \textbf{A.1} - la probabilit\`a di un evento arbitrario $A$ \`e non
+        negativa:
+	    \[
+		    Pr(A) \geq 0
+	    \]
+	\item \textbf{A.2} - la probabilit\`a dell'evento certo \`e unitaria (
+        \textit{assioma di normalizzazione}):
+	    \[
+		    Pr(\Omega) = 1
+	    \]
+	\item \textbf{A.3} - dati due eventi $A$ e $B$ mutuamente esclusivi (o 
+        incompatibili, o disgiunti, cio\`e che non possono verificarsi 
+        contemporaneamente), la probabilit\`a dell'evento unione \`e data dalla 
+        somma delle probabilit\`a di $A$ e $B$:
+	    \[
+		    A \cap B = \varnothing \Rightarrow Pr(A \cup B) = Pr(A) + Pr(B)
+	    \]
+\end{itemize}
 
 %-------------------------------------------------------------------------------
 % Subsection: Probabilita' Condizionata
@@ -6046,6 +6250,12 @@ PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}
 
 \subsection{Dimostrare che, se si rispetta la condizione di Nyquist, non si ha
 ISI per un sistema PAM binario}
+
+%-------------------------------------------------------------------------------
+% Subsection: Definizione di Processo Indipendente
+%-------------------------------------------------------------------------------
+
+\subsection{Definizione di Processo Indipendente}
 
 %-------------------------------------------------------------------------------
 % Subsection: Definizione di Processo SSL e SSS
