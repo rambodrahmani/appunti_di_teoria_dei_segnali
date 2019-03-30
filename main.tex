@@ -2397,7 +2397,7 @@ del ritardo}.
 %------------------------------------------------
 
 \newpage
-\subsection{Criteri di esistenza della Trasformata Continua di Fourier (TCF)}
+\subsection{Criteri di esistenza della Trasformata Continua di Fourier ($TCF$)}
 Indichiamo adesso delle condizioni sufficienti per la rappresentazione del
 segnale $x(t)$ attraverso la propria trasformata di Fourier $X(f)$, nel senso
 gi\`a discusso riguardo la serie di Fourier. Se tali condizioni sono soddisfatte
@@ -3847,7 +3847,7 @@ Che dimostra la nostra tesi.
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsection{Simmetrie della Trasformata Continua di Fourier (TCF)}
+\subsection{Simmetrie della Trasformata Continua di Fourier ($TCF$)}
 La funzione complessa $X(f)$ pu\`o essere rappresentata in forma polare o in
 forma rettangolare:
 \begin{equation}
@@ -3862,7 +3862,7 @@ riflettano sulla sua trasformata.
 % Subsubsection: Simmetrie della TCF: Simmetria Hermitiana
 %-------------------------------------------------------------------------------
 
-\subsubsection{Simmetrie della TCF: Simmetria Hermitiana}
+\subsubsection{Simmetrie della $TCF$: Simmetria Hermitiana}
 Supponiamo che $x(t)$ sia una funzione \textit{reale}:
 \[
 	x(t) = x^*(t)
@@ -3921,7 +3921,7 @@ il suo spettro di fase \`e dispari.
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsubsection{Simmetrie della TCF: Segnali reali e pari}
+\subsubsection{Simmetrie della $TCF$: Segnali reali e pari}
 Supponiamo adesso che $x(t)$ sia un segnale \textit{reale e pari}
 \[
 	x(t) = x^*(t) \quad\quad , \quad\quad x(t) = x(-t).
@@ -3985,7 +3985,7 @@ $X(f) = X(-f)$
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsubsection{Simmetrie della TCF: Segnali reali e dispari}
+\subsubsection{Simmetrie della $TCF$: Segnali reali e dispari}
 Supponiamo adesso che $x(t)$ sia un segnale \textit{reale e dispari}
 \[
 	x(t) = x^*(t) \quad\quad , \quad\quad x(t) = -x(-t).
@@ -4032,7 +4032,7 @@ carattere applicativo.
 % Subsubsection: Linearita' della TCF
 %-------------------------------------------------------------------------------
 
-\subsubsection{Linearit\`a della TCF}
+\subsubsection{Linearit\`a della $TCF$}
 Pu\`o essere conveniente in molti casi esprimere un segnale $x(t)$ come
 combinazione lineare di due segnali $x_1(t)$ e $x_2(t)$:
 \[
@@ -4072,7 +4072,7 @@ sfruttando la propriet\`a di linearit\`a dell'integrale stesso
 %-------------------------------------------------------------------------------
 
 \newpage
-\subsubsection{Dualit\`a della TCF}
+\subsubsection{Dualit\`a della $TCF$}
 La similitudine tra le relazioni di trasformata e antitrasformata intese come
 "operatori" sulle funzioni rispettivamente $x(t)$ e $X(f)$ permette di risolvere
 una questione: se $X(f)$ indica la trasformata del segnale $x(t)$, qual \`e la
@@ -4905,7 +4905,7 @@ Dunque il risultato ottenuto pu\`o essere riassunto come
 \]
 \end{proof}
 \bigbreak
-\textbf{Uso della TCF per il calcolo del prodotto di convoluzione:}
+\textbf{Uso della $TCF$ per il calcolo del prodotto di convoluzione:}
 \[
     x(t) \otimes y(t) = z(t)
 \]
@@ -5061,7 +5061,7 @@ Pertanto \`e possibile semplificare la precedente relazione in
     e^{-j 2 \pi k f_0 \alpha} \ d \alpha = 
 \]
 \[
-    = \frac{1}{T_0} \cdot X(k f_0) = \frac{1}{T_0} \cdot
+    = \frac{1}{T_0} \cdot X(k f_0) = f_0 \cdot X(k f_0) = \frac{1}{T_0} \cdot
     X\left(\frac{k}{T_0}\right),
 \]
 che stabilisce la relazione cercata, detta di \textit{campionamento in
@@ -5128,10 +5128,81 @@ la quale riveste importanza fondamentale nel \textit{campionamento} dei segnali
 a tempo continuo.
 
 %-------------------------------------------------------------------------------
+% Subsection: Dimostrare la TCF di un segnale periodico
+%-------------------------------------------------------------------------------
+
+\newpage
+\subsection{Dimostrare la $TCF$ di un segnale periodico}
+Sia $x(t)$ un segnale aperiodico che ammette $TCF$
+\[
+    x(t) \iff X(f)
+\]
+e sia $y(t)$ il segnale ottenuto per periodicizzazione di $x(t)$
+\[
+    y(t) = \sum\displaylimits_{n = -\infty}^{+\infty} x(t - n T_0), \ \ \ T_0
+    \in \mathbb{R}^{+}.
+\]
+Allora
+\[
+    y(t) \iff Y(f) = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+    X\left(\frac{n}{T_0}\right) \cdot \delta\left(f - \frac{n}{T_0}\right) =
+\]
+\[
+    = \sum\displaylimits_{n = -\infty}^{+\infty} Y_n \cdot \delta\left(f -
+    \frac{n}{T_0}\right)
+\]
+dove
+\[
+    y(t) \iff Y_n = \frac{1}{T_0} \cdot x\left(\frac{n}{T_0}\right).
+\]
+\begin{proof}
+\[
+    Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{-\infty}^{+\infty}
+    \sum\displaylimits_{n = -\infty}^{+\infty} x(t - nT_0) \cdot
+    e^{-j 2 \pi f t} \dt =
+\]
+\[
+    \footnote{Poniamo $t' = t - nT_0$}= \int\displaylimits_{-\infty}^{+\infty}
+    \sum\displaylimits_{n = -\infty}^{+\infty} x(t') \cdot
+    e^{-j 2 \pi f (t' + nT_0)} \dt' = \sum\displaylimits_{n = -\infty}^{+\infty}
+    \int\displaylimits_{-\infty}^{+\infty} x(t') \cdot e^{-j 2 \pi f t'} \dt'
+    \cdot e^{-j 2 \pi n f T_0} =
+\]
+\[
+    = \sum\displaylimits_{n = -\infty}^{+\infty} X(f) \cdot e^{-j 2 \pi n f T_0}
+    = X(f) \sum\displaylimits_{n = -\infty}^{+\infty} e^{-j 2 \pi n f T_0} =
+\]
+\[
+    \footnote{Per la seconda formula di Poisson.}= X(f) \cdot \frac{1}{T_0}
+    \sum\displaylimits_{n = -\infty}^{+\infty} \delta\left(
+        f - \frac{n}{T_0}
+    \right) = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+    X\left(\frac{n}{T_0}\right) \cdot \delta\left(f - \frac{n}{T_0}\right) =
+\]
+\[
+    = \sum\displaylimits_{n = -\infty}^{+\infty} Y_n \cdot \delta\left(
+        f - \frac{n}{T_0}
+    \right).
+\]
+\end{proof}
+Da questo risultato segue che periodicizzare nel tempo corrisponde a campionare
+in frequenza.
+
+%-------------------------------------------------------------------------------
 % Subsection: Teorema di Parseval
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Teorema di Parseval}
+In analisi complessa il teorema di Parseval o identit\`a di Rayleigh, il cui 
+nome \`e dovuto a Marc-Antoine Parseval, \`e un teorema che stabilisce che la 
+sommatoria del prodotto dei coefficienti di Fourier di due funzioni periodiche 
+\`e uguale all'integrale del loro prodotto.\\
+Nonostante il termine "teorema di Parseval" sia spesso utilizzato per descrivere
+l'unitariet\`a di ogni trasformata di Fourier, in particolar modo in fisica e in
+ingegneria, la forma pi\`u generale di questa propriet\`a \`e data dal teorema
+di Plancherel.
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Definire e dimostrare il teorema di Parseval per segnali
@@ -5140,6 +5211,34 @@ a tempo continuo.
 
 \subsubsection{Definire e dimostrare il teorema di Parseval per segnali
 aperiodici}
+Se,
+\[
+    x(t) \iff X(f),
+\]
+e
+\[
+    y(t) \iff Y(f),
+\]
+allora
+\[
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot y^*(t) \dt =
+    \int\displaylimits_{-\infty}^{+\infty} X(f) \cdot Y^*(f) \df.
+\]
+\begin{proof}
+\[
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot y^*(t) \dt =
+    \int\displaylimits_{t = -\infty}^{+\infty}
+    \int\displaylimits_{f = -\infty}^{+\infty} X(f) \cdot e^{j 2 \pi f t}
+    \df \cdot y^*(t) \dt =
+\]
+\[
+    = \int\displaylimits_{f = -\infty}^{+\infty} X(f) \cdot \left[
+        \int\displaylimits_{t = -\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+        \dt
+    \right]^* \df = \int\displaylimits_{-\infty}^{+\infty} X(f) \cdot Y^*(f) \df
+    .
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Definire e dimostrare il teorema di Parseval per segnali
@@ -5147,7 +5246,47 @@ aperiodici}
 %-------------------------------------------------------------------------------
 
 \subsubsection{Definire e dimostrare il teorema di Parseval per segnali
-periodici}
+periodici (con $TSF$)}
+Consideriamo due segnali $x(t)$ e $y(t)$ periodici di periodo $T_0$ che
+ammettono $TSF$.
+\[
+    x(t) \iff X_n
+\]
+\[
+    y(t) \iff Y_n
+\]
+Allora
+\[
+    \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot y^*(t) \dt =
+    \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot Y^*_n.
+\]
+\begin{proof}
+\[
+    \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot y^*(t) \dt =
+    \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
+    \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot e^{j 2 \pi n f_0 t}
+    \cdot y^*(t) \dt =
+\]
+\[
+    = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot
+    \int\displaylimits_{-T_0/2}^{T_0/2} y^*(t) \cdot e^{j 2 \pi n f_0 t} \dt =
+    \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot
+    \left[
+        \int\displaylimits_{-T_0/2}^{T_0/2} y(t) \cdot e^{-j 2 \pi n f_0 t}
+    \right]^* =
+\]
+\[
+    = \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot Y^*_n.
+\]
+\end{proof}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Definire e dimostrare il teorema di Parseval per segnali
+%                periodici
+%-------------------------------------------------------------------------------
+
+\subsubsection{Definire e dimostrare il teorema di Parseval per segnali
+periodici (con $TCF$)}
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Definire e dimostrare il teorema di Parseval per le sequenze
@@ -5167,7 +5306,7 @@ periodici}
 %-------------------------------------------------------------------------------
 
 \subsection{Dimostrare che la TFS di $x[n] = x(nT)$ \`e scrivibile tramite la
-TCF di $x(t)$}
+$TCF$ di $x(t)$}
 
 %-------------------------------------------------------------------------------
 % Subsection: Definire l'operazione di autocorrelazione per segnali aperiodici
@@ -5176,12 +5315,6 @@ TCF di $x(t)$}
 
 \subsection{Definire l'operazione di autocorrelazione per segnali aperiodici ed
 illustrarne le propriet\`a}
-
-%-------------------------------------------------------------------------------
-% Subsection: Dimostrare la TCF di un segnale periodico
-%-------------------------------------------------------------------------------
-
-\subsection{Dimostrare la TCF di un segnale periodico}
 
 %-------------------------------------------------------------------------------
 % Subsection: Definire la cross-correlazione e la convoluzione tra due segnali
@@ -5211,8 +5344,8 @@ $1/T$}
 %             tramite la TCF di x_0(t).
 %-------------------------------------------------------------------------------
 
-\subsection{Dimostrare che la TSF di $x(t) = \sum\displaylimits_{n} x_0(t - nT)$
-\`e scrivibile tramite la TCF di $x_0(t)$}
+\subsection{Dimostrare che la $TSF$ di $x(t) = \sum\displaylimits_{n}
+x_0(t - nT)$ \`e scrivibile tramite la $TCF$ di $x_0(t)$}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dare la definizione di Densita' spettrale di Energia e dimostrare
