@@ -5111,7 +5111,7 @@ alla prima formula di Poisson, ottenendo
 \]
 \[
     \Rightarrow \sum\displaylimits_{n = -\infty}^{+\infty} X\left(t -
-    \frac{n}{T}\right) = \sum\displaylimits_{k = -\infty}^{+\infty} T
+    \frac{n}{T}\right) = T \sum\displaylimits_{k = -\infty}^{+\infty}
     x(kT) \cdot e^{-j 2 \pi k t T}
 \]
 avendo cambiato segno all'indice di sommatoria nel secondo membro e avendo posto
@@ -5126,6 +5126,29 @@ Poisson}
 \]
 la quale riveste importanza fondamentale nel \textit{campionamento} dei segnali
 a tempo continuo.
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Applicazione delle formule di Poisson alla Delta di Dirac
+%-------------------------------------------------------------------------------
+
+\subsubsection{Applicazione delle formule di Poisson alla Delta di Dirac}
+Sia
+\[
+    x(t) = \delta(t) \iff X(f) = 1
+\]
+allora, dalla \textbf{prima formula di Poisson} segue che
+\[
+    \sum\displaylimits_{n = -\infty}^{+\infty} \delta(t - nT_0) = \frac{1}{T_0}
+    \sum\displaylimits_{n = -\infty}^{+\infty} X\left(\frac{n}{T_0}\right)
+    e^{j 2 \pi n f_0 t} = \frac{1}{T_0}
+    \sum\displaylimits_{n = -\infty}^{+\infty} e^{j 2 \pi n f_0 t},
+\]
+e dalla \textbf{seconda formula di Poisson} segue che
+\[
+    \sum\displaylimits_{n = -\infty}^{+\infty} e^{-j 2 \pi n f T_0} =
+    \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty} \delta\left(f -
+    \frac{n}{T_0}\right).
+\]
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare la TCF di un segnale periodico
@@ -5177,11 +5200,15 @@ dove
     \footnote{Per la seconda formula di Poisson.}= X(f) \cdot \frac{1}{T_0}
     \sum\displaylimits_{n = -\infty}^{+\infty} \delta\left(
         f - \frac{n}{T_0}
-    \right) = \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty}
+    \right) \footnote{$f = n \cdot f_0 = \frac{n}{T_0}$}= \frac{1}{T_0}
+    \sum\displaylimits_{n = -\infty}^{+\infty}
     X\left(\frac{n}{T_0}\right) \cdot \delta\left(f - \frac{n}{T_0}\right) =
 \]
 \[
-    = \sum\displaylimits_{n = -\infty}^{+\infty} Y_n \cdot \delta\left(
+    \footnote{Dalla relazione tra $TSF$ e $TCF$ per un segnale $y(t)$ ottenuto
+    tramite periodicizzazione di un segnale aperiodico $x(t)$, sappiamo che
+    $Y_n = \frac{1}{T_0} \cdot X\left(\frac{n}{T_0}\right) = f_0 \cdot X(n \cdot
+    f_0)$} = \sum\displaylimits_{n = -\infty}^{+\infty} Y_n \cdot \delta\left(
         f - \frac{n}{T_0}
     \right).
 \]
@@ -5803,6 +5830,12 @@ medio $m_X^2$:
 \]
 
 %-------------------------------------------------------------------------------
+% Subsection: Teorema Fondamentale della Probabilita'
+%-------------------------------------------------------------------------------
+
+\subsection{Teorema Fondamentale della Probabilit\`a}
+
+%-------------------------------------------------------------------------------
 % Subsection: Dimostrare il teorema Fondamentale della Probabilita' per funzioni
 %             monotone
 %-------------------------------------------------------------------------------
@@ -5817,6 +5850,12 @@ monotone}
 
 \subsection{Dimostrare il teorema dell'Aspettazione per variabili discrete
 $X$ e $Y = g(X)$}
+
+%-------------------------------------------------------------------------------
+% Subsection: Teorema del Limite Centrale
+%-------------------------------------------------------------------------------
+
+\subsection{Teorema del Limite Centrale}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare che due variabili aleatorie gaussiane incorrelate sono
@@ -5933,7 +5972,8 @@ aleatori}
 %             filtro non introduce distorsioni lineari
 %-------------------------------------------------------------------------------
 
-\subsection{}
+\subsection{Dare la definizione di replica fedele e specificare quando un filtro
+non introduce distorsioni lineari}
 
 %-------------------------------------------------------------------------------
 % Subsection: Si dimostri che, per un SLS, il segnale di uscita e' scrivibile
@@ -6006,6 +6046,12 @@ PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}
 
 \subsection{Dimostrare che, se si rispetta la condizione di Nyquist, non si ha
 ISI per un sistema PAM binario}
+
+%-------------------------------------------------------------------------------
+% Subsection: Definizione di Processo SSL e SSS
+%-------------------------------------------------------------------------------
+
+\subsection{Definizione di Processo SSL e SSS}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare che se un processo gaussiano e' SSL allora e' anche SSS
