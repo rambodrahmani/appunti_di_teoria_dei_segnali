@@ -53,130 +53,131 @@
 \BOOKMARK [3][-]{subsubsection.2.8.2.4}{Teorema della Probabilit\340 Composta}{subsection.2.8.2}% 53
 \BOOKMARK [3][-]{subsubsection.2.8.2.5}{Esempio lancio di un dado non truccato}{subsection.2.8.2}% 54
 \BOOKMARK [3][-]{subsubsection.2.8.2.6}{Teorema della Probabilit\340 Assoluta}{subsection.2.8.2}% 55
-\BOOKMARK [1][-]{section.2.9}{Segnali aleatori a tempo continuo e a tempo discreto}{chapter.2}% 56
-\BOOKMARK [0][-]{chapter.3}{Esame Scritto}{}% 57
-\BOOKMARK [1][-]{section.3.1}{Compitino 2014}{chapter.3}% 58
-\BOOKMARK [1][-]{section.3.2}{Compitino 2015}{chapter.3}% 59
-\BOOKMARK [1][-]{section.3.3}{Compitino 2016}{chapter.3}% 60
-\BOOKMARK [1][-]{section.3.4}{Compitino 2017}{chapter.3}% 61
-\BOOKMARK [1][-]{section.3.5}{Compitino 2018}{chapter.3}% 62
-\BOOKMARK [1][-]{section.3.6}{Prova di Comunicazioni Numeriche - 09 Gennaio 2018}{chapter.3}% 63
-\BOOKMARK [1][-]{section.3.7}{Prova di Comunicazioni Numeriche - 29 Gennaio 2018}{chapter.3}% 64
-\BOOKMARK [1][-]{section.3.8}{Prova di Comunicazioni Numeriche - 20 Febbraio 2018}{chapter.3}% 65
-\BOOKMARK [1][-]{section.3.9}{Prova di Comunicazioni Numeriche - 09 Aprile 2018}{chapter.3}% 66
-\BOOKMARK [0][-]{chapter.4}{Esame Orale}{}% 67
-\BOOKMARK [1][-]{section.4.1}{Segnali Deterministici}{chapter.4}% 68
-\BOOKMARK [2][-]{subsection.4.1.1}{Relazioni tra Potenza Media Px ed Energia Ex di un Segnale}{section.4.1}% 69
-\BOOKMARK [3][-]{subsubsection.4.1.1.1}{Funzione a quadrato sommabile}{subsection.4.1.1}% 70
-\BOOKMARK [3][-]{subsubsection.4.1.1.2}{Applicazioni nella Meccanica Quantistica}{subsection.4.1.1}% 71
-\BOOKMARK [2][-]{subsection.4.1.2}{Relazione Potenza Media, Valore Efficace e Valore Medio: Px = 0 -3.45muxeff = 0, xm = 0}{section.4.1}% 72
-\BOOKMARK [3][-]{subsubsection.4.1.2.1}{Media quadratica}{subsection.4.1.2}% 73
-\BOOKMARK [3][-]{subsubsection.4.1.2.2}{Valore Efficace}{subsection.4.1.2}% 74
-\BOOKMARK [2][-]{subsection.4.1.3}{Biunivocit\340 della trasformata serie di Fourier}{section.4.1}% 75
-\BOOKMARK [2][-]{subsection.4.1.4}{Linearit\340 della trasformata serie di Fourier}{section.4.1}% 76
-\BOOKMARK [3][-]{subsubsection.4.1.4.1}{Esercizio}{subsection.4.1.4}% 77
-\BOOKMARK [2][-]{subsection.4.1.5}{Simmetria Hermitiana della trasformata serie di Fourier}{section.4.1}% 78
-\BOOKMARK [3][-]{subsubsection.4.1.5.1}{Simmetria pari per il modulo}{subsection.4.1.5}% 79
-\BOOKMARK [3][-]{subsubsection.4.1.5.2}{Simmetria dispari per la fase}{subsection.4.1.5}% 80
-\BOOKMARK [2][-]{subsection.4.1.6}{Trasformata di un segnale \(periodico\) reale e pari}{section.4.1}% 81
-\BOOKMARK [2][-]{subsection.4.1.7}{Trasformata di un segnale \(periodico\) reale e dispari}{section.4.1}% 82
-\BOOKMARK [2][-]{subsection.4.1.8}{Trasformata di un segnale \(periodico\) reale alternativo}{section.4.1}% 83
-\BOOKMARK [2][-]{subsection.4.1.9}{Simmetrie della Trasformata Continua di Fourier \(TCF\)}{section.4.1}% 84
-\BOOKMARK [3][-]{subsubsection.4.1.9.1}{Simmetrie della TCF: Simmetria Hermitiana}{subsection.4.1.9}% 85
-\BOOKMARK [3][-]{subsubsection.4.1.9.2}{Simmetrie della TCF: Segnali reali e pari}{subsection.4.1.9}% 86
-\BOOKMARK [3][-]{subsubsection.4.1.9.3}{Simmetrie della TCF: Segnali reali e dispari}{subsection.4.1.9}% 87
-\BOOKMARK [2][-]{subsection.4.1.10}{Teoremi sulla trasformata continua di Fourier}{section.4.1}% 88
-\BOOKMARK [3][-]{subsubsection.4.1.10.1}{Linearit\340 della TCF}{subsection.4.1.10}% 89
-\BOOKMARK [3][-]{subsubsection.4.1.10.2}{Dualit\340 della TCF}{subsection.4.1.10}% 90
-\BOOKMARK [3][-]{subsubsection.4.1.10.3}{Teorema del ritardo}{subsection.4.1.10}% 91
-\BOOKMARK [3][-]{subsubsection.4.1.10.4}{Teorema del cambiamento di scala}{subsection.4.1.10}% 92
-\BOOKMARK [2][-]{subsection.4.1.11}{Teorema della Modulazione}{section.4.1}% 93
-\BOOKMARK [3][-]{subsubsection.4.1.11.1}{Modulazione con coseno}{subsection.4.1.11}% 94
-\BOOKMARK [3][-]{subsubsection.4.1.11.2}{Modulazione con seno}{subsection.4.1.11}% 95
-\BOOKMARK [3][-]{subsubsection.4.1.11.3}{Modulazione con cosinusoide generica}{subsection.4.1.11}% 96
-\BOOKMARK [3][-]{subsubsection.4.1.11.4}{Modulazione con esponenziale complesso}{subsection.4.1.11}% 97
-\BOOKMARK [2][-]{subsection.4.1.12}{Teorema di derivazione}{section.4.1}% 98
-\BOOKMARK [3][-]{subsubsection.4.1.12.1}{Teorema di derivazione nel tempo \(Prof. Martorella\)}{subsection.4.1.12}% 99
-\BOOKMARK [3][-]{subsubsection.4.1.12.2}{Teorema di derivazione in frequenza \(Prof. Martorella\)}{subsection.4.1.12}% 100
-\BOOKMARK [2][-]{subsection.4.1.13}{Teorema di integrazione}{section.4.1}% 101
-\BOOKMARK [3][-]{subsubsection.4.1.13.1}{Teorema di Integrazione nel tempo \(Prof. Martorella\)}{subsection.4.1.13}% 102
-\BOOKMARK [3][-]{subsubsection.4.1.13.2}{Teorema di Integrazione in frequenza \(Prof. Martorella\)}{subsection.4.1.13}% 103
-\BOOKMARK [2][-]{subsection.4.1.14}{Teorema del Prodotto di Convoluzione}{section.4.1}% 104
-\BOOKMARK [3][-]{subsubsection.4.1.14.1}{Teorema del Prodotto \(Prof. Martorella\)}{subsection.4.1.14}% 105
-\BOOKMARK [2][-]{subsection.4.1.15}{Teorema di Convoluzione}{section.4.1}% 106
-\BOOKMARK [3][-]{subsubsection.4.1.15.1}{Teorema di Convoluzione \(Prof. Martorella\)}{subsection.4.1.15}% 107
-\BOOKMARK [3][-]{subsubsection.4.1.15.2}{Propriet\340 della Convoluzione}{subsection.4.1.15}% 108
-\BOOKMARK [2][-]{subsection.4.1.16}{Formule di Somma di Poisson}{section.4.1}% 109
-\BOOKMARK [3][-]{subsubsection.4.1.16.1}{Prima Formula di somma di Poisson}{subsection.4.1.16}% 110
-\BOOKMARK [3][-]{subsubsection.4.1.16.2}{Seconda Formula di somma di Poisson}{subsection.4.1.16}% 111
-\BOOKMARK [3][-]{subsubsection.4.1.16.3}{Applicazione delle formule di Poisson alla Delta di Dirac}{subsection.4.1.16}% 112
-\BOOKMARK [2][-]{subsection.4.1.17}{Dimostrare la TCF di un segnale periodico}{section.4.1}% 113
-\BOOKMARK [2][-]{subsection.4.1.18}{Teorema di Parseval}{section.4.1}% 114
-\BOOKMARK [3][-]{subsubsection.4.1.18.1}{Definire e dimostrare il teorema di Parseval per segnali aperiodici}{subsection.4.1.18}% 115
-\BOOKMARK [3][-]{subsubsection.4.1.18.2}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TSF\)}{subsection.4.1.18}% 116
-\BOOKMARK [3][-]{subsubsection.4.1.18.3}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TCF\)}{subsection.4.1.18}% 117
-\BOOKMARK [3][-]{subsubsection.4.1.18.4}{Definire e dimostrare il teorema di Parseval per le sequenze}{subsection.4.1.18}% 118
-\BOOKMARK [2][-]{subsection.4.1.19}{Definire l'operazione di convoluzione ed illustrarne le propriet\340}{section.4.1}% 119
-\BOOKMARK [2][-]{subsection.4.1.20}{Dimostrare che la TFS di x[n] = x\(nT\) \350 scrivibile tramite la TCF di x\(t\)}{section.4.1}% 120
-\BOOKMARK [2][-]{subsection.4.1.21}{Definire l'operazione di autocorrelazione per segnali aperiodici ed illustrarne le propriet\340}{section.4.1}% 121
-\BOOKMARK [2][-]{subsection.4.1.22}{Definire la cross-correlazione e la convoluzione tra due segnali x\(t\) e y\(t\)}{section.4.1}% 122
-\BOOKMARK [2][-]{subsection.4.1.23}{Dimostrare che la cross-correlazione tra x\(t\) e y\(t\) \350 scrivibile in termini di convoluzione tra i due segnali}{section.4.1}% 123
-\BOOKMARK [2][-]{subsection.4.1.24}{Dimostrare che la TFS di x[n] = x\(nT\) \350 periodica di periodo 1/T}{section.4.1}% 124
-\BOOKMARK [2][-]{subsection.4.1.25}{Dimostrare che la TSF di x\(t\) = n x0\(t - nT\) \350 scrivibile tramite la TCF di x0\(t\)}{section.4.1}% 125
-\BOOKMARK [2][-]{subsection.4.1.26}{Dare la definizione di Densit\340 spettrale di Energia e dimostrare che Sx\(f\) = X\(f\)2}{section.4.1}% 126
-\BOOKMARK [2][-]{subsection.4.1.27}{Definire la funzione delta di Dirac e illustrare le sue propriet\340}{section.4.1}% 127
-\BOOKMARK [2][-]{subsection.4.1.28}{Dimostrare la condizione sufficiente per l'esistenza della TFS}{section.4.1}% 128
-\BOOKMARK [1][-]{section.4.2}{Segnali Aleatori}{chapter.4}% 129
-\BOOKMARK [2][-]{subsection.4.2.1}{Teorema di Bayes}{section.4.2}% 130
-\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Esempio Teorema di Bayes}{subsection.4.2.1}% 131
-\BOOKMARK [2][-]{subsection.4.2.2}{Teorema della Probabilit\340 Totale}{section.4.2}% 132
-\BOOKMARK [3][-]{subsubsection.4.2.2.1}{Esempio Teorema di Bayes \046 Teorema della Probabilit\340 Totale}{subsection.4.2.2}% 133
-\BOOKMARK [2][-]{subsection.4.2.3}{Legame tra Varianza X2 e Valor quadratico medio mX2}{section.4.2}% 134
-\BOOKMARK [2][-]{subsection.4.2.4}{Teorema Fondamentale della Probabilit\340}{section.4.2}% 135
-\BOOKMARK [2][-]{subsection.4.2.5}{Dimostrare il teorema Fondamentale della Probabilit\340 per funzioni monotone}{section.4.2}% 136
-\BOOKMARK [2][-]{subsection.4.2.6}{Dimostrare il teorema dell'Aspettazione per variabili discrete X e Y = g\(X\)}{section.4.2}% 137
-\BOOKMARK [2][-]{subsection.4.2.7}{Teorema del Limite Centrale}{section.4.2}% 138
-\BOOKMARK [2][-]{subsection.4.2.8}{Dimostrare che due variabili aleatorie gaussiane incorrelate sono anche indipendenti}{section.4.2}% 139
-\BOOKMARK [2][-]{subsection.4.2.9}{Dare la definizione di Funzione di distribuzione e le sue propriet\340, specificare come \350 fatta nel caso di variabili aleatorie discrete e continue}{section.4.2}% 140
-\BOOKMARK [2][-]{subsection.4.2.10}{Definire Valore Medio, Varianza, Momento Ordinario di Ordine r e Valore Quadratico Medio}{section.4.2}% 141
-\BOOKMARK [3][-]{subsubsection.4.2.10.1}{Valore Medio}{subsection.4.2.10}% 142
-\BOOKMARK [3][-]{subsubsection.4.2.10.2}{Varianza}{subsection.4.2.10}% 143
-\BOOKMARK [2][-]{subsection.4.2.11}{Momento Ordinario di Ordine r}{section.4.2}% 144
-\BOOKMARK [3][-]{subsubsection.4.2.11.1}{Valore Quadratico Medio}{subsection.4.2.11}% 145
-\BOOKMARK [2][-]{subsection.4.2.12}{Modelli per Variabili Aleatorie: DDP, FDd, Valor Medio, Valore Quadratico Medio, Varianza}{section.4.2}% 146
-\BOOKMARK [3][-]{subsubsection.4.2.12.1}{Modello Uniforme}{subsection.4.2.12}% 147
-\BOOKMARK [3][-]{subsubsection.4.2.12.2}{Modello Gaussiano}{subsection.4.2.12}% 148
-\BOOKMARK [3][-]{subsubsection.4.2.12.3}{Modello Esponenziale Negativo}{subsection.4.2.12}% 149
-\BOOKMARK [2][-]{subsection.4.2.13}{Definire la correlazione e la covarianza fra variabili aleatorie e dire quando sono incorrelate e indipendenti}{section.4.2}% 150
-\BOOKMARK [2][-]{subsection.4.2.14}{Propriet\340 della funzione di autocorrelazione per processi aleatori}{section.4.2}% 151
-\BOOKMARK [2][-]{subsection.4.2.15}{Definizione e propriet\340 della DSP per processi aleatori}{section.4.2}% 152
-\BOOKMARK [1][-]{section.4.3}{Sistemi Monodimensionali}{chapter.4}% 153
-\BOOKMARK [2][-]{subsection.4.3.1}{Dare la definizione di sistema e illustrarne le propriet\340}{section.4.3}% 154
-\BOOKMARK [2][-]{subsection.4.3.2}{Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{section.4.3}% 155
-\BOOKMARK [2][-]{subsection.4.3.3}{Si dimostri che, per un SLS, il segnale di uscita \350 scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{section.4.3}% 156
-\BOOKMARK [2][-]{subsection.4.3.4}{Definire quando un SLS \350 causale e stabile BIBO e dimostrarlo}{section.4.3}% 157
-\BOOKMARK [2][-]{subsection.4.3.5}{Dimostrare che l'uscita y\(t\) da un interpolatore, con funzione interpolatrice p\(t\) e in ingresso la sequenza x[n], \350 scrivibile come y\(t\) = F-1\173X\(f\) P\(f\)\175, dove X\(f\) = TFS\173x[n]\175 e P\(f\) = F\173p\(t\)\175}{section.4.3}% 158
-\BOOKMARK [2][-]{subsection.4.3.6}{Spiegare il concetto di stazionariet\340 in senso lato e in senso stretto di un processo aleatorio}{section.4.3}% 159
-\BOOKMARK [2][-]{subsection.4.3.7}{Definire l'efficienza spettrale e calcolarla per una PAM binaria}{section.4.3}% 160
-\BOOKMARK [2][-]{subsection.4.3.8}{Definire l'ISI e la condizione di Nyquist}{section.4.3}% 161
-\BOOKMARK [2][-]{subsection.4.3.9}{Dimostrare che, per una modulazione PAM in banda passante, che la condizione di Nyquist nel tempo garantisce l'assenza di ISI}{section.4.3}% 162
-\BOOKMARK [2][-]{subsection.4.3.10}{A partire dalla condizione di Nyquist per l'assenza di ISI per una PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}{section.4.3}% 163
-\BOOKMARK [2][-]{subsection.4.3.11}{Dimostrare che, se si rispetta la condizione di Nyquist, non si ha ISI per un sistema PAM binario}{section.4.3}% 164
-\BOOKMARK [2][-]{subsection.4.3.12}{Definizione di Processo Indipendente}{section.4.3}% 165
-\BOOKMARK [2][-]{subsection.4.3.13}{Definizione di Processo SSL e SSS}{section.4.3}% 166
-\BOOKMARK [2][-]{subsection.4.3.14}{Dimostrare che se un processo gaussiano \350 SSL allora \350 anche SSS}{section.4.3}% 167
-\BOOKMARK [2][-]{subsection.4.3.15}{L'uso della codifica Grey invece della codificare naturale in un sistema numerico di comunicazione consente la riduzione della BER \(Bit Error Rate\) a parit\340 di rapporto senglae/rumore Eb/N0 in ricezione? Giustificare la risposta.}{section.4.3}% 168
-\BOOKMARK [2][-]{subsection.4.3.16}{Si spieghi il funzionamento del filtro adattato ed il modo in cui questo sistema minimizza la P\(e\) in ricezione per un sistema di comunicazione binario in banda base}{section.4.3}% 169
-\BOOKMARK [2][-]{subsection.4.3.17}{Descrivere il sistema PCM standard}{section.4.3}% 170
-\BOOKMARK [2][-]{subsection.4.3.18}{Dimostrare che il valore medio di un processo Y\(t\) ottenuto filtrando un processo X\(t\) con nu filtro lineare e stazionario con risposta impulsiva h\(t\) \350 scrivibile in termini della h\(t\) e del valore medio del processo in ingresso x\(t\)}{section.4.3}% 171
-\BOOKMARK [2][-]{subsection.4.3.19}{Definire il segnale trasmesso per una QAM generica e calcolare dal punto di vista teorico l'energia media per simbolo trasmesso}{section.4.3}% 172
-\BOOKMARK [2][-]{subsection.4.3.20}{Schema QAM \(ricevitore + trasmettitore\)}{section.4.3}% 173
-\BOOKMARK [2][-]{subsection.4.3.21}{Schema PAM in banda base e in banda passante}{section.4.3}% 174
-\BOOKMARK [2][-]{subsection.4.3.22}{Definire gli indici statistici del primo ordine e quelli del secondo ordine per processi aleatori}{section.4.3}% 175
-\BOOKMARK [2][-]{subsection.4.3.23}{Illustrare le relazioni fra processi}{section.4.3}% 176
-\BOOKMARK [3][-]{subsubsection.4.3.23.1}{Incorrelati}{subsection.4.3.23}% 177
-\BOOKMARK [3][-]{subsubsection.4.3.23.2}{Ortogonali}{subsection.4.3.23}% 178
-\BOOKMARK [3][-]{subsubsection.4.3.23.3}{Indipendenti}{subsection.4.3.23}% 179
-\BOOKMARK [2][-]{subsection.4.3.24}{Dire quando due processi sono congiuntamente stazionari in SSS e SSL}{section.4.3}% 180
-\BOOKMARK [0][-]{appendix.Alph1}{Segnali Canonici}{}% 181
-\BOOKMARK [1][-]{section.Alph1.1}{Gradino Unitario}{appendix.Alph1}% 182
+\BOOKMARK [3][-]{subsubsection.2.8.2.7}{Esperimento aleatorio composto}{subsection.2.8.2}% 56
+\BOOKMARK [1][-]{section.2.9}{Segnali aleatori a tempo continuo e a tempo discreto}{chapter.2}% 57
+\BOOKMARK [0][-]{chapter.3}{Esame Scritto}{}% 58
+\BOOKMARK [1][-]{section.3.1}{Compitino 2014}{chapter.3}% 59
+\BOOKMARK [1][-]{section.3.2}{Compitino 2015}{chapter.3}% 60
+\BOOKMARK [1][-]{section.3.3}{Compitino 2016}{chapter.3}% 61
+\BOOKMARK [1][-]{section.3.4}{Compitino 2017}{chapter.3}% 62
+\BOOKMARK [1][-]{section.3.5}{Compitino 2018}{chapter.3}% 63
+\BOOKMARK [1][-]{section.3.6}{Prova di Comunicazioni Numeriche - 09 Gennaio 2018}{chapter.3}% 64
+\BOOKMARK [1][-]{section.3.7}{Prova di Comunicazioni Numeriche - 29 Gennaio 2018}{chapter.3}% 65
+\BOOKMARK [1][-]{section.3.8}{Prova di Comunicazioni Numeriche - 20 Febbraio 2018}{chapter.3}% 66
+\BOOKMARK [1][-]{section.3.9}{Prova di Comunicazioni Numeriche - 09 Aprile 2018}{chapter.3}% 67
+\BOOKMARK [0][-]{chapter.4}{Esame Orale}{}% 68
+\BOOKMARK [1][-]{section.4.1}{Segnali Deterministici}{chapter.4}% 69
+\BOOKMARK [2][-]{subsection.4.1.1}{Relazioni tra Potenza Media Px ed Energia Ex di un Segnale}{section.4.1}% 70
+\BOOKMARK [3][-]{subsubsection.4.1.1.1}{Funzione a quadrato sommabile}{subsection.4.1.1}% 71
+\BOOKMARK [3][-]{subsubsection.4.1.1.2}{Applicazioni nella Meccanica Quantistica}{subsection.4.1.1}% 72
+\BOOKMARK [2][-]{subsection.4.1.2}{Relazione Potenza Media, Valore Efficace e Valore Medio: Px = 0 -3.45muxeff = 0, xm = 0}{section.4.1}% 73
+\BOOKMARK [3][-]{subsubsection.4.1.2.1}{Media quadratica}{subsection.4.1.2}% 74
+\BOOKMARK [3][-]{subsubsection.4.1.2.2}{Valore Efficace}{subsection.4.1.2}% 75
+\BOOKMARK [2][-]{subsection.4.1.3}{Biunivocit\340 della trasformata serie di Fourier}{section.4.1}% 76
+\BOOKMARK [2][-]{subsection.4.1.4}{Linearit\340 della trasformata serie di Fourier}{section.4.1}% 77
+\BOOKMARK [3][-]{subsubsection.4.1.4.1}{Esercizio}{subsection.4.1.4}% 78
+\BOOKMARK [2][-]{subsection.4.1.5}{Simmetria Hermitiana della trasformata serie di Fourier}{section.4.1}% 79
+\BOOKMARK [3][-]{subsubsection.4.1.5.1}{Simmetria pari per il modulo}{subsection.4.1.5}% 80
+\BOOKMARK [3][-]{subsubsection.4.1.5.2}{Simmetria dispari per la fase}{subsection.4.1.5}% 81
+\BOOKMARK [2][-]{subsection.4.1.6}{Trasformata di un segnale \(periodico\) reale e pari}{section.4.1}% 82
+\BOOKMARK [2][-]{subsection.4.1.7}{Trasformata di un segnale \(periodico\) reale e dispari}{section.4.1}% 83
+\BOOKMARK [2][-]{subsection.4.1.8}{Trasformata di un segnale \(periodico\) reale alternativo}{section.4.1}% 84
+\BOOKMARK [2][-]{subsection.4.1.9}{Simmetrie della Trasformata Continua di Fourier \(TCF\)}{section.4.1}% 85
+\BOOKMARK [3][-]{subsubsection.4.1.9.1}{Simmetrie della TCF: Simmetria Hermitiana}{subsection.4.1.9}% 86
+\BOOKMARK [3][-]{subsubsection.4.1.9.2}{Simmetrie della TCF: Segnali reali e pari}{subsection.4.1.9}% 87
+\BOOKMARK [3][-]{subsubsection.4.1.9.3}{Simmetrie della TCF: Segnali reali e dispari}{subsection.4.1.9}% 88
+\BOOKMARK [2][-]{subsection.4.1.10}{Teoremi sulla trasformata continua di Fourier}{section.4.1}% 89
+\BOOKMARK [3][-]{subsubsection.4.1.10.1}{Linearit\340 della TCF}{subsection.4.1.10}% 90
+\BOOKMARK [3][-]{subsubsection.4.1.10.2}{Dualit\340 della TCF}{subsection.4.1.10}% 91
+\BOOKMARK [3][-]{subsubsection.4.1.10.3}{Teorema del ritardo}{subsection.4.1.10}% 92
+\BOOKMARK [3][-]{subsubsection.4.1.10.4}{Teorema del cambiamento di scala}{subsection.4.1.10}% 93
+\BOOKMARK [2][-]{subsection.4.1.11}{Teorema della Modulazione}{section.4.1}% 94
+\BOOKMARK [3][-]{subsubsection.4.1.11.1}{Modulazione con coseno}{subsection.4.1.11}% 95
+\BOOKMARK [3][-]{subsubsection.4.1.11.2}{Modulazione con seno}{subsection.4.1.11}% 96
+\BOOKMARK [3][-]{subsubsection.4.1.11.3}{Modulazione con cosinusoide generica}{subsection.4.1.11}% 97
+\BOOKMARK [3][-]{subsubsection.4.1.11.4}{Modulazione con esponenziale complesso}{subsection.4.1.11}% 98
+\BOOKMARK [2][-]{subsection.4.1.12}{Teorema di derivazione}{section.4.1}% 99
+\BOOKMARK [3][-]{subsubsection.4.1.12.1}{Teorema di derivazione nel tempo \(Prof. Martorella\)}{subsection.4.1.12}% 100
+\BOOKMARK [3][-]{subsubsection.4.1.12.2}{Teorema di derivazione in frequenza \(Prof. Martorella\)}{subsection.4.1.12}% 101
+\BOOKMARK [2][-]{subsection.4.1.13}{Teorema di integrazione}{section.4.1}% 102
+\BOOKMARK [3][-]{subsubsection.4.1.13.1}{Teorema di Integrazione nel tempo \(Prof. Martorella\)}{subsection.4.1.13}% 103
+\BOOKMARK [3][-]{subsubsection.4.1.13.2}{Teorema di Integrazione in frequenza \(Prof. Martorella\)}{subsection.4.1.13}% 104
+\BOOKMARK [2][-]{subsection.4.1.14}{Teorema del Prodotto di Convoluzione}{section.4.1}% 105
+\BOOKMARK [3][-]{subsubsection.4.1.14.1}{Teorema del Prodotto \(Prof. Martorella\)}{subsection.4.1.14}% 106
+\BOOKMARK [2][-]{subsection.4.1.15}{Teorema di Convoluzione}{section.4.1}% 107
+\BOOKMARK [3][-]{subsubsection.4.1.15.1}{Teorema di Convoluzione \(Prof. Martorella\)}{subsection.4.1.15}% 108
+\BOOKMARK [3][-]{subsubsection.4.1.15.2}{Propriet\340 della Convoluzione}{subsection.4.1.15}% 109
+\BOOKMARK [2][-]{subsection.4.1.16}{Formule di Somma di Poisson}{section.4.1}% 110
+\BOOKMARK [3][-]{subsubsection.4.1.16.1}{Prima Formula di somma di Poisson}{subsection.4.1.16}% 111
+\BOOKMARK [3][-]{subsubsection.4.1.16.2}{Seconda Formula di somma di Poisson}{subsection.4.1.16}% 112
+\BOOKMARK [3][-]{subsubsection.4.1.16.3}{Applicazione delle formule di Poisson alla Delta di Dirac}{subsection.4.1.16}% 113
+\BOOKMARK [2][-]{subsection.4.1.17}{Dimostrare la TCF di un segnale periodico}{section.4.1}% 114
+\BOOKMARK [2][-]{subsection.4.1.18}{Teorema di Parseval}{section.4.1}% 115
+\BOOKMARK [3][-]{subsubsection.4.1.18.1}{Definire e dimostrare il teorema di Parseval per segnali aperiodici}{subsection.4.1.18}% 116
+\BOOKMARK [3][-]{subsubsection.4.1.18.2}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TSF\)}{subsection.4.1.18}% 117
+\BOOKMARK [3][-]{subsubsection.4.1.18.3}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TCF\)}{subsection.4.1.18}% 118
+\BOOKMARK [3][-]{subsubsection.4.1.18.4}{Definire e dimostrare il teorema di Parseval per le sequenze}{subsection.4.1.18}% 119
+\BOOKMARK [2][-]{subsection.4.1.19}{Definire l'operazione di convoluzione ed illustrarne le propriet\340}{section.4.1}% 120
+\BOOKMARK [2][-]{subsection.4.1.20}{Dimostrare che la TFS di x[n] = x\(nT\) \350 scrivibile tramite la TCF di x\(t\)}{section.4.1}% 121
+\BOOKMARK [2][-]{subsection.4.1.21}{Definire l'operazione di autocorrelazione per segnali aperiodici ed illustrarne le propriet\340}{section.4.1}% 122
+\BOOKMARK [2][-]{subsection.4.1.22}{Definire la cross-correlazione e la convoluzione tra due segnali x\(t\) e y\(t\)}{section.4.1}% 123
+\BOOKMARK [2][-]{subsection.4.1.23}{Dimostrare che la cross-correlazione tra x\(t\) e y\(t\) \350 scrivibile in termini di convoluzione tra i due segnali}{section.4.1}% 124
+\BOOKMARK [2][-]{subsection.4.1.24}{Dimostrare che la TFS di x[n] = x\(nT\) \350 periodica di periodo 1/T}{section.4.1}% 125
+\BOOKMARK [2][-]{subsection.4.1.25}{Dimostrare che la TSF di x\(t\) = n x0\(t - nT\) \350 scrivibile tramite la TCF di x0\(t\)}{section.4.1}% 126
+\BOOKMARK [2][-]{subsection.4.1.26}{Dare la definizione di Densit\340 spettrale di Energia e dimostrare che Sx\(f\) = X\(f\)2}{section.4.1}% 127
+\BOOKMARK [2][-]{subsection.4.1.27}{Definire la funzione delta di Dirac e illustrare le sue propriet\340}{section.4.1}% 128
+\BOOKMARK [2][-]{subsection.4.1.28}{Dimostrare la condizione sufficiente per l'esistenza della TFS}{section.4.1}% 129
+\BOOKMARK [1][-]{section.4.2}{Segnali Aleatori}{chapter.4}% 130
+\BOOKMARK [2][-]{subsection.4.2.1}{Teorema di Bayes}{section.4.2}% 131
+\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Esempio Teorema di Bayes}{subsection.4.2.1}% 132
+\BOOKMARK [2][-]{subsection.4.2.2}{Teorema della Probabilit\340 Totale}{section.4.2}% 133
+\BOOKMARK [3][-]{subsubsection.4.2.2.1}{Esempio Teorema di Bayes \046 Teorema della Probabilit\340 Totale}{subsection.4.2.2}% 134
+\BOOKMARK [2][-]{subsection.4.2.3}{Legame tra Varianza X2 e Valor quadratico medio mX2}{section.4.2}% 135
+\BOOKMARK [2][-]{subsection.4.2.4}{Teorema Fondamentale della Probabilit\340}{section.4.2}% 136
+\BOOKMARK [2][-]{subsection.4.2.5}{Dimostrare il teorema Fondamentale della Probabilit\340 per funzioni monotone}{section.4.2}% 137
+\BOOKMARK [2][-]{subsection.4.2.6}{Dimostrare il teorema dell'Aspettazione per variabili discrete X e Y = g\(X\)}{section.4.2}% 138
+\BOOKMARK [2][-]{subsection.4.2.7}{Teorema del Limite Centrale}{section.4.2}% 139
+\BOOKMARK [2][-]{subsection.4.2.8}{Dimostrare che due variabili aleatorie gaussiane incorrelate sono anche indipendenti}{section.4.2}% 140
+\BOOKMARK [2][-]{subsection.4.2.9}{Dare la definizione di Funzione di distribuzione e le sue propriet\340, specificare come \350 fatta nel caso di variabili aleatorie discrete e continue}{section.4.2}% 141
+\BOOKMARK [2][-]{subsection.4.2.10}{Definire Valore Medio, Varianza, Momento Ordinario di Ordine r e Valore Quadratico Medio}{section.4.2}% 142
+\BOOKMARK [3][-]{subsubsection.4.2.10.1}{Valore Medio}{subsection.4.2.10}% 143
+\BOOKMARK [3][-]{subsubsection.4.2.10.2}{Varianza}{subsection.4.2.10}% 144
+\BOOKMARK [2][-]{subsection.4.2.11}{Momento Ordinario di Ordine r}{section.4.2}% 145
+\BOOKMARK [3][-]{subsubsection.4.2.11.1}{Valore Quadratico Medio}{subsection.4.2.11}% 146
+\BOOKMARK [2][-]{subsection.4.2.12}{Modelli per Variabili Aleatorie: DDP, FDd, Valor Medio, Valore Quadratico Medio, Varianza}{section.4.2}% 147
+\BOOKMARK [3][-]{subsubsection.4.2.12.1}{Modello Uniforme}{subsection.4.2.12}% 148
+\BOOKMARK [3][-]{subsubsection.4.2.12.2}{Modello Gaussiano}{subsection.4.2.12}% 149
+\BOOKMARK [3][-]{subsubsection.4.2.12.3}{Modello Esponenziale Negativo}{subsection.4.2.12}% 150
+\BOOKMARK [2][-]{subsection.4.2.13}{Definire la correlazione e la covarianza fra variabili aleatorie e dire quando sono incorrelate e indipendenti}{section.4.2}% 151
+\BOOKMARK [2][-]{subsection.4.2.14}{Propriet\340 della funzione di autocorrelazione per processi aleatori}{section.4.2}% 152
+\BOOKMARK [2][-]{subsection.4.2.15}{Definizione e propriet\340 della DSP per processi aleatori}{section.4.2}% 153
+\BOOKMARK [1][-]{section.4.3}{Sistemi Monodimensionali}{chapter.4}% 154
+\BOOKMARK [2][-]{subsection.4.3.1}{Dare la definizione di sistema e illustrarne le propriet\340}{section.4.3}% 155
+\BOOKMARK [2][-]{subsection.4.3.2}{Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{section.4.3}% 156
+\BOOKMARK [2][-]{subsection.4.3.3}{Si dimostri che, per un SLS, il segnale di uscita \350 scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{section.4.3}% 157
+\BOOKMARK [2][-]{subsection.4.3.4}{Definire quando un SLS \350 causale e stabile BIBO e dimostrarlo}{section.4.3}% 158
+\BOOKMARK [2][-]{subsection.4.3.5}{Dimostrare che l'uscita y\(t\) da un interpolatore, con funzione interpolatrice p\(t\) e in ingresso la sequenza x[n], \350 scrivibile come y\(t\) = F-1\173X\(f\) P\(f\)\175, dove X\(f\) = TFS\173x[n]\175 e P\(f\) = F\173p\(t\)\175}{section.4.3}% 159
+\BOOKMARK [2][-]{subsection.4.3.6}{Spiegare il concetto di stazionariet\340 in senso lato e in senso stretto di un processo aleatorio}{section.4.3}% 160
+\BOOKMARK [2][-]{subsection.4.3.7}{Definire l'efficienza spettrale e calcolarla per una PAM binaria}{section.4.3}% 161
+\BOOKMARK [2][-]{subsection.4.3.8}{Definire l'ISI e la condizione di Nyquist}{section.4.3}% 162
+\BOOKMARK [2][-]{subsection.4.3.9}{Dimostrare che, per una modulazione PAM in banda passante, che la condizione di Nyquist nel tempo garantisce l'assenza di ISI}{section.4.3}% 163
+\BOOKMARK [2][-]{subsection.4.3.10}{A partire dalla condizione di Nyquist per l'assenza di ISI per una PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}{section.4.3}% 164
+\BOOKMARK [2][-]{subsection.4.3.11}{Dimostrare che, se si rispetta la condizione di Nyquist, non si ha ISI per un sistema PAM binario}{section.4.3}% 165
+\BOOKMARK [2][-]{subsection.4.3.12}{Definizione di Processo Indipendente}{section.4.3}% 166
+\BOOKMARK [2][-]{subsection.4.3.13}{Definizione di Processo SSL e SSS}{section.4.3}% 167
+\BOOKMARK [2][-]{subsection.4.3.14}{Dimostrare che se un processo gaussiano \350 SSL allora \350 anche SSS}{section.4.3}% 168
+\BOOKMARK [2][-]{subsection.4.3.15}{L'uso della codifica Grey invece della codificare naturale in un sistema numerico di comunicazione consente la riduzione della BER \(Bit Error Rate\) a parit\340 di rapporto senglae/rumore Eb/N0 in ricezione? Giustificare la risposta.}{section.4.3}% 169
+\BOOKMARK [2][-]{subsection.4.3.16}{Si spieghi il funzionamento del filtro adattato ed il modo in cui questo sistema minimizza la P\(e\) in ricezione per un sistema di comunicazione binario in banda base}{section.4.3}% 170
+\BOOKMARK [2][-]{subsection.4.3.17}{Descrivere il sistema PCM standard}{section.4.3}% 171
+\BOOKMARK [2][-]{subsection.4.3.18}{Dimostrare che il valore medio di un processo Y\(t\) ottenuto filtrando un processo X\(t\) con nu filtro lineare e stazionario con risposta impulsiva h\(t\) \350 scrivibile in termini della h\(t\) e del valore medio del processo in ingresso x\(t\)}{section.4.3}% 172
+\BOOKMARK [2][-]{subsection.4.3.19}{Definire il segnale trasmesso per una QAM generica e calcolare dal punto di vista teorico l'energia media per simbolo trasmesso}{section.4.3}% 173
+\BOOKMARK [2][-]{subsection.4.3.20}{Schema QAM \(ricevitore + trasmettitore\)}{section.4.3}% 174
+\BOOKMARK [2][-]{subsection.4.3.21}{Schema PAM in banda base e in banda passante}{section.4.3}% 175
+\BOOKMARK [2][-]{subsection.4.3.22}{Definire gli indici statistici del primo ordine e quelli del secondo ordine per processi aleatori}{section.4.3}% 176
+\BOOKMARK [2][-]{subsection.4.3.23}{Illustrare le relazioni fra processi}{section.4.3}% 177
+\BOOKMARK [3][-]{subsubsection.4.3.23.1}{Incorrelati}{subsection.4.3.23}% 178
+\BOOKMARK [3][-]{subsubsection.4.3.23.2}{Ortogonali}{subsection.4.3.23}% 179
+\BOOKMARK [3][-]{subsubsection.4.3.23.3}{Indipendenti}{subsection.4.3.23}% 180
+\BOOKMARK [2][-]{subsection.4.3.24}{Dire quando due processi sono congiuntamente stazionari in SSS e SSL}{section.4.3}% 181
+\BOOKMARK [0][-]{appendix.Alph1}{Segnali Canonici}{}% 182
+\BOOKMARK [1][-]{section.Alph1.1}{Gradino Unitario}{appendix.Alph1}% 183

@@ -3104,8 +3104,14 @@ grado di eseguire (e che pone anche questioni di esistenza).
 \bigbreak
 \`E interessante osservare che la definizione "frequentista" non \`e in
 contrasto con quella assiomatrica di Kolmogorov. Infatti la probabilit\`a
-$Pr(A)$, espresso con il limite che abbiamo appena introdotto, \`e \textit{i})
-una quantit\`a \textit{non negativa} poich\`e prodotta dal limite di un rapporto fra quantit\`a positive; se inoltre \textit{ii}) l'evento $A$ coincide con l'evento certo $\Omega$, allora banalmente $N_A = N$ e quindi $Pr(A) = 1$; se infine \textit{iii}) $A$ e $B$ sono due eventi mutuamente esclusivi, una prova dell'esperimento che fa verificare $A \cup B$ d\`a un risultato che sta o in $A$ o in $B$, ma che non pu\`o stare in entrambi, per cui $N_{A \cup B} = N_A + N_B$ e allora
+$Pr(A)$, espresso con il limite che abbiamo appena introdotto, \`e
+\textit{i}) una quantit\`a \textit{non negativa} poich\`e prodotta dal limite di
+un rapporto fra quantit\`a positive; se inoltre \textit{ii}) l'evento $A$
+coincide con l'evento certo $\Omega$, allora banalmente $N_A = N$ e quindi
+$Pr(A) = 1$; se infine \textit{iii}) $A$ e $B$ sono due eventi mutuamente
+esclusivi, una prova dell'esperimento che fa verificare $A \cup B$ d\`a un
+risultato che sta o in $A$ o in $B$, ma che non pu\`o stare in entrambi, per cui
+$N_{A \cup B} = N_A + N_B$ e allora
 \[
     Pr(A \cup B) = lim_{N \rightarrow \infty} \frac{N_{A \cup B}}{N} =
     \lim_{N \rightarrow \infty} \frac{N_A + N_B}{N} =
@@ -3130,6 +3136,137 @@ partizione dello spazio campionario di tutti gli eventi possibili $\Omega$
     Pr(B) = \sum_{i = 1}^{n} Pr(A_i \cap B) = \sum_{i = 1}^{n} Pr(A_i)
     Pr(B | A_i).
 \end{equation}
+\textit{Vedi il teorema della probabilit\`a totale nel capitolo "Esame Orale".}
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Esperimento aleatorio composto
+%-------------------------------------------------------------------------------
+
+\subsubsection{Esperimento aleatorio composto}
+Consideriamo ora due \textit{diversi} esperimenti aleatori caratterizzati dagli
+spazi campione $\Omega_1$ e $\Omega_2$ (ad esempio il lancio di un dado e
+l'estrazione di una carta da un mazzo di $52$). \`E possibile definire un
+\textit{esperimento composto} i cui risultati sono costituiti da una
+\textit{coppia ordinata} dei risultati degli esperimenti componenti (ad esempio,
+($faccia_3$ e $due_di_picche$)). Lo spazio campione $\Omega$ dell'esperimento
+composto \`e costituito dal \textit{prodotto cartesiano} degli spazi dei due
+esperimenti componenti, cio\`e $\Omega = \Omega_1 x \Omega_2$. Consideriamo,
+adesso, un evento $A_1$ definito nello spazio campione $\Omega_1$ e un evento
+$A_2$ definito in $\Omega_2$; vogliamo calcolare la probabilit\`a dell'evento
+$A = A_1 x A_2$ appartenente allo spazio campione $\Omega$. Se i due esperimenti
+sono \textit{indipendenti}, la probabilit\`a dell'evento composto $A$ \`e
+\[
+    Pr(A) = Pr_1(A_1) \times Pr_2(A_2)
+\]
+dove $Pr_1(\cdot)$ e $Pr_2(\cdot)$ rappresentano le leggi di probabilit\`a
+definite rispettivamente per il primo e il secondo esperimenti componente. \`E
+importante osservare che
+\begin{itemize}
+    \item dalla conoscenza delle leggi di probabilit\`a dei singoli esperimenti
+        non \`e possibile, in generale, ricavare la legge di probabilit\`a
+        dell'esperimento composto;
+    \item le considerazioni appena illustrate per una coppia di esperimenti
+        aleatori indipendenti possono essere immediatamente estese al caso di
+        $n$ esperimenti aleatori indipendenti.
+\end{itemize}
+In questo ambito \`e utile ricordare il problema delle \textit{prove ripetute
+binarie e indipendenti} (o \textit{prove di Bernoulli}). In tal caso
+l'esperimento composto \`e costituito da $n$ esperimenti identici, indipendenti,
+e aventi ciascuno uno spazio campione costituito da due risultati soltanto. In
+questo modello ricadono numerosi esperimenti elementari (testa/croce,
+vero/falso, 0/1, alto/basso, ecc\dots). Indichiamo con $\omega_0$ e $\omega_1$
+questi risultati e con $p = Pr(\omega_0)$ e $q = Pr(\omega_1) 1 - p$ le loro
+rispettive probabilit\`a, e definiamo l'evento $A =$ \{\textit{$\omega_0$ si
+presenta $k$ volte in $n$ prove ripetute}\}. La \textit{formula di Bernoulli} (o
+\textit{binomiale}) dice che
+\[
+    Pr(A) = {n \choose k} p^k q^{n - k} \quad , \quad 0 \leq k \leq n
+\]
+dove compare il coefficiente binomiale
+\[
+    {n \choose k} = \frac{n!}{k! (n - k)!}.
+\]
+\bigbreak
+\noindent
+\textbf{Esempio Formula di Bernoulli}\\
+Una scatola contiene due monete: la prima \`e una moneta "perfetta", la seconda
+\`e una moneta "truccata" avente $Pr(\{Testa\}) = 0.8$. Viene scelta casualmente
+una delle due monete, che viene poi lanciata per dieci volte in condizioni
+indipendenti, osservando l'uscita di 5 facce Testa e 5 facce Croce. Sulla base
+di quest'ultima osservazione, qual \`e la probabilit\`a che la moneta scelta sia
+quella "perfetta"? Cosa pu\`o dirsi di questa probabilit\`a se si osservano
+$5000$ facce Testa su $1000$ lanci?\\
+In questo esempio si deve calcolare la \textit{probabilit\`a condizionata}
+$Pr(A|B)$ dove $B$ \`e l'evento osservato \{\textit{$5$ facce Testa, $5$ facce
+Croce}\}, mentre $A$ \`e l'evento \{\textit{la moneta scelta \`e quella
+perfetta}\}. Usando il teorema di Bayes \`e possibile ricavare $Pr(A|B)$ dalla
+conoscenza delle probabilit\`a $Pr(B|A)$, $Pr(A)$, $Pr(B)$. Poich\`e la scelta
+fra le due monete \`e casuale, abbiamo facilmente
+\[
+    Pr(A) = Pr(\overline{A}) = \frac{1}{2}.
+\]
+Supponiamo ora di aver effettivmanete scelto la moneta perfetta, cio\`e che si
+sia verificato $A$. La probabilit\`a condizionata $Pr(B|A)$ pu\`o essere
+calcolata mediante la formula di Bernoulli con $n = 10$, $k = 5$, $w_0$
+corrispondente al presentarsi della faccia Testa e $w_1$ al presentarsi della
+faccia Croce (le facce della moneta perfetta sono equiprobabili
+$Pr(\{w_0\}) = Pr(\{w_1\}) = 0.5$), risulta
+\[
+    Pr(B|A) = {10 \choose 5} \left(\frac{1}{2}\right)^5
+    \left(\frac{1}{2}\right)^{10 - 5} = {10 \choose 5} \left(
+        \frac{1}{2}
+    \right)^5
+    \left(\frac{1}{2}\right)^5 = 
+\]
+\[
+    {10 \choose 5} \frac{1}{2^{10}} = \frac{252}{1024} \cong 0.246.
+\]
+$Pr(B)$ pu\`o essere calcolata mediante il teorema della probabilit\`a totale,
+con la partizione
+\[
+    \Omega = A \cup \overline{A},
+\]
+\[
+    Pr(B) = Pr(B|A) Pr(A) + Pr(B|\overline{A}) Pr(A)
+\]
+Resta da ricavare la probabilit\`a $Pr(B|\overline{A})$ (cio\`e la probabilit\`a
+di avere $5$ volte Testa su $10$ prove con la moneta \textit{truccata}), che
+pu\`o di nuovo essere calcolata mediante la formula di Bernoulli con $n = 10$,
+$k = 5$, $p = Pr(\{\omega_0\}) = 0.8$, $q = Pr(\{\omega_1\}) = 0.2$ (le facce
+della moneta truccata non sono equiprobabili):
+\[
+    Pr(B|\overline{A}) = {10 \choose 5} (0.8)^5 (0.2)^5 = 252 \cdot (0.16)^5
+    \cong 0.0264.
+\]
+Usando i valori appena ricavati possiamo finalmente determinare $Pr(B)$:
+\[
+    Pr(B) = {10 \choose 5} \left(\frac{1}{2}\right)^10 \cdot \frac{1}{2} +
+    {10 \choose 5} (0.8)^5 (0.2)^5 \cdot \frac{1}{2} =
+\]
+\[
+    = \frac{252}{2} \cdot \left[\frac{1}{1024} + (0.16)^5\right] \cong 0.1363
+\]
+e infine
+\[
+    Pr(A|B) = \frac{Pr(B|A) Pr(A)}{Pr(B)} = \frac{{10 \choose 5} {1 \choose 2}
+    ^{2 \cdot 5} \cdot \frac{1}{2}}{\frac{1}{2} {10 \choose 5} {1 \choose 2}
+    ^{2 \cdot 5} + \frac{1}{2} {10 \choose 5} (0.8)^5 (0.2)^5} =
+\]
+\[
+    = \frac{1}{1 + (2 \cdot 0.8 \cdot 2 \cdot 0.2)^5} \cong 0.903.
+\]
+Questa probabilit\`a \`e piuttosto alta. Lanciando infatti la moneta
+\textit{truccata}, \`e abbastanza impossibile ottenere un serie di risultati
+"equiripartiti" $5$-$5$ come quella richiesta.\\
+Ripetendo i calcoli per il caso in cui $B$ sia l'evento \{\textit{$5000$ facce
+Testa, $5000$ facce Croce}\}, si ottiene la seguente espressione per $Pr(A|B)$:
+\[
+    Pr(A|B) = \frac{1}{1 + (0.8 \cdot 0.2 \cdot 4)^{5000}} \cong 1
+\]
+e si raggiunge quasi la \textit{certezza} che la moneta scelta sia
+effettivamente quella perfetta. Infatti, la probabilit\`a di ottenere un cos\`i
+preciso bilanciamento dei risultati \{\textit{Testa}\} e \{\textit{Croce}\} con
+la moneta (pesantemente) truccata  \`e praticamente \textit{nulla}.
 
 %-------------------------------------------------------------------------------
 % Section: Segnali aleatori a tempo continuo e a tempo discreto
@@ -6034,13 +6171,11 @@ probabilit\`a di errore.\\
 Mentre la seconda pu\`o essere ottenuta mediante il teorema della probabilit\`a
 totale:
 \[
-    \Omega = \{A, \overline{A}, B, \overline{B}\}
+    \Omega = A \cup \overline{A}
 \]
 \[
-    Pr(B) = Pr(B | A) \cdot Pr(A) + Pr(B | \overline{A}) \cdot Pr(A) +
-    Pr(B | \overline{B}) \cdot Pr(\overline{B})
+    Pr(B) = Pr(B | A) \cdot Pr(A) + Pr(B | \overline{A}) \cdot Pr(A)
 \]
-dato che $Pr(B | \overline{B}) = 0$
 \[
     Pr(B) = Pr(B | A) \cdot Pr(A) + Pr(B | \overline{A}) \cdot Pr(A) = 0.99
     \cdot 0.7 + 0.01 \cdot 0.3 = 0.696.
@@ -6118,7 +6253,7 @@ A partire dalle formule del punto 1:
     \cdot Pr(A)}{Pr(A) - P_e}.
 \]
 A partire da questo risultato si dimostra la tesi iniziale con una serie di
-\textbf{Considerazioni}\\
+\textbf{Considerazioni}:\\
 \begin{itemize}
     \item $P_e \rightarrow 0$, errore nullo, $(1 - P_e) \rightarrow 1$,
         $Pr(A | B) = \frac{Pr(A)}{Pr(A)} = 1$.
