@@ -2774,7 +2774,7 @@ Usando queste propriet\`a si pu\`o anche dimostrare che
     \item dato un evento $A$, gli insiemi $A \cup \overline{A}$ e $A \cap 
         \overline{A}$ sono eventi, il primo, coincidente con $\Omega$ (ovvero 
         con tutto lo spazio campione), \`e detto \textit{evento certo}, mentre 
-        il secondo, indicato con il simbolo $\varnothing$ e non centenente alcun 
+        il secondo, indicato con il simbolo $\varnothing$ e non centenente alcun
         risultato dell'esperimento, \`e detto \textit{evento impossibile}.
 \end{itemize}
 Le definizioni e propriet\`a sopra elencate dicono che gli evneti di uno spazio
@@ -2828,12 +2828,47 @@ soddisfa i seguenti \textit{assiomi}:
 		    A \cap B = \varnothing \Rightarrow Pr(A \cup B) = Pr(A) + Pr(B)
 	    \]
 \end{itemize}
+Da questi \textit{assiomi} si possono poi ricavare alcune \textit{propriet\`a}
+(cio\`e dimostrare alcuni \textit{teoremi} o corollari) che sembrano ovvie, ma
+che devono comunque essere ricondotte ai soli principi primi (cio\`e agli
+assiomi stessi):
+\begin{itemize}
+    \item Dato un evento $A$, la probabilit\`a dell'evento complementare
+        $\overline{A}$ \`e data dal complemento a uno di $Pr(A)$:
+        \[
+            Pr(\overline{A}) = 1 - Pr(A);
+        \]
+    \item L'insieme impossibile ha probabilit\`a nulla di verificarsi;
+    \item La probabilit\`a di un evento $A$ non pu\`o assumere un valore
+        maggiore di uno:
+        \[
+            0 \leq Pr(A) \leq 1;
+        \]
+    \item Dati due eventi $A$ e $B$, la probabilit\`a dell'evento unione
+        $A \cup B$ \`e espressa dall'uguaglianza
+        \[
+            Pr(A \cup B) = Pr(A) + Pr(B) - Pr(B \cap A).
+        \]
+\end{itemize}
+L'intersezione fra due eventi $A$ e $B$ pu\`o anche essere rappresentata con la
+scrittura $A \ B$, cos\`i come talvolta l'unione tra eventi viene indicata con
+la scrittura $A + B$. La probabilit\`a $Pr(B \cap A) = Pr(A B)$ dell'evento
+intersezione fra $A$ e $B$ \`e chiamata \textit{probabilit\`a congiunta} degli
+eventi $A$ e $B$. Le probabilit\`a $Pr(A)$ e $Pr(B)$ sono dette, invece,
+\textit{probabilit\`a marginali}.
+\bigbreak
+Data una coppia di eventi $A$ e $B$, con $Pr(B) \neq 0$, la probabilit\`a
+$Pr(A|B)$ dell'evento $A$ \textit{condizionata} al verificarsi dell'evento $B$
+\`e definita dalla relazione
+\[
+    Pr(A|B) \triangleq \frac{Pr(AB)}{Pr(B)}.
+\]
 
 %-------------------------------------------------------------------------------
-% Subsection: Probabilita' Condizionata
+% Subsubsection: Probabilita' Condizionata
 %-------------------------------------------------------------------------------
 
-\subsection{Probabilit\`a Condizionata}
+\subsubsection{Probabilit\`a Condizionata}
 In teoria della probabilit\`a la probabilit\`a condizionata di un evento $A$
 rispetto ad un evento $B$ \`e la probabilit\`a che si verifichi $A$, sapendo che
 $B$ \`e verificato. Questa probabilit\`a, indicata con $Pr(A | B)$ o $P_{B}(A)$,
@@ -2916,10 +2951,10 @@ $A \cup B$ \`e espressa dall'uguaglianza:
 \]
 
 %-------------------------------------------------------------------------------
-% Subsection: Teorema della Probabilita' Composta
+% Subsubsection: Teorema della Probabilita' Composta
 %-------------------------------------------------------------------------------
 
-\subsection{Teorema della Probabilit\`a Composta}
+\subsubsection{Teorema della Probabilit\`a Composta}
 Il teorema della probabilit\`a composta deriva dal concetto di probabilit\`a
 condizionata
 \begin{equation}
@@ -2950,10 +2985,14 @@ dell'intersezione di un numero arbitrario di eventi:
 \]
 
 %-------------------------------------------------------------------------------
-% Subsection: Teorema della Probabilita' Assoluta
+%
 %-------------------------------------------------------------------------------
 
-\subsection{Teorema della Probabilit\`a Assoluta}
+%-------------------------------------------------------------------------------
+% Subsubsection: Teorema della Probabilita' Assoluta
+%-------------------------------------------------------------------------------
+
+\subsubsection{Teorema della Probabilit\`a Assoluta}
 In teoria della probabilit\`a il teorema della probabilit\`a assoluta (detto 
 anche teorema delle partizioni) afferma che se $A_1, \dots, A_n$ formano una
 partizione dello spazio campionario di tutti gli eventi possibili $\Omega$
