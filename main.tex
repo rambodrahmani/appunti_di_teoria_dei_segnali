@@ -2902,6 +2902,22 @@ sorta di "nuovo spazio campione" in quanto al di fuori di questo niente pu\`o
 verificarsi. In questo senso bisogna rinormalizzare tutte le probabilit\`a
 rispetto a quello di $B$.\\
 Si noti inoltre che $Pr(B | B) = 1$.
+\bigbreak
+Due eventi $A$ e $B$ sono \textit{indipendenti} se la probabilit\`a marginale
+$Pr(A)$ e la probabilit\`a condizionata $Pr(A | B$ sono identiche, cio\`e in
+pratica se il verificarsi dell'evento $B$ non ha alcuna influenza sull'evento
+$A$:
+\[
+    Pr(A) = Pr(A|B)
+\]
+o, tenendo conto della definizione di probabilit\`a condizionata:
+\[
+    Pr(AB) = Pr(A) \cdot Pr(B).
+\]
+Pertanto, se gli eventi $A$ e $B$ sono indipendenti, la probabilit\`a congiunta
+$Pr(AB)$ \`e pari al prodotto delle probabilit\`a marginali. La relazione
+precedente viene utilizzata spesso per definire l'indipendenza fra due eventi,
+anche se il suo significato non \`e immediatamente comprensibile com la prima.
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Esempi Probabilita' Condizionata
@@ -2985,8 +3001,120 @@ dell'intersezione di un numero arbitrario di eventi:
 \]
 
 %-------------------------------------------------------------------------------
-%
+% Subsubsection: Esempio lancio di un dado non truccato
 %-------------------------------------------------------------------------------
+
+\subsubsection{Esempio lancio di un dado non truccato}
+Cerchiamo di definire un esperimento aleatorio (nel senso della deifnizione
+appena vista) che modelli il \textit{lancio di un dado non truccato}.
+Evidentemente lo spazio compione $\Omega$ \`e costituito da $6$ risultati
+$\{\omega_1, \omega_2, \dots, \omega_6\}$, dove $\omega_i$ corrisponde al
+presentarsi al termine del lancio della faccia $i$-esima (cio\`e quella con nu
+numero di puntini pari ad $i$). Poich\`e lo spazio campione $\Omega$ \`e
+\textit{finito}, la classe degli eventi \textit{S} \`e semplicemente costituita
+dalla raccolta di tutti i sottoinsiemi di $\Omega$ stesso (che sono in numero,
+come \`e noto, di $2^6$, inclusi $\varnothing$ ed $\Omega$). La legge di
+probabilit\`a degli eventi resta a questo punto definita non appena assegnamo
+una probabilit\`a a ciascuno dei \textit{risultati} dello spazio $\Omega$. Fatto
+ci\`o, \`e possibile calcolare la probabilit\`a di un qualunque evento $A$.
+Sfruttando la \textit{simmetria} del problema, cio\`e l'ipotesi di dado non
+truccato, \`e ragionevole imporre che
+\[
+    Pr(\{\omega_1\}) = Pr(\{\omega_2\}) = \dots = Pr(\{\omega_6\}) =
+    \frac{1}{6}.
+\]
+Allora, ad esempio, la probabilit\`a dell'evento $A$ = \{\textit{la faccia del
+dado \`e dispari}\} \`e
+\[
+    Pr(A) = Pr(\{\omega_1\}) \cup Pr(\{\omega_3\}) \cup Pr(\{\omega_5\})
+\]
+quindi, per il terzo assioma:
+\[
+    Pr(A) = Pr(\{\omega_1\}) + Pr(\{\omega_3\}) + Pr(\{\omega_5\}) = \frac{1}{6}
+    + \frac{1}{6} + \frac{1}{6} = \frac{3}{6} = \frac{1}{2}.
+\]
+Per giustificare il fatto che tutte le facce del dado hanno la stessa
+probabilit\`a di presentarsi, osserviamo che in casi come questo, di esperimento
+\textit{simmetrico} e spazio campione finito, $Pr(A)$ pu\`o essere calcolata
+attraverso la cosiddetta \textit{definizione classica di probabilit\`a},
+attribuite a Pascal. Questa prevede di individuare il numero $N_F(A)$ dei
+cosiddetti \textit{casi favorevoli} ad $A$, e il numero $N_P$ dei cosiddetti
+\textit{casi possibili}. Quest'ultimo \`e semplicemente il numero totale di 
+risultati contenuti in $\Omega$, mentre il primo \`e il numero dei risultati 
+elementari contenuti in $A$ stesso. La probabilit\`a cercata \`e allora data dal
+rapporto
+\[
+    Pr(A) = \frac{N_F(A)}{N_P}
+\]
+Considerando di nuovo $A =$ \{\textit{la faccia del dado \`e dispari}\}, \`e
+chiaro che $N_F(A) = 3$ ed $N_P = 6$, e quindi,
+\[
+    Pr(A) = \frac{N_F(A)}{N_P} = \frac{3}{6} = \frac{1}{2}.
+\]
+L'ipotesi cruciale alla base della definizione "classica" \`e la
+\textit{perfetta simmetria} del dado o, in altri termini,
+l'\textit{equiprobabilit\`a} di tutti i possibili risultati dell'esperimento.
+Questa definizione ha il pregio di essere molto semplice, ma pu\`o essere
+applicata solamente a una classe ristretta di esperimenti. In particolare, essa
+\`e incapace di modella il caso in cui il dado risulti "truccato", cio\`e le
+varie facce (intenzionalmente o per imperfezioni di manifattura) \textit{non}
+siano equiprobabili.
+\bigbreak
+In questi casi \`e pi\`u conveniente dare un'altra definizione di probabilit\`a,
+che trova una sua giustificazione in un \textit{approcio di tipo sperimentrale}.
+Consideriamo di nuovo l'esperimento del lancio del dado ed effetuiamo $N$
+\textit{prove} dell'esperimento stesso (cio\`e lanciamo il dado $N$ volte).
+Indichiamo poi con $N_A$ il numero di volte in cui, nelle suddette ripetizioni,
+si verifica l'evento $A$ (cio\`e la faccia uscita mostra un numero dispari).
+All'aumentare di $N$, ovvero del numero di lanci, si ottiene una situazione
+simile a quella riassunta nella tabella seguente:
+\begin{center}
+    \begin{tabular}{| c | c | c |}
+        \hline
+        $N$ & $N_A$ & $N_A/N$ \\
+        \hline
+        $100$ & $47$ & $0.47$ \\
+        \hline
+        $1000$ & $491$ & $0.491$ \\
+        \hline
+        $10000$ & $4984$ & $0.4984$ \\
+        \hline
+        $100000$ & $50012$ & $0.50012$ \\
+        \hline
+        \dots & \dots & \dots \\
+        \hline
+    \end{tabular}
+\end{center}
+Si nota una cerca \textit{regolari\t`a} nella relazione tra il numeor di volte
+in cui si verifica l'evento $A$ rispetto al numero totale di prove effettuate:
+il rapporto
+\[
+    \frac{N_A}{N},
+\]
+detto \textit{frequenza relativa dell'evento} $A$, approssima il numero $1/2$ al
+crescere di $N$. Da questa osservazione discende la \textit{definizione di
+probabilit\`a di Von Mises} (o \textit{frequentista}), secondo la quale
+\[
+    Pr(A) = \lim_{N \rightarrow \infty} \frac{N_A}{N}.
+\]
+Tale definizione, rispetto alla definizione classica, presenta il vantaggio di
+\textit{prescindere dalla simmetria del problema} e di poter modellare anche il
+caso di dado "truccato", ma contiene un'operazione di limite che non si \`e in
+grado di eseguire (e che pone anche questioni di esistenza).
+\bigbreak
+\`E interessante osservare che la definizione "frequentista" non \`e in
+contrasto con quella assiomatrica di Kolmogorov. Infatti la probabilit\`a
+$Pr(A)$, espresso con il limite che abbiamo appena introdotto, \`e \textit{i})
+una quantit\`a \textit{non negativa} poich\`e prodotta dal limite di un rapporto fra quantit\`a positive; se inoltre \textit{ii}) l'evento $A$ coincide con l'evento certo $\Omega$, allora banalmente $N_A = N$ e quindi $Pr(A) = 1$; se infine \textit{iii}) $A$ e $B$ sono due eventi mutuamente esclusivi, una prova dell'esperimento che fa verificare $A \cup B$ d\`a un risultato che sta o in $A$ o in $B$, ma che non pu\`o stare in entrambi, per cui $N_{A \cup B} = N_A + N_B$ e allora
+\[
+    Pr(A \cup B) = lim_{N \rightarrow \infty} \frac{N_{A \cup B}}{N} =
+    \lim_{N \rightarrow \infty} \frac{N_A + N_B}{N} =
+\]
+\[
+    = \lim_{N \rightarrow \infty} \frac{N_A}{N} + \lim_{N \rightarrow \infty}
+    \frac{N_A}{N} = Pr(A) + Pr(B),
+\]
+cio\`e tutti gli assiomi di Kolmogorov sono automaticamente verificati.
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Teorema della Probabilita' Assoluta
@@ -5692,7 +5820,7 @@ probabilit\`a probabilit\`a di un evento $A$, noto un evento $B$, risulta:
 \]
 In modo analogo, la probabilit\`a di un evento $B$ noto un evento $A$
 \[
-    Pr(B | A) = \frac{Pr(A \cap B)}{Pr(A)} = \frac{Pr(AB)}{Pr(B)},
+    Pr(B | A) = \frac{Pr(A \cap B)}{Pr(A)} = \frac{Pr(AB)}{Pr(A)},
 \]
 dalla quale otteniamo
 \[
@@ -5743,8 +5871,8 @@ l'evento che lo studente visto indossa i pantaloni.}$, dovremo sapere:
         \[
             60 \% = \frac{60}{100} = 0.6 = \frac{6}{10} = \frac{3}{5}.
         \]
-    \item $Pr(B | A)$, ovvero la probabilit\`a che uno studente femmina indossi i
-        pantaloni (ossia la probabilit\`a cje, verificato che lo studente
+    \item $Pr(B | A)$, ovvero la probabilit\`a che uno studente femmina indossi
+        i pantaloni (ossia la probabilit\`a che, verificato che lo studente
         osservato \`e una femmina, si verifichi l'evento che indossi i
         pantaloni). Poich\`e le studentesse indossano gonne e pantaloni in egual
         numero, la probabilit\`a sar\`a $\frac{1}{2}$.
@@ -5818,7 +5946,7 @@ $i = 1, 2, \dots, N$ con le seguenti propriet\`a:
 \[
     \begin{dcases}
         B_i \cap B_k = \emptyset \ \ se \ \ i \neq k\\
-        \cup_{i = 1}^{N} = \Omega
+        \cup_{i = 1}^{N} B_i = \Omega
     \end{dcases}
 \]
 \begin{figure}[H]
@@ -5828,8 +5956,8 @@ $i = 1, 2, \dots, N$ con le seguenti propriet\`a:
     \caption{Una partizione dello spazio $\Omega$ che rispetta le propriet\`a
     date.}
 \end{figure}
-La propriet\`a di un evento $A$ pu\`o allora essere calcolata come segue
-\change{Aggiungere assioma A.3}
+\noindent
+La probabilit\`a di un evento $A$ pu\`o allora essere calcolata come segue
 \[
     Pr(A) = Pr(A \cap \Omega) = Pr(A \cap \cup_{i = 1}^{N} B_i) =
     Pr(\cup_{i = 1}^{N} A \cap B_i) =
@@ -5841,7 +5969,7 @@ Se in questa relazione si esprime poi ciascuna probabilit\`a congiunta
 $Pr(A \cap B_i)$ come prodotto tra la probabilit\`a condizionata $Pr(A | B_i)$ e
 la probabilit\`a marginale $Pr(B_i)$, si ricava l'uguaglianza
 \[
-    Pr(a) = \sum_{i = 1}^{N} Pr(A|B_i) Pr(B_i)
+    Pr(A) = \sum_{i = 1}^{N} Pr(A|B_i) Pr(B_i)
 \]
 che rappresenta appunto l'enunciato del teorema della probabilit\`a totale.
 \end{proof}
@@ -5887,7 +6015,7 @@ e
     Pr(B | \overline{A}) = Pr(\overline{B} | A) = P_e = 0.01.
 \]
 Occorre determinare la probabilit\`a che il trasmettitore (telefono mobile)
-abbia effettivamente trasmesso un bit event valore nullo quando sia stato
+abbia effettivamente trasmesso un bit avente valore nullo quando sia stato
 ricevuto un dato dello stesso tipo (dalla stazione radio base), cio\`e la
 probabilit\`a condizionata $Pr(A | B)$; a tal fine possiamo usare la formula di
 Bayes:
