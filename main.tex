@@ -5982,6 +5982,7 @@ per segnali periodici (con $TSF$).
 %             di x(t)
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Dimostrare che la TFS di $x[n] = x(nT)$ \`e scrivibile tramite la
 $TCF$ di $x(t)$}
 
@@ -6086,12 +6087,179 @@ che $S_x(f) = \abs{X(f)}^2$}
 % Subsection: Definire la funzione delta di Dirac e illustrare le sue proprieta'
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Definire la funzione delta di Dirac e illustrare le sue propriet\`a}
+Consideriamo di nuovo la funzione \textit{gradino unitario} rappresentata nella
+seguente figura
+\[
+    u(t) =
+        \begin{dcases}
+            1 \quads{4} t > 0\\
+            1/2 \quads{3} t = 0\\
+            0 \quads{4} t < 0
+        \end{dcases}
+\]
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.5\textwidth]{images/heaviside_function.png}
+    \caption{Segnale Gradino Unitario $u(t)$.}
+\end{figure}
+Evidentemente, il segnale gradino unitario presenta una discontinuit\`a di prima
+specie per $t = 0$. Il valore assegnato alla funzione in questo punto pu\`o
+essere scelto arbitrariamente: per consisenza con il criterio di Dirichlet, si
+scegli la semisomma dei limiti destro e sinistro, cio\`e si pone $u(0) = 1/2$.
+\bigbreak
+Consideriamo allora come migliore approssimazione una fnuzione gradino "reale"
+$u_{\epsilon}(t)$ illustrata in figura e definita dalla relazione
+% IMMAGINE
+\[
+    u_{\epsilon} =
+        \begin{dcases}
+            0 \quads{5} t < -\epsilon\\
+            \frac{1 + t/\epsilon}{2} \quad -\epsilon \leq t \leq \epsilon\\
+            1 \quads{5} t > \epsilon
+        \end{dcases}
+\]
+L'andamento del gradino durante l'intervallo di "salita" $(-\epsilon, \epsilon)$
+\`e stato preso linere per semplicit\`a. Le considerazioni che stiamo per fare
+non cambierebbero per\`o anche se tale andamento fosse ancora pi\`u simile a
+quello di un segnale reale (in particolare ancora pi\`u regolare). Il segnale
+$u_{\epsilon}(t)$ \`e adesso ovunque derivabile e la sua derivata
+\[
+    \delta_{\epsilon}(t) = \frac{d u_{\epsilon}(t)}{dt}
+\]
+\`e rappresentata nella seguente figura:
+% IMMAGINE
+Evidentemente,
+\[
+    \delta_{\epsilon}(t) = \frac{1}{2 \epsilon} rect\left(\frac{t}{2 \epsilon}
+    \right)
+\]
+e inoltre
+\[
+    \delta_{\epsilon}(t) = \frac{d u_{\epsilon}(t)}{dt} \Longrightarrow
+    u_{\epsilon}(t) = \int\displaylimits_{-\infty}^{t} \delta_{\epsilon}(\alpha)
+    \ d\alpha
+\]
+senz'alcuna ambiguit\`a.
+\bigbreak
+Osserviamo che riducendo il valore del parametro $\epsilon$, ossia riducendo il
+tempo di salita del segnale, si ottiene una approssimazione sempre migliore del
+gradino ideale, tant'\`e che si pu\`o scrivere
+\[
+    u(t) = \lim_{\epsilon \rightarrow 0} u_{\epsilon}(t) =
+    \lim_{\epsilon \rightarrow 0}
+    \int\displaylimits_{-\infty}^{t} \delta_{\epsilon}(\alpha) \ d\alpha
+\]
+da cui segue
+\[
+    u(t) = \lim_{\epsilon \rightarrow 0}
+    \int\displaylimits_{-\infty}^{t} \delta_{\epsilon}(\alpha) \ d\alpha
+\]
+% IMMAGINE
+Il problema di trovare la "derivata della funzione gradino" sarebbe risolto se
+nella precedente relazione potessimo eseguire l'operazione di limite
+\textit{sotto il segno d'integrale} ponendo dunque
+\[
+    \frac{d u(T)}{dt} \triangleq lim_{\epsilon \Rightarrow 0}
+    \delta_{\epsilon}(t) = \delta(t).
+\]
+Otterremmo cos\`i una funzione $\delta(t)$ con l'apparenza della derivata del
+gradino ideale come limite della successione di funzioni $\delta_{\epsilon}(t)$.
+Purtroppo, come \`e evidente dalla precedente immagine, il limite di tale
+successione \textit{non \`e una funzione} nel senso ordinario dell'analisi
+matematica. Infatti tale funzione dovrebbe assumere ovunque valore nullo al di
+fuori del punto $t = 0$ e, se integrata, dovrebbe restituire un valore finito
+diverso da zero. Non \`e corretto quindi affermare che $\delta(t)$ \`e il limite
+della successione di funzioni $\delta_{\epsilon}(t)$. Tuttavia, per estensione,
+ammettiamo di definire una \textit{funzione generalizzata impulso unitario}
+$\delta(t)$ o funzione $\delta$ di Dirac, attraverso una sua propriet\`a di
+carattere integrale:
+\[
+    u(t) = \int\displaylimits_{-\infty}^{t} \delta(\alpha) \ d\alpha
+\]
+che la identifica come "derivata della funzione gradino".
+\bigbreak
+Come abbiamo gi\`a discusso, non esiste alcuna funzione ordinaria che possa
+soddisfare la definizione e quindi dobbiamo ammettere che l'impulso unitario sia
+un'entit\`a matematica di carattere analogo a quello di una funzione ordinaria,
+\textit{ma che assume un significato solo quando se ne consideri una qualche
+propriet\`a integrale} come nella definizione stessa.
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Proprieta' della Delta di Dirac
+%-------------------------------------------------------------------------------
+
+\subsubsection{Propriet\`a della Delta di Dirac}
+\textbf{1) Area unitaria}\\
+\[
+    \int\displaylimits_{-\infty}^{+\infty} \delta(t) \dt =
+    \int\displaylimits_{-\infty}^{+\infty} \lim_{\epsilon \rightarrow 0}
+    \delta_{\epsilon}(t) \dt =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} \lim_{\epsilon \rightarrow 0}
+    \frac{1}{\epsilon} \cdot rect\left(\frac{t}{\epsilon}\right) \dt =
+    \lim_{\epsilon \Rightarrow 0} \frac{1}{\epsilon}
+    \int\displaylimits_{-\epsilon/2}^{\epsilon/2} 1 \dt =
+    \lim_{\epsilon \Rightarrow 0} \frac{1}{\epsilon} \cdot \epsilon = 1.
+\]
+\bigbreak
+\noindent
+\textbf{2) Propriet\`a Campionatrice}\\
+Se $x(t)$ risulta continuo in $t = 0$, allora
+\[
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \delta(t) \dt = x(t)|_{t = 0} =
+    x(0).
+\]
+\begin{proof}
+\[
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot \delta(t) \dt =
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    \lim_{\epsilon \rightarrow 0} \delta_{\epsilon}(t) \dt =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot 
+    \lim_{\epsilon \rightarrow 0}
+    \frac{1}{\epsilon} \cdot rect\left(\frac{t}{\epsilon}\right) \dt =
+    \lim_{\epsilon \Rightarrow 0} \frac{1}{\epsilon}
+    \int\displaylimits_{-\epsilon/2}^{\epsilon/2} x(t) \dt =
+\]
+\[
+    \footnote{Per il teorema della media: il teorema della media itnegrale
+    stabilisce che la media integrale della funzione sia un valore incluso
+    nell'intervallo immagine.}= \lim_{\epsilon \Rightarrow 0}
+    \frac{1}{\epsilon} \cdot \epsilon x(\overline{t}) =
+    \lim_{\epsilon \Rightarrow 0} x(\overline{t}) = x(0).
+\]
+\end{proof}
+\bigbreak
+\noindent
+\textbf{3) Parit\`a}
+\[
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \delta(t) \dt =
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \delta(-t) \dt
+\]
+\begin{proof}
+\[
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \delta(-t) \dt \ 
+    \footnote{Poniamo $t = -t'$.}=
+    \int\displaylimits_{+\infty}^{-\infty} x(-t') \delta(t') -\dt' =
+    \int\displaylimits_{-\infty}^{+\infty} x(-t') \delta(t') \dt' =
+\]
+\[
+    \footnote{Per la propriet\`a campionatrice.}=
+    x(-0) = x(0) = \int\displaylimits_{-\infty}^{+\infty} x(t) \delta(t) \dt.
+\]
+\end{proof}
+\change{To be continued.}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare la condizione sufficiente per l'esistenza della TFS
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Dimostrare la condizione sufficiente per l'esistenza della TFS}
 
 %-------------------------------------------------------------------------------
