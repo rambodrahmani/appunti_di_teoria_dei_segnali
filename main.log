@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.20)  1 APR 2019 00:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.20)  1 APR 2019 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1518,7 +1518,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 214.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 214.
-<images/cc_88x31.png, id=690, 88.33pt x 31.11626pt>
+<images/cc_88x31.png, id=1073, 88.33pt x 31.11626pt>
 File: images/cc_88x31.png Graphic file (type png)
 <use images/cc_88x31.png>
 Package pdftex.def Info: images/cc_88x31.png  used on input line 224.
@@ -1536,7 +1536,7 @@ Overfull \hbox (31.60391pt too wide) in paragraph at lines 267--270
 ne-dimensional
  []
 
-<images/complex_plane.png, id=704, 180.675pt x 130.4875pt>
+<images/complex_plane.png, id=1087, 180.675pt x 130.4875pt>
 File: images/complex_plane.png Graphic file (type png)
 <use images/complex_plane.png>
 Package pdftex.def Info: images/complex_plane.png  used on input line 283.
@@ -1557,7 +1557,7 @@ Underfull \hbox (badness 1292) in paragraph at lines 286--296
  []
 
 [3 <./images/complex_plane.png>]
-<images/complex_number_polar_form.png, id=712, 137.7948pt x 148.3944pt>
+<images/complex_number_polar_form.png, id=1095, 137.7948pt x 148.3944pt>
 File: images/complex_number_polar_form.png Graphic file (type png)
 <use images/complex_number_polar_form.png>
 Package pdftex.def Info: images/complex_number_polar_form.png  used on input li
@@ -1567,7 +1567,7 @@ ne 305.
 (/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [4 <./images/complex_number_polar_form.png>] [5]
-<images/euler_s_formula.png, id=725, 527.0892pt x 564.6696pt>
+<images/euler_s_formula.png, id=1108, 527.0892pt x 564.6696pt>
 File: images/euler_s_formula.png Graphic file (type png)
 <use images/euler_s_formula.png>
 Package pdftex.def Info: images/euler_s_formula.png  used on input line 392.
@@ -1583,7 +1583,7 @@ Overfull \hbox (9.29277pt too wide) detected at line 416
 []\OT1/ppl/m/n/12 .
  []
 
-<images/complex_conjugate_picture.png, id=726, 225.9642pt x 317.7471pt>
+<images/complex_conjugate_picture.png, id=1109, 225.9642pt x 317.7471pt>
 File: images/complex_conjugate_picture.png Graphic file (type png)
 <use images/complex_conjugate_picture.png>
 Package pdftex.def Info: images/complex_conjugate_picture.png  used on input li
@@ -1621,7 +1621,7 @@ OML/zplm/m/it/12 sin\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 '[] \OT1/zplm/m/n/12 +
 n/12 + \OML/zplm/m/it/12 '[]\OT1/zplm/m/n/12 ))\OT1/ppl/m/n/12 ,
  []
 
-<images/multiply_by_i.png, id=746, 345.29pt x 357.335pt>
+<images/multiply_by_i.png, id=1129, 345.29pt x 357.335pt>
 File: images/multiply_by_i.png Graphic file (type png)
 <use images/multiply_by_i.png>
 Package pdftex.def Info: images/multiply_by_i.png  used on input line 556.
@@ -1662,7 +1662,7 @@ Underfull \hbox (badness 1077) in paragraph at lines 863--863
 -sen-te nel-l'Ap-pen-di-ce A: Se-gna-li
  []
 
-<images/esercizio_12_marzo_2018.png, id=798, 105.76097pt x 62.39897pt>
+<images/esercizio_12_marzo_2018.png, id=1182, 105.76097pt x 62.39897pt>
 File: images/esercizio_12_marzo_2018.png Graphic file (type png)
 <use images/esercizio_12_marzo_2018.png>
 Package pdftex.def Info: images/esercizio_12_marzo_2018.png  used on input line
@@ -1699,21 +1699,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 1459--1470
  []
 
 [29]
-<images/spettro_di_ampiezza_e_di_fase.jpg, id=933, 370.0224pt x 277.5168pt>
+<images/spettro_di_ampiezza_e_di_fase.jpg, id=1316, 370.0224pt x 277.5168pt>
 File: images/spettro_di_ampiezza_e_di_fase.jpg Graphic file (type jpg)
 <use images/spettro_di_ampiezza_e_di_fase.jpg>
 Package pdftex.def Info: images/spettro_di_ampiezza_e_di_fase.jpg  used on inpu
 t line 1503.
 (pdftex.def)             Requested size: 383.0pt x 287.26407pt.
  [30] [31 <./images/spettro_di_ampiezza_e_di_fase.jpg>] [32]
-<images/cosine_power_phase_spectrum.jpg, id=954, 277.035pt x 102.3825pt>
+<images/cosine_power_phase_spectrum.jpg, id=1337, 277.035pt x 102.3825pt>
 File: images/cosine_power_phase_spectrum.jpg Graphic file (type jpg)
 <use images/cosine_power_phase_spectrum.jpg>
 Package pdftex.def Info: images/cosine_power_phase_spectrum.jpg  used on input 
 line 1621.
 (pdftex.def)             Requested size: 383.0pt x 141.5442pt.
  [33] [34 <./images/cosine_power_phase_spectrum.jpg>] [35]
-<images/sine_phase_spectrum.jpg, id=978, 264.99pt x 108.405pt>
+<images/sine_phase_spectrum.jpg, id=1361, 264.99pt x 108.405pt>
 File: images/sine_phase_spectrum.jpg Graphic file (type jpg)
 <use images/sine_phase_spectrum.jpg>
 Package pdftex.def Info: images/sine_phase_spectrum.jpg  used on input line 178
@@ -1729,7 +1729,7 @@ it/12 ^^Yf[]t \OMS/zplm/m/n/12 ^^@ []\OT1/zplm/m/n/12 )[][][] =[]\OMS/zplm/m/n/
  []
 
 [37 <./images/sine_phase_spectrum.jpg>]
-<images/matlab_ecg_signal.jpg, id=998, 1371.1225pt x 691.58376pt>
+<images/matlab_ecg_signal.jpg, id=1382, 1371.1225pt x 691.58376pt>
 File: images/matlab_ecg_signal.jpg Graphic file (type jpg)
 <use images/matlab_ecg_signal.jpg>
 Package pdftex.def Info: images/matlab_ecg_signal.jpg  used on input line 1858.
@@ -1749,7 +1749,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1886
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/matlab_ecg_spectrum.jpg, id=1031, 1371.1225pt x 691.58376pt>
+<images/matlab_ecg_spectrum.jpg, id=1415, 1371.1225pt x 691.58376pt>
 File: images/matlab_ecg_spectrum.jpg Graphic file (type jpg)
 <use images/matlab_ecg_spectrum.jpg>
 Package pdftex.def Info: images/matlab_ecg_spectrum.jpg  used on input line 191
@@ -1757,26 +1757,26 @@ Package pdftex.def Info: images/matlab_ecg_spectrum.jpg  used on input line 191
 (pdftex.def)             Requested size: 383.0pt x 193.17781pt.
 
 [40] [41 <./images/matlab_ecg_spectrum.jpg>]
-<images/treno_di_impulsi.png, id=1082, 473.77pt x 335.2525pt>
+<images/treno_di_impulsi.png, id=1465, 473.77pt x 335.2525pt>
 File: images/treno_di_impulsi.png Graphic file (type png)
 <use images/treno_di_impulsi.png>
 Package pdftex.def Info: images/treno_di_impulsi.png  used on input line 1938.
 (pdftex.def)             Requested size: 191.5pt x 135.5105pt.
 
 (./resources/fourier_approximation.m [42 <./images/treno_di_impulsi.png>])
-<images/matlab_approssimazione_1.jpg, id=1096, 664.4825pt x 665.48625pt>
+<images/matlab_approssimazione_1.jpg, id=1480, 664.4825pt x 665.48625pt>
 File: images/matlab_approssimazione_1.jpg Graphic file (type jpg)
 <use images/matlab_approssimazione_1.jpg>
 Package pdftex.def Info: images/matlab_approssimazione_1.jpg  used on input lin
 e 1954.
 (pdftex.def)             Requested size: 191.5pt x 191.78784pt.
-<images/matlab_approssimazione_2.jpg, id=1097, 664.4825pt x 665.48625pt>
+<images/matlab_approssimazione_2.jpg, id=1481, 664.4825pt x 665.48625pt>
 File: images/matlab_approssimazione_2.jpg Graphic file (type jpg)
 <use images/matlab_approssimazione_2.jpg>
 Package pdftex.def Info: images/matlab_approssimazione_2.jpg  used on input lin
 e 1960.
 (pdftex.def)             Requested size: 191.5pt x 191.78784pt.
-<images/matlab_approssimazione_3.jpg, id=1098, 664.4825pt x 665.48625pt>
+<images/matlab_approssimazione_3.jpg, id=1482, 664.4825pt x 665.48625pt>
 File: images/matlab_approssimazione_3.jpg Graphic file (type jpg)
 <use images/matlab_approssimazione_3.jpg>
 Package pdftex.def Info: images/matlab_approssimazione_3.jpg  used on input lin
@@ -1784,7 +1784,7 @@ e 1966.
 (pdftex.def)             Requested size: 191.5pt x 191.78784pt.
 
 [43 <./images/matlab_approssimazione_1.jpg>]
-<images/matlab_approssimazione_4.jpg, id=1131, 664.4825pt x 665.48625pt>
+<images/matlab_approssimazione_4.jpg, id=1515, 664.4825pt x 665.48625pt>
 File: images/matlab_approssimazione_4.jpg Graphic file (type jpg)
 <use images/matlab_approssimazione_4.jpg>
 Package pdftex.def Info: images/matlab_approssimazione_4.jpg  used on input lin
@@ -1792,19 +1792,19 @@ e 1972.
 (pdftex.def)             Requested size: 191.5pt x 191.78784pt.
  [44 <./images/matlab_approssimazione_2.jpg> <./images/matlab_approssimazione_3
 .jpg>]
-<images/matlab_approssimazione_5.jpg, id=1138, 664.4825pt x 665.48625pt>
+<images/matlab_approssimazione_5.jpg, id=1522, 664.4825pt x 665.48625pt>
 File: images/matlab_approssimazione_5.jpg Graphic file (type jpg)
 <use images/matlab_approssimazione_5.jpg>
 Package pdftex.def Info: images/matlab_approssimazione_5.jpg  used on input lin
 e 1981.
 (pdftex.def)             Requested size: 191.5pt x 191.78784pt.
-<images/matlab_approssimazione_6.jpg, id=1139, 664.4825pt x 665.48625pt>
+<images/matlab_approssimazione_6.jpg, id=1523, 664.4825pt x 665.48625pt>
 File: images/matlab_approssimazione_6.jpg Graphic file (type jpg)
 <use images/matlab_approssimazione_6.jpg>
 Package pdftex.def Info: images/matlab_approssimazione_6.jpg  used on input lin
 e 1987.
 (pdftex.def)             Requested size: 191.5pt x 191.78784pt.
-<images/matlab_approssimazione_7.jpg, id=1140, 664.4825pt x 665.48625pt>
+<images/matlab_approssimazione_7.jpg, id=1524, 664.4825pt x 665.48625pt>
 File: images/matlab_approssimazione_7.jpg Graphic file (type jpg)
 <use images/matlab_approssimazione_7.jpg>
 Package pdftex.def Info: images/matlab_approssimazione_7.jpg  used on input lin
@@ -1819,13 +1819,13 @@ Overfull \hbox (1.19998pt too wide) in paragraph at lines 2023--2031
  []
 
 [47]
-<images/treno_di_impulsi_rettangolari.jpg, id=1173, 1284.8pt x 501.875pt>
+<images/treno_di_impulsi_rettangolari.jpg, id=1556, 1284.8pt x 501.875pt>
 File: images/treno_di_impulsi_rettangolari.jpg Graphic file (type jpg)
 <use images/treno_di_impulsi_rettangolari.jpg>
 Package pdftex.def Info: images/treno_di_impulsi_rettangolari.jpg  used on inpu
 t line 2043.
 (pdftex.def)             Requested size: 383.0pt x 149.6064pt.
-<images/rect_alpha.jpg, id=1174, 1284.8pt x 573.14125pt>
+<images/rect_alpha.jpg, id=1557, 1284.8pt x 573.14125pt>
 File: images/rect_alpha.jpg Graphic file (type jpg)
 <use images/rect_alpha.jpg>
 Package pdftex.def Info: images/rect_alpha.jpg  used on input line 2064.
@@ -1835,7 +1835,7 @@ Package pdftex.def Info: images/rect_alpha.jpg  used on input line 2064.
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
 (Font)              Font shape `T1/ppl/b/it' tried instead on input line 2143.
  [50]
-<images/treno_di_impulsi_rettangolari_2.jpg, id=1197, 1284.8pt x 487.8225pt>
+<images/treno_di_impulsi_rettangolari_2.jpg, id=1580, 1284.8pt x 487.8225pt>
 File: images/treno_di_impulsi_rettangolari_2.jpg Graphic file (type jpg)
 <use images/treno_di_impulsi_rettangolari_2.jpg>
 Package pdftex.def Info: images/treno_di_impulsi_rettangolari_2.jpg  used on in
@@ -1847,21 +1847,21 @@ Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 2238.
 
 [53] [54]
-<images/spettro_rect_alpha.jpg, id=1230, 1029.8475pt x 1284.8pt>
+<images/spettro_rect_alpha.jpg, id=1614, 1029.8475pt x 1284.8pt>
 File: images/spettro_rect_alpha.jpg Graphic file (type jpg)
 <use images/spettro_rect_alpha.jpg>
 Package pdftex.def Info: images/spettro_rect_alpha.jpg  used on input line 2320
 .
 (pdftex.def)             Requested size: 383.0pt x 477.79951pt.
  [55] [56 <./images/spettro_rect_alpha.jpg>]
-<images/esempio_14_03_2018.png, id=1241, 264.99pt x 132.495pt>
+<images/esempio_14_03_2018.png, id=1625, 264.99pt x 132.495pt>
 File: images/esempio_14_03_2018.png Graphic file (type png)
 <use images/esempio_14_03_2018.png>
 Package pdftex.def Info: images/esempio_14_03_2018.png  used on input line 2339
 .
 (pdftex.def)             Requested size: 383.0pt x 191.51437pt.
  [57 <./images/esempio_14_03_2018.png>]
-<images/esempio_14_03_2018_2.png, id=1248, 216.81pt x 96.36pt>
+<images/esempio_14_03_2018_2.png, id=1632, 216.81pt x 96.36pt>
 File: images/esempio_14_03_2018_2.png Graphic file (type png)
 <use images/esempio_14_03_2018_2.png>
 Package pdftex.def Info: images/esempio_14_03_2018_2.png  used on input line 23
@@ -2004,12 +2004,7 @@ m/it/12 t\OT1/zplm/m/n/12 )[]) \OML/zplm/m/it/12 dt \OT1/zplm/m/n/12 =[] [][] [
 m/m/n/12 ))[]) \OML/zplm/m/it/12 dt \OT1/zplm/m/n/12 =
  []
 
-[89]
-
-LaTeX Warning: Reference `eq:valor_medio_x_tilde' on page 90 undefined on input
- line 3652.
-
-[90] [91] [92]
+[89] [90] [91] [92]
 Overfull \hbox (4.56747pt too wide) detected at line 3814
 \OT1/zplm/m/n/12 = [] [] \OML/zplm/m/it/12 X[] [] \OT1/ppl/m/n/12 .
  []
@@ -2079,7 +2074,7 @@ Overfull \hbox (1.80507pt too wide) detected at line 4080
  []
 
 [99] [100] [101] [102] [103]
-<images/segnale_alternativo.jpg, id=1564, 277.035pt x 116.8365pt>
+<images/segnale_alternativo.jpg, id=1948, 277.035pt x 116.8365pt>
 File: images/segnale_alternativo.jpg Graphic file (type jpg)
 <use images/segnale_alternativo.jpg>
 Package pdftex.def Info: images/segnale_alternativo.jpg  used on input line 427
@@ -2157,19 +2152,19 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 4583.
 
 [113] [114] [115] [116]
-<images/modulato_modulante_oscillazione.png, id=1638, 228.855pt x 96.36pt>
+<images/modulato_modulante_oscillazione.png, id=2021, 228.855pt x 96.36pt>
 File: images/modulato_modulante_oscillazione.png Graphic file (type png)
 <use images/modulato_modulante_oscillazione.png>
 Package pdftex.def Info: images/modulato_modulante_oscillazione.png  used on in
 put line 4768.
 (pdftex.def)             Requested size: 383.0pt x 161.27052pt.
  [117 <./images/modulato_modulante_oscillazione.png>]
-<images/modulatore.png, id=1645, 120.45pt x 96.36pt>
+<images/modulatore.png, id=2028, 120.45pt x 96.36pt>
 File: images/modulatore.png Graphic file (type png)
 <use images/modulatore.png>
 Package pdftex.def Info: images/modulatore.png  used on input line 4799.
 (pdftex.def)             Requested size: 191.5pt x 153.21457pt.
-<images/segnale_modulato.png, id=1646, 289.08pt x 115.632pt>
+<images/segnale_modulato.png, id=2029, 289.08pt x 115.632pt>
 File: images/segnale_modulato.png Graphic file (type png)
 <use images/segnale_modulato.png>
 Package pdftex.def Info: images/segnale_modulato.png  used on input line 4815.
@@ -2251,14 +2246,71 @@ t[]\OT1/zplm/m/n/12 ) \OMS/zplm/m/n/12 ^^A \OML/zplm/m/it/12 e[] dt[] \OMS/zplm
 [140] [141]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5784.
+(hyperref)                removing `math shift' on input line 5734.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5784.
+(hyperref)                removing `math shift' on input line 5734.
 
-[142]
-Overfull \hbox (32.43973pt too wide) detected at line 5812
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sum@' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\slimits@' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\displaylimits' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 5734.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5734.
+
+[142] [143]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5848.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5848.
+
+[144]
+Overfull \hbox (32.43973pt too wide) detected at line 5876
 \OT1/zplm/m/n/12 = [] [] \OML/zplm/m/it/12 X[] \OMS/zplm/m/n/12 ^^A [] \OML/zpl
 m/m/it/12 y[]\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 t\OT1/zplm/m/n/12 ) \OMS/zplm/
 m/n/12 ^^A \OML/zplm/m/it/12 e[] dt \OT1/zplm/m/n/12 = [] [] \OML/zplm/m/it/12 
@@ -2267,180 +2319,143 @@ X[] \OMS/zplm/m/n/12 ^^A [][] \OT1/zplm/m/n/12 =
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5824.
+(hyperref)                removing `math shift' on input line 5892.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5824.
+(hyperref)                removing `math shift' on input line 5892.
+
+[145] [146] [147]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5986.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5844.
+(hyperref)                removing `math shift' on input line 5986.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5844.
+(hyperref)                removing `math shift' on input line 5986.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5844.
+(hyperref)                removing `math shift' on input line 5986.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5844.
+(hyperref)                removing `math shift' on input line 5986.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5844.
+(hyperref)                removing `math shift' on input line 5986.
+
+[148]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5844.
+(hyperref)                removing `math shift' on input line 6003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5860.
+(hyperref)                removing `math shift' on input line 6003.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5860.
+(hyperref)                removing `math shift' on input line 6003.
+
+[149]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6022.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5860.
+(hyperref)                removing `math shift' on input line 6022.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5860.
+(hyperref)                removing `math shift' on input line 6022.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5868.
+(hyperref)                removing `math shift' on input line 6022.
+
+
+Overfull \hbox (3.53223pt too wide) detected at line 6038
+\OML/zplm/m/it/12 x\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 ^^\\OT1/zplm/m/n/12 ) \O
+MS/zplm/m/n/12 ^^C \OML/zplm/m/it/12 y[]\OT1/zplm/m/n/12 (\OMS/zplm/m/n/12 ^^@\
+OML/zplm/m/it/12 ^^\\OT1/zplm/m/n/12 ) = [] \OML/zplm/m/it/12 x\OT1/zplm/m/n/12
+ (\OML/zplm/m/it/12 t\OT1/zplm/m/n/12 ) \OMS/zplm/m/n/12 ^^A \OML/zplm/m/it/12 
+y[]\OT1/zplm/m/n/12 [\OMS/zplm/m/n/12 ^^@\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 ^^
+\ \OMS/zplm/m/n/12 ^^@ \OML/zplm/m/it/12 t\OT1/zplm/m/n/12 )] \OML/zplm/m/it/12
+ dt \OT1/zplm/m/n/12 = [] \OML/zplm/m/it/12 x\OT1/zplm/m/n/12 (\OML/zplm/m/it/1
+2 t\OT1/zplm/m/n/12 ) \OMS/zplm/m/n/12 ^^A \OML/zplm/m/it/12 y[]\OT1/zplm/m/n/1
+2 (\OML/zplm/m/it/12 t \OMS/zplm/m/n/12 ^^@ \OML/zplm/m/it/12 ^^\\OT1/zplm/m/n/
+12 ) \OML/zplm/m/it/12 dt \OT1/zplm/m/n/12 = \OML/zplm/m/it/12 C[]\OT1/zplm/m/n
+/12 (\OML/zplm/m/it/12 ^^\\OT1/zplm/m/n/12 )
+ []
+
+[150]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6050.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5868.
+(hyperref)                removing `math shift' on input line 6050.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5868.
+(hyperref)                removing `math shift' on input line 6050.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5868.
+(hyperref)                removing `math shift' on input line 6050.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5875.
+(hyperref)                removing `math shift' on input line 6083.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5875.
+(hyperref)                removing `subscript' on input line 6083.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5875.
+(hyperref)                removing `\new@ifnextchar' on input line 6083.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5875.
+(hyperref)                removing `superscript' on input line 6083.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
+(hyperref)                removing `math shift' on input line 6083.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sum@' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\slimits@' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\displaylimits' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5883.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5891.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 5891.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 5891.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 5891.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5891.
-
-[143] [144] [145] [146]
-Overfull \hbox (2.77576pt too wide) in paragraph at lines 5986--5992
+[151] [152] [153]
+Overfull \hbox (2.77576pt too wide) in paragraph at lines 6178--6184
 \T1/ppl/m/n/12 den-te os-ser-va-to in-dos-si i pan-ta-lo-ni. Per cal-co-la-re l
 a pro-ba-bi-li-tà $\OML/zplm/m/it/12 Pr\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 A\OM
 S/zplm/m/n/12 j\OML/zplm/m/it/12 B\OT1/zplm/m/n/12 )[][][]$\T1/ppl/m/n/12 ,
  []
 
-[147]
-Underfull \hbox (badness 10000) in paragraph at lines 6035--6039
+[154]
+Underfull \hbox (badness 10000) in paragraph at lines 6227--6231
 
  []
 
-[148] [149]
-<images/set_partition.jpg, id=1813, 1284.8pt x 601.24625pt>
+[155] [156]
+<images/set_partition.jpg, id=2235, 1284.8pt x 601.24625pt>
 File: images/set_partition.jpg Graphic file (type jpg)
 <use images/set_partition.jpg>
-Package pdftex.def Info: images/set_partition.jpg  used on input line 6092.
+Package pdftex.def Info: images/set_partition.jpg  used on input line 6284.
 (pdftex.def)             Requested size: 191.5pt x 89.61423pt.
- [150 <./images/set_partition.jpg>] [151]
-Overfull \hbox (9.25783pt too wide) detected at line 6182
+ [157 <./images/set_partition.jpg>] [158]
+Overfull \hbox (9.25783pt too wide) detected at line 6374
 \OML/zplm/m/it/12 Pr\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 B\OT1/zplm/m/n/12 ) = \
 OML/zplm/m/it/12 Pr\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 B\OMS/zplm/m/n/12 j\OML/
 zplm/m/it/12 A\OT1/zplm/m/n/12 ) \OMS/zplm/m/n/12 ^^A \OML/zplm/m/it/12 Pr\OT1/
@@ -2452,266 +2467,257 @@ plm/m/n/12 + \OT1/ppl/m/n/12 0.01 \OMS/zplm/m/n/12 ^^A \OT1/ppl/m/n/12 0.3 \OT1
 /zplm/m/n/12 = \OT1/ppl/m/n/12 0.696.
  []
 
-[152]
-Underfull \hbox (badness 10000) in paragraph at lines 6254--6258
+[159]
+Underfull \hbox (badness 10000) in paragraph at lines 6446--6450
 
  []
 
-[153] [154]
+[160] [161]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6270.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 6270.
+(hyperref)                removing `math shift' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 6270.
+(hyperref)                removing `\sigma' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 6270.
+(hyperref)                removing `subscript' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6270.
+(hyperref)                removing `superscript' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6270.
+(hyperref)                removing `math shift' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 6270.
+(hyperref)                removing `math shift' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 6270.
+(hyperref)                removing `subscript' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6270.
-
-[155]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6358.
+(hyperref)                removing `superscript' on input line 6462.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6358.
+(hyperref)                removing `math shift' on input line 6462.
+
+[162]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6550.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6358.
+(hyperref)                removing `math shift' on input line 6550.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6358.
+(hyperref)                removing `math shift' on input line 6550.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6390.
+(hyperref)                removing `math shift' on input line 6550.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6390.
+(hyperref)                removing `math shift' on input line 6582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6408.
+(hyperref)                removing `math shift' on input line 6582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6408.
+(hyperref)                removing `math shift' on input line 6600.
 
-[156] [157]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6600.
+
+[163] [164]
 Overfull \vbox (122.0pt too high) has occurred while \output is active []
 
- [158]
+ [165]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@overline' on input line 6509.
+(hyperref)                removing `superscript' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cdot' on input line 6509.
+(hyperref)                removing `\@@overline' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `\cdot' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@overline' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `\@@overline' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6509.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6585.
+(hyperref)                removing `math shift' on input line 6701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 6585.
+(hyperref)                removing `math shift' on input line 6777.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 6585.
+(hyperref)                removing `subscript' on input line 6777.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6585.
+(hyperref)                removing `subscript' on input line 6777.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6595.
+(hyperref)                removing `math shift' on input line 6777.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6595.
+(hyperref)                removing `math shift' on input line 6787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6787.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\eta' on input line 6613.
+(hyperref)                removing `math shift' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 6613.
+(hyperref)                removing `\eta' on input line 6805.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6613.
+(hyperref)                removing `subscript' on input line 6805.
 
-[159]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6805.
+
+[166]
 Overfull \vbox (826.13335pt too high) has occurred while \output is active []
 
 
-[160]
-<images/heaviside_function.png, id=1862, 326.21875pt x 244.915pt>
+[167]
+<images/heaviside_function.png, id=2285, 326.21875pt x 244.915pt>
 File: images/heaviside_function.png Graphic file (type png)
 <use images/heaviside_function.png>
-Package pdftex.def Info: images/heaviside_function.png  used on input line 6712
+Package pdftex.def Info: images/heaviside_function.png  used on input line 6904
 .
 (pdftex.def)             Requested size: 191.5pt x 143.77733pt.
- [161
+ [168
 
-] [162 <./images/heaviside_function.png>] [163]
+] [169 <./images/heaviside_function.png>] [170]
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6775.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 6775.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6967.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 6967.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6775.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6775.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6967.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6967.
 
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: A318E495CFD48376E26A38820982CB68;4594
-(rerunfilecheck)             After:  F9A3D48C372876F4B45EF641ED895C92;18824.
-
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 95208496680B2134547E34FD66754BF3;18824.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38406 strings out of 492616
- 669087 string characters out of 6135177
- 899791 words of memory out of 5000000
- 40964 multiletter control sequences out of 15000+600000
- 618338 words of font info for 240 fonts, out of 8000000 for 9000
+ 38543 strings out of 492616
+ 671671 string characters out of 6135177
+ 899694 words of memory out of 5000000
+ 41090 multiletter control sequences out of 15000+600000
+ 617562 words of font info for 239 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,22n,81p,769b,2535s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
@@ -2729,24 +2735,23 @@ athpazo/fplmbi.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb
 ></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1
-/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
-r/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb>
-</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/tex
-mf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share
-/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf-dist/fon
-ts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public
-/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1
-200.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/
-texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texmf-dist/fonts/ty
-pe1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/upl
-ri8a.pfb>
-Output written on main.pdf (175 pages, 2973375 bytes).
+/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
+r/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb>
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/tex
+mf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
+super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.
+pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share
+/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fon
+ts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1/public
+/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
+fb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texm
+f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
+rw/palatino/uplri8a.pfb>
+Output written on main.pdf (182 pages, 2983912 bytes).
 PDF statistics:
- 2144 PDF objects out of 2487 (max. 8388607)
- 1854 compressed objects within 19 object streams
- 717 named destinations out of 1000 (max. 500000)
- 717 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2569 PDF objects out of 2984 (max. 8388607)
+ 2269 compressed objects within 23 object streams
+ 729 named destinations out of 1000 (max. 500000)
+ 1733 words of extra memory for PDF output out of 10000 (max. 10000000)
 

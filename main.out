@@ -112,18 +112,18 @@
 \BOOKMARK [3][-]{subsubsection.4.1.16.2}{Seconda Formula di somma di Poisson}{subsection.4.1.16}% 112
 \BOOKMARK [3][-]{subsubsection.4.1.16.3}{Applicazione delle formule di Poisson alla Delta di Dirac}{subsection.4.1.16}% 113
 \BOOKMARK [2][-]{subsection.4.1.17}{Dimostrare la TCF di un segnale periodico}{section.4.1}% 114
-\BOOKMARK [2][-]{subsection.4.1.18}{Teorema di Parseval}{section.4.1}% 115
-\BOOKMARK [3][-]{subsubsection.4.1.18.1}{Definire e dimostrare il teorema di Parseval per segnali aperiodici}{subsection.4.1.18}% 116
-\BOOKMARK [3][-]{subsubsection.4.1.18.2}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TSF\)}{subsection.4.1.18}% 117
-\BOOKMARK [3][-]{subsubsection.4.1.18.3}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TCF\)}{subsection.4.1.18}% 118
-\BOOKMARK [3][-]{subsubsection.4.1.18.4}{Definire e dimostrare il teorema di Parseval per le sequenze}{subsection.4.1.18}% 119
-\BOOKMARK [2][-]{subsection.4.1.19}{Definire l'operazione di convoluzione ed illustrarne le propriet\340}{section.4.1}% 120
-\BOOKMARK [2][-]{subsection.4.1.20}{Dimostrare che la TFS di x[n] = x\(nT\) \350 scrivibile tramite la TCF di x\(t\)}{section.4.1}% 121
-\BOOKMARK [2][-]{subsection.4.1.21}{Definire l'operazione di autocorrelazione per segnali aperiodici ed illustrarne le propriet\340}{section.4.1}% 122
-\BOOKMARK [2][-]{subsection.4.1.22}{Definire la cross-correlazione e la convoluzione tra due segnali x\(t\) e y\(t\)}{section.4.1}% 123
-\BOOKMARK [2][-]{subsection.4.1.23}{Dimostrare che la cross-correlazione tra x\(t\) e y\(t\) \350 scrivibile in termini di convoluzione tra i due segnali}{section.4.1}% 124
-\BOOKMARK [2][-]{subsection.4.1.24}{Dimostrare che la TFS di x[n] = x\(nT\) \350 periodica di periodo 1/T}{section.4.1}% 125
-\BOOKMARK [2][-]{subsection.4.1.25}{Dimostrare che la TSF di x\(t\) = n x0\(t - nT\) \350 scrivibile tramite la TCF di x0\(t\)}{section.4.1}% 126
+\BOOKMARK [2][-]{subsection.4.1.18}{Dimostrare che la TSF di x\(t\) = n x0\(t - nT\) \350 scrivibile tramite la TCF di x0\(t\)}{section.4.1}% 115
+\BOOKMARK [2][-]{subsection.4.1.19}{Teorema di Parseval}{section.4.1}% 116
+\BOOKMARK [3][-]{subsubsection.4.1.19.1}{Definire e dimostrare il teorema di Parseval per segnali aperiodici}{subsection.4.1.19}% 117
+\BOOKMARK [3][-]{subsubsection.4.1.19.2}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TSF\)}{subsection.4.1.19}% 118
+\BOOKMARK [3][-]{subsubsection.4.1.19.3}{Definire e dimostrare il teorema di Parseval per segnali periodici \(con TCF\)}{subsection.4.1.19}% 119
+\BOOKMARK [3][-]{subsubsection.4.1.19.4}{Definire e dimostrare il teorema di Parseval per le sequenze}{subsection.4.1.19}% 120
+\BOOKMARK [2][-]{subsection.4.1.20}{Definire l'operazione di convoluzione ed illustrarne le propriet\340}{section.4.1}% 121
+\BOOKMARK [2][-]{subsection.4.1.21}{Dimostrare che la TFS di x[n] = x\(nT\) \350 scrivibile tramite la TCF di x\(t\)}{section.4.1}% 122
+\BOOKMARK [2][-]{subsection.4.1.22}{Definire l'operazione di autocorrelazione per segnali aperiodici ed illustrarne le propriet\340}{section.4.1}% 123
+\BOOKMARK [2][-]{subsection.4.1.23}{Definire la cross-correlazione e la convoluzione tra due segnali x\(t\) e y\(t\)}{section.4.1}% 124
+\BOOKMARK [2][-]{subsection.4.1.24}{Dimostrare che la cross-correlazione tra x\(t\) e y\(t\) \350 scrivibile in termini di convoluzione tra i due segnali}{section.4.1}% 125
+\BOOKMARK [2][-]{subsection.4.1.25}{Dimostrare che la TFS di x[n] = x\(nT\) \350 periodica di periodo 1/T}{section.4.1}% 126
 \BOOKMARK [2][-]{subsection.4.1.26}{Dare la definizione di Densit\340 spettrale di Energia e dimostrare che Sx\(f\) = X\(f\)2}{section.4.1}% 127
 \BOOKMARK [2][-]{subsection.4.1.27}{Definire la funzione delta di Dirac e illustrare le sue propriet\340}{section.4.1}% 128
 \BOOKMARK [2][-]{subsection.4.1.28}{Dimostrare la condizione sufficiente per l'esistenza della TFS}{section.4.1}% 129
@@ -153,9 +153,9 @@
 \BOOKMARK [2][-]{subsection.4.2.15}{Definizione e propriet\340 della DSP per processi aleatori}{section.4.2}% 153
 \BOOKMARK [1][-]{section.4.3}{Sistemi Monodimensionali}{chapter.4}% 154
 \BOOKMARK [2][-]{subsection.4.3.1}{Dare la definizione di sistema e illustrarne le propriet\340}{section.4.3}% 155
-\BOOKMARK [2][-]{subsection.4.3.2}{Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{section.4.3}% 156
-\BOOKMARK [2][-]{subsection.4.3.3}{Si dimostri che, per un SLS, il segnale di uscita \350 scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{section.4.3}% 157
-\BOOKMARK [2][-]{subsection.4.3.4}{Definire quando un SLS \350 causale e stabile BIBO e dimostrarlo}{section.4.3}% 158
+\BOOKMARK [2][-]{subsection.4.3.2}{Si dimostri che, per un SLS, il segnale di uscita \350 scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{section.4.3}% 156
+\BOOKMARK [2][-]{subsection.4.3.3}{Definire quando un SLS \350 causale e stabile BIBO e dimostrarlo}{section.4.3}% 157
+\BOOKMARK [2][-]{subsection.4.3.4}{Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{section.4.3}% 158
 \BOOKMARK [2][-]{subsection.4.3.5}{Dimostrare che l'uscita y\(t\) da un interpolatore, con funzione interpolatrice p\(t\) e in ingresso la sequenza x[n], \350 scrivibile come y\(t\) = F-1\173X\(f\) P\(f\)\175, dove X\(f\) = TFS\173x[n]\175 e P\(f\) = F\173p\(t\)\175}{section.4.3}% 159
 \BOOKMARK [2][-]{subsection.4.3.6}{Spiegare il concetto di stazionariet\340 in senso lato e in senso stretto di un processo aleatorio}{section.4.3}% 160
 \BOOKMARK [2][-]{subsection.4.3.7}{Definire l'efficienza spettrale e calcolarla per una PAM binaria}{section.4.3}% 161

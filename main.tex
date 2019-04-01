@@ -5725,6 +5725,70 @@ Da questo risultato segue che periodicizzare nel tempo corrisponde a campionare
 in frequenza.
 
 %-------------------------------------------------------------------------------
+% Subsection: Dimostrare che la TSF di x(t) = sum of x_0(t - nT) e' scrivibile
+%             tramite la TCF di x_0(t).
+%-------------------------------------------------------------------------------
+
+\newpage
+\subsection{Dimostrare che la $TSF$ di $x(t) = \sum\displaylimits_{n}
+x_0(t - nT)$ \`e scrivibile tramite la $TCF$ di $x_0(t)$}
+Consideriamo un segnale $x(t)$ periodico
+\[
+    x(t) \sum\displaylimits_{m = -\infty}^{+\infty} x_0(t - mT_0),
+\]
+\[
+    x(t) \iff X_n,
+\]
+\[
+    X_n = TSF\{x(t)\} \triangleq \frac{1}{T_0} \int\displaylimits_{-T_0/2}
+    ^{T_0/2} x(t) \cdot e^{-j 2 \pi n f_0 t} \dt
+\]
+La $TSF$ di $x(t)$ pu\`o alternativamente essere calcolata come
+\[
+    X_n = \frac{1}{T_0} \cdot X_0\left(\frac{n}{T_0}\right)
+\]
+con
+\[
+    X_0(f) = TCF\{x_0(t)\}.
+\]
+Quindi, per calcolare la $TSF$ di un segnale periodico basta calcolare la $TCF$
+del segnale aperiodico di base.
+\begin{proof}
+\[
+    X_n = \frac{1}{T_0} \cdot \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot
+    e^{-j 2 \pi n f_0 t} \dt = 
+\]
+\[
+    = \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot
+    \sum_{m = -\infty}^{+\infty} x_0(t - mT_0) \cdot e^{-j 2 \pi n f_0 t} \dt =
+\]
+\[
+    = \frac{1}{T_0} \sum_{m = -\infty}^{+\infty} \int\displaylimits_{-T_0/2}
+    ^{T_0/2} x_0(t - mT_0) \cdot e^{-j 2 \pi n f_0 t} \dt =
+\]
+\[
+    \footnote{Pongo $t' = t - mT_0 \Longrightarrow t = t' + mT_0$.}=
+    \frac{1}{T_0} \sum_{m = -\infty}^{+\infty}
+    \int\displaylimits_{-T_0/2 - mT_0}^{T_0/2 - mT_0} x_0(t') \cdot
+    e^{-j 2 \pi n f_0 (t' + mT_0)} \dt' =
+\]
+\[
+    \footnote{$\sum_{m = -\infty}^{+\infty} \int\displaylimits_{-T_0/2 - mT_0}
+    ^{T_0/2 - mT_0} = \int\displaylimits_{-\infty}^{+\infty}$.}= \frac{1}{T_0}
+    \int\displaylimits_{-\infty}^{+\infty} x_0(t') \cdot e^{-j 2 \pi n f_0 t'}
+    \dt' \cdot e^{-j 2 \pi n f_0 m T_0} =
+\]
+\[
+    \footnote{$e^{-j 2 \pi n f_0 m T_0} = e^{-j 2 \pi n m} = 1$.}=
+    \frac{1}{T_0} \int\displaylimits_{-\infty}^{+\infty} x_0(t') \cdot
+    e^{-j 2 \pi n f_0 t'} \dt' =
+\]
+\[
+    = \frac{1}{T_0} X_0(n f_0) = \frac{1}{T_0} X_0\left(\frac{n}{T_0}\right).
+\]
+\end{proof}
+
+%-------------------------------------------------------------------------------
 % Subsection: Teorema di Parseval
 %-------------------------------------------------------------------------------
 
@@ -5783,7 +5847,7 @@ allora
 \subsubsection{Definire e dimostrare il teorema di Parseval per segnali
 periodici (con $TSF$)}
 Consideriamo due segnali $x(t)$ e $y(t)$ periodici di periodo $T_0$ che
-ammettono $TSF$.
+ammettono $TSF$
 \[
     x(t) \iff X_n
 \]
@@ -5811,7 +5875,11 @@ Allora
     \right]^* =
 \]
 \[
-    = \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot Y^*_n.
+    = \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot
+    \frac{1}{T_0} \cdot \left[
+        \int\displaylimits_{-T_0/2}^{T_0/2} y(t) \cdot e^{-j 2 \pi n f_0 t}
+    \right]^* =
+    \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot Y^*_n.
 \]
 \end{proof}
 
@@ -5822,17 +5890,91 @@ Allora
 
 \subsubsection{Definire e dimostrare il teorema di Parseval per segnali
 periodici (con $TCF$)}
+Tenendo a mente quanto dimostrato usando la $TSF$ sella sezione precedente,
+consideriamo due segnali $x(t)$ e $y(t)$ periodici di periodo $T_0$ che
+ammettono $TSF$. Prendiamo ora in esame il segnale base da cui vengono ottenuti
+per \textit{periodicizzazione} questi due segnali
+\[
+    x_0(t) = x(t) \cdot rect\left(\frac{t}{T_0}\right),
+\]
+\[
+    y_0(t) = y(t) \cdot rect\left(\frac{t}{T_0}\right).
+\]
+Essendo aperiodici, $x_0(t)$ e $y_0(t)$ ammettono $TCF$
+\[
+    x_0(t) \iff X_0(f),
+\]
+\[
+    y_0(t) \iff Y_0(f).
+\]
+Da quanto premesso, segue quindi che
+\[
+    x(t) \iff X_n = \frac{1}{T_0} X_0\left(\frac{k}{T_0}\right),
+\]
+\[
+    y(t) \iff y_n = \frac{1}{T_0} Y_0\left(\frac{k}{T_0}\right).
+\]
+Allora
+\[
+    \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot y^*(t) \dt =
+    = \sum\displaylimits_{n = -\infty}^{+\infty} \frac{1}{T_0}
+    X_0\left(\frac{n}{T_0}\right) \cdot \frac{1}{T_0}
+    Y_0^*\left(\frac{n}{T_0}\right) =
+\]
+\[
+    =\frac{1}{T_0^2} \sum\displaylimits_{n = -\infty}^{+\infty}
+    X_0\left(\frac{n}{T_0}\right) \cdot Y_0^*\left(\frac{n}{T_0}\right).
+\]
+\begin{proof}
+\[
+    \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t) \cdot y^*(t) \dt =
+    \sum\displaylimits_{n = -\infty}^{+\infty} X_n \cdot Y^*_n = \frac{1}{T_0^2}
+    \sum\displaylimits_{n = -\infty}^{+\infty} X_0\left(\frac{n}{T_0}\right)
+    Y_0^*\left(\frac{n}{T_0}\right).
+\]
+\end{proof}
+In pratica, si tratta di una nuova relazione ottenuta sfruttando la relazione
+tra $TSF$ e $TCF$ precedentemente dimostrata e applicando il teorema di Parseval
+per segnali periodici (con $TSF$).
 
 %-------------------------------------------------------------------------------
 % Subsubsection: Definire e dimostrare il teorema di Parseval per le sequenze
 %-------------------------------------------------------------------------------
 
 \subsubsection{Definire e dimostrare il teorema di Parseval per le sequenze}
+\[
+    \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot y^*[n] = T
+    \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot \overline{Y}^*(f)
+    \df
+\]
+\[
+    = \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot y^*[n] \  
+    \footnote{L'antitrasformata di Fourier di una sequenza $x[n] = T
+    \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot e^{j 2 \pi f n T}
+    \df$.}= \sum\displaylimits_{n = -\infty}^{+\infty} T
+    \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot e^{j 2 \pi f n T}
+    \df \cdot y^*[n] =
+\]
+\[
+    = T \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot
+    \sum\displaylimits_{n = -\infty}^{+\infty} y^*[n] \cdot e^{j 2 \pi f n T}
+    \df =
+\]
+\[
+    = T \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot \left[
+    \sum\displaylimits_{n = -\infty}^{+\infty} y[n] \cdot e^{j 2 \pi f n T}
+    \right]^* \df =
+\]
+\[
+    = T \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot
+    \overline{Y}^*(f) \df.
+\]
 
 %-------------------------------------------------------------------------------
 % Subsection: Definire l'operazione di convoluzione ed illustrarne le proprieta'
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Definire l'operazione di convoluzione ed illustrarne le propriet\`a}
 
 %-------------------------------------------------------------------------------
@@ -5856,31 +5998,81 @@ illustrarne le propriet\`a}
 %             x(t) e y(t).
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Definire la cross-correlazione e la convoluzione tra due segnali
 $x(t)$ e $y(t)$}
+La convoluzione tra due segnali $x(t)$ e $y(t)$ \`e data da
+\[
+    x(\tau) * y(\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t)
+    \cdot y(\tau - t),
+\]
+mentre la cross-correlazione \`e definita come
+\[
+    C_{xy} (\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    y^*(t - \tau) \dt.
+\]
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare che la cross-correlazione tra x(t) e y(t) e' scrivibile
 %             in termini di convoluzione tra i due segnali.
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Dimostrare che la cross-correlazione tra $x(t)$ e $y(t)$ \`e
 scrivibile in termini di convoluzione tra i due segnali}
+Si ricorda che la convoluzione tra due segnali $x(t)$ e $y(t)$ \`e data da
+\[
+    x(\tau) * y(\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t)
+    \cdot y(\tau - t),
+\]
+mentre la cross-correlazione \`e definita come
+\[
+    C_{xy} (\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    y^*(t - \tau) \dt.
+\]
+\begin{proof} La relazione tra la cross-correlazione e la convoluzione \`e data
+\[
+    x(\tau) * y^*(-\tau) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    y^*[-(\tau - t)] \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    y^*(t - \tau) \dt = C_{xy}(\tau)
+\]
+\[
+    \Longrightarrow C_{xy}(\tau) = x(\tau) * y^*(-\tau).
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare che la TFS di x[n] = x(nT) e' periodica di periodo 1/T
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Dimostrare che la TFS di $x[n] = x(nT)$ \`e periodica di periodo
 $1/T$}
-
-%-------------------------------------------------------------------------------
-% Subsection: Dimostrare che la TSF di x(t) = sum of x_0(t - nT) e' scrivibile
-%             tramite la TCF di x_0(t).
-%-------------------------------------------------------------------------------
-
-\subsection{Dimostrare che la $TSF$ di $x(t) = \sum\displaylimits_{n}
-x_0(t - nT)$ \`e scrivibile tramite la $TCF$ di $x_0(t)$}
+Dato
+\[
+    x[n] \iff \overline{X}(f)
+\]
+sappiamo che per definizione
+\[
+    \overline{X}(f) \triangleq \sum\displaylimits_{n} x[n] \cdot
+    e^{-j 2 \pi n f T}
+\]
+Dobbiamo ora dimostrare che
+\[
+    \overline{X}(f) = \overline{X}\left(f - \frac{k}{T}\right) \quad k \in
+    \mathbb{Z}
+\]
+\begin{proof}
+\[
+    \overline{X}\left(f - \frac{k}{T}\right) = \sum\displaylimits_{n = -\infty}
+    ^{+\infty} x[n] \cdot e^{-j 2 \pi n (f - \frac{k}{T}) T} =
+    \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot
+    e^{-j 2 \pi n f T} \cdot e^{j 2 \pi n k} =
+\]
+\[
+    \overline{X}(f)\footnote{Dato che $e^{j 2 \pi n k} = 1$.}
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dare la definizione di Densita' spettrale di Energia e dimostrare
@@ -6474,14 +6666,6 @@ aleatori}
 \subsection{Dare la definizione di sistema e illustrarne le propriet\`a}
 
 %-------------------------------------------------------------------------------
-% Subsection: Dare la definizione di replica fedele e specificare quando un
-%             filtro non introduce distorsioni lineari
-%-------------------------------------------------------------------------------
-
-\subsection{Dare la definizione di replica fedele e specificare quando un filtro
-non introduce distorsioni lineari}
-
-%-------------------------------------------------------------------------------
 % Subsection: Si dimostri che, per un SLS, il segnale di uscita e' scrivibile
 %             come la convoluzione del segnale di ingresso per la risposta
 %             impulsiva
@@ -6495,6 +6679,14 @@ come la convoluzione del segnale di ingresso per la risposta impulsiva}
 %-------------------------------------------------------------------------------
 
 \subsection{Definire quando un SLS \`e causale e stabile BIBO e dimostrarlo}
+
+%-------------------------------------------------------------------------------
+% Subsection: Dare la definizione di replica fedele e specificare quando un
+%             filtro non introduce distorsioni lineari
+%-------------------------------------------------------------------------------
+
+\subsection{Dare la definizione di replica fedele e specificare quando un filtro
+non introduce distorsioni lineari}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare che l'uscita y(t) da un interpolatore, con funzione
