@@ -154,33 +154,34 @@
 \contentsline {subsection}{\numberline {4.2.13}Definire la correlazione e la covarianza fra variabili aleatorie e dire quando sono incorrelate e indipendenti}{171}{subsection.4.2.13}% 
 \contentsline {subsection}{\numberline {4.2.14}Propriet\`a della funzione di autocorrelazione per processi aleatori}{171}{subsection.4.2.14}% 
 \contentsline {subsection}{\numberline {4.2.15}Definizione e propriet\`a della DSP per processi aleatori}{171}{subsection.4.2.15}% 
-\contentsline {section}{\numberline {4.3}Sistemi Monodimensionali}{173}{section.4.3}% 
+\contentsline {section}{\numberline {4.3}Sistemi Monodimensionali}{172}{section.4.3}% 
 \contentsline {subsection}{\numberline {4.3.1}Dare la definizione di sistema e illustrarne le propriet\`a}{173}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}Si dimostri che, per un SLS, il segnale di uscita \`e scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{173}{subsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.3.3}Definire quando un SLS \`e causale e stabile BIBO e dimostrarlo}{173}{subsection.4.3.3}% 
-\contentsline {subsection}{\numberline {4.3.4}Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{173}{subsection.4.3.4}% 
-\contentsline {subsection}{\numberline {4.3.5}Dimostrare che l'uscita $y(t)$ da un interpolatore, con funzione interpolatrice $p(t)$ e in ingresso la sequenza $x[n]$, \`e scrivibile come $y(t) = \mathcal {F}^{-1}\{\overline {X}(f) \cdot P(f)\}$, dove $\overline {X}(f) = TFS\{x[n]\}$ e $P(f) = \mathcal {F}\{p(t)\}$}{173}{subsection.4.3.5}% 
-\contentsline {subsection}{\numberline {4.3.6}Spiegare il concetto di stazionariet\`a in senso lato e in senso stretto di un processo aleatorio}{173}{subsection.4.3.6}% 
-\contentsline {subsection}{\numberline {4.3.7}Definire l'efficienza spettrale e calcolarla per una PAM binaria}{173}{subsection.4.3.7}% 
-\contentsline {subsection}{\numberline {4.3.8}Definire l'ISI e la condizione di Nyquist}{173}{subsection.4.3.8}% 
-\contentsline {subsection}{\numberline {4.3.9}Dimostrare che, per una modulazione PAM in banda passante, che la condizione di Nyquist nel tempo garantisce l'assenza di ISI}{173}{subsection.4.3.9}% 
-\contentsline {subsection}{\numberline {4.3.10}A partire dalla condizione di Nyquist per l'assenza di ISI per una PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}{173}{subsection.4.3.10}% 
-\contentsline {subsection}{\numberline {4.3.11}Dimostrare che, se si rispetta la condizione di Nyquist, non si ha ISI per un sistema PAM binario}{173}{subsection.4.3.11}% 
-\contentsline {subsection}{\numberline {4.3.12}Definizione di Processo Indipendente}{173}{subsection.4.3.12}% 
-\contentsline {subsection}{\numberline {4.3.13}Definizione di Processo SSL e SSS}{173}{subsection.4.3.13}% 
-\contentsline {subsection}{\numberline {4.3.14}Dimostrare che se un processo gaussiano \`e SSL allora \`e anche SSS}{173}{subsection.4.3.14}% 
-\contentsline {subsection}{\numberline {4.3.15}L'uso della codifica Grey invece della codificare naturale in un sistema numerico di comunicazione consente la riduzione della BER (Bit Error Rate) a parit\`a di rapporto senglae/rumore $E_b/N_0$ in ricezione? Giustificare la risposta.}{173}{subsection.4.3.15}% 
-\contentsline {subsection}{\numberline {4.3.16}Si spieghi il funzionamento del filtro adattato ed il modo in cui questo sistema minimizza la $P(e)$ in ricezione per un sistema di comunicazione binario in banda base}{173}{subsection.4.3.16}% 
-\contentsline {subsection}{\numberline {4.3.17}Descrivere il sistema PCM standard}{173}{subsection.4.3.17}% 
-\contentsline {subsection}{\numberline {4.3.18}Dimostrare che il valore medio di un processo $Y(t)$ ottenuto filtrando un processo $X(t)$ con nu filtro lineare e stazionario con risposta impulsiva $h(t)$ \`e scrivibile in termini della $h(t)$ e del valore medio del processo in ingresso $\eta _x(t)$}{173}{subsection.4.3.18}% 
-\contentsline {subsection}{\numberline {4.3.19}Definire il segnale trasmesso per una QAM generica e calcolare dal punto di vista teorico l'energia media per simbolo trasmesso}{173}{subsection.4.3.19}% 
-\contentsline {subsection}{\numberline {4.3.20}Schema QAM (ricevitore + trasmettitore)}{173}{subsection.4.3.20}% 
-\contentsline {subsection}{\numberline {4.3.21}Schema PAM in banda base e in banda passante}{173}{subsection.4.3.21}% 
-\contentsline {subsection}{\numberline {4.3.22}Definire gli indici statistici del primo ordine e quelli del secondo ordine per processi aleatori}{173}{subsection.4.3.22}% 
-\contentsline {subsection}{\numberline {4.3.23}Illustrare le relazioni fra processi}{173}{subsection.4.3.23}% 
-\contentsline {subsubsection}{\numberline {4.3.23.1}Incorrelati}{173}{subsubsection.4.3.23.1}% 
-\contentsline {subsubsection}{\numberline {4.3.23.2}Ortogonali}{173}{subsubsection.4.3.23.2}% 
-\contentsline {subsubsection}{\numberline {4.3.23.3}Indipendenti}{173}{subsubsection.4.3.23.3}% 
-\contentsline {subsection}{\numberline {4.3.24}Dire quando due processi sono congiuntamente stazionari in SSS e SSL}{173}{subsection.4.3.24}% 
-\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{174}{appendix.Alph1}% 
-\contentsline {section}{\numberline {A.1}Gradino Unitario}{174}{section.Alph1.1}% 
+\contentsline {subsubsection}{\numberline {4.3.1.1}Propriet\`a dei sistemi monodimensionali}{174}{subsubsection.4.3.1.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Si dimostri che, per un SLS, il segnale di uscita \`e scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{179}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Definire quando un SLS \`e causale e stabile BIBO e dimostrarlo}{179}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{179}{subsection.4.3.4}% 
+\contentsline {subsection}{\numberline {4.3.5}Dimostrare che l'uscita $y(t)$ da un interpolatore, con funzione interpolatrice $p(t)$ e in ingresso la sequenza $x[n]$, \`e scrivibile come $y(t) = \mathcal {F}^{-1}\{\overline {X}(f) \cdot P(f)\}$, dove $\overline {X}(f) = TFS\{x[n]\}$ e $P(f) = \mathcal {F}\{p(t)\}$}{179}{subsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.3.6}Spiegare il concetto di stazionariet\`a in senso lato e in senso stretto di un processo aleatorio}{179}{subsection.4.3.6}% 
+\contentsline {subsection}{\numberline {4.3.7}Definire l'efficienza spettrale e calcolarla per una PAM binaria}{179}{subsection.4.3.7}% 
+\contentsline {subsection}{\numberline {4.3.8}Definire l'ISI e la condizione di Nyquist}{179}{subsection.4.3.8}% 
+\contentsline {subsection}{\numberline {4.3.9}Dimostrare che, per una modulazione PAM in banda passante, che la condizione di Nyquist nel tempo garantisce l'assenza di ISI}{179}{subsection.4.3.9}% 
+\contentsline {subsection}{\numberline {4.3.10}A partire dalla condizione di Nyquist per l'assenza di ISI per una PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}{179}{subsection.4.3.10}% 
+\contentsline {subsection}{\numberline {4.3.11}Dimostrare che, se si rispetta la condizione di Nyquist, non si ha ISI per un sistema PAM binario}{179}{subsection.4.3.11}% 
+\contentsline {subsection}{\numberline {4.3.12}Definizione di Processo Indipendente}{179}{subsection.4.3.12}% 
+\contentsline {subsection}{\numberline {4.3.13}Definizione di Processo SSL e SSS}{179}{subsection.4.3.13}% 
+\contentsline {subsection}{\numberline {4.3.14}Dimostrare che se un processo gaussiano \`e SSL allora \`e anche SSS}{179}{subsection.4.3.14}% 
+\contentsline {subsection}{\numberline {4.3.15}L'uso della codifica Grey invece della codificare naturale in un sistema numerico di comunicazione consente la riduzione della BER (Bit Error Rate) a parit\`a di rapporto senglae/rumore $E_b/N_0$ in ricezione? Giustificare la risposta.}{179}{subsection.4.3.15}% 
+\contentsline {subsection}{\numberline {4.3.16}Si spieghi il funzionamento del filtro adattato ed il modo in cui questo sistema minimizza la $P(e)$ in ricezione per un sistema di comunicazione binario in banda base}{179}{subsection.4.3.16}% 
+\contentsline {subsection}{\numberline {4.3.17}Descrivere il sistema PCM standard}{179}{subsection.4.3.17}% 
+\contentsline {subsection}{\numberline {4.3.18}Dimostrare che il valore medio di un processo $Y(t)$ ottenuto filtrando un processo $X(t)$ con nu filtro lineare e stazionario con risposta impulsiva $h(t)$ \`e scrivibile in termini della $h(t)$ e del valore medio del processo in ingresso $\eta _x(t)$}{179}{subsection.4.3.18}% 
+\contentsline {subsection}{\numberline {4.3.19}Definire il segnale trasmesso per una QAM generica e calcolare dal punto di vista teorico l'energia media per simbolo trasmesso}{179}{subsection.4.3.19}% 
+\contentsline {subsection}{\numberline {4.3.20}Schema QAM (ricevitore + trasmettitore)}{179}{subsection.4.3.20}% 
+\contentsline {subsection}{\numberline {4.3.21}Schema PAM in banda base e in banda passante}{179}{subsection.4.3.21}% 
+\contentsline {subsection}{\numberline {4.3.22}Definire gli indici statistici del primo ordine e quelli del secondo ordine per processi aleatori}{179}{subsection.4.3.22}% 
+\contentsline {subsection}{\numberline {4.3.23}Illustrare le relazioni fra processi}{179}{subsection.4.3.23}% 
+\contentsline {subsubsection}{\numberline {4.3.23.1}Incorrelati}{179}{subsubsection.4.3.23.1}% 
+\contentsline {subsubsection}{\numberline {4.3.23.2}Ortogonali}{179}{subsubsection.4.3.23.2}% 
+\contentsline {subsubsection}{\numberline {4.3.23.3}Indipendenti}{179}{subsubsection.4.3.23.3}% 
+\contentsline {subsection}{\numberline {4.3.24}Dire quando due processi sono congiuntamente stazionari in SSS e SSL}{179}{subsection.4.3.24}% 
+\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{180}{appendix.Alph1}% 
+\contentsline {section}{\numberline {A.1}Gradino Unitario}{180}{section.Alph1.1}% 

@@ -6847,12 +6847,223 @@ aleatori}
 
 \newpage
 \section{Sistemi Monodimensionali}
+L'analisi e in generalo lo studio dei segnali a tempo continuo intrapresi nei
+capitoli precedenti originano un certo numero di domande: \textit{In quale
+contesto si manifestano tali segnali? Dove possono essere osservati? Che cosa
+\`e responsabile della produzione dei segnali stessi? Come questti possono
+essere elaborati?} Nei capitoli precedenti abbiamo gi\`a visto alcune risposte
+parziali a queste domande. Abbiamo infatti preso in considerazione segnali
+prodotti da fenomeni fisici, da circuiti elettrici, da apparati in generale sia
+naturali sia artificiali. Tutti questi esempi possono essere accomunati in un
+solo concetto, ovvero quello di \textit{sistema} che produce o elabora un
+segnale.
 
 %-------------------------------------------------------------------------------
 % Subsection: Dare la definizione di sistema e illustrane le proprieta'
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Dare la definizione di sistema e illustrarne le propriet\`a}
+Cos\`i come nel caso della definizione di segnale discussa precedentemente,
+anche la definizione di \textit{sistema} \`e abbastanza articolata, per lo meno
+dal punto di vista del linguaggio ordinario. In senso lato, possiamo chiamare
+\textit{sistema monodimensionale} (altrimenti detto \textit{a un ingresso e una
+uscita}) un qualunque dispositivo, o interconnessione di dispositivi, o
+apparato, che produce un segnale di \textit{uscita} (chiamato anche
+\textit{risposta} o \textit{effetto}) in corrispondenza di un segnale di
+\textit{ingresso} (detto anche \textit{sollecitazione}, \textit{eccitazione}
+o \textit{causa}). Questa definizione \`e intenzionalmente molto vaga, in modo
+che sotto il termine di \textit{sistema} possano rientrare i casi pi\`u
+disparati. \`E chiaro che un circuito elettronico per il trattamento del segnale
+\`e un caso tipico di sistema (per esempio un amplificatore in un sistema di
+riproduzione audio ad alta fedelt\`a). A buon diritto per\`o pu\`o classificarsi
+come tale anche un sistema di \textit{controllo}: la potenza erogata dal motore
+a scoppio di una autovettura (segnale di \textit{uscita}), controllata dal
+sistema di iniezione di carburante, \`e determinata dalla posizione che istante
+per istante assume il pedale dell'acceleratore (segnale di \textit{ingresso});
+la temperatura del nocciolo di una centrale termonucleare (segnale di uscita)
+\`e determinata dalla portata con cui il liquido refrigerante affluisce al
+nocciolo stesso (segnale di ingresso), e cos\`i via.
+\bigbreak
+Dal punto di vista matematico, che \`e quello che riguarda pi\`u da vicino la
+teoria dei segnali, la definizione di sistema \`e assai meno vaga. In questo
+contesto, un \textit{sistema} \`e una \textit{trasformazione} (o, con il
+linguaggio nell'analisi funzionale, una \textit{funzionale}) ce a un segnale
+di ingresso $x(t)$ fa corrispondere un ben determinato e unico segnale d'uscita
+$y(t)$. La trasformata del segnale $x(t)$ nel segnale $y(t)$ si denota nel modo
+seguente:
+\[
+    y(t) = \mathcal{T}[x(\alpha); t]
+\]
+dove con questa notazione si intende che il valore dell'uscita all'istante $t$
+dipende in generale, oltre che da $t$ stesso, dall'andamento
+\textit{complessivo} del segnale d'ingresso $x(t)$, cio\`e da \textit{tutti}
+i suoi valori $x(\alpha)$, con $-\infty < \alpha < +\infty$ (per esempio
+$y(t) = \int\displaylimits_{-\infty}{t} x\alpha) \ d\alpha$). Quando non ci sono
+per\`o particolari questioni di ambiguit\`a, si pu\`o usare anche la notazione
+semplificata
+\[
+    y(t) = \mathcal{T}[x(t)].
+\]
+Una rappresentazione grafica di questa trasformazione \`e quella della figura
+seguente
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.9\textwidth]{images/siso_system.png}
+    \caption{Sistema che trasforma il segnale $x(t)$ nel segnale $y(t)$}
+\end{figure}
+Le frecce indicano i segnali di ingresso e di uscita; il rettangolo \`e la
+"materializzazione" grafica della trasformazione $\mathcal{T}[\cdot]$; la
+funzione $h(t)$ si ritiene per il momento non nota cos\`i come non \`e nota
+la struttura interna (racchiusa dal blocco ed inaccessibile), n\`e la maniera
+per caratterizzare il comportamento agli effetti esterni. Quest'ultimo argomento
+\`e l'oggetto del prossimi paragrafi.
+\bigbreak
+Un esempio di sistema \`e l'\textit{amplificatore ideale} per il quale la legge
+di trasformazione \`e elementare: esso viene infatti descritto dalla semplice 
+relazione $y(t) = A \cdot x(t)$, essendo $A$ una costante data
+(l'\textit{amplificazione}).
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Propriet\`a dei sistemi monodimensionali
+%-------------------------------------------------------------------------------
+
+\subsubsection{Propriet\`a dei sistemi monodimensionali}
+A prescindere dalla struttura interna del sistema, fortemente dipendente dal
+contesto e dall'applicazione, \`e possibile acquisire alcune informazioni
+preliminari sul comportamento del sistema stesso e individuare cos\`i alcune
+\textit{propriet\`a}, compiendo osservazioni esclusivamente sui segnali di
+ingresso/uscita. Esaminiamo dunque queste propriet\`a:
+\bigbreak
+\noindent
+\textbf{Stazionariet\`a}\\
+Se le caratteristiche del sistema \textit{non variano nel tempo}, il sistema \`e
+\textit{stazionario}\footnote{Un sistema tempo-invariante o sistema stazionario
+\`e un sistema dinamico in cui l'uscita non dipende esplicitamente dal tempo.};
+questo \`e il caso dei circuiti elettrici con componenti,
+per l'appunto, costanti nel tempo. Volendo caratterizzare in modo formare un
+sistema siffatto possiamo scrivere che, se
+\[
+    y(t) = \mathcal{T}[x(t)]
+\]
+allora
+\[
+    \mathcal[x(t - t_0)] = y(t - t_0)
+\]
+Questa relazione dice in pratica che la risposta corrispondente all'eccitazione
+traslata nel tempo $x(t - t_0)$ ha lo stesso andamento della risposta al segnale
+originario $x(t)$ non traslato, purch\`e la si trasli della \textit{stessa
+medesima} quantit\`a $t_0$.
+\bigbreak
+\noindent
+\textbf{Causalit\`a}\\
+Un sistema \`e \textit{causale} quando il valore dell'uscita all'istante
+arbitrario generico $t$ dipende soltanto dai valori assunti dall'ingresso agli
+istanti \textit{precedenti} (o al limite coincidenti con) $t$ stesso:
+\[
+    y(t) = \mathcal{T}[x(\alpha), \alpha \leq t; t] = \mathcal{T}[x(\alpha)
+    \cdot u(t - \alpha); t]
+\]
+L'aggettivo \textit{causale} deriva dalla considerazione che, se la relazione
+precedente non fosse verificata, l'uscita all'istante $t$ sarebbe determinata
+anche da valori dell'ingresso $x(\alpha)$ a istanti $\alpha > t$, cio\`e valori
+\textit{futuri} relativamente a $t$, in violazione del principio di
+causa-effetto.
+\bigbreak
+La causalit\`a dei sistemi sembrerebbe quindi una propriet\`a scontata. In
+realt\`a possiamo introdurre un'ulteriore distinzione: si dice che un sistema
+opera in \textit{tempo reale} se produce il segnale di uscita contestualmente
+alla presentazione di quello d'ingresso. Quindi un sistema fisicamente
+realizzabile che lavora in tempo reale non pu\`o che essere causale. Se invece
+l'uscita viene fornita dal sistema solo \textit{successivamente
+all'acquisizione completa de segnale di ingresso}, si dice che il sistema opera
+in \textit{tempo vrituale}. Registrando il segnale d'ingresso su nastro o disco
+magnetico, si pu\`o generale il segnale di uscita elaborando il segnale
+\textit{successivamente} all'acquisizione (cio\`e in tempo virtuale) e quindi si
+possono anche compiere operazioni di tipo "predittivo" impossibili in tempo
+reale e tipiche di un sistema non causale.
+\bigbreak
+\noindent
+\textbf{Memoria}\\
+Un caso particolare di sistema causale \`e il cosiddetto sistema
+\textit{istantaneo} in cui l'uscita all'istante $t$ dipende \textit{solamente}
+dal valore dell'ingresso al medesimo istante:
+\[
+    y(t) = \mathcal{T}[x(\alpha), \alpha = t; t]
+\]
+In questo caso si usa anche la dizione di sistema \textit{senza memoria} (per
+evidenti motivi). Due diversi segnali di ingresso $x_1(t)$ e $x_2(t)$,
+coincidenti a un certo istante $t*$, provocano un medesimo valore in uscita
+all'istante $t*$, indipendentemente dai rispettivi andamenti per $t \neq t*$.
+L'esempio tipico di un sistema istantaneo \`e l'amplificatore ideale
+$y(t) = A \cdot x(t)$. Viceversa, un esempio di sistema \textit{con memoria}
+\`e il cosiddetto \textit{integratore a finestra mobile} per il quale
+\[
+    y(t) = \int\displaylimits_{t - T}^{t} x(\alpha) \ d\alpha
+\]
+ove $T > 0$ \`e l'ampiezza della "finestra di integrazione". Il calcolo del
+valore dell'uscita all'istante $t$ presuppone la conscenza dell'andamento del
+segnale d'ingresso in tutto l'intervallo $[t - T, t]$: il sistema mantiene
+una certa \textit{memoria} dell'andamento del segnale d'ingresso $x(t)$.
+\bigbreak
+\noindent
+\textbf{Stabilit\`a}\\
+Diremo che un sistema \`e \textit{stabile} se, sollecitato da un segnale con
+andamento arbitrario ma di \textit{ampiezza limitata}, produce a sua volta in
+uscita un segnale di \textit{ampiezza limitata}:
+\[
+    |x(t)| \leq M \Rightarrow |y(t)| \leq K
+\]
+con $M$ e $K$ finiti. Questa definizione di stabilit\`a si indica con l'acronimo
+BIBO (\textit{Bounded-Input Bounded-Output}) che significa "uscita limitata per
+ogni ingresso limitato", ed \`e solo una tra le molte definizioni di stabilit\`a
+che si possono dare per i sistemi monodimensionali. Secondo questo criterio, un
+"buon pilotaggio" di un sistema stabile, cio\`e un segnale di ingresso
+adeguatamente limitato, non causa mai in uscita fenomeni di instabilit\`a,
+cio\`e situazioni in cui la risposta $y(t)$ tende a crescere illimitatamente.
+\bigbreak
+\noindent
+\textbf{Invertibilit\`a}\\
+In molti casi \`e necessario \textit{ricostruire} il segnale di eccitazione in
+ingresso a un sistema nota la risposta al segnale stesso. Questa operazione \`e
+possibile solo per sistemi \textit{invertibili}, per i quali cio\`e esiste un
+\textit{sistema inverso} $\mathcal{T^{-1}[\cdot]}$ tale  che:
+\[
+    \mathcal{T}^{-1}[y(t)] = x(t)
+\]
+qualunque sia il segnale di ingresso $x(t)$. \`E chiaro che l'amplificatore
+ideale \`e invertibile
+\[
+    y(t) = A \cdot x(t) \Rightarrow x(t) = \frac{y(t)}{A}
+\]
+(e il suo sistema inverso \`e ancora un amplificatore ideale), mentre il sistema
+$y(t) = x^2(t)$ non lo \`e.
+\bigbreak
+\noindent
+\textbf{Linearit\`a}\\
+Infine, un sistema \`e \textit{lineare} se a esso \`e applicabile il principio
+di sovrapposizione degli effetti. Ci\`o significa che al segnale di ingresso
+\[
+    x(t) = \alpha \cdot x_1(t) + \beta \cdot x_2(t)
+\]
+costituito da una combinazione lineare con coefficienti costanti $\alpha$ e
+$beta$ dekke due eccitazioni $x_1(t)$ e $x_2(t)$ (le \textit{cause}), il sistema
+risponde con il segnale di uscita
+\[
+    y(t) = \mathcal{T}[x(t)] = \alpha y_1(t) + \beta y_2(t)
+\]
+dove
+\[
+    y_1(t) = \mathcal{T}[x_1(t)]
+\]
+e
+\[
+    y_2(t) = \mathcal{T}[x_2(t)].
+\]
+L'uscita si ottiene dunque mediante la \textit{stessa} combinazione lineare
+delle due risposte $y_1(t)$ e $y_2(t)$ (gli \textit{effetti}) alle due
+eccitazioni $x_1(t)$ e $x_2(t)$ considerate agenti separatamente.
 
 %-------------------------------------------------------------------------------
 % Subsection: Si dimostri che, per un SLS, il segnale di uscita e' scrivibile
