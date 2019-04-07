@@ -5849,10 +5849,10 @@ periodici (con $TSF$)}
 Consideriamo due segnali $x(t)$ e $y(t)$ periodici di periodo $T_0$ che
 ammettono $TSF$
 \[
-    x(t) \iff X_n
+    x(t) \iff X_n,
 \]
 \[
-    y(t) \iff Y_n
+    y(t) \iff Y_n.
 \]
 Allora
 \[
@@ -5942,13 +5942,23 @@ per segnali periodici (con $TSF$).
 %-------------------------------------------------------------------------------
 
 \subsubsection{Definire e dimostrare il teorema di Parseval per le sequenze}
+Se
+\[
+    x[n] \iff \overline{X}(f)
+\]
+e
+\[
+    y[n] \iff \overline{Y}(f)
+\]
+allora
 \[
     \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot y^*[n] = T
     \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot \overline{Y}^*(f)
     \df
 \]
+\begin{proof}
 \[
-    = \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot y^*[n] \  
+    \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot y^*[n] \  
     \footnote{L'antitrasformata di Fourier di una sequenza $x[n] = T
     \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot e^{j 2 \pi f n T}
     \df$.}= \sum\displaylimits_{n = -\infty}^{+\infty} T
@@ -5969,6 +5979,7 @@ per segnali periodici (con $TSF$).
     = T \int\displaylimits_{-1/2T}^{1/2T} \overline{X}(f) \cdot
     \overline{Y}^*(f) \df.
 \]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Definire l'operazione di convoluzione ed illustrarne le proprieta'
@@ -6659,7 +6670,7 @@ parola inglese \textit{Expectation} che traduce l'italiano "aspettativa".
 Notiamo che anche il valore atteso $\eta_X$ pu\`o essere riscritto formalmente
 usando questo operatore
 \[
-    \eta_X = \int\displaylimits_{-\infty}^{+\infty} x \cdot fX(x) \ dx = E\{X\},
+    \eta_X = \int\displaylimits_{-\infty}^{+\infty} x \cdot f_X(x) \ dx = E\{X\},
 \]
 cio\`e il valore atteso \`e anche il valor medio della variabile aleatoria
 stessa.
@@ -6688,8 +6699,18 @@ medio $m_X^2$:
     \eta_X \cdot X\} =
 \]
 \[
-    = E\{X^2\} + E\{\eta_X^2\} - E\{2 \cdot \eta_X \cdot X\} = m_X^2 + \eta_X^2
-    - 2 \cdot \eta_X^2 =
+    \footnote{Il valore medio \`e una funzione lineare.}
+    = E\{X^2\} + E\{\eta_X^2\} - E\{2 \cdot \eta_X \cdot X\} = 
+\]
+\[
+    \footnote{$E\{\eta_x^2\} \int\displaylimits_{-\infty}^{+\infty} \eta_x^2
+    f_X(x) \ dx = \eta_x^2 \int\displaylimits_{-\infty}^{+\infty} f_X(x) \ dx =
+    \eta_x^2$.}
+    \footnote{$E\{2 \eta_x X\} = \int\displaylimits_{-\infty}^{+\infty} 2 \cdot 
+    x \cdot \eta_x \cdot f_X(x) \ dx = 2 \cdot \eta_x
+    \int\displaylimits_{-\infty}^{+\infty} x \cdot f_X(x) \ dx = 2 \cdot \eta_x
+    E\{x\}$.}
+    = m_X^2 + \eta_X^2 - 2 \cdot \eta_X^2 =
 \]
 \[
     = m_X^2 - \eta_X^2.
