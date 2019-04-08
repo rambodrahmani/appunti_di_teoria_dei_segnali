@@ -121,67 +121,68 @@
 \contentsline {subsubsection}{\numberline {4.1.19.3}Definire e dimostrare il teorema di Parseval per segnali periodici (con $TCF$)}{145}{subsubsection.4.1.19.3}% 
 \contentsline {subsubsection}{\numberline {4.1.19.4}Definire e dimostrare il teorema di Parseval per le sequenze}{146}{subsubsection.4.1.19.4}% 
 \contentsline {subsection}{\numberline {4.1.20}Definire l'operazione di convoluzione ed illustrarne le propriet\`a}{148}{subsection.4.1.20}% 
-\contentsline {subsection}{\numberline {4.1.21}Dimostrare che la TFS di $x[n] = x(nT)$ \`e scrivibile tramite la $TCF$ di $x(t)$}{149}{subsection.4.1.21}% 
-\contentsline {subsection}{\numberline {4.1.22}Definire l'operazione di autocorrelazione per segnali aperiodici ed illustrarne le propriet\`a}{149}{subsection.4.1.22}% 
-\contentsline {subsection}{\numberline {4.1.23}Definire la cross-correlazione e la convoluzione tra due segnali $x(t)$ e $y(t)$}{150}{subsection.4.1.23}% 
-\contentsline {subsection}{\numberline {4.1.24}Dimostrare che la cross-correlazione tra $x(t)$ e $y(t)$ \`e scrivibile in termini di convoluzione tra i due segnali}{151}{subsection.4.1.24}% 
-\contentsline {subsection}{\numberline {4.1.25}Dimostrare che la TFS di $x[n] = x(nT)$ \`e periodica di periodo $1/T$}{152}{subsection.4.1.25}% 
-\contentsline {subsection}{\numberline {4.1.26}Dare la definizione di Densit\`a spettrale di Energia e dimostrare che $S_x(f) = \abs {X(f)}^2$}{152}{subsection.4.1.26}% 
-\contentsline {subsection}{\numberline {4.1.27}Definire la funzione delta di Dirac e illustrare le sue propriet\`a}{153}{subsection.4.1.27}% 
-\contentsline {subsubsection}{\numberline {4.1.27.1}Propriet\`a della Delta di Dirac}{155}{subsubsection.4.1.27.1}% 
-\contentsline {subsection}{\numberline {4.1.28}Dimostrare la condizione sufficiente per l'esistenza della TFS}{157}{subsection.4.1.28}% 
-\contentsline {section}{\numberline {4.2}Segnali Aleatori}{158}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Teorema di Bayes}{159}{subsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.1.1}Esempio Teorema di Bayes}{160}{subsubsection.4.2.1.1}% 
-\contentsline {subsection}{\numberline {4.2.2}Teorema della Probabilit\`a Totale}{163}{subsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.2.1}Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}{164}{subsubsection.4.2.2.1}% 
-\contentsline {subsection}{\numberline {4.2.3}Legame tra Varianza $\sigma _X^2$ e Valor quadratico medio $m_X^2$}{168}{subsection.4.2.3}% 
-\contentsline {subsection}{\numberline {4.2.4}Teorema Fondamentale della Probabilit\`a}{170}{subsection.4.2.4}% 
-\contentsline {subsection}{\numberline {4.2.5}Dimostrare il teorema Fondamentale della Probabilit\`a per funzioni monotone}{171}{subsection.4.2.5}% 
-\contentsline {subsection}{\numberline {4.2.6}Dimostrare il teorema dell'Aspettazione per variabili discrete $X$ e $Y = g(X)$}{172}{subsection.4.2.6}% 
-\contentsline {subsection}{\numberline {4.2.7}Teorema del Limite Centrale}{173}{subsection.4.2.7}% 
-\contentsline {subsection}{\numberline {4.2.8}Dimostrare che due variabili aleatorie gaussiane incorrelate sono anche indipendenti}{174}{subsection.4.2.8}% 
-\contentsline {subsection}{\numberline {4.2.9}Dare la definizione di Funzione di distribuzione e le sue propriet\`a, specificare come \`e fatta nel caso di variabili aleatorie discrete e continue}{175}{subsection.4.2.9}% 
-\contentsline {subsection}{\numberline {4.2.10}Definire Valore Medio, Varianza, Momento Ordinario di Ordine $r$ e Valore Quadratico Medio}{176}{subsection.4.2.10}% 
-\contentsline {subsubsection}{\numberline {4.2.10.1}Valore Medio}{176}{subsubsection.4.2.10.1}% 
-\contentsline {subsubsection}{\numberline {4.2.10.2}Varianza}{176}{subsubsection.4.2.10.2}% 
-\contentsline {subsection}{\numberline {4.2.11}Momento Ordinario di Ordine $r$}{176}{subsection.4.2.11}% 
-\contentsline {subsubsection}{\numberline {4.2.11.1}Valore Quadratico Medio}{176}{subsubsection.4.2.11.1}% 
-\contentsline {subsection}{\numberline {4.2.12}Modelli per Variabili Aleatorie: DDP, FDd, Valor Medio, Valore Quadratico Medio, Varianza}{177}{subsection.4.2.12}% 
-\contentsline {subsubsection}{\numberline {4.2.12.1}Modello Uniforme}{177}{subsubsection.4.2.12.1}% 
-\contentsline {subsubsection}{\numberline {4.2.12.2}Modello Gaussiano}{177}{subsubsection.4.2.12.2}% 
-\contentsline {subsubsection}{\numberline {4.2.12.3}Modello Esponenziale Negativo}{177}{subsubsection.4.2.12.3}% 
-\contentsline {subsection}{\numberline {4.2.13}Definire la correlazione e la covarianza fra variabili aleatorie e dire quando sono incorrelate e indipendenti}{178}{subsection.4.2.13}% 
-\contentsline {subsection}{\numberline {4.2.14}Propriet\`a della funzione di autocorrelazione per processi aleatori}{179}{subsection.4.2.14}% 
-\contentsline {subsection}{\numberline {4.2.15}Definizione e propriet\`a della DSP per processi aleatori}{180}{subsection.4.2.15}% 
-\contentsline {section}{\numberline {4.3}Sistemi Monodimensionali}{181}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}Dare la definizione di sistema e illustrarne le propriet\`a}{182}{subsection.4.3.1}% 
-\contentsline {subsubsection}{\numberline {4.3.1.1}Propriet\`a dei sistemi monodimensionali}{183}{subsubsection.4.3.1.1}% 
-\contentsline {subsection}{\numberline {4.3.2}Si dimostri che, per un SLS, il segnale di uscita \`e scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{187}{subsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.3.3}Definire quando un SLS \`e causale e stabile BIBO e dimostrarlo}{189}{subsection.4.3.3}% 
-\contentsline {subsection}{\numberline {4.3.4}Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{191}{subsection.4.3.4}% 
-\contentsline {subsection}{\numberline {4.3.5}Dimostrare che l'uscita $y(t)$ da un interpolatore, con funzione interpolatrice $p(t)$ e in ingresso la sequenza $x[n]$, \`e scrivibile come $y(t) = \mathcal {F}^{-1}\{\overline {X}(f) \cdot P(f)\}$, dove $\overline {X}(f) = TFS\{x[n]\}$ e $P(f) = \mathcal {F}\{p(t)\}$}{192}{subsection.4.3.5}% 
-\contentsline {subsection}{\numberline {4.3.6}Spiegare il concetto di stazionariet\`a in senso lato e in senso stretto di un processo aleatorio}{193}{subsection.4.3.6}% 
-\contentsline {subsection}{\numberline {4.3.7}Definire l'efficienza spettrale e calcolarla per una PAM binaria}{194}{subsection.4.3.7}% 
-\contentsline {subsection}{\numberline {4.3.8}Definire l'ISI e la condizione di Nyquist}{195}{subsection.4.3.8}% 
-\contentsline {subsection}{\numberline {4.3.9}Dimostrare che, per una modulazione PAM in banda passante, che la condizione di Nyquist nel tempo garantisce l'assenza di ISI}{199}{subsection.4.3.9}% 
-\contentsline {subsection}{\numberline {4.3.10}A partire dalla condizione di Nyquist per l'assenza di ISI per una PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}{200}{subsection.4.3.10}% 
-\contentsline {subsection}{\numberline {4.3.11}Dimostrare che, se si rispetta la condizione di Nyquist, non si ha ISI per un sistema PAM binario}{200}{subsection.4.3.11}% 
-\contentsline {subsection}{\numberline {4.3.12}Definizione di Processo Indipendente}{201}{subsection.4.3.12}% 
-\contentsline {subsection}{\numberline {4.3.13}Definizione di Processo SSL e SSS}{202}{subsection.4.3.13}% 
-\contentsline {subsection}{\numberline {4.3.14}Dimostrare che se un processo gaussiano \`e SSL allora \`e anche SSS}{203}{subsection.4.3.14}% 
-\contentsline {subsection}{\numberline {4.3.15}L'uso della codifica Grey invece della codificare naturale in un sistema numerico di comunicazione consente la riduzione della BER (Bit Error Rate) a parit\`a di rapporto senglae/rumore $E_b/N_0$ in ricezione? Giustificare la risposta.}{204}{subsection.4.3.15}% 
-\contentsline {subsection}{\numberline {4.3.16}Si spieghi il funzionamento del filtro adattato ed il modo in cui questo sistema minimizza la $P(e)$ in ricezione per un sistema di comunicazione binario in banda base}{205}{subsection.4.3.16}% 
-\contentsline {subsection}{\numberline {4.3.17}Descrivere il sistema PCM standard}{206}{subsection.4.3.17}% 
-\contentsline {subsection}{\numberline {4.3.18}Dimostrare che il valore medio di un processo $Y(t)$ ottenuto filtrando un processo $X(t)$ con nu filtro lineare e stazionario con risposta impulsiva $h(t)$ \`e scrivibile in termini della $h(t)$ e del valore medio del processo in ingresso $\eta _x(t)$}{207}{subsection.4.3.18}% 
-\contentsline {subsection}{\numberline {4.3.19}Definire il segnale trasmesso per una QAM generica e calcolare dal punto di vista teorico l'energia media per simbolo trasmesso}{208}{subsection.4.3.19}% 
-\contentsline {subsection}{\numberline {4.3.20}Schema QAM (ricevitore + trasmettitore)}{209}{subsection.4.3.20}% 
-\contentsline {subsection}{\numberline {4.3.21}Schema PAM in banda base e in banda passante}{210}{subsection.4.3.21}% 
-\contentsline {subsection}{\numberline {4.3.22}Definire gli indici statistici del primo ordine e quelli del secondo ordine per processi aleatori}{211}{subsection.4.3.22}% 
-\contentsline {subsection}{\numberline {4.3.23}Illustrare le relazioni fra processi}{212}{subsection.4.3.23}% 
-\contentsline {subsubsection}{\numberline {4.3.23.1}Incorrelati}{213}{subsubsection.4.3.23.1}% 
-\contentsline {subsubsection}{\numberline {4.3.23.2}Ortogonali}{214}{subsubsection.4.3.23.2}% 
-\contentsline {subsubsection}{\numberline {4.3.23.3}Indipendenti}{215}{subsubsection.4.3.23.3}% 
-\contentsline {subsection}{\numberline {4.3.24}Dire quando due processi sono congiuntamente stazionari in SSS e SSL}{216}{subsection.4.3.24}% 
-\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{217}{appendix.Alph1}% 
-\contentsline {section}{\numberline {A.1}Gradino Unitario}{217}{section.Alph1.1}% 
+\contentsline {subsubsection}{\numberline {4.1.20.1}Propriet\`a della Convoluzione}{148}{subsubsection.4.1.20.1}% 
+\contentsline {subsection}{\numberline {4.1.21}Dimostrare che la TFS di $x[n] = x(nT)$ \`e scrivibile tramite la $TCF$ di $x(t)$}{150}{subsection.4.1.21}% 
+\contentsline {subsection}{\numberline {4.1.22}Definire l'operazione di autocorrelazione per segnali aperiodici ed illustrarne le propriet\`a}{150}{subsection.4.1.22}% 
+\contentsline {subsection}{\numberline {4.1.23}Definire la cross-correlazione e la convoluzione tra due segnali $x(t)$ e $y(t)$}{151}{subsection.4.1.23}% 
+\contentsline {subsection}{\numberline {4.1.24}Dimostrare che la cross-correlazione tra $x(t)$ e $y(t)$ \`e scrivibile in termini di convoluzione tra i due segnali}{152}{subsection.4.1.24}% 
+\contentsline {subsection}{\numberline {4.1.25}Dimostrare che la TFS di $x[n] = x(nT)$ \`e periodica di periodo $1/T$}{153}{subsection.4.1.25}% 
+\contentsline {subsection}{\numberline {4.1.26}Dare la definizione di Densit\`a spettrale di Energia e dimostrare che $S_x(f) = \abs {X(f)}^2$}{153}{subsection.4.1.26}% 
+\contentsline {subsection}{\numberline {4.1.27}Definire la funzione delta di Dirac e illustrare le sue propriet\`a}{154}{subsection.4.1.27}% 
+\contentsline {subsubsection}{\numberline {4.1.27.1}Propriet\`a della Delta di Dirac}{156}{subsubsection.4.1.27.1}% 
+\contentsline {subsection}{\numberline {4.1.28}Dimostrare la condizione sufficiente per l'esistenza della TFS}{158}{subsection.4.1.28}% 
+\contentsline {section}{\numberline {4.2}Segnali Aleatori}{159}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Teorema di Bayes}{160}{subsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.1.1}Esempio Teorema di Bayes}{161}{subsubsection.4.2.1.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Teorema della Probabilit\`a Totale}{164}{subsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.2.1}Esempio Teorema di Bayes \& Teorema della Probabilit\`a Totale}{165}{subsubsection.4.2.2.1}% 
+\contentsline {subsection}{\numberline {4.2.3}Legame tra Varianza $\sigma _X^2$ e Valor quadratico medio $m_X^2$}{169}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}Teorema Fondamentale della Probabilit\`a}{171}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.5}Dimostrare il teorema Fondamentale della Probabilit\`a per funzioni monotone}{172}{subsection.4.2.5}% 
+\contentsline {subsection}{\numberline {4.2.6}Dimostrare il teorema dell'Aspettazione per variabili discrete $X$ e $Y = g(X)$}{173}{subsection.4.2.6}% 
+\contentsline {subsection}{\numberline {4.2.7}Teorema del Limite Centrale}{174}{subsection.4.2.7}% 
+\contentsline {subsection}{\numberline {4.2.8}Dimostrare che due variabili aleatorie gaussiane incorrelate sono anche indipendenti}{175}{subsection.4.2.8}% 
+\contentsline {subsection}{\numberline {4.2.9}Dare la definizione di Funzione di distribuzione e le sue propriet\`a, specificare come \`e fatta nel caso di variabili aleatorie discrete e continue}{176}{subsection.4.2.9}% 
+\contentsline {subsection}{\numberline {4.2.10}Definire Valore Medio, Varianza, Momento Ordinario di Ordine $r$ e Valore Quadratico Medio}{177}{subsection.4.2.10}% 
+\contentsline {subsubsection}{\numberline {4.2.10.1}Valore Medio}{177}{subsubsection.4.2.10.1}% 
+\contentsline {subsubsection}{\numberline {4.2.10.2}Varianza}{177}{subsubsection.4.2.10.2}% 
+\contentsline {subsection}{\numberline {4.2.11}Momento Ordinario di Ordine $r$}{177}{subsection.4.2.11}% 
+\contentsline {subsubsection}{\numberline {4.2.11.1}Valore Quadratico Medio}{177}{subsubsection.4.2.11.1}% 
+\contentsline {subsection}{\numberline {4.2.12}Modelli per Variabili Aleatorie: DDP, FDd, Valor Medio, Valore Quadratico Medio, Varianza}{178}{subsection.4.2.12}% 
+\contentsline {subsubsection}{\numberline {4.2.12.1}Modello Uniforme}{178}{subsubsection.4.2.12.1}% 
+\contentsline {subsubsection}{\numberline {4.2.12.2}Modello Gaussiano}{178}{subsubsection.4.2.12.2}% 
+\contentsline {subsubsection}{\numberline {4.2.12.3}Modello Esponenziale Negativo}{178}{subsubsection.4.2.12.3}% 
+\contentsline {subsection}{\numberline {4.2.13}Definire la correlazione e la covarianza fra variabili aleatorie e dire quando sono incorrelate e indipendenti}{179}{subsection.4.2.13}% 
+\contentsline {subsection}{\numberline {4.2.14}Propriet\`a della funzione di autocorrelazione per processi aleatori}{180}{subsection.4.2.14}% 
+\contentsline {subsection}{\numberline {4.2.15}Definizione e propriet\`a della DSP per processi aleatori}{181}{subsection.4.2.15}% 
+\contentsline {section}{\numberline {4.3}Sistemi Monodimensionali}{182}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Dare la definizione di sistema e illustrarne le propriet\`a}{183}{subsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.1.1}Propriet\`a dei sistemi monodimensionali}{184}{subsubsection.4.3.1.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Si dimostri che, per un SLS, il segnale di uscita \`e scrivibile come la convoluzione del segnale di ingresso per la risposta impulsiva}{188}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Definire quando un SLS \`e causale e stabile BIBO e dimostrarlo}{190}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}Dare la definizione di replica fedele e specificare quando un filtro non introduce distorsioni lineari}{192}{subsection.4.3.4}% 
+\contentsline {subsection}{\numberline {4.3.5}Dimostrare che l'uscita $y(t)$ da un interpolatore, con funzione interpolatrice $p(t)$ e in ingresso la sequenza $x[n]$, \`e scrivibile come $y(t) = \mathcal {F}^{-1}\{\overline {X}(f) \cdot P(f)\}$, dove $\overline {X}(f) = TFS\{x[n]\}$ e $P(f) = \mathcal {F}\{p(t)\}$}{193}{subsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.3.6}Spiegare il concetto di stazionariet\`a in senso lato e in senso stretto di un processo aleatorio}{194}{subsection.4.3.6}% 
+\contentsline {subsection}{\numberline {4.3.7}Definire l'efficienza spettrale e calcolarla per una PAM binaria}{195}{subsection.4.3.7}% 
+\contentsline {subsection}{\numberline {4.3.8}Definire l'ISI e la condizione di Nyquist}{196}{subsection.4.3.8}% 
+\contentsline {subsection}{\numberline {4.3.9}Dimostrare che, per una modulazione PAM in banda passante, che la condizione di Nyquist nel tempo garantisce l'assenza di ISI}{200}{subsection.4.3.9}% 
+\contentsline {subsection}{\numberline {4.3.10}A partire dalla condizione di Nyquist per l'assenza di ISI per una PAM in banda base, dimostrare la condizione di Nyquist in Frequenza}{201}{subsection.4.3.10}% 
+\contentsline {subsection}{\numberline {4.3.11}Dimostrare che, se si rispetta la condizione di Nyquist, non si ha ISI per un sistema PAM binario}{201}{subsection.4.3.11}% 
+\contentsline {subsection}{\numberline {4.3.12}Definizione di Processo Indipendente}{202}{subsection.4.3.12}% 
+\contentsline {subsection}{\numberline {4.3.13}Definizione di Processo SSL e SSS}{203}{subsection.4.3.13}% 
+\contentsline {subsection}{\numberline {4.3.14}Dimostrare che se un processo gaussiano \`e SSL allora \`e anche SSS}{204}{subsection.4.3.14}% 
+\contentsline {subsection}{\numberline {4.3.15}L'uso della codifica Grey invece della codificare naturale in un sistema numerico di comunicazione consente la riduzione della BER (Bit Error Rate) a parit\`a di rapporto senglae/rumore $E_b/N_0$ in ricezione? Giustificare la risposta.}{205}{subsection.4.3.15}% 
+\contentsline {subsection}{\numberline {4.3.16}Si spieghi il funzionamento del filtro adattato ed il modo in cui questo sistema minimizza la $P(e)$ in ricezione per un sistema di comunicazione binario in banda base}{206}{subsection.4.3.16}% 
+\contentsline {subsection}{\numberline {4.3.17}Descrivere il sistema PCM standard}{207}{subsection.4.3.17}% 
+\contentsline {subsection}{\numberline {4.3.18}Dimostrare che il valore medio di un processo $Y(t)$ ottenuto filtrando un processo $X(t)$ con nu filtro lineare e stazionario con risposta impulsiva $h(t)$ \`e scrivibile in termini della $h(t)$ e del valore medio del processo in ingresso $\eta _x(t)$}{208}{subsection.4.3.18}% 
+\contentsline {subsection}{\numberline {4.3.19}Definire il segnale trasmesso per una QAM generica e calcolare dal punto di vista teorico l'energia media per simbolo trasmesso}{209}{subsection.4.3.19}% 
+\contentsline {subsection}{\numberline {4.3.20}Schema QAM (ricevitore + trasmettitore)}{210}{subsection.4.3.20}% 
+\contentsline {subsection}{\numberline {4.3.21}Schema PAM in banda base e in banda passante}{211}{subsection.4.3.21}% 
+\contentsline {subsection}{\numberline {4.3.22}Definire gli indici statistici del primo ordine e quelli del secondo ordine per processi aleatori}{212}{subsection.4.3.22}% 
+\contentsline {subsection}{\numberline {4.3.23}Illustrare le relazioni fra processi}{213}{subsection.4.3.23}% 
+\contentsline {subsubsection}{\numberline {4.3.23.1}Incorrelati}{214}{subsubsection.4.3.23.1}% 
+\contentsline {subsubsection}{\numberline {4.3.23.2}Ortogonali}{215}{subsubsection.4.3.23.2}% 
+\contentsline {subsubsection}{\numberline {4.3.23.3}Indipendenti}{216}{subsubsection.4.3.23.3}% 
+\contentsline {subsection}{\numberline {4.3.24}Dire quando due processi sono congiuntamente stazionari in SSS e SSL}{217}{subsection.4.3.24}% 
+\contentsline {appendix}{\chapternumberline {A}Segnali Canonici}{218}{appendix.Alph1}% 
+\contentsline {section}{\numberline {A.1}Gradino Unitario}{218}{section.Alph1.1}% 

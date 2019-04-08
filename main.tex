@@ -5988,6 +5988,64 @@ allora
 
 \newpage
 \subsection{Definire l'operazione di convoluzione ed illustrarne le propriet\`a}
+In matematica, in particolare nell'analisi funzionale, la convoluzione \`e
+un'operazione tra due funzioni di una variabile che consiste nell'integrare il
+prodotto tra la prima e la seconda traslata di un certo valore. Ha una forte
+somiglianza con la correlazione incrociata.\\
+La convoluzione viene utilizzata in vari campi della fisica, della statistica,
+dell'elettronica, dell'analisi d'immagini e della grafica computerizzata.
+Quando si studiano sistemi dinamici lineari stazionari, l'uscita \`e data dalla
+convoluzione tra il segnale in ingresso e la risposta all'impulso del sistema,
+la cui trasformata di Laplace (o la trasformata di Fourier) \`e la funzione di
+trasferimento del sistema. 
+\bigbreak
+Si considerino due segnali $x(t)$ e $y(t)$. Si definisce convoluzione di $x(t)$
+e $y(t)$ la funzione definita nel seguente modo
+\[
+    z(t) = x(t) * y(t) = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    y(t - \tau) \ d\tau
+\]
+
+%-------------------------------------------------------------------------------
+% Subsubsection: Proprieta' della Convoluzione
+%-------------------------------------------------------------------------------
+
+\subsubsection{Propriet\`a della Convoluzione}
+\textbf{Propriet\`a Commutativa}\\
+\[
+    x(t) * y(t) = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    y(t - \tau) \ d\tau \footnote{Poniamo $\tau' = t - \tau$.}=
+    \int\displaylimits_{+\infty}^{-\infty} x(t - \tau') \cdot y(\tau')
+    \ -d\tau' =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} x(t - \tau') \cdot y(\tau')
+    \ d\tau' = y(t) * x(t)
+\]
+\bigbreak
+\noindent
+\textbf{Propriet\`a Distributiva}\\
+\[
+    x(t) * [y(t) + z(t)] = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    [y(t - \tau) \cdot z(t - \tau)] \ d\tau =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot y(t - \tau) \ d\tau +
+    \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot z(t - \tau) \ d\tau =
+\]
+\[
+    = x(t) * y(t) + x(t) * z(t).
+\]
+\bigbreak
+\noindent
+\textbf{Propriet\`a Associativa}\\
+Grazie al teorema della convoluzione, possiamo scrivere che
+\[
+    x(t) * [y(t) * z(t)] \iff X(f) \cdot [Y(f) \cdot Z(f)] =
+\]
+\[
+    = [X(f) \cdot Y(f)] \cdot Z(f) \iff [x(t) * y(t)] * z(t).
+\]
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare che la TFS di x[n] = x(nT) e' scrivibile tramite la TCF
@@ -7160,7 +7218,7 @@ consente anche di verificare le propriet\`a possedute dal sistema e quindi
 paragrafo precedente abbiamo visto che un sistema \`e causale se \`e verificata
 la relazione
 \[
-    y(t) = \mathcal{T}[x(\alpha), \alpha \;eq t; t] = \mathcal{T}[x(\alpha)
+    y(t) = \mathcal{T}[x(\alpha), \alpha \leq t; t] = \mathcal{T}[x(\alpha)
     u(t - \alpha); t].
 \]
 Dimostriamo ora che un SLS \`e causale se la sua risposta impulsiva \`e un
@@ -7211,8 +7269,12 @@ scrivere
 \]
 \[
     \leq M \cdot \int\displaylimits_{-\infty}^{+\infty}
-    \abs{h(t - \alpha)} \ d\alpha = \int\displaylimits_{-\infty}^{+\infty}
-    \abs{h(t')} \ d\alpha \leq M \cdot H,
+    \abs{h(t - \alpha)} \ d\alpha = M \cdot
+    \int\displaylimits_{+\infty}^{-\infty} \abs{h(t')} \ -dt' =
+\]
+\[
+    = M \cdot \int\displaylimits_{-\infty}^{+\infty}
+    \abs{h(t')} \ dt' \leq M \cdot H < +\infty,
 \]
 quindi il sistema \`e stabile.
 \end{proof}
