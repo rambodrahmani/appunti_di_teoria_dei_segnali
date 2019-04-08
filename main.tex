@@ -6055,12 +6055,82 @@ Grazie al teorema della convoluzione, possiamo scrivere che
 \newpage
 \subsection{Dimostrare che la TFS di $x[n] = x(nT)$ \`e scrivibile tramite la
 $TCF$ di $x(t)$}
+Prendiamo in considerazione il campionamento di un segnale aperiodico $x(t)$:
+\[
+    x[n] = x(nT)
+\]
+Dato che $x(t)$ \`e un segnale aperiodico ammette $TCF$:
+\[
+    x(t) \iff X(f)
+\]
+mentre $x[n]$ ammette $TFS$:
+\[
+    x[n] \iff \overline{X}(f).
+\]
+Possiamo allora scrivere che
+\[
+    \overline{X}(f) = \frac{1}{T} \sum\displaylimits_{n = -\infty}^{+\infty}
+    X\left(f - \frac{n}{T}\right).
+\]
+\[
+    \overline{X}(f) = \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot
+    e^{-j 2 \pi f n T} =
+\]
+\[
+    = \sum\displaylimits_{n = -\infty}^{+\infty} x(nT) \cdot
+    e^{-j 2 \pi f n T} =
+\]
+\[
+    = \sum\displaylimits_{n = -\infty}^{+\infty}
+    \int\displaylimits_{-\infty}^{+\infty} X(\alpha) \cdot e^{j 2 \pi \alpha n
+    T} \cdot \ d\alpha \ \ e^{-j 2 \pi f n T} =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} X(\alpha) 
+    \sum\displaylimits_{n = -\infty}^{+\infty} e^{j 2 \pi \alpha n T}
+    \cdot e^{-j 2 \pi f n T} \ d\alpha =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} X(\alpha) 
+    \sum\displaylimits_{n = -\infty}^{+\infty} e^{-j 2 \pi (f - \alpha) n T}
+    \ d\alpha =
+\]
+\[
+    \footnote{Segue dall'applicazione della seconda formula di Poisson alla
+    Delta di Dirac $\sum_{n = -\infty}^{+\infty} e^{-j 2 \pi n f T_0} =
+    \frac{1}{T_0} \sum\displaylimits_{n = -\infty}^{+\infty} \delta\left(f -
+    \frac{n}{T_0}\right)$.} = \int\displaylimits_{-\infty}^{+\infty} X(\alpha)
+    \ \frac{1}{T} \sum\displaylimits_{n = -\infty}^{+\infty} \delta\left(
+        f - \alpha - \frac{n}{T}
+    \right) \ d\alpha =
+\]
+\[
+    \footnote{Segue dalla propriet\`a di parit\`a della delta di Dirac
+    $\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot \delta(t) \dt =
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot \delta(-t)$.} =
+    \int\displaylimits_{-\infty}^{+\infty} X(\alpha)
+    \ \frac{1}{T} \sum\displaylimits_{n = -\infty}^{+\infty} \delta\left(
+        \alpha - f + \frac{n}{T}
+    \right) \ d\alpha =
+\]
+\[
+    = \frac{1}{T} \sum\displaylimits_{n = -\infty}^{+\infty}
+    \int\displaylimits_{-\infty}^{+\infty} X(\alpha) \cdot \delta\left(
+        \alpha - \left(f - \frac{n}{T}\right)
+    \right) \ d\alpha =
+\]
+\[
+    \footnote{Per la propriet\`a di traslazione della delta di Dirac $x(t) *
+    \delta(t) - t_0 = x(t - t_0)$.}= \frac{1}{T}
+    \sum\displaylimits_{n = -\infty}^{+\infty} X\left(f - \frac{n}{T}\right)
+\]
 
 %-------------------------------------------------------------------------------
 % Subsection: Definire l'operazione di autocorrelazione per segnali aperiodici
 %             ed illustrarne le proprieta'
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Definire l'operazione di autocorrelazione per segnali aperiodici ed
 illustrarne le propriet\`a}
 
@@ -6150,6 +6220,7 @@ Dobbiamo ora dimostrare che
 %             che Sx(f) = |X(f)|^2
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Dare la definizione di Densit\`a spettrale di Energia e dimostrare
 che $S_x(f) = \abs{X(f)}^2$}
 
@@ -6232,7 +6303,7 @@ Il problema di trovare la "derivata della funzione gradino" sarebbe risolto se
 nella precedente relazione potessimo eseguire l'operazione di limite
 \textit{sotto il segno d'integrale} ponendo dunque
 \[
-    \frac{d u(T)}{dt} \triangleq lim_{\epsilon \Rightarrow 0}
+    \frac{d u(t)}{dt} \triangleq \lim_{\epsilon \rightarrow 0}
     \delta_{\epsilon}(t) = \delta(t).
 \]
 Otterremmo cos\`i una funzione $\delta(t)$ con l'apparenza della derivata del
@@ -6271,17 +6342,17 @@ propriet\`a integrale} come nella definizione stessa.
 \[
     = \int\displaylimits_{-\infty}^{+\infty} \lim_{\epsilon \rightarrow 0}
     \frac{1}{\epsilon} \cdot rect\left(\frac{t}{\epsilon}\right) \dt =
-    \lim_{\epsilon \Rightarrow 0} \frac{1}{\epsilon}
+    \lim_{\epsilon \rightarrow 0} \frac{1}{\epsilon}
     \int\displaylimits_{-\epsilon/2}^{\epsilon/2} 1 \dt =
-    \lim_{\epsilon \Rightarrow 0} \frac{1}{\epsilon} \cdot \epsilon = 1.
+    \lim_{\epsilon \rightarrow 0} \frac{1}{\epsilon} \cdot \epsilon = 1.
 \]
 \bigbreak
 \noindent
 \textbf{2) Propriet\`a Campionatrice}\\
 Se $x(t)$ risulta continuo in $t = 0$, allora
 \[
-    \int\displaylimits_{-\infty}^{+\infty} x(t) \delta(t) \dt = x(t)|_{t = 0} =
-    x(0).
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot \delta(t) \dt =
+    x(t)|_{t = 0} = x(0).
 \]
 \begin{proof}
 \[
@@ -6293,15 +6364,15 @@ Se $x(t)$ risulta continuo in $t = 0$, allora
     = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot 
     \lim_{\epsilon \rightarrow 0}
     \frac{1}{\epsilon} \cdot rect\left(\frac{t}{\epsilon}\right) \dt =
-    \lim_{\epsilon \Rightarrow 0} \frac{1}{\epsilon}
+    \lim_{\epsilon \rightarrow 0} \frac{1}{\epsilon}
     \int\displaylimits_{-\epsilon/2}^{\epsilon/2} x(t) \dt =
 \]
 \[
     \footnote{Per il teorema della media: il teorema della media itnegrale
     stabilisce che la media integrale della funzione sia un valore incluso
-    nell'intervallo immagine.}= \lim_{\epsilon \Rightarrow 0}
+    nell'intervallo immagine.}= \lim_{\epsilon \rightarrow 0}
     \frac{1}{\epsilon} \cdot \epsilon x(\overline{t}) =
-    \lim_{\epsilon \Rightarrow 0} x(\overline{t}) = x(0).
+    \lim_{\epsilon \rightarrow 0} x(\overline{t}) = x(0).
 \]
 \end{proof}
 \bigbreak
