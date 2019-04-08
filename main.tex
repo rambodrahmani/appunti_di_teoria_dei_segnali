@@ -7028,7 +7028,7 @@ cio\`e situazioni in cui la risposta $y(t)$ tende a crescere illimitatamente.
 In molti casi \`e necessario \textit{ricostruire} il segnale di eccitazione in
 ingresso a un sistema nota la risposta al segnale stesso. Questa operazione \`e
 possibile solo per sistemi \textit{invertibili}, per i quali cio\`e esiste un
-\textit{sistema inverso} $\mathcal{T^{-1}[\cdot]}$ tale  che:
+\textit{sistema inverso} $\mathcal{T}^{-1}[\cdot]$ tale  che:
 \[
     \mathcal{T}^{-1}[y(t)] = x(t)
 \]
@@ -7051,7 +7051,7 @@ costituito da una combinazione lineare con coefficienti costanti $\alpha$ e
 $beta$ dekke due eccitazioni $x_1(t)$ e $x_2(t)$ (le \textit{cause}), il sistema
 risponde con il segnale di uscita
 \[
-    y(t) = \mathcal{T}[x(t)] = \alpha y_1(t) + \beta y_2(t)
+    y(t) = \mathcal{T}[x(t)] = \alpha \cdot y_1(t) + \beta \cdot y_2(t)
 \]
 dove
 \[
@@ -7071,8 +7071,69 @@ eccitazioni $x_1(t)$ e $x_2(t)$ considerate agenti separatamente.
 %             impulsiva
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Si dimostri che, per un SLS, il segnale di uscita \`e scrivibile
 come la convoluzione del segnale di ingresso per la risposta impulsiva}
+Restringiamo adesso la nostra attenzione al caso estremamente importante di
+\textit{sistemi lineari e stazionari} (SLS). Questi rivestono una particolare
+importanza perch\`e si rivelano estremamente semplici da analizzare e possono
+inoltre essere sintetizzati (progettati) con altrettanta facilit\`a.
+\bigbreak
+Nel paragrafo precedente abbiamo qualificato i sistemi monodimensionali secondo
+determinate propriet\`a rilevabili mediante lo studio dei soli segnali di
+ingresso e uscita, a prescindere dalla struttura materiale del sistema stesso.
+Vogliamo estendere questo modo di procedere, che potremmo chiamare "a scatola
+chiusa", per arrivare a una \textit{caratterizzazione} esaustiva del
+comportamento dei sistemi \textit{lineari stazionari}.
+\bigbreak
+Per un SLS dato \`e possibile misurare (o calcolare se si dispone di uno schema
+di progetto) la cosiddetta \textit{risposta impulsiva}, cio\`e l'uscita del
+sistema in corrispondenza all'eccitazione \textit{impulsiva} $x(t) = \delta(t)$.
+Convenzionalmente, tale segnale viene indicato con $h(t)$:
+\[
+    h(t) \triangleq \mathcal{T}[\delta(t)]
+\]
+L'importanza della risposta impulsiva di un SLS risiede nel fatto che la sua
+conoscenza permette di determinare la risposta del sistema a un segnale di
+ingresso di andamento arbitrario.\\
+Ricordando che la delta di Dirac \`e l'elemento neutro della convoluzione
+\[
+    x(t) = x(t) * \delta(t) = \int\displaylimits_{-\infty}^{+\infty} x(\alpha)
+    \cdot \delta(t - \alpha) \ d\alpha
+\]
+possiamo scrivere che
+\[
+    y(t) = \mathcal{T}[x(t)] = \mathcal{T}[x(t) * \delta(t)] =
+\]
+\[
+    = \mathcal{T}\left[\int\displaylimits_{-\infty}^{+\infty} x(\alpha)
+    \cdot \delta(t - \alpha) \ d\alpha\right] =
+\]
+La trasformazione $\mathcal{T}[\cdot]$ caratteristica del sistema e
+l'operazione di integrale sono entrambe operatori \textit{lineari}, e quindi \`e
+possibile invertire l'ordine di calcolo. Otteniamo quindi
+\[
+    y(t) = \int\displaylimits_{-\infty}^{+\infty} \mathcal{T} [x(\alpha) \cdot
+    \delta(t - \alpha) \ d\alpha]
+\]
+in cui \`e importante osservare che l'\textit{operatore} $\mathcal{T}[\cdot]$
+agisce su segnali \textit{funzioni del tempo t}. Tenendo conto del fatto che
+tale operatore \`e lineare e che, rispetto al tempo $t$, la quantit\`a
+$x(\alpha)$ \`e una costante, si ha
+\[
+    y(t) = \int\displaylimits_{-\infty}^{+\infty} x(\alpha) \cdot
+    \mathcal{T}[\delta(t - \alpha)] \ d\alpha.
+\]
+Infine, per la propriet\`a di \textit{stazionariert\`a}\footnote{$\mathcal{T}
+[\delta(t - \alpha)] = h(t - \alpha)$} del sistema e
+ricordando la definizione di risposta impulsiva $h(t)$, si ottiene
+\[
+    y(t) = \int\displaylimits_{-\infty}^{+\infty} x(\alpha) \cdot h(t - \alpha)
+    \ d\alpha = x(t) * h(t)
+\]
+che stabilisce la relazione fondamentale (diremo \textit{costitutiva}) del
+sistema lineare stazionario: il segnale di uscita pu\`o essere calcolato
+attraverso la convoluzione del segnale di ingresso con la risposta impulsiva.
 
 %-------------------------------------------------------------------------------
 % Subsection: Definire quando un SLS e' causale e stabile BIBO e dimostrarlo
@@ -7118,13 +7179,154 @@ stretto di un processo aleatorio}
 % Subsection: Definire l'ISI e la condizione di Nyquist
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Definire l'ISI e la condizione di Nyquist}
+Nel valutare le prestazioni dei sistemi di comunicazione numerici in banda base
+considereremo due fenomeni peggiorativi
+\begin{itemize}
+    \item Interferenza Inter-Simbolo\footnote{In telecomunicazioni con
+        interferenza intersimbolica (ISI) si intende un particolare fenomeno
+        indesiderato che si manifesta nei ricevitori degli apparati di
+        trasmissione digitale sulla base del quale i simboli o forme d'onda
+        analogiche trasmesse in sequenza sul canale di comunicazione ad onde
+        continue si sovrappongono temporalmente e parzialmente tra di loro
+        producendo una distorsione del simbolo in questione con degrado della
+        qualit\`a dell'informazione trasportata ossia diminuendo il margine di
+        immunit\`a agli errori ed aumentando la probabilit\`a di errore del
+        simbolo trasmesso in fase di decodifica/decisione.}
+    \item Presenza di rumore
+\end{itemize}
+Per il momento ignoriamo il rumore e ci concentriamo sul primo problema.
+\bigbreak
+Il primo fenomeno \`e causato dalla non perfetta risposta in frequenza del
+canale di trasmissione, e quindi dalle distorsioni lineari introdotte da
+questo.
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=1.0\textwidth]{images/isi.jpg}
+    \caption{Canale con e senza ISI.}
+\end{figure}
+Il risultato \`e che il campione estratto al ricevitore dal segnale ricevuto al
+$k$-esimo istante non dipende solo dal $k$-esimo simbolo:
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.6\textwidth]{images/isi_scheme.jpg}
+    \caption{Schema funzionale ISI.}
+\end{figure}
+\noindent
+\textbf{ASSENZA DI ISI}
+\[
+    y[k] = f(x[k])
+\]
+\noindent
+\textbf{PRESENZA DI ISI}
+\[
+    y[k] = f(\dots,\  x[k - 1],\  x[k],\  x[k + 1],\  \dots)
+\]
+\bigbreak
+Per valutare gli effetti dell'ISI si devono considerare
+\begin{itemize}
+    \item il sagomatore di trasmissione $p(t)$
+    \item la risposta impulsiva del canale $c(t)$
+    \item il filtro in ricezione
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.9\textwidth]{images/full_isi_scheme.jpg}
+    \caption{Schema completo ISI.}
+\end{figure}
+Un canale con Banda $B_c$ in generale introduce ISI. Ci sono due aspetti di cui
+ci occuperemo:
+\begin{itemize}
+    \item Determinazione del $T_s$ minimo che pu\`o essere adattato al fine di
+        ottenere una sequenza campionata priva di ISI;
+    \item Determinare le condizioni sotto le quali \`e possibile trasmettere un
+        segnale $M-PAM$  attraverso un canale non ideale in modo che non vi sia
+        ISI nella sequenza campionata.
+\end{itemize}
+Secondo lo schema precedente, possiamo scrivere che
+\[
+    Y(f) = R(f) \cdot H_R(f) = S(f) \cdot C(f) \cdot H_R(f) =
+\]
+\[
+    = \overline{X}(f) \cdot P(f) \cdot C(f) \cdot H_R(f) =
+\]
+\[
+    = \overline{X}(f) \cdot H(f)
+\]
+dove nell'ultimo passaggio si \`e posto
+\[
+    H(f) = \cdot P(f) \cdot C(f) \cdot H_R(f).
+\]
+Passando nel dominio del tempo possiamo scrivere che
+\[
+    y(t) = \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot h(t - nT_s)
+\]
+Ora, il campione estratto al ricevitore dal segnale ricevuto al $k$-esimo
+istante \`e dato da
+\[
+    y[k] = y(k T_s) = \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot
+    h(kT_s - nT_s) = \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot
+    h((k - n) T_s) =
+\]
+\[
+    = x[k] \cdot h(0) + \sum\displaylimits_{n \neq k} x[n] \cdot h((k - n) T_s)
+\]
+dove nell'ultimo passaggio \`e stato estratto dalla sommatoria il campione di
+indice $k$.\\
+La prima parte del risultato
+\[
+    x[k] \cdot h(0)
+\]
+rappresenta la \textbf{componente utile}. Mentre la seconda parte
+\[
+    \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot h((k - n) T_s)
+\]
+rappresenta la \textbf{componente ISI}.
+Da questo risultato deriva il \textbf{Primo Criterio di Nyquist per la
+Trasmissione Priva di ISI} nel dominio del tempo
+\[
+    h((k - n)T_s) =
+        \begin{cases}
+            1 \ , \quads{2} k - n = 0\\
+            0 \ , \quads{2} k - n \neq 0
+        \end{cases}
+\]
+e nel dominio dell frequenza
+\[
+    \sum\displaylimits_{k = -\infty}^{+\infty} H\left(f - \frac{k}{T_s}\right) =
+    T_s \quads{2} \forall \ f.
+\]
+\begin{proof}
+Il primo criterio di Nyquist nel dominio del tempo garantisce l'assenza di ISI
+in quanto
+\[
+    y[k] = x[k] \cdot h(0) + \sum\displaylimits_{n \neq k} x[n] \cdot
+    h((k - n) T_s) = y[k] = x[k] \cdot h(0).
+\]
+La relazione in frequenza si ottiene come trasformazione
+\[
+    h[k] = \delta[k] \iff \overline{H}(f) = 1 \quads{2} \forall \ f
+\]
+\[
+    \frac{1}{T_s} \sum\displaylimits_{n = -\infty}^{+\infty}
+    H\left(f - \frac{k}{T_s}\right) = 1 \quads{2} \forall \ f
+\]
+\[
+    \Rightarrow \sum\displaylimits_{n = -\infty}^{+\infty}
+    H\left(f - \frac{k}{T_s}\right) = T_s \quads{2} \forall \ f
+\]
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dimostrare che, per una modulazione PAM in banda passante, che la
 %             condizione di Nyquist nel tempo garantisce l'assenza di ISI
 %-------------------------------------------------------------------------------
 
+\newpage
 \subsection{Dimostrare che, per una modulazione PAM in banda passante, che la
 condizione di Nyquist nel tempo garantisce l'assenza di ISI}
 
