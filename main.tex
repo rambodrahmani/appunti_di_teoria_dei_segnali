@@ -7153,6 +7153,69 @@ attraverso la convoluzione del segnale di ingresso con la risposta impulsiva.
 
 \newpage
 \subsection{Definire quando un SLS \`e causale e stabile BIBO e dimostrarlo}
+La conoscenza della risposta impulsiva $h(t)$ di un sistema lineare stazionario,
+oltre a permettere di ricavare il segnale di uscita dato quello di ingresso,
+consente anche di verificare le propriet\`a possedute dal sistema e quindi
+\textit{caratterizza completamente} il comportamento del sistema stesso. Nel
+paragrafo precedente abbiamo visto che un sistema \`e causale se \`e verificata
+la relazione
+\[
+    y(t) = \mathcal{T}[x(\alpha), \alpha \;eq t; t] = \mathcal{T}[x(\alpha)
+    u(t - \alpha); t].
+\]
+Dimostriamo ora che un SLS \`e causale se la sua risposta impulsiva \`e un
+\textit{segnale causale}\footnote{Un segnale causale \`e una
+funzione dipendente dal tempo che rappresenta uno stimolo esterno su un sistema
+fisico. Matematicamente, un segnale causale \`e rappresentato mediante una
+funzione nulla per $t < 0$. L'istante $t = 0$ rappresenta il momento in cui
+viene applicato dall'esterno il segnale.}, cio\`e
+\[
+    h(t) \equiv h(t) \cdot u(t) \Longrightarrow h(t) = 0 \quads{2} \forall
+    \ t < 0.
+\]
+Infatti, se calcoliamo il segnale di uscita di un SLS la cui risposta impulsiva
+\`e causale, abbiamo:
+\[
+    y(t) = x(t) * h(t) = \int\displaylimits_{-\infty}^{+\infty} x(\alpha)
+    \cdot h(t - \alpha) \ d\alpha = 
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty}
+    x(\alpha) \cdot h(t - \alpha) \cdot u(t - \alpha) \ d\alpha =
+    = \int\displaylimits_{-\infty}^{t} x(\alpha) \cdot h(t - \alpha) \ d\alpha.
+\]
+La limitazione dell'estremo superiore di integrazione nella precedente relazione
+provocata dalla causalit\`a della risposta impulsiva, porta a concludere che il
+valore al generico istante $t$ del segnale di uscita \`e determinato \textit{dai
+soli valori assunti da $x(\alpha)$ per $\alpha \leq t$}. In una parola, il
+sistema \`e causale.
+\bigbreak
+Anche la \textit{stabilit\`a} del sistema lineare stazionario \`e univocamente
+determinata dall'andamento della risposta impulsiva. Infatti, condizione
+necessaria e sufficiente affinch\`e un SLS sia stabile \`e che la sua risposta
+impulsiva sia \textit{assolutamente integrabile}:
+\[
+    \int\displaylimits_{-\infty}^{+\infty} \abs{h(t)} \dt = H < +\infty
+    \Longrightarrow \abs{y(t)} < +\infty.
+\]
+\begin{proof}
+Per un segnale di ingresso limitato (cio\`e $\abs{x(t)} \leq M$) possiamo
+scrivere
+\[
+    \abs{y(t)} = \abs{x(t) * h(t)} = \left|
+        \int\displaylimits_{-\infty}^{+\infty} x(\alpha) \cdot h(t - \alpha)
+        \ d\alpha
+    \right| \leq \int\displaylimits_{-\infty}^{+\infty} \abs{
+        x(\alpha) \cdot h(t - \alpha)
+    } \ d\alpha \leq
+\]
+\[
+    \leq M \cdot \int\displaylimits_{-\infty}^{+\infty}
+    \abs{h(t - \alpha)} \ d\alpha = \int\displaylimits_{-\infty}^{+\infty}
+    \abs{h(t')} \ d\alpha \leq M \cdot H,
+\]
+quindi il sistema \`e stabile.
+\end{proof}
 
 %-------------------------------------------------------------------------------
 % Subsection: Dare la definizione di replica fedele e specificare quando un
