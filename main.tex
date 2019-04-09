@@ -5685,7 +5685,7 @@ Allora
 \]
 dove
 \[
-    y(t) \iff Y_n = \frac{1}{T_0} \cdot x\left(\frac{n}{T_0}\right).
+    y(t) \iff Y_n = \frac{1}{T_0} \cdot X\left(\frac{n}{T_0}\right).
 \]
 \begin{proof}
 \[
@@ -6144,13 +6144,13 @@ illustrarne le propriet\`a}
 $x(t)$ e $y(t)$}
 La convoluzione tra due segnali $x(t)$ e $y(t)$ \`e data da
 \[
-    x(\tau) * y(\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t)
-    \cdot y(\tau - t),
+    x(t) * y(t) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(\tau)
+    \cdot y(t - \tau) \ d\tau,
 \]
 mentre la cross-correlazione \`e definita come
 \[
-    C_{xy} (\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
-    y^*(t - \tau) \dt.
+    C_{xy} (t) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    y^*(\tau - t) \ d\tau.
 \]
 
 %-------------------------------------------------------------------------------
@@ -6163,22 +6163,22 @@ mentre la cross-correlazione \`e definita come
 scrivibile in termini di convoluzione tra i due segnali}
 Si ricorda che la convoluzione tra due segnali $x(t)$ e $y(t)$ \`e data da
 \[
-    x(\tau) * y(\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t)
-    \cdot y(\tau - t),
+    x(t) * y(t) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(\tau)
+    \cdot y(t - \tau) \ d\tau,
 \]
 mentre la cross-correlazione \`e definita come
 \[
-    C_{xy} (\tau) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
-    y^*(t - \tau) \dt.
+    C_{xy} (t) \triangleq \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    y^*(\tau - t) \ d\tau.
 \]
 \begin{proof} La relazione tra la cross-correlazione e la convoluzione \`e data
 \[
-    x(\tau) * y^*(-\tau) = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
-    y^*[-(\tau - t)] \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
-    y^*(t - \tau) \dt = C_{xy}(\tau)
+    x(t) * y^*(-t) = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    y^*[-(t - \tau)] \dt = \int\displaylimits_{-\infty}^{+\infty} x(\tau) \cdot
+    y^*(\tau - t) \dt = C_{xy}(t)
 \]
 \[
-    \Longrightarrow C_{xy}(\tau) = x(\tau) * y^*(-\tau).
+    \Longrightarrow C_{xy}(t) = x(t) * y^*(-t).
 \]
 \end{proof}
 
