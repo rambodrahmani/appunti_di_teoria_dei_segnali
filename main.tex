@@ -3747,12 +3747,12 @@ constatare che il suo valore efficace coincide con il valore reale.
 Ogni segnale $x(t)$ che soddisfi il criterio di Dirichlet pu\`o essere
 rappresentato con lo sviluppo in serie di Fourier
 \begin{equation}
-	x(t) = \sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi n f_0 t},
+	x(t) = \sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t},
 \end{equation}
 dove il particolare coefficiente $X_k$ della serie \`e dato da
 \begin{equation}
 	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi k f_0 t} \dt.
+	\ e^{-j 2 \pi k f_0 t} \dt.
 \end{equation}
 La seconda delle due \`e una equazione di \textit{analisi} che permette di
 stabilire qual \`e il contenuto in termini di oscillazioni armoniche del segnale
@@ -3784,16 +3784,16 @@ attraverso le relazioni di analisi e sintesi.
 \begin{equation}
 \begin{split}
 	X_k = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi k f_0 t} \dt =
+	\ e^{-j 2 \pi k f_0 t} \dt =
 	\quads{2}
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
-	\sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi k f_0 t} e^{-j 2 \pi k f_0 t}
+	\sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi n f_0 t} e^{-j 2 \pi k f_0 t}
 	\dt =
 	\quads{1}
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2}
-	\sum_{n = -\infty}^{\infty} X_n e^{j 2 \pi (n - k) f_0 t} \dt =
+	\sum_{n = -\infty}^{\infty} X_n \ e^{j 2 \pi (n - k) f_0 t} \dt =
 	\quads{2}
 	\\
 	= \frac{1}{T_0} \sum_{n = -\infty}^{\infty} X_n
@@ -3883,11 +3883,11 @@ $T_0$, e ha coefficienti di Fourier $Z_n$ dati da
 \end{equation}
 \begin{proof}
 Tale propriet\`a di linearit\`a dei coefficienti di Fourier deriva direttamente
-	dalla medesima propriet\`a dell'integrale; si ha infatti che
+dalla medesima propriet\`a dell'integrale; si ha infatti che
 \begin{equation}
 \begin{split}
 	Z_n = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} z(t)
-	e^{-j 2 \pi n f_0 t} \dt =
+	\ e^{-j 2 \pi n f_0 t} \dt =
 	\quads{8}
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left[a \cdot x(t) +
@@ -3895,13 +3895,13 @@ Tale propriet\`a di linearit\`a dei coefficienti di Fourier deriva direttamente
 	\quads{6}
 	\\
 	= \frac{a}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi n f_0 t} \dt + \frac{b}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t} \dt =
+	\ e^{-j 2 \pi n f_0 t} \dt + \frac{b}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} y(t) \ e^{-j 2 \pi n f_0 t} \dt =
 	\quads{3}
 	\\
 	= a \cdot \left[\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi n f_0 t} \dt \right] + b \cdot \left[\frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} y(t) e^{-j 2 \pi n f_0 t}
+	\ e^{-j 2 \pi n f_0 t} \dt \right] + b \cdot \left[\frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} y(t) \ e^{-j 2 \pi n f_0 t}
 	\dt \right] =
 	\\
 	= a \cdot X_n + b \cdot Y_n.
@@ -3942,6 +3942,7 @@ dalla propriet\`a di linearit\`a dei coefficienti di Fourier deriva che
 \end{equation}
 Procediamo con i calcoli.
 \improvement[inline]{To be continued.}
+\noindent
 In conclusione possiamo quindi scrivere
 \begin{equation}
 	X_n =
@@ -3958,7 +3959,7 @@ In conclusione possiamo quindi scrivere
 				0  \quad\quad\quad\quad\quad n \neq \pm 1, \ \pm 2.
 			\end{cases}
 \end{equation}
-\change{To be continued.}
+\improvement[inline]{To be continued.}
 
 %-------------------------------------------------------------------------------
 % Subsection: Simmetria Hermitiana della trasformata serie di Fourier
@@ -3975,26 +3976,28 @@ $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
 \begin{equation}
 	X_{-n} = X^*_{n} \iff
 		\begin{cases}
-			\abs{X_{n}} = \abs{X_{-n}} \quads{2} (simmetria \ pari \ per \ il \ modulo)\\
-			\angle X_n = - \angle X_{-n} \quad (simmetria \ dispari \ per \ la \ fase)
+			\abs{X_{n}} = \abs{X_{-n}} \quads{2}
+                (simmetria \ pari \ per \ il \ modulo)\\
+			\angle X_n = - \angle X_{-n} \quad
+                (simmetria \ dispari \ per \ la \ fase)
 		\end{cases}
 \end{equation}
 \begin{proof}
 \begin{equation}
 \begin{split}
 	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi (-n) f_0 t} \dt =
+	\ e^{-j 2 \pi (-n) f_0 t} \dt =
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{j 2 \pi n f_0 t} \dt =
+	\ e^{j 2 \pi n f_0 t} \dt =
 	\quad
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x^*(t)
-	e^{j 2 \pi n f_0 t} \dt =
+	\ e^{j 2 \pi n f_0 t} \dt =
 	\quad
 	\\
 	= \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} \left( x(t)
-	e^{-j 2 \pi n f_0 t} \right)^* \dt =
+	\ e^{-j 2 \pi n f_0 t} \right)^* \dt =
 	\quad
 \end{split}
 \end{equation}
@@ -4007,7 +4010,7 @@ $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
 	\left[c_1 c_2 \cdot e^{j (\varphi_1 + \varphi_2)}\right]^* = c_1 c_2
 	\cdot e^{-j (\varphi_1 + \varphi_2)} = c_1 e^{-j \varphi_1} \cdot c_2
 	e^{-j \varphi_2} = z_1^* \cdot z_2^*.$} \left[\frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{-j 2 \pi n f_0 t}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \ e^{-j 2 \pi n f_0 t}
 	\dt\right]^* = X^*_{n}.
 \]
 \end{proof}
@@ -4030,7 +4033,7 @@ $x(t)$ godono della propriet\`a di simmetria Hermitiana (o coniugata). Ovvero
 	\abs{X_n} = \abs{X_{-n}}
 \end{equation}
 Sia $f(x)$ una funzione a valori reali di variabile reale e sia $D \subset
-\mathbb{R}$ il suo dominio. Allora $f$ \`e [aro se per ogni $x \in D$ vale
+\mathbb{R}$ il suo dominio. Allora $f$ \`e pari se per ogni $x \in D$ vale
 l'equazione:
 \[
 	f(x) = f(-x).
@@ -4106,20 +4109,20 @@ di $n$:
 \begin{proof}
 \[
 	X_{-n} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) e^{j 2 \pi n f_0 t} \dt =
+	\ e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t) \ e^{j 2 \pi n f_0 t} \dt =
 \]
 \[
-	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0}
-	\int\displaylimits_{T_0/2}^{-T_0/2} x(-t^{'})
-	e^{-j 2 \pi n f_0 t^{'}} -\dt^{'} = \frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}}
-	\dt^{'} = 
+	\footnote{Poniamo ora $t = -t'$.}= \frac{1}{T_0}
+	\int\displaylimits_{T_0/2}^{-T_0/2} x(-t')
+	\ e^{-j 2 \pi n f_0 t'} -\dt' = \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(-t') \ e^{-j 2 \pi n f_0 t'}
+	\dt' = 
 \]
 \[
 	\footnote{Dato che $x(t) = x(-t)$.}= \frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'})
-	e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = X_n.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t')
+	\ e^{-j 2 \pi n f_0 t'} \dt' = X_n.
 \]
 \end{proof}
 \noindent
@@ -4129,26 +4132,26 @@ Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e
 sia pari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per
 $x(t)$ in forma semplificata. Infatti:
 \[
-	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 +
-	\sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1}
-	X_n e^{j 2 \pi n f_0 t} =
+	x(t) = \sum_{n = -\infty}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} = X_0 +
+	\sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1}
+	X_n \ e^{j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
-	\sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} \ e^{j 2 \pi (-n) f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
-	\sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} \ e^{-j 2 \pi n f_0 t} =
 \]
 \[
 	\footnote{$X_n = X_{-n}$. dato che $x(t)$ \`e un segnale pari.}= X_0 +
-	\sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty}
-	X_n e^{-j 2 \pi n f_0 t} =
+	\sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} + \sum_{n = 1}^{+\infty}
+	X_n \ e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} +
-	e^{-j 2 \pi n f_0 t}\right) =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \left(e^{j 2 \pi n f_0 t} +
+	\ e^{-j 2 \pi n f_0 t}\right) =
 \]
 \[
 	= X_0 + 2 \cdot \sum_{n = 1}^{+\infty} X_n \left(
@@ -4189,19 +4192,19 @@ dispari di $n$:
 \begin{proof}
 \[
 	-X_{-n} = -\frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} x(t)
-	e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} -x(t) e^{j 2 \pi n f_0 t} \dt =
+    \ e^{-j 2 \pi (-n) f_0 t} \dt = \frac{1}{T_0}
+	\int\displaylimits_{-T_0/2}^{T_0/2} -x(t) \ e^{j 2 \pi n f_0 t} \dt =
 \]
 \[
-	\footnote{Poniamo ora $t = -t^{'}$.}= \frac{1}{T_0}
-	\int\displaylimits_{T_0/2}^{-T_0/2} -x(-t^{'}) e^{-j 2 \pi n f_0 t^{'}}
-	-\dt^{'} = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} -x(-t^{'})
-	e^{-j 2 \pi n f_0 t^{'}} \dt^{'} = 
+	\footnote{Poniamo ora $t = -t'$.}= \frac{1}{T_0}
+	\int\displaylimits_{T_0/2}^{-T_0/2} -x(-t') \ e^{-j 2 \pi n f_0 t'}
+	-\dt' = \frac{1}{T_0} \int\displaylimits_{-T_0/2}^{T_0/2} -x(-t')
+	\ e^{-j 2 \pi n f_0 t'} \dt' = 
 \]
 \[
 	\footnote{Dato che $x(t) = -x(-t)$.}= \frac{1}{T_0}
-	\int\displaylimits_{-T_0/2}^{T_0/2} x(t^{'}) e^{-j 2 \pi n f_0 t^{'}}
-	\dt^{'} = X_n.
+	\int\displaylimits_{-T_0/2}^{T_0/2} x(t') \ e^{-j 2 \pi n f_0 t'}
+	\dt' = X_n.
 \]
 \end{proof}
 \noindent
@@ -4211,29 +4214,29 @@ Ora, dato che in generale sappiamo che $X_{-n} = X_n^*$, ne segue che $X_n$ \`e
 sia dispari che reale ed \`e quindi possibile riscrivere la Serie di Fourier per
 $x(t)$ in forma semplificata. Infatti:
 \[
-	x(t) = \sum_{n = -\infty}^{+\infty} X_n e^{j 2 \pi n f_0 t} = X_0 +
-	\sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1}
-	X_n e^{j 2 \pi n f_0 t} =
+	x(t) = \sum_{n = -\infty}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} = X_0 +
+	\sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} + \sum_{n = -\infty}^{-1}
+	X_n \ e^{j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
-	\sum_{n = 1}^{+\infty} X_{-n} e^{j 2 \pi (-n) f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} \ e^{j 2 \pi (-n) f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
-	\sum_{n = 1}^{+\infty} X_{-n} e^{-j 2 \pi n f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} X_{-n} \ e^{-j 2 \pi n f_0 t} =
 \]
 \[
 	\footnote{$X_n = -X_{-n}$. dato che $x(t)$ \`e un segnale dispari.}= X_0
-	+ \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} +
-	\sum_{n = 1}^{+\infty} (-X_n) e^{-j 2 \pi n f_0 t} =
+	+ \sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} +
+	\sum_{n = 1}^{+\infty} (-X_n) \ e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n e^{j 2 \pi n f_0 t} -
-	\sum_{n = 1}^{+\infty} X_n e^{-j 2 \pi n f_0 t} =
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \ e^{j 2 \pi n f_0 t} -
+	\sum_{n = 1}^{+\infty} X_n \ e^{-j 2 \pi n f_0 t} =
 \]
 \[
-	= X_0 + \sum_{n = 1}^{+\infty} X_n \left( e^{j 2 \pi n f_0 t} -
+	= X_0 + \sum_{n = 1}^{+\infty} X_n \left(e^{j 2 \pi n f_0 t} -
 	e^{-j 2 \pi n f_0 t}\right) =
 \]
 \[
