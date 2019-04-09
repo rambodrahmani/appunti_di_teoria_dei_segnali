@@ -6196,12 +6196,12 @@ Dato
 sappiamo che per definizione
 \[
     \overline{X}(f) \triangleq \sum\displaylimits_{n} x[n] \cdot
-    e^{-j 2 \pi n f T}
+    e^{-j 2 \pi f n T}
 \]
 Dobbiamo ora dimostrare che
 \[
-    \overline{X}(f) = \overline{X}\left(f - \frac{k}{T}\right) \quad k \in
-    \mathbb{Z}
+    \overline{X}(f) = \overline{X}\left(f - \frac{k}{T}\right) \quads{2} \forall
+    \ \ k \in \mathbb{Z}
 \]
 \begin{proof}
 \[
@@ -6211,7 +6211,9 @@ Dobbiamo ora dimostrare che
     e^{-j 2 \pi n f T} \cdot e^{j 2 \pi n k} =
 \]
 \[
-    \overline{X}(f)\footnote{Dato che $e^{j 2 \pi n k} = 1$.}
+    \footnote{Dato che $e^{j 2 \pi n k} = 1$.} =
+    \sum\displaylimits_{n = -\infty}^{+\infty} x[n] \cdot e^{-j 2 \pi n f T} 
+    = \overline{X}(f)
 \]
 \end{proof}
 
