@@ -4635,27 +4635,27 @@ destra della quantit\`a $t_0$
 \]
 \`e
 \[
-	Y(f) = X(f) e^{-j 2 \pi f t_0}.
+	Y(f) = X(f) \cdot e^{-j 2 \pi f t_0}.
 \]
 Questa operazione corrisponde evidentemente a un ritardo se $t_0 > 0$ e ad un
 anticipo se $t_0 < 0$.
 \begin{proof}
 Applicando la definizione di trasformata si ha
 \[
-	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
-	= \int\displaylimits_{-\infty}^{+\infty} x(t - t_0) e^{-j 2 \pi f t} \dt
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{-\infty}^{+\infty} x(t - t_0) e^{-j 2 \pi f t} \dt
 	=
 \]
 \[
 	\footnote{Poniamo $t' = t - t_0$.}=
-	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f (t' + t_0)}
-	\dt ' =	\int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'}
-	e^{-j 2 \pi f t_0} \dt ' =
+	\int\displaylimits_{-\infty}^{+\infty} x(t') \cdot e^{-j 2 \pi f (t' + t_0)}
+	\dt ' =	\int\displaylimits_{-\infty}^{+\infty} x(t') \cdot e^{-j 2 \pi f t'}
+	e^{-j 2 \pi f t_0} \dt' =
 \]
 \[
-	= \int\displaylimits_{-\infty}^{+\infty} x(t') e^{-j 2 \pi f t'} \dt '
+	= \int\displaylimits_{-\infty}^{+\infty} x(t') \cdot e^{-j 2 \pi f t'} \dt'
 	\cdot e^{-j 2 \pi f t_0}
-	= X(f) e^{-j 2 \pi f t_0}.
+	= X(f) \cdot e^{-j 2 \pi f t_0}.
 \]
 \end{proof}
 Questa propriet\`a mostra che un ritardo temporale modifica lo spettro di fase
@@ -4680,15 +4680,15 @@ relazione
 	y(t) = x(\alpha t).
 \]
 Cio\`e si effettua un cambiamento della scala temporale. Moltiplicando la
-variabile indipendente $t$ del segnale $x(t)$ per coefficiente $\alpha$ si
+variabile indipendente $t$ del segnale $x(t)$ per il coefficiente $\alpha$ si
 producono i seguenti effetti:
 \begin{itemize}
 	\item $\abs{\alpha} > 1$ $\rightarrow$ \textit{compressione} della scala
-		dei tempi
+		dei tempi;
 	\item $\abs{\alpha} < 1$ $\rightarrow$ \textit{dilatazione} della scala
-		dei tempi
+		dei tempi;
 	\item $\alpha < 0$ \ \ $\rightarrow$ \textit{inversione} della scala dei
-		tempi
+		tempi.
 \end{itemize}
 In altri termini, se $\abs{\alpha} < 1$ l'evoluzione del segnale viene
 "rallentata", viceversa se $\abs{\alpha} > 1$ il segnale viene "accelerato".
@@ -4703,16 +4703,16 @@ Allora
 \begin{proof}
 $\alpha > 0$
 \[
-	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
-	= \int\displaylimits_{-\infty}^{+\infty} x(\alpha t) e^{-j 2 \pi f t}
-	\dt =
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{-\infty}^{+\infty} x(\alpha t) \cdot
+    e^{-j 2 \pi f t} \dt =
 \]
 \[
 	\footnote{Poniamo $t' = \alpha t$, da cui $dt' = d(\alpha t)$ e $dt' =
 	\alpha dt \rightarrow dt = dt'/\alpha$.}= \int\displaylimits_{-\infty}
-	^{+\infty} x(t') e^{-j 2 \pi f \frac{t'}{\alpha}} \frac{\dt'}{\alpha} =
-	\frac{1}{\alpha} \int\displaylimits_{-\infty}^{+\infty} x(t')
-	e^{-j 2 \pi \frac{f}{\alpha}t'} \dt' =
+	^{+\infty} x(t') \cdot e^{-j 2 \pi f \frac{t'}{\alpha}} \frac{\dt'}{\alpha}
+    = \frac{1}{\alpha} \int\displaylimits_{-\infty}^{+\infty} x(t')
+	\cdot e^{-j 2 \pi \frac{f}{\alpha}t'} \dt' =
 \]
 \[
 	= \frac{1}{\alpha} X\left(\frac{f}{\alpha}\right) \quad , \quad
@@ -4722,17 +4722,17 @@ $\alpha > 0$
 \begin{proof}
 $\alpha < 0$
 \[
-	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
-	= \int\displaylimits_{-\infty}^{+\infty} x(\alpha t) e^{-j 2 \pi f t}
-	\dt =
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{-\infty}^{+\infty} x(\alpha t) \cdot
+    e^{-j 2 \pi f t} \dt =
 \]
 \[
 	\footnote{Poniamo $t' = \alpha t$, da cui $t = \frac{t'}{\alpha}$,
 	$dt' = d(\alpha t) \rightarrow dt' = \alpha \cdot dt'$,
 	$dt = \frac{dt'}{\alpha}$.}=
-	\int\displaylimits_{-\infty}^{+\infty} x(t')
-	e^{-j 2 \pi f \frac{t'}{\alpha}} -\frac{\dt}{\alpha} = -\frac{1}{\alpha}
-	\int\displaylimits_{-\infty}^{+\infty} x(t')
+	\int\displaylimits_{-\infty}^{+\infty} x(t') \cdot
+	e^{-j 2 \pi f \frac{t'}{\alpha}} -\frac{\dt'}{\alpha} = -\frac{1}{\alpha}
+	\int\displaylimits_{-\infty}^{+\infty} x(t') \cdot
 	e^{-j 2 \pi \frac{f}{\alpha} t'} \dt' =
 \]
 \[
@@ -4773,7 +4773,7 @@ modulazione.
 	\caption{Segnale modulato.}
 \end{figure}
 L'operazione inversa di ripristino del segnale informativo originario in banda
-base \`e detto demodulazione. Il dispositivo in trasmissione che attua
+base \`e detta demodulazione. Il dispositivo in trasmissione che attua
 l'operazione di modulazione sul segnale informativo \`e detto modulatore, mentre
 il dispositivo in ricezione che attua l'operazione di demodulazione \`e detto
 demodulatore, compresi rispettivamente nel trasmettitore e nel ricevitore. In
@@ -4803,6 +4803,7 @@ l'informazione.
 	\includegraphics[width=0.5\textwidth]{images/modulatore.png}
 	\caption{Modulatore.}
 \end{figure}
+\noindent
 Esistono diversi tipi di modulazione analogica, utilizzate nelle rispettive
 trasmissioni analogiche:
 \begin{itemize}
@@ -4819,6 +4820,7 @@ recuperata, ovvero demodulata dal segnale portante ricevuto.
 	\includegraphics[width=1.0\textwidth]{images/segnale_modulato.png}
 	\caption{Codifica dell'informazione da trasmettere.}
 \end{figure}
+\noindent
 Enunciamo ora formalmente il cosiddetto teorema della modulazione.
 
 %-------------------------------------------------------------------------------
@@ -4833,14 +4835,14 @@ Se, come di consueto, $x(t) \iff X(f)$, allora definendo
 \]
 segue che
 \[
-	Y(f) = \frac{1}{2} \cdot X(f - f_0) + \frac{1}{2} X(f + f_0) =
+	Y(f) = \frac{1}{2} \cdot X(f - f_0) + \frac{1}{2} \cdot X(f + f_0) =
 	\frac{X(f - f_0) + X(f + f_0)}{2}.
 \]
 \begin{proof}
 \[
-	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt
-	= \int\displaylimits_{-\infty}^{+\infty} x(t) cos(2 \pi f_0 t)
-	e^{-j 2 \pi f t} \dt =
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot cos(2 \pi f_0 t)
+	\cdot e^{-j 2 \pi f t} \dt =
 \]
 \[
 	\footnote{$\cos(2 \pi f_0 t) = \frac{e^{j 2 \pi f_0 t} +
@@ -4853,16 +4855,17 @@ segue che
 	\frac{e^{-j 2 \pi (f - f_0) t} + e^{-j 2 \pi (f + f_0) t}}{2} \dt =
 \]
 \[
-	= \frac{1}{2} \int\displaylimits_{-\infty}^{+\infty} x(t)
+	= \frac{1}{2} \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
 	e^{-j 2 \pi (f - f_0)t} \dt + \frac{1}{2}
-	\int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi (f + f_0) t} \dt
-	=
+	\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (f + f_0) t}
+    \dt =
 \]
 \[
-	\frac{1}{2} X(f - f_0) + \frac{1}{2} X(f + f_0),
+    = \frac{1}{2} X(f - f_0) + \frac{1}{2} X(f + f_0),
 \]
 che dimostra la tesi iniziale.
 \end{proof}
+\noindent
 Una prima conclusione che possiamo trarre \`e la seguente: se un segnale viene
 moltiplicato per il fattore esponenziale complesso $e^{j 2 \pi f_0 t}$, la sua
 trasformata di Fourier viene traslata attorno alla frequenza $f_0$. Questo
@@ -4896,12 +4899,12 @@ Se, come di consueto, $x(t) \iff X(f)$, allora definendo
 \]
 segue che
 \[
-	Y(f) = \frac{1}{2j} \cdot X(f - f_0) - \frac{1}{2j} X(f + f_0) =
+	Y(f) = \frac{1}{2j} \cdot X(f - f_0) - \frac{1}{2j} \cdot X(f + f_0) =
 	\frac{X(f - f_0) - X(f + f_0)}{2j}.
 \]
 \begin{proof}
 \[
-	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t}
+	Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
 	\dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot 
 	\sin(2 \pi f_0 t) \cdot e^{-j 2 \pi f t} \dt =
 \]
@@ -4917,13 +4920,13 @@ segue che
 	\frac{e^{-j 2 \pi (f + f_0) t}}{2j} \dt =
 \]
 \[
-	= \frac{1}{2j} \int\displaylimits_{-\infty}^{+\infty} x(t)
+	= \frac{1}{2j} \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
 	e^{-j 2 \pi (f - f_0) t} \dt - \frac{1}{2j}
-	\int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi (f + f_0) t}
+	\int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (f + f_0) t}
 	\dt =
 \]
 \[
-    \frac{1}{2j} X(f - f_0) - \frac{1}{2j} X(f + f_0) =
+    = \frac{1}{2j} X(f - f_0) - \frac{1}{2j} X(f + f_0) =
     \frac{X(f - f_0) - X(f + f_0)}{2j}.
 \]
 \end{proof}
@@ -4940,37 +4943,41 @@ Se, come di consueto, $x(t) \iff X(f)$, allora definendo
 \]
 segue che
 \[
-    Y(f) = \frac{e^{j \varphi}}{2} X(f - f_0) + \frac{e^{-j \varphi}}{2}
-    X(f + f_0) = \frac{e^{j \varphi} X(f - f_0) + e^{-j \varphi} X(f + f_0)}{2}.
+    Y(f) = \frac{e^{j \varphi}}{2} \cdot X(f - f_0) + \frac{e^{-j \varphi}}{2}
+    \cdot X(f + f_0) = \frac{e^{j \varphi} \cdot X(f - f_0) +
+    e^{-j \varphi} \cdot X(f + f_0)}{2}.
 \]
 \begin{proof}
 \[
-    Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt =
-    \int\displaylimits_{-\infty}^{+\infty} x(t) cos(2 \pi f_0 t + \varphi)
+    Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    cos(2 \pi f_0 t + \varphi) \cdot e^{-j 2 \pi f t} \dt =
+\]
+\[
+    = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    \frac{e^{j(2 \pi f_0 t + \varphi)} + e^{-j(2 \pi f_0 t + \varphi)}}{2} \cdot
     e^{-j 2 \pi f t} \dt =
 \]
 \[
-    = \int\displaylimits_{-\infty}^{+\infty} x(t)
-    \frac{e^{j(2 \pi f_0 t + \varphi)} + e^{-j(2 \pi f_0 t + \varphi)}}{2} 
-    e^{-j 2 \pi f t} \dt =
+    = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot \frac{e^{j \varphi}
+    \cdot e^{j 2 \pi f_0 t} + e^{-j \varphi} \cdot e^{-j 2 \pi f_0 t +}}{2}
+    \cdot e^{-j 2 \pi f t} \dt =
 \]
 \[
-    = \int\displaylimits_{-\infty}^{+\infty} x(t) \frac{e^{j \varphi}
-    e^{j 2 \pi f_0 t} + e^{-j \varphi} e^{-j 2 \pi f_0 t +}}{2}
-    e^{-j 2 \pi f t} \dt =
+    = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot \frac{e^{j \varphi}
+    \cdot e^{-j 2 \pi (f - f_0) t} + e^{-j \varphi} \cdot
+    e^{-j 2 \pi (f + f_0) t}}{2} =
 \]
 \[
-    = \int\displaylimits_{-\infty}^{+\infty} x(t) \frac{e^{j \varphi}
-    e^{-j 2 \pi (f - f_0) t} + e^{-j \varphi} e^{-j 2 \pi (f + f_0) t}}{2} =
-\]
-\[
-    = \frac{e^{j \varphi}}{2} \int\displaylimits_{-\infty}^{+\infty} x(t)
+    = \frac{e^{j \varphi}}{2} \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
     e^{-j 2 \pi (f - f_0) t} \dt + \frac{e^{-j \varphi}}{2}
-    \int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi (f + f_0) t} \dt =
+    \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot
+    e^{-j 2 \pi (f + f_0) t} \dt =
 \]
 \[
-    = \frac{e^{j \varphi}}{2} X(f - f_0) + \frac{e^{-j \varphi}}{2} X(f + f_0) =
-    \frac{e^{j \varphi} X(f - f_0) + e^{-j \varphi} X(f + f_0)}{2}.
+    = \frac{e^{j \varphi}}{2} \cdot X(f - f_0) + \frac{e^{-j \varphi}}{2} \cdot
+    X(f + f_0) = \frac{e^{j \varphi} \cdot X(f - f_0) + e^{-j \varphi} \cdot
+    X(f + f_0)}{2}.
 \]
 \end{proof}
 
@@ -4990,23 +4997,26 @@ segue che
 \]
 \begin{proof}
 \[
-    Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) e^{-j 2 \pi f t} \dt =
-    \int\displaylimits_{-\infty}^{+\infty} x(t) e^{j 2 \pi f_0 t}
-    e^{-j 2 \pi f t} \dt = 
+    Y(f) = \int\displaylimits_{-\infty}^{+\infty} y(t) \cdot e^{-j 2 \pi f t}
+    \dt = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{j 2 \pi f_0 t}
+    \cdot e^{-j 2 \pi f t} \dt = 
 \]
 \[
-    = \int\displaylimits_{-\infty}^{+\infty} x(t) e^{-j 2 \pi (f - f_0) t} \dt
-    = X(f - f_0).
+    = \int\displaylimits_{-\infty}^{+\infty} x(t) \cdot e^{-j 2 \pi (f - f_0) t}
+    \dt = X(f - f_0).
 \]
 \end{proof}
+\noindent
 \`E Interessante a questo punto sottolineare due risultati importanti che
 abbiamo ottenuto
 \bigbreak
+\noindent
 \textbf{Teorema del ritardo}
 \[
     y(t) = x(t - t_0) \iff Y(f) = X(f) e^{-j 2 \pi f t_0}.
 \]
 \bigbreak
+\noindent
 \textbf{Teorema della modulazione}
 \[
     y(t) = x(t) e^{j 2 \pi f_0 t} \iff Y(f) = X(f - f_0).
